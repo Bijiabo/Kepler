@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Kepler</title>
+    <!--styles-->
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/main.css">
+    <!--scripts-->
+    <script src="static/js/jquery-3.1.1.min.js"></script>
+    <script src="static/js/tether.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/vue.min.js"></script>
+    <script src="static/js/main.js"></script>
+    <script src="static/js/demo.js" defer="true"></script>
+</head>
+<body>
+
+<div id="app">
+    <!-- 导航栏 -->
+    <nav class="navigation-bar navbar navbar-default navbar-inverse" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Kepler</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- main container -->
+    <div class="main-container">
+        <!-- 侧边栏 -->
+        <div class="side-bar">
+            <template v-for="item in sideBarItems">
+                <div class="side-bar-item media">
+                    <a class="media-left" href="#">
+                        <img src="static/image/side-bar-icon.png" alt="">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">{{item.text}}</h4>
+                    </div>
+                </div>
+            </template>
+        </div>
+        <!-- end for .main-container -->
+
+        <!-- 主要内容 -->
+        <div class="main-content col-sm-9">
+            <template v-for="item in mainContentItems">
+                <div class="main-content-item row">
+                    <div class="main-content-item-title col-md-12">{{item.title}}</div>
+                    <div class="main-content-item-container col-md-12">
+                        <template v-for="videoItem in item.list">
+                            <div class="main-content-item-video-card col-md-2">
+                                <div class="thumbnail">
+                                    <img src="static/image/video-thumbnail.jpg">
+                                    <div class="caption">
+                                        <h5>{{videoItem.title}}</h5>
+                                        <p>{{videoItem.description}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+
+                    </div>
+                </div>
+            </template>
+
+            <div class="footer col-md-12">
+                <div class="footer-link-container pull-left">
+                    <a href="#">关于我们</a>
+                    <a href="#">联系我们</a>
+                    <a href="#">用户反馈</a>
+                    <a href="#">常见问题</a>
+                </div>
+                <div class="pull-right">
+                    CopyRight© 2016 Doopler.京ICP备XXXXXXXX号-1
+                </div>
+            </div>
+        </div>
+        <!-- end for .main-content -->
+    </div>
+    <!-- end for .main-container-->
+
+
+</div>
+
+
+
+</body>
+</html>
