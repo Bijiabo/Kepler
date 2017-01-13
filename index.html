@@ -29,7 +29,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Kepler</a>
+                <a class="navbar-brand" href="#">
+                    <img src="static/image/logo.jpg" alt="Kepler">
+                </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -72,21 +74,29 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
+    <!-- end of navigation bar -->
 
     <!-- main container -->
     <div class="main-container">
         <!-- 侧边栏 -->
         <div class="side-bar">
-            <template v-for="item in sideBarItems">
-                <div class="side-bar-item media">
-                    <a class="media-left" href="#">
-                        <img src="static/image/side-bar-icon.png" alt="">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="media-heading">{{item.text}}</h4>
-                    </div>
-                </div>
-            </template>
+            <ul class="nav nav-pills nav-stacked" role="tablist">
+                <template v-for="item in sideBarItems">
+                    <li class="side-bar-item" role="presentation">
+                        <a href="#">
+                            <div class="icon" href="#">
+                                <!--<img src="static/image/side-bar-icon.png" alt="">-->
+                            </div>
+                            <div class="title">
+                                <h4 class="media-heading">{{item.text}}</h4>
+                            </div>
+
+                        </a>
+                    </li>
+                </template>
+
+            </ul>
+
         </div>
         <!-- end for .main-container -->
 
@@ -97,14 +107,16 @@
                     <div class="main-content-item-title col-md-12">{{item.title}}</div>
                     <div class="main-content-item-container col-md-12">
                         <template v-for="videoItem in item.list">
-                            <div class="main-content-item-video-card col-md-2">
-                                <div class="thumbnail">
-                                    <img src="static/image/video-thumbnail.jpg">
-                                    <div class="caption">
-                                        <h5>{{videoItem.title}}</h5>
-                                        <p>{{videoItem.description}}</p>
+                            <div class="main-content-item-video-card col-lg-2 col-md-3 col-sm-4">
+                                <a href="">
+                                    <div class="thumbnail animation">
+                                        <img src="static/image/video-thumbnail.jpg">
+                                        <div class="caption">
+                                            <h5>{{videoItem.title}}</h5>
+                                            <p>{{videoItem.description}}</p>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </template>
 
