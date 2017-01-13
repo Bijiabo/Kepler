@@ -1,0 +1,22 @@
+<div class="side-bar">
+    <ul class="nav nav-pills nav-stacked" role="tablist">
+
+        <template v-for="item in sideBarItems">
+            <!--侧边栏 cell 元素 start -->
+            <li class="side-bar-item" role="presentation">
+                <a href="#">
+                    <div class="icon" href="#">
+                        <!--<img src="static/image/side-bar-icon.png" alt="">-->
+                    </div>
+                    <div class="title">
+                        <h4 class="media-heading">{{item.text}}</h4>
+                    </div>
+
+                </a>
+            </li>
+            <!--侧边栏 cell 元素 end -->
+        </template>
+
+    </ul>
+
+</div>
