@@ -8,7 +8,9 @@
 - [登出](https://bijiabo.github.io/Kepler/log_out.html )
 - [历史记录](https://bijiabo.github.io/Kepler/history.html )
 - [频道](https://bijiabo.github.io/Kepler/channels.html )
+
 ## 沟通记录
+
 ### 关于footer
-联系我们和用户反馈合并或取其一
-常见问题一定要保留，包含会员特权的说明
+- 联系我们和用户反馈合并或取其一
+- 常见问题一定要保留，包含会员特权的说明
