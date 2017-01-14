@@ -1,22 +1,25 @@
-<div class="side-bar">
-    <ul class="nav nav-pills nav-stacked" role="tablist">
-
+<div class="side-bar panel">
+    <ul class="list-group">
         <template v-for="item in sideBarItems">
-            <!--侧边栏 cell 元素 start -->
-            <li class="side-bar-item" role="presentation">
-                <a href="#">
-                    <div class="icon" href="#">
-                        <!--<img src="static/image/side-bar-icon.png" alt="">-->
-                    </div>
-                    <div class="title">
-                        <h4 class="media-heading">{{item.text}}</h4>
-                    </div>
-
+            <template v-if="item.icon">
+                <a class="list-group-item" :class="[item.active ? 'active' : '']" href="#">
+                    <span>
+                        <i class="fa" :class="[item.icon]" aria-hidden="true"></i>
+                        {{item.text}}
+                    </span>
                 </a>
-            </li>
-            <!--侧边栏 cell 元素 end -->
-        </template>
+            </template>
+            <template v-else>
+                <a class="list-group-item subclass" href="#">
+                    <span>
+                        <i class="fa fa-caret-right" aria-hidden="true"></i>
+                        {{item.text()}}
+                    </span>
+                </a>
+            </template>
 
+
+        </template>
     </ul>
 
 </div>

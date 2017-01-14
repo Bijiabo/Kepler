@@ -13,13 +13,16 @@ function fillArray(value, len) {
 // fake side bar demo data
 var sideBarItems = fillArray({
     icon: undefined,
-    text: 'test'
-}, 20);
-
-sideBarItems[0] = {
-    icon: 'home',
-    text: 'Home'
-};
+    text: function () {
+        return words({ min: 1, max: 3, join: ' ' }).toUpperCase();
+    }
+}, 10);
+sideBarItems[0] = {icon: 'fa-home', text: '首页', active: true};
+sideBarItems[1] = {icon: 'fa-hashtag', text: '类别'};
+sideBarItems[2] = {icon: 'fa-heart', text: '收藏'};
+sideBarItems[3] = {icon: 'fa-history', text: '历史记录'};
+sideBarItems[4] = {icon: 'fa-eye', text: '浏览频道'};
+sideBarItems[5] = {icon: 'fa-rss', text: '订阅内容'};
 
 // fake main content data
 var mainContentItems = [];

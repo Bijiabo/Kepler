@@ -83,9 +83,29 @@ body {
 
     width: 200px;
     height: 100%;
-    padding: 13px 22px;
+    /*padding: 13px 22px;*/
     overflow-y: scroll;
     background-color: #222222;
+}
+
+.side-bar .list-group-item {
+    background: transparent;
+    border-color: rgba(255,255,255,0.02);
+    transition: all 0.3s ease;
+}
+.side-bar .list-group-item.active {
+    background-color: rgba(255,255,255,0.05);
+}
+.side-bar .list-group-item:hover {
+    background-color: transparent;
+    color: #bcbcbc;
+    transform: translate(12px,0);
+}
+.side-bar .list-group-item.active:hover {
+    border-color: rgba(255,255,255,0.02);
+}
+.side-bar .list-group-item.subclass {
+    padding-left: 32px;
 }
 
 .side-bar-item {
