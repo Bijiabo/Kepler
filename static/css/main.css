@@ -37,6 +37,32 @@ body {
 .navigation-bar .navbar-brand {
     padding: 6px;
 }
+.navigation-bar .form-control {
+    background: #252525;
+    border-color: #000000;
+    outline: none;
+    box-shadow: none;
+}
+.navigation-bar .form-control:focus {
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
+    background-color: #cccccc;
+}
+.navigation-bar .input-group {
+    width: 200px;
+}
+.navigation-bar .input-group.focus {
+    width: 300px;
+}
+.navigation-bar .input-group-btn .btn {
+    background: #1d1d1d;
+    border-color: #000000;
+    color: #535353;
+}
+
+.navigation-bar .input-group.focus .input-group-btn .btn {
+    color: #cccccc;
+    background-color: #444444;
+}
 
 /* main container */
 .main-container {
