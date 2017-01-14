@@ -200,3 +200,19 @@ body {
 /* comment panel */
 .comment-panel {
 }
+
+.comment-post-input-container {
+    width: 100%;
+}
+
+/* right side bar */
+.right-side-bar-title {
+    margin-bottom: 16px;
+}
+.right-side-bar-video-card {
+    padding: 0;
+}
+
+.right-side-bar-video-card .media-left img {
+    width: 80px;
+}
