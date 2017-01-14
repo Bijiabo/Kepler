@@ -169,8 +169,10 @@ body {
 
 /* video-player */
 .video-player {
+    margin-top: 16px;
     width: 100%;
-    height: 40vw;
+    height: 400px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 .video-player.video-js .vjs-big-play-button {
     position: absolute;
@@ -178,4 +180,21 @@ body {
     left: 50%;
     margin-left: -1.5em;
     margin-top: -0.75em;
+}
+
+/* video detail panel */
+.video-description-tags .table > tbody > tr > td {
+    border: none;
+}
+
+.video-detail-panel {
+    color: #cccccc;
+}
+
+.video-detail-panel > div {
+    background-color: #252525;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    margin: 16px 0;
+    padding: 16px 0;
 }
