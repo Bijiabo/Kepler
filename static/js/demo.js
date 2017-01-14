@@ -39,6 +39,28 @@ for (var i=0, len=mainContentItemsTitles.length; i< len; i++) {
     });
 }
 
+// fake collection data
+var collections = [];
+var collectionsItemsTitles = ['动作', '冒险', '模拟', '角色扮演'];
+for (var i=0, len=collectionsItemsTitles.length; i< len; i++) {
+    var item = {
+        title: function () {
+            return words({ min: 1, max: 3, join: ' ' });
+        },
+        description: function () {
+            return words({ min: 1, max: 7, join: ' ' });
+        },
+        time: function() {
+            var second = Math.floor(Math.random()*60);
+            return '0' + Math.floor(Math.random()*9) + ':' + (second > 9 ? second : '0'+second);
+        }
+    };
+    collections.push({
+        title: collectionsItemsTitles[i],
+        list: fillArray(item, i===0 ? 12 : 6)
+    });
+}
+
 // fake comment data
 var commentData = [];
 for (var i=0; i< 20; i++) {
@@ -100,7 +122,8 @@ var render = function() {
         el: '#app',
         data: {
             sideBarItems: sideBarItems,
-            commentData: commentData
+            commentData: commentData,
+            collections: collections
         }
     });
 };

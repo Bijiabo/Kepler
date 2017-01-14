@@ -1,0 +1,40 @@
+<div class="col-md-12">
+    <div class="history-list panel-item panel">
+        <template v-for="item in collections">
+            <div class="panel-heading">
+                {{item.title}}
+                <div class="pull-right">
+                    <a href="#">
+                        查看全部 <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="panel-body">
+                <template v-for="videoItem in item.list">
+                    <!--单个视频卡片模板 start-->
+                    <div class="main-content-item-video-card col-lg-2 col-md-3 col-sm-4">
+                        <a href="watch.html">
+                            <div class="thumbnail animation">
+                                <!-- 套用模板时使用
+                                <div class="video-thumbnail" video-time="视频时间">
+                                -->
+                                <div class="video-thumbnail" v-bind:video-time="videoItem.time()">
+                                    <img src="static/image/video-thumbnail.jpg">
+                                </div>
+                                <div class="caption">
+                                    <h5>{{videoItem.title()}}</h5>
+                                    <p>{{videoItem.description()}}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!--单个视频卡片模板 end-->
+                </template>
+            </div>
+        </template>
+
+
+
+
+    </div>
+</div>

@@ -167,6 +167,12 @@ body {
 .main-content-item-video-card a .thumbnail:hover .caption{
     color: rgba(255, 255, 255, 0.6);
 }
+.main-content-item-video-card .caption h5, .main-content-item-video-card .caption p {
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    overflow: hidden;
+}
 .video-thumbnail {
     position: relative;
 }
@@ -242,7 +248,10 @@ body {
 .panel-item .media-body .media-heading h4 {
     margin: 0;
 }
-
+.panel-item .panel-heading {
+    background-color: #222222;
+    border-radius: 0;
+}
 /* video detail panel */
 .video-description-tags .table > tbody > tr > td {
     border: none;
