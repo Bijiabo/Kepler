@@ -22,10 +22,11 @@ body {
     flex-direction: column;
     justify-content: flex-start;
 
-    position: absolute;
+    /*position: absolute;*/
     width: 100%;
-    height: 100%;
-    overflow: hidden;
+    padding-top: 50px;
+    /*height: 100%;*/
+    /*overflow: hidden;*/
 }
 
 /* navigation bar */
@@ -66,21 +67,19 @@ body {
 
 /* main container */
 .main-container {
-    flex-grow: 1;
+}
 
-    display: -webkit-flex;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-
-    height: 100%;
-    overflow: hidden;
-
+/* home page */
+.right-content-container {
+    margin-left: 200px;
 }
 
 /* side bar */
 .side-bar {
-    flex-grow: 0;
+    /*flex-grow: 0;*/
+    position: fixed;
+    top: 50px;
+    left: 0;
 
     width: 200px;
     height: 100%;
@@ -238,7 +237,50 @@ body {
 .right-side-bar-video-card {
     padding: 0;
 }
-
 .right-side-bar-video-card .media-left img {
     width: 80px;
+}
+.right-side-bar-more-link {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 16px;
+    margin-top: 16px;
+}
+
+/* channel list */
+.channel-list-title {
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+.channel-list-item {
+
+}
+.channel-list-item .media-body {
+    width: 100%;
+}
+.channel-list-item .media-body .media-heading {
+    overflow: auto;
+}
+.channel-list-item .media-body .media-heading h4 {
+    margin: 0;
+}
+
+/* pagination */
+.pagination-container ul.pagination {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+.pagination-container ul.pagination li a {
+    transition: all 0.3s ease;
+    background-color: #292929;
+    border-color: #444444;
+    color: #444444;
+}
+.pagination-container ul.pagination li a:hover {
+    background-color: rgba(206, 19, 17, 0.2);
+    /*border-color: rgba(206, 19, 17, 0.5);*/
+    color: rgba(255, 255, 255, 0.5);
+}
+.pagination-container ul.pagination li.active a {
+    background-color: rgba(206, 19, 17, 0.38);
+    border-color: #CE1311;
+    color: #ffffff;
 }
