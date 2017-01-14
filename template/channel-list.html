@@ -2,18 +2,20 @@
     <div class="channel-list-title col-md-12">浏览频道</div>
     <div class="channel-list col-md-12">
         <template v-for="item in [1,2,3,4,5,6,7,8]">
-            <div class="channel-list-item media">
+            <div class="channel-list-item media animation-slow">
                 <a class="media-left" href="#">
                     <img src="../static/image/video-thumbnail.jpg" alt="channel name">
                 </a>
                 <div class="media-body">
                     <div class="media-heading">
                         <div class="pull-left">
-                            <h4>Channel name</h4>
+                            <a href="#">
+                                <h4>Channel name</h4>
+                            </a>
                         </div>
-                        <div class="pull-right">
-                            <span>订阅</span>
-                            <span>9,080</span>
+                        <div class="subscribe-button pull-right">
+                            <span class="subscribe-button-title"><i class="fa fa-play"></i> 订阅</span>
+                            <span class="subscribe-button-count">9,080</span>
                         </div>
                     </div>
                     <p>channel descriptions</p>

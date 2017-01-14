@@ -7,6 +7,7 @@
     <!--styles-->
     <link rel="stylesheet" href="static/css/bootstrap.css">
     <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/font-awesome.min.css">
     <!--scripts-->
     <script src="static/js/jquery-3.1.1.min.js"></script>
     <script src="static/js/tether.min.js"></script>
@@ -23,14 +24,14 @@
     <!-- 导航栏 -->
     <template-import file="./template/navigationBar.html"></template-import>
 
+    <!-- 侧边栏 -->
+    <template-import file="./template/sidebar.html"></template-import>
+
     <!-- main container -->
     <div class="main-container">
-        <!-- 侧边栏 -->
-        <template-import file="./template/sidebar.html"></template-import>
-
         <!-- 主要内容 -->
-        <div class="main-content col-sm-9">
-            <!--TODO: insert main content-->
+        <div class="right-content-container">
+            <template-import file="./template/history-list.html"></template-import>
 
             <template-import file="./template/footer.html"></template-import>
         </div>

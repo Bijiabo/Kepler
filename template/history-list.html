@@ -1,0 +1,38 @@
+<div class="col-md-12">
+    <div class="history-list panel-item panel">
+        <ul class="nav nav-pills navbar-inverse" role="tablist">
+            <li role="presentation" class="active"><a href="#">观看记录</a></li>
+            <li role="presentation"><a href="#">搜索记录</a></li>
+        </ul>
+
+        <div class="panel-body">
+            <ul class="list-group">
+                <template v-for="item in [1,2,3,4,5,6,7,8]">
+                    <li class="list-group-item">
+                        <div class="media">
+                            <a class="media-left" href="#">
+                                <img src="../static/image/video-thumbnail.jpg" alt="video name">
+                            </a>
+                            <div class="media-body">
+                                <div class="media-heading">
+                                    <div class="pull-left">
+                                        <a href="#">
+                                            <h4>视频名称</h4>
+                                        </a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <i class="fa fa-close"></i>
+                                    </div>
+                                </div>
+                                <p>视频介绍文字...</p>
+                                <p>
+                                    <span>观看时间：2017-01-14</span>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </template>
+            </ul>
+        </div>
+    </div>
+</div>

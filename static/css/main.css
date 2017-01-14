@@ -216,6 +216,32 @@ body {
     padding: 16px 0;
     color: #cccccc;
 }
+.panel-item .panel-body {
+    padding: 0;
+    border-radius: 0;
+}
+.panel-item .panel-body .list-group-item:first-child, .panel-item .panel-body .list-group-item:last-child {
+    border-radius: 0;
+}
+.panel-item .list-group-item {
+    background: none;
+    border-color: #343434;
+    border-right: none;
+    border-left: none;
+}
+.panel-item .list-group-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: all 0.8s ease;
+}
+.panel-item .media-body {
+    width: 100%;
+}
+.panel-item .media-body .media-heading {
+    overflow: auto;
+}
+.panel-item .media-body .media-heading h4 {
+    margin: 0;
+}
 
 /* video detail panel */
 .video-description-tags .table > tbody > tr > td {
@@ -251,18 +277,17 @@ body {
     padding-bottom: 8px;
     margin-bottom: 8px;
 }
+.channel-list {
+    padding: 0;
+}
 .channel-list-item {
-
-}
-.channel-list-item .media-body {
-    width: 100%;
-}
-.channel-list-item .media-body .media-heading {
-    overflow: auto;
-}
-.channel-list-item .media-body .media-heading h4 {
     margin: 0;
+    padding: 8px 16px;
 }
+.channel-list-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
 
 /* pagination */
 .pagination-container ul.pagination {
@@ -283,4 +308,40 @@ body {
     background-color: rgba(206, 19, 17, 0.38);
     border-color: #CE1311;
     color: #ffffff;
+}
+
+/* subscribe */
+.subscribe-button {
+    border: 1px solid #CE1311;
+    padding: 0;
+    font-size: 12px;
+}
+.subscribe-button span {
+    padding: 2px 6px;
+}
+.subscribe-button-title {
+    margin: 0;
+    background-color: #CE1311;
+    color: #ffffff;
+}
+.subscribe-button-count {
+    color: #ffffff;
+}
+
+/* history list */
+.history-list {
+    padding-top: 0;
+}
+.history-list .nav li a {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.5);
+    border-radius: 0;
+}
+.history-list .nav li.active a {
+    border: none;
+    color: #CE1311;
+}
+
+.history-list .nav li a:hover {
+    background-color: rgba(206, 19, 17, 0.38);
 }
