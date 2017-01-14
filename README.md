@@ -1,4 +1,5 @@
 # Kepler
+**本地浏览需要启用 http server，使用 file://xxx 观看会有问题**
 预览地址：
 - [主页](https://bijiabo.github.io/Kepler/index.html )
     - 基本布局👌
