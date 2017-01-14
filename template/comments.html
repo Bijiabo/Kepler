@@ -1,3 +1,66 @@
-<div class="comments col-md-12">
+<div class="comment-panel panel-item">
+    <div class="comment-panel-title col-md-12">
+        评论(203)：
+    </div>
 
+    <div class="comment-post-panel col-md-12">
+        <div class="pull-left">
+            <img src="../static/image/user.jpg" alt="user name">
+        </div>
+        <div class="pull-right row">
+            <textarea class="col-md-12" name="comment" id="comment-input-textarea" cols="30" rows="3" placeholder="点此输入评论内容..."></textarea>
+            <button class="btn btn-default col-md-12">发表</button>
+        </div>
+    </div>
+
+    <div class="comment-list col-md-12">
+        <template v-for="comment in commentData">
+            <div class="media">
+                <a class="media-left" href="#">
+                    <img :src="comment.user.avatar" alt="user name">
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading">
+                        {{comment.user.name}}
+                        <span class="comment-post-time">{{comment.postTime}}</span>
+                    </h4>
+                    <p>{{comment.content}}</p>
+                    <div class="comment-interaction-panel">
+                        <span>{{comment.reply.count}}</span>
+                        <span>Up{{comment.thumbsUp}}</span>
+                        <span>Down {{comment.thumbsDown}}</span>
+                    </div>
+                    <div class="comment-reply-list-container">
+                        <div class="comment-reply-list-show-all">查看全部 {{comment.reply.count}} 条回复</div>
+                        <div class="comment-reply-list row">
+
+                            <template v-for="reply in comment.reply.list">
+                                <div class="comment-reply-item col-md-12">
+                                    <div class="media">
+                                        <a class="media-left" href="#">
+                                            <img :src="reply.user.avatar" :alt="reply.user.name">
+                                        </a>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">
+                                                {{reply.user.name}}
+                                                <span class="comment-post-time">{{reply.postTime}}</span>
+                                            </h4>
+                                            <p class="comment-reply-content">{{reply.content}}</p>
+                                            <div class="comment-reply-interaction-panel">
+                                                <span>回复 {{reply.reply.count}}</span>
+                                                <span>Up {{reply.thumbsUp}}</span>
+                                                <span>Down {{reply.thumbsDown}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
 </div>

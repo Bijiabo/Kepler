@@ -39,6 +39,45 @@ for (var i=0, len=mainContentItemsTitles.length; i< len; i++) {
     });
 }
 
+// fake comment data
+var commentData = [];
+for (var i=0; i< 20; i++) {
+    var commentItem = {
+        postTime: Math.floor(Math.random()*9) + '小时前',
+        content: words({ min: 3, max: 100, join: ' ' }),
+        user: {
+            name: words({ exactly: 2, join: ' ' }),
+            avatar: '../static/image/user.jpg',
+            id: Math.floor(Math.random()*999)
+        },
+        thumbsUp: Math.floor(Math.random()*999),
+        thumbsDown: Math.floor(Math.random()*100),
+        reply: {
+            count: Math.floor(Math.random()*10),
+            list: []
+        }
+    };
+
+    for (var a=0; a<commentItem.reply.count; a++) {
+        commentItem.reply.list.push({
+            postTime: Math.floor(Math.random()*9) + '小时前',
+            content: words({ min: 3, max: 50, join: ' ' }),
+            user: {
+                name: words({ exactly: 2, join: ' ' }),
+                avatar: '../static/image/user.jpg',
+                id: Math.floor(Math.random()*999)
+            },
+            thumbsUp: Math.floor(Math.random()*999),
+            thumbsDown: Math.floor(Math.random()*100),
+            reply: {
+                count: Math.floor(Math.random()*9)
+            }
+        });
+    }
+
+    commentData.push(commentItem);
+}
+
 
 // 添加组件
 var templateImports = $('template-import');
@@ -60,7 +99,8 @@ var render = function() {
     var app = new Vue({
         el: '#app',
         data: {
-            sideBarItems: sideBarItems
+            sideBarItems: sideBarItems,
+            commentData: commentData
         }
     });
 };
