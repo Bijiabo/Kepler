@@ -2,20 +2,41 @@
     <ul class="list-group">
         <template v-for="item in sideBarItems">
             <template v-if="item.icon">
-                <a class="list-group-item" :class="[item.active ? 'active' : '']" href="#">
-                    <span>
+                <div class="list-group-item" :class="[item.active?'active':'', item.list?'side-bar-list-parent':'']">
+                    <a href="#" class="col-xs-12 animation">
                         <i class="fa" :class="[item.icon]" aria-hidden="true"></i>
                         {{item.text}}
-                    </span>
-                </a>
+                    </a>
+                    <div class="side-bar-sublist animation">
+                        <template v-for="(listItem, _index) in item.list">
+                            <template v-if="_index === 0">
+                                <!--若继续增加子目录-->
+                                <div href="#" class="side-bar-sublist-item col-xs-12 animation side-bar-list-parent">
+                                    <span>{{listItem.text}}</span>
+                                    <div class="side-bar-sublist animation">
+                                        <a href="#" class="side-bar-sublist-item col-xs-12 animation">
+                                            xxxx
+                                        </a>
+                                    </div>
+                                </div>
+                            </template>
+
+                            <template v-else>
+                                <a href="#" class="side-bar-sublist-item col-xs-12 animation">
+                                    {{listItem.text}}
+                                </a>
+                            </template>
+                        </template>
+                    </div>
+                </div>
             </template>
             <template v-else>
-                <a class="list-group-item subclass" href="#">
-                    <span>
+                <div class="list-group-item subclass" href="#" count="8">
+                    <a href="#" class="col-xs-12 animation">
                         <i class="fa fa-caret-right" aria-hidden="true"></i>
                         {{item.text()}}
-                    </span>
-                </a>
+                    </a>
+                </div>
             </template>
 
 

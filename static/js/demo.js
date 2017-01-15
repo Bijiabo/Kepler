@@ -18,7 +18,15 @@ var sideBarItems = fillArray({
     }
 }, 10);
 sideBarItems[0] = {icon: 'fa-home', text: '首页', active: true};
-sideBarItems[1] = {icon: 'fa-hashtag', text: '类别'};
+sideBarItems[1] = {icon: 'fa-hashtag', text: '类别',
+    list: [
+        {icon: undefined, text: '动作'},
+        {icon: undefined, text: '冒险'},
+        {icon: undefined, text: '模拟'},
+        {icon: undefined, text: '角色扮演'},
+        {icon: undefined, text: '休闲'},
+        {icon: undefined, text: '其他'}
+    ]};
 sideBarItems[2] = {icon: 'fa-heart', text: '收藏'};
 sideBarItems[3] = {icon: 'fa-history', text: '历史记录'};
 sideBarItems[4] = {icon: 'fa-eye', text: '浏览频道'};
