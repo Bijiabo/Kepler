@@ -33,3 +33,11 @@ $(document).on('click', '.thumbs-up-button', function () {
 $(document).on('click', '.thumbs-down-button', function () {
 
 });
+// 显示登陆界面
+$(document).on('click', '.show-log-in', function () {
+
+});
+// 显示注册界面
+$(document).on('click', '.show-register', function () {
+
+});

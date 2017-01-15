@@ -65,6 +65,11 @@ body {
     background-color: #444444;
 }
 
+.navigation-bar .nav li a {
+    box-shadow: none;
+    outline: none;
+}
+
 /* main container */
 .main-container {
 }
