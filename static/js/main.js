@@ -25,3 +25,11 @@ $(document).on('click', '.reply-button', function () {
         parent.find(replyInputContainerElementClass).remove();
     }
 });
+// 点赞
+$(document).on('click', '.thumbs-up-button', function () {
+
+});
+// 踩评论
+$(document).on('click', '.thumbs-down-button', function () {
+
+});
