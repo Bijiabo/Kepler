@@ -15,6 +15,13 @@ var sideBarItems = fillArray({
     icon: undefined,
     text: function () {
         return words({ min: 1, max: 3, join: ' ' }).toUpperCase();
+    },
+    avatar: function () {
+        return 'static/image/avatars/' + Math.floor(Math.random()*5) + '.jpg';
+    },
+    count: function () {
+        var x = Math.floor(Math.random()*500);
+        return x>99 ? '99+' : x;
     }
 }, 10);
 sideBarItems[0] = {icon: 'fa-home', text: '首页', active: true};

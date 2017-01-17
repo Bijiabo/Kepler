@@ -31,9 +31,10 @@
                 </div>
             </template>
             <template v-else>
-                <div class="list-group-item subclass" href="#" count="8">
+                <div class="list-group-item subclass" href="#" :count="item.count()">
                     <a href="#" class="col-xs-12 animation">
-                        <i class="fa fa-caret-right" aria-hidden="true"></i>
+                        <!--<i class="fa fa-caret-right" aria-hidden="true"></i>-->
+                        <img :src="item.avatar()" :alt="item.text()" class="img-circle">
                         {{item.text()}}
                     </a>
                 </div>
