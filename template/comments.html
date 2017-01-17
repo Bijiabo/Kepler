@@ -10,15 +10,15 @@
                     <img src="../static/image/user.jpg" alt="user name">
                 </a>
                 <div class="media-body comment-post-input-container">
-                    <textarea class="col-md-12" name="comment" id="comment-input-textarea" cols="30" rows="3" placeholder="点此输入评论内容..."></textarea>
-                    <button class="btn btn-default col-md-12">发表</button>
+                    <textarea class="col-xs-12" name="comment" id="comment-input-textarea" cols="30" rows="3" placeholder="点此输入评论内容..."></textarea>
+                    <button class="btn btn-default col-xs-12">发表</button>
                 </div>
             </div>
         </div>
 
         <div class="comment-list col-md-12">
             <ul class="list-group">
-                <template v-for="comment in commentData">
+                <template v-for="(comment, parentIndex) in commentData">
                     <li class="list-group-item">
                         <div class="media">
                             <div class="media-left">
@@ -33,7 +33,7 @@
                                 </h4>
                                 <p>{{comment.content}}</p>
                                 <div class="comment-interaction-panel">
-                                    <span class="reply-button"><i class="fa fa-reply"></i> {{comment.reply.count}}</span>
+                                    <span class="reply-button" :comment-id="connectString(parentIndex)"><i class="fa fa-reply"></i> {{comment.reply.count}}</span>
                                     <span class="thumbs-up-button"><i class="fa fa-thumbs-up"></i> {{comment.thumbsUp}}</span>
                                     <span class="thumbs-down-button"><i class="fa fa-thumbs-down"></i> {{comment.thumbsDown}}</span>
                                 </div>
@@ -44,7 +44,7 @@
                                     </div>
                                     <div class="comment-reply-list row">
                                         <ul class="list-group">
-                                            <template v-for="reply in comment.reply.list">
+                                            <template v-for="(reply, childIndex) in comment.reply.list">
                                                 <li class="list-group-item">
                                                     <div class="comment-reply-item col-md-12">
                                                         <div class="media">
@@ -60,7 +60,7 @@
                                                                 </h4>
                                                                 <p class="comment-reply-content">{{reply.content}}</p>
                                                                 <div class="comment-reply-interaction-panel">
-                                                                    <span class="reply-button"><i class="fa fa-reply"></i> {{reply.reply.count}}</span>
+                                                                    <span class="reply-button" :comment-id="connectString(parentIndex, '-', childIndex)"><i class="fa fa-reply"></i> {{reply.reply.count}}</span>
                                                                     <span class="thumbs-up-button"><i class="fa fa-thumbs-up"></i> {{reply.thumbsUp}}</span>
                                                                     <span class="thumbs-down-button"><i class="fa fa-thumbs-down"></i> {{reply.thumbsDown}}</span>
                                                                 </div>
@@ -80,9 +80,42 @@
                 </template>
 
             </ul>
-
         </div>
     </div>
 
-
+    <!--评论回复模板-->
+    <div class="comment-reply-template" style="display: none">
+        <li class="list-group-item">
+            <div class="comment-reply-item col-md-12">
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="avatar">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">
+                            <span class="user-name">user name</span>
+                            <span class="comment-post-time">postTime</span>
+                        </h4>
+                        <p class="comment-reply-content">reply content</p>
+                        <div class="comment-reply-interaction-panel">
+                            <span class="reply-button" comment-id="">
+                                <i class="fa fa-reply"></i>
+                                <span class="reply-count">reply count</span>
+                            </span>
+                            <span class="thumbs-up-button">
+                                <i class="fa fa-thumbs-up"></i>
+                                <span class="thumbs-up-count">reply thumbsUp</span>
+                            </span>
+                            <span class="thumbs-down-button">
+                                <i class="fa fa-thumbs-down"></i>
+                                <span class="thumbs-down-count">reply thumbsDown</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </div>
 </div>

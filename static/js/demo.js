@@ -142,6 +142,11 @@ var render = function() {
             sideBarItems: sideBarItems,
             commentData: commentData,
             collections: collections
+        },
+        methods: {
+            connectString: function () {
+                return Array.from(arguments).join('');
+            }
         }
     });
 };
