@@ -1,19 +1,22 @@
 <div class="right-side-bar panel-item row">
-    <div class="right-side-bar-title col-md-12">推荐视频</div>
+    <div class="right-side-bar-title col-md-12 panel-heading">推荐视频</div>
     <div class="right-side-bar-list col-md-12">
-        <template v-for="item in [0,1,2,3,4,5,6,7,8]">
+        <template v-for="(item,index) in [0,1,2,3,4,5,6,7,8]">
             <div class="right-side-bar-video-card media">
                 <a class="media-left" href="#">
-                    <img src="../static/image/video-thumbnail.jpg" alt="video-thumbnail" class="img-responsive">
+                    <img src="static/image/video-thumbnail.jpg" alt="video-thumbnail">
                 </a>
                 <div class="media-body">
                     <h5 class="media-heading">Video title</h5>
                     <p>author name</p>
                 </div>
             </div>
+            <div class="right-side-bar-list-divider" v-if="index === 0"></div>
         </template>
     </div>
     <div class="right-side-bar-more-link col-md-12 text-center">
-        浏览更多
+        <a href="#">
+            浏览更多
+        </a>
     </div>
 </div>
