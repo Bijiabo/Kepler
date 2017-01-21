@@ -497,6 +497,7 @@ body {
 
 /* channel list */
 .channel-list-title {
+    padding-top: 16px;
     padding-bottom: 8px;
     margin-bottom: 8px;
 }
