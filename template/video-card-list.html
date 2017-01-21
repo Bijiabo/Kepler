@@ -1,6 +1,11 @@
 <template v-for="item in mainContentItems">
     <div class="main-content-item row">
-        <div class="main-content-item-title col-md-12">{{item.title}}</div>
+        <div class="main-content-item-title col-md-12">
+            <a href="#" class="animation">
+                {{item.title}}
+                <span class="fa fa-angle-right"></span>
+            </a>
+        </div>
         <div class="main-content-item-container col-md-12">
 
             <template v-for="videoItem in item.list">

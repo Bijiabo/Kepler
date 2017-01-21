@@ -290,7 +290,14 @@ body {
 }
 .main-content-item-title {
     padding-top: 16px;
+    padding-bottom: 8px;
+}
+.main-content-item-title a {
+    text-decoration: none;
     color: rgba(206, 19, 17, 0.7);
+}
+.main-content-item-title a:hover {
+    color: rgba(206, 19, 17, 1);
 }
 .main-content-item-container {
     padding-left: 0;
