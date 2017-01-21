@@ -3,7 +3,6 @@
 
 预览地址：
 - [主页](https://bijiabo.github.io/Kepler/index.html )
-    - 基本布局👌
 - [观看页面](https://bijiabo.github.io/Kepler/watch.html )
 - [登陆](https://bijiabo.github.io/Kepler/log_in.html )
 - [注册](https://bijiabo.github.io/Kepler/register.html )
@@ -15,8 +14,9 @@
 ## 沟通记录
 
 ### 关于footer
-- 联系我们和用户反馈合并或取其一
-- 常见问题一定要保留，包含会员特权的说明
+- [x] 联系我们和用户反馈合并或取其一
+- [x] 常见问题一定要保留，包含会员特权的说明
+
 ### 2017.01.21 沟通修改内容
 - 添加个人设置界面
     - 能修改头像
