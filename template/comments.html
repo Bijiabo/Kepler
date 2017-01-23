@@ -7,7 +7,7 @@
         <div class="comment-post-panel col-md-12">
             <div class="media">
                 <a class="media-left" href="#">
-                    <img src="../static/image/user.jpg" alt="user name">
+                    <img src="static/image/user.jpg" alt="user name" class="img-rounded">
                 </a>
                 <div class="media-body comment-post-input-container">
                     <textarea class="col-xs-12" name="comment" id="comment-input-textarea" cols="30" rows="3" placeholder="点此输入评论内容..."></textarea>
@@ -23,7 +23,7 @@
                         <div class="media">
                             <div class="media-left">
                                 <a href="#">
-                                    <img :src="comment.user.avatar" alt="user name">
+                                    <img :src="comment.user.avatar" alt="user name" class="img-rounded">
                                 </a>
                             </div>
                             <div class="media-body">
@@ -50,7 +50,7 @@
                                                         <div class="media">
                                                             <div class="media-left">
                                                                 <a href="#">
-                                                                    <img :src="reply.user.avatar" :alt="reply.user.name">
+                                                                    <img :src="reply.user.avatar" :alt="reply.user.name" class="img-rounded">
                                                                 </a>
                                                             </div>
                                                             <div class="media-body">
@@ -90,7 +90,7 @@
                 <div class="media">
                     <div class="media-left">
                         <a href="#">
-                            <img class="avatar">
+                            <img class="avatar img-rounded">
                         </a>
                     </div>
                     <div class="media-body">
