@@ -475,9 +475,13 @@ body {
     right: 16px;
     margin: 0;
     font-size: 28px;
+    border-bottom: 2px solid #8e1210;
 }
 .video-description-detail p {
     margin-bottom: 16px;
+}
+.video-info-detail-subscribe-button-container {
+    margin-top: 11px;
 }
 /* comment panel */
 .comment-panel .panel-body {
@@ -619,20 +623,43 @@ body {
 
 /* subscribe */
 .subscribe-button {
-    border: 1px solid #CE1311;
+    border: 1px solid #8e1210;
     padding: 0;
     font-size: 12px;
+    line-height: 22px;
+    border-radius: 4px;
+    cursor: pointer;
 }
 .subscribe-button span {
-    padding: 2px 6px;
+    padding: 4px 6px;
+}
+.subscribe-button span .fa {
+    margin-right: 2px;
 }
 .subscribe-button-title {
     margin: 0;
-    background-color: #CE1311;
-    color: #ffffff;
+    background-color: #8e1210;
+    color: #cccccc;
 }
 .subscribe-button-count {
-    color: #ffffff;
+    color: #9f9f9f;
+}
+/*active*/
+.subscribe-button.active {
+    border: 1px solid #5a5a5a;
+}
+.subscribe-button.active .subscribe-button-title {
+    background-color: #5a5a5a;
+    color: #cccccc;
+}
+.subscribe-button.active .subscribe-button-title .fa-close {
+    display: none;
+}
+.subscribe-button.active:hover .subscribe-button-title .fa-close {
+    display: inherit;
+}
+.subscribe-button.active:hover .subscribe-button-title .fa-check {
+    display: none;
 }
 
 /* history list */

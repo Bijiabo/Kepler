@@ -28,7 +28,7 @@
 - [x] footer 文字颜色变成侧边栏灰色
 - [x] video-card-list 缩略图比例定好,css 处理一下
 - video-card 的图片压缩的异常处理
-- watch.html 页面图标添加和完善
+- [x] watch.html 页面图标添加和完善
 - 视频播放器样式定制
 - watch.html 添加剧场模式（暂缓）
 - [x] watch.html 主体变宽
@@ -36,7 +36,7 @@
 - history.html 搜索的是关键字，类似 youtube
     - 未完善
 - [x] histtory.html 头部的标题修改为可点击样式
-- channels.html 添加已经订阅状态和点击交互
+- [x] channels.html 添加已经订阅状态
 - channels.html description 文字超出的显示 ...
 - 添加频道首页
     - 头部图片
