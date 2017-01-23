@@ -1,41 +1,59 @@
 <div class="channel-list-container panel-item">
-    <div class="channel-list-title col-md-12 panel-heading">浏览频道</div>
-    <div class="channel-list col-md-12">
-        <template v-for="(item,index) in [1,2,3,4,5,6,7,8]">
-            <div class="channel-list-item media animation-slow">
-                <a class="media-left" href="#">
-                    <img src="static/image/video-thumbnail.jpg" alt="channel name" class="img-rounded">
-                </a>
-                <div class="media-body">
-                    <div class="media-heading">
-                        <div class="pull-left">
-                            <a href="#">
-                                <h4>Channel name</h4>
+    <div class="panel-body">
+        <div class="channel-banner">
+            <img src="static/image/channel-banner.jpg" alt="">
+        </div>
+        <div class="channel-info">
+            <div class="col-md-8">
+                <h4>Channel Name</h4>
+                <p class="channel-description">频道简介...</p>
+            </div>
+            <div class="col-md-4">
+                <div class="pull-right">
+                    <div class="subscribe-button animation">
+                                    <span class="subscribe-button-title">
+                                        <i class="fa fa-play-circle"></i>
+                                            订阅
+                                    </span>
+                        <span class="subscribe-button-count">9,080</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <template v-for="(item,index) in mainContentItems">
+            <div class="main-content-item row" v-if="index===0">
+                <div class="main-content-item-title col-md-12">
+                    <a href="#" class="animation">
+                        上传的视频
+                    </a>
+                </div>
+                <div class="main-content-item-container col-md-12">
+
+                    <template v-for="videoItem in item.list">
+                        <!--单个视频卡片模板 start-->
+                        <div class="main-content-item-video-card col-lg-2 col-md-3 col-sm-4">
+                            <a href="watch.html">
+                                <div class="thumbnail animation">
+                                    <!-- 套用模板时使用
+                                    <div class="video-thumbnail" video-time="视频时间">
+                                    -->
+                                    <div class="video-thumbnail" v-bind:video-time="videoItem.time()">
+                                        <img src="static/image/video-thumbnail.jpg" class="img-responsive">
+                                    </div>
+                                    <div class="caption">
+                                        <h5>{{videoItem.title}}</h5>
+                                        <p>{{videoItem.description}}</p>
+                                    </div>
+                                </div>
                             </a>
                         </div>
-                        <div class="pull-right">
-                            <div class="subscribe-button animation" :class="[{active: index===1}]">
-                                <span class="subscribe-button-title">
-                                    <template v-if="index!==1">
-                                        <i class="fa fa-play-circle"></i>
-                                        订阅
-                                    </template>
-                                    <template v-else>
-                                        <i class="fa fa-check" v-if="index===1"></i>
-                                        <i class="fa fa-close" v-if="index===1"></i>
-                                        已订阅
-                                    </template>
+                        <!--单个视频卡片模板 end-->
+                    </template>
 
-
-                                </span>
-                                <span class="subscribe-button-count">9,080</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p>channel descriptions</p>
-                    <p>冒险 / 动作</p>
                 </div>
             </div>
         </template>
+
     </div>
 </div>

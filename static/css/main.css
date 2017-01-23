@@ -686,3 +686,21 @@ body {
     color: #d7dde0;
     background-color: rgba(60, 60, 60, 0.38);
 }
+
+/* channel */
+.channel-banner img {
+    width: 100%;
+}
+.channel-info {
+    overflow: auto;
+    padding: 16px 4px;
+    border-bottom: 1px solid #2d2d2d;
+}
+.channel-info h4 {
+}
+.channel-info .subscribe-button {
+    margin-top: 8px;
+}
+.channel-description {
+    color: #9d9d9d;
+}
