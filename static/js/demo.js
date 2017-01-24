@@ -147,6 +147,13 @@ var render = function() {
             connectString: function () {
                 return Array.from(arguments).join('');
             }
+        },
+        mounted: function () {
+            // 设定搜索页面显示内容
+            if (/search.html/ig.test(location.pathname)) {
+                $('.search-input').val('搜索内容').focus();
+            }
+
         }
     });
 };

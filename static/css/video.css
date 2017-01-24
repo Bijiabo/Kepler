@@ -1,0 +1,102 @@
+#player {
+    background-color: #1b1b1b;
+}
+.player {
+    position: relative;
+    font-size: 0;
+}
+#controller {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 30px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2147483647
+}
+.icon {
+    font-size: 18px;
+    line-height: 30px;
+    color: #999;
+}
+.icon:hover {
+    cursor: pointer;
+}
+.icon-play,
+.icon-pause,
+.icon-stop {
+    padding-left: 5px;
+}
+.icon-expand,
+.icon-contract {
+    font-size: 16px;
+    float: right;
+    padding-right: 10px;
+}
+.icon-upload {
+    float: right;
+    padding-right: 10px;
+}
+#file {
+    visibility: hidden;
+}
+#timer,
+#volume {
+    float: left;
+}
+#timer {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 30px;
+    color: #999;
+    vertical-align: top;
+    margin-right: 15px;
+}
+
+.controlBar {
+    background: #999;
+    height: 6px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.controlInner {
+    height: 6px;
+    background: #2187e7;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px 1px rgba(0,198,255,0.7);
+    -webkit-transition: width 0.1s;
+    transition: width 0.1s;
+}
+
+#progressBar {
+    margin: 12px 20px 12px 5px;
+}
+#innerBar {
+    width: 0%; /* 播放进度默认为0 */
+}
+
+#volume-control,
+#volume-inner {
+    display: inline-block;
+}
+#volume-control {
+    width: 50%;
+    margin: 12px 0 12px 3px;
+}
+#volume-inner {
+    width: 100%; /* 音量默认100% */
+}
+
+/* fix bug in linux */
+.overflow-h {
+    overflow: hidden;
+}
+
+#player {
+    width: 100%;
+}
+
+#controller > div {
+    height: 50px;
+}
