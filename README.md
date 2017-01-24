@@ -33,8 +33,8 @@
 - watch.html 添加剧场模式（暂缓）
 - [x] watch.html 主体变宽
 - [x] 右上角第推荐视频第一个下面加一个 divider，作为特别推荐
-- history.html 搜索的是关键字，类似 youtube
-    - 未完善
+- [x] history.html 搜索的是关键字，类似 youtube
+    - [x] 未完善
 - [x] histtory.html 头部的标题修改为可点击样式
 - [x] channels.html 添加已经订阅状态
 - channels.html description 文字超出的显示 ...
