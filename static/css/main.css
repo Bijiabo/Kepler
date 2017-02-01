@@ -3,6 +3,27 @@ body {
     /*height: 2000px;*/
 }
 
+/* iconfont */
+@font-face {
+    font-family: 'iconfont';  /* project id 226504 */
+    src: url('//at.alicdn.com/t/font_yzwra3jczrm5cdi.eot');
+    src: url('//at.alicdn.com/t/font_yzwra3jczrm5cdi.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_yzwra3jczrm5cdi.woff') format('woff'),
+    url('//at.alicdn.com/t/font_yzwra3jczrm5cdi.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_yzwra3jczrm5cdi.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-vip:before { content: "\e664"; }
+
+
 /*-------*/
 body {
     background-color: #1B1B1B;
@@ -789,6 +810,15 @@ a:hover {
     border-color: #000000;
     color: #535353;
 }
+.setting-panel .panel-body .btn.yellow-btn {
+    border-color: #ffc543;
+    color: #ffc543;
+    margin-right: 12px;
+}
+.setting-panel .panel-body .btn.yellow-btn:hover {
+    background-color: #ffc543;
+    color: #703127;
+}
 .setting-panel .panel-body .btn:hover {
     background: #656565;
     color: #1d000d;
@@ -800,7 +830,7 @@ a:hover {
     box-shadow: none;
 }
 .setting-panel .panel-body label {
-    color: #535353;
+    color: #7b7b7b;
 }
 .setting-panel .panel-body .form-control:focus {
     box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
@@ -810,4 +840,60 @@ a:hover {
     width: 80px;
     height: 80px;
     margin: 12px 0;
+}
+.member-info-username {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+.member-info-des {
+    color: #7b7b7b;
+}
+.panel-divider {
+    height: 1px;
+    width: 100%;
+    background-color: #343434;
+    margin: 16px 0;
+}
+.vip-progress {
+    background-color: #444444;
+    margin-bottom: 6px;
+}
+.vip-progress .progress-bar {
+    background-color: #8e1210;
+}
+.vip-progress-des {
+    position: relative;
+    width: 100%;
+    height: 32px;
+    margin-bottom: 12px;
+    /*background-color: rgba(204, 204, 204, 0.3);*/
+}
+.vip-progress-des-item {
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    overflow: visible;
+}
+.vip-progress-des-item:before {
+    content: attr(des);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 40px;
+    height: 20px;
+    margin-left: -20px;
+    text-align: center;
+    color: #d91b18;
+}
+.vip-progress-des-item:after {
+    content: attr(value);
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    width: 40px;
+    height: 20px;
+    margin-left: -20px;
+    text-align: center;
+    color: #7b7b7b;
 }
