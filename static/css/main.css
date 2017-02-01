@@ -38,6 +38,19 @@ body {
     transition: all 0.8s ease;
 }
 
+.blur {
+    -moz-filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+
+.background-blur {
+    -webkit-backdrop-filter: blur(15px); /* Safari for macOS & iOS*/
+    backdrop-filter: blur(15px); /* Google Chrome */
+}
+
 a {
     color: #cc4b48;
 }
@@ -372,6 +385,8 @@ a:hover {
     background-color: #313131;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
     transform: scale(1.2,1.2);
+    position: relative;
+    z-index: 100;
 }
 .main-content-item-video-card .thumbnail img {
     width: 100%;
@@ -916,48 +931,4 @@ a:hover {
 }
 .modal-content .close {
     color: #7b7b7b;
-}
-/* video */
-.video-container {
-    margin-top: 16px;
-    position: relative;
-    width: 100%;
-    background-color: #252525;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-}
-.video-container video {
-    width: 100%;
-    z-index: 1;
-    margin-bottom: -5px;
-}
-.video-controls {
-    position: absolute;
-    z-index: 2;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
-    height: 30px;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-.video-controls > .video-contol-group {
-    flex-grow: 1;
-    flex-shrink: 0;
-
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-}
-.video-controls > .video-contol-group.right {
-    flex-direction: row-reverse;
-}
-.video-control-item {
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 50px;
-    line-height: 30px;
-    color: rgba(255, 255, 255, 0.7);
 }

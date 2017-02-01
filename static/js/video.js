@@ -1,146 +1,213 @@
-$(function() {
-	var
-		$player = $('#player'),
-		$play = $('#play'),
-		$stop = $('#stop'),
-		$volume = $('#volume'),
-		$expand = $('#expand'),
-		$upload = $('#upload');
+/**
+ * Created by huchunbo on 2017/2/1.
+ */
+// video
+String.prototype.toHHMMSS = function () {
+    var sec_num = parseInt(this, 10); // don't forget the second param
+    var hours   = Math.floor(sec_num / 3600);
+    var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
+    var seconds = sec_num - (hours * 3600) - (minutes * 60);
 
-	var player = $player[0];
-	var 
-		$file = $('#file'),
-		$timer = $('#timer');
-	var
-		$progressBar = $('#progressBar'),
-		$innerBar = $('#innerBar'),
-		$volumeControl = $('#volume-control'),
-		$volumeInner = $('#volume-inner');
+    if (hours   < 10) {hours   = "0"+hours;}
+    if (minutes < 10) {minutes = "0"+minutes;}
+    if (seconds < 10) {seconds = "0"+seconds;}
+    return hours+':'+minutes+':'+seconds;
+};
+var videoData = {
+    currentTime: '00:00:00',
+    duration: '00:00:00',
+    dragging: false
+};
+$(document).on('click', '.video-full-screen', function() {
+    var videoContainer = $('.video-container');
+    if (videoContainer.length > 0) {
+        if (videoContainer.data('fullscreenstatus')) {
+            // 退出全屏
+            videoContainer.data('fullscreenstatus', false);
+            if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+            } else if (document.webkitCancelFullScreen) {
+                document.webkitCancelFullScreen();
+            } else if (document.msCancelFullScreen) {
+                document.msCancelFullScreen();
+            }
+        } else {
+            // 进入全屏
+            videoContainer.data('fullscreenstatus', true);
+            if (videoContainer[0].mozRequestFullScreen) {
+                videoContainer[0].mozRequestFullScreen();
+            } else if (videoContainer[0].webkitRequestFullScreen) {
+                videoContainer[0].webkitRequestFullScreen();
+            } else if (videoContainer[0].msRequestFullScreen) {
+                videoContainer[0].msRequestFullScreen();
+            }
+        }
+    }
+    updateVideoControls();
+});
+var togglePlayPause = function () {
+    var video = $('.video-canvas').get(0);
+    if (video.paused) {
+        video.play();
+    } else {
+        video.pause();
+    }
+    updateVideoControls();
+};
 
-	$play
-		.on('click', function() {
-			if (player.paused) {
-				player.play();
-				$(this).removeClass('icon-play').addClass('icon-pause');
-			} else {
-				player.pause();
-				$(this).removeClass('icon-pause').addClass('icon-play');
-			}
-		});
-
-	$stop
-		.on('click', function() {
-			player.currentTime = 0;
-			$innerBar.css('width', 0 + 'px');
-		});
-
-	$volume
-		.on('click', function() {
-			if (player.muted) {
-				player.muted = false;
-				$(this).removeClass('icon-volume-mute').addClass('icon-volume');
-				$volumeInner.css('width', 100 + '%');
-			} else {
-				player.muted = true;
-				$(this).removeClass('icon-volume').addClass('icon-volume-mute');
-				$volumeInner.css('width', 0);
-			}
-		});
-
-	$expand
-		.on('click', function() {
-			if (!document.webkitIsFullScreen) {
-				player.webkitRequestFullScreen(); //全屏
-				$(this).removeClass('icon-expand').addClass('icon-contract');
-			} else {
-				document.webkitCancelFullScreen();
-				$(this).removeClass('icon-contract').addClass('icon-expand');
-			}
-		});
-
-	$upload
-		.on('click', function() {
-			$file.trigger('click');
-		});
-
-	$file
-		.on('change', function(e) {
-			var file = e.target.files[0],
-				canPlayType = player.canPlayType(file.type);
-
-			if (canPlayType === 'maybe' || canPlayType === 'probably') {
-				src = window.URL.createObjectURL(file);
-				player.src = src;
-				$play.removeClass('icon-pause').addClass('icon-play'); //新打开的视频处于paused状态
-				player.onload = function() {
-					window.URL.revokeObjectURL(src);
-				};
-			} else {
-				alert("浏览器不支持您选择的文件格式");
-			}
-		});
-
-	$player
-		.on('timeupdate', function() {
-			//秒数转换
-			var time = player.currentTime.toFixed(1),
-				minutes = Math.floor((time / 60) % 60),
-				seconds = Math.floor(time % 60);
-
-			if (seconds < 10) {
-				seconds = '0' + seconds;
-			}
-			$timer.text(minutes + ':' + seconds);
-
-			var w = $progressBar.width();
-			if (player.duration) {
-				var per = (player.currentTime / player.duration).toFixed(3);
-				window.per = per;
-			} else {
-				per = 0;
-			}
-			$innerBar.css('width', (w * per).toFixed(0) + 'px');
-
-			if (player.ended) { //播放完毕
-				$play.removeClass('icon-pause').addClass('icon-play'); 
-			}
-		});
-
-	$progressBar
-		.on('click', function(e) {
-			var w = $(this).width(),
-				x = e.offsetX;
-			window.per = (x / w).toFixed(3); //全局变量
-
-			var duration = player.duration;
-			player.currentTime = (duration * window.per).toFixed(0);
-
-			$innerBar.css('width', x + 'px');
-		});
-
-	$volumeControl
-		.on('click', function(e) {
-			var w = $(this).width(),
-				x = e.offsetX;
-			window.vol = (x / w).toFixed(1); //全局变量
-
-			player.volume = window.vol;
-			$volumeInner.css('width', x + 'px');
-		});
-
-	$(document)
-		.on('webkitfullscreenchange', function(e) {
-			var w = $progressBar.width(),
-				w1 = $volumeControl.width();
-			if (window.per) {
-				$innerBar.css('width', (window.per * w).toFixed(0) + 'px');
-			}
-			if (window.vol) {
-				$volumeInner.css('width', (window.vol * w1).toFixed(0) + 'px')
-			}
-		});
+$(document).on('click', '.video-play-button', function(){
+    togglePlayPause();
 });
 
-/** question:
-  * 1. 控制栏
-  */
+$(document).on('dblclick', '.video-canvas', function(){
+   togglePlayPause();
+});
+var updateVideoControls = function() {
+    if ($('.video-canvas').length === 0) {return;}
+    var videoContainer = $('.video-container');
+    var video = $('.video-canvas').get(0);
+    var playing = !video.paused;
+    // update play button
+    $('.video-play-button').removeClass(playing ? 'paused' : 'playing').addClass(!playing ? 'paused' : 'playing');
+    // update full screen button
+    var fullScreen = videoContainer.data('fullscreenstatus');
+    if (fullScreen) {
+        $('.video-full-screen').addClass('active');
+    } else {
+        $('.video-full-screen').removeClass('active');
+    }
+    // update volume UI
+    updateVolumeUI(video.volume);
+};
+
+var updateVideoTIme = function() {
+    // update time
+    // console.log(videoData.currentTime);
+    $('.video-current-time').text(videoData.currentTime);
+    $('.video-duration').text(videoData.duration);
+    var timeLinePlayedWidth = videoData._currentTime/videoData._duration*100 + '%';
+    $('.video-time-line-played').css('width', timeLinePlayedWidth);
+};
+
+// 时间轴交互逻辑
+$(document).on('mousemove', '.video-time-line', function(event){
+    var mousePosition = {
+        x: event.pageX,
+        y: event.pageY
+    };
+    var timeLine = $('.video-time-line');
+    var timeLineOffset = timeLine.offset();
+    var timeLinePosition = {
+        x: timeLineOffset.left,
+        y: timeLineOffset.top
+    };
+    var timeLinePointerWidth = mousePosition.x - timeLinePosition.x;
+    $('.video-time-line-pointer').width(timeLinePointerWidth);
+});
+$(document).on('mouseout', '.video-time-line', function(event){
+    if (!videoData.dragging) {
+        $('.video-time-line-pointer').width(0);
+    }
+});
+$(document).on('click', '.video-time-line', function(event){
+    var video = $('.video-canvas').get(0);
+    var timeLine = $('.video-time-line');
+    var targetTime = $('.video-time-line-pointer').width() / timeLine.width() * video.duration;
+    $('.video-time-line-played').removeClass('video-time-line-played-animation');
+    video.currentTime = targetTime;
+    setTimeout(function () {
+        $('.video-time-line-played').addClass('video-time-line-played-animation');
+    }, 100);
+});
+// 音量调节
+var updateVolume = function(volume) {
+    $('.video-canvas').get(0).volume = volume;
+};
+var updateVolumeUI = function(volume) {
+    $('.volume-control-handle').css('left', $('.volume-control').width()*volume + 'px');
+    if (volume === 0) {
+        $('.volume-icon').removeClass('fa-volume-up').addClass('fa-volume-off');
+    } else {
+        $('.volume-icon').removeClass('fa-volume-off').addClass('fa-volume-up');
+    }
+};
+$(document).on('mousedown','.volume-control', function(event){
+    videoData.volumeControling = true;
+    videoData.originalVolumeControlWidth = $('.volume-control').width();
+});
+$(document).on('mousemove','.volume-control', function(event){
+    if (!videoData.volumeControling) {return;}
+    var mousePosition = {
+        x: event.pageX,
+        y: event.pageY
+    };
+    var volumeControlOffset = $('.volume-control').offset();
+    var volumeControlPosition = {
+        x: volumeControlOffset.left,
+        y: volumeControlOffset.top
+    };
+    var handleElementLeft = mousePosition.x - volumeControlPosition.x;
+    if (handleElementLeft > videoData.originalVolumeControlWidth || handleElementLeft < 0) {
+        return;
+    }
+    $('.volume-control-handle').css('left', handleElementLeft + 'px');
+    updateVolume(handleElementLeft / videoData.originalVolumeControlWidth);
+});
+$(document).on('mouseup','.volume-control', function(event){
+    videoData.volumeControling = false;
+    var mousePosition = {
+        x: event.pageX,
+        y: event.pageY
+    };
+    var volumeControlOffset = $('.volume-control').offset();
+    var volumeControlPosition = {
+        x: volumeControlOffset.left,
+        y: volumeControlOffset.top
+    };
+    var handleElementLeft = mousePosition.x - volumeControlPosition.x;
+    if (handleElementLeft > videoData.originalVolumeControlWidth || handleElementLeft < 0) {
+        return;
+    }
+    $('.volume-control-handle').css('left', handleElementLeft + 'px');
+    updateVolume(handleElementLeft / videoData.originalVolumeControlWidth);
+    if (handleElementLeft <= 0) {
+        $('.volume-icon').removeClass('fa-volume-up').addClass('fa-volume-off');
+    } else {
+        $('.volume-icon').removeClass('fa-volume-off').addClass('fa-volume-up');
+    }
+});
+$(document).on('mouseout','.volume-control', function(event){
+    if (!videoData.volumeControling) {return;}
+    var mousePosition = {
+        x: event.pageX,
+        y: event.pageY
+    };
+    var volumeControlOffset = $('.volume-control').offset();
+    var volumeControlPosition = {
+        x: volumeControlOffset.left,
+        y: volumeControlOffset.top
+    };
+    var handleElementLeft = mousePosition.x - volumeControlPosition.x;
+    if (handleElementLeft <= 0) {
+        $('.volume-icon').removeClass('fa-volume-up').addClass('fa-volume-off');
+    } else {
+        $('.volume-icon').removeClass('fa-volume-off').addClass('fa-volume-up');
+    }
+    videoData.volumeControling = false;
+});
+
+var init = function() {
+    var video = $('.video-canvas');
+    updateVideoControls();
+    video.on('timeupdate', function (event) {
+        videoData._currentTime = this.currentTime;
+        videoData.currentTime = this.currentTime.toString().toHHMMSS();
+        videoData._duration = this.duration
+        videoData.duration = this.duration.toString().toHHMMSS();
+        updateVideoTIme();
+    });
+};
+
+$(function () {
+    setTimeout(init, 500);
+});

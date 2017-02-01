@@ -55,23 +55,40 @@
             </video>
             -->
             <div class="video-container">
-                <video autoplay="autoplay" poster="static/image/demo-video-thumbnail.png" preload="auto">
+                <video class="video-canvas" autoplay="autoplay" poster="static/image/demo-video-thumbnail.png" preload="auto" loop="loop">
                     您的浏览器不支持 video 标签。
                     <source src="static/video/demo.mp4" type="video/mp4"></source>
+                    <track src="static/video/video.vtt" srclang="zh" kind="subtitles" label="中文" default>
                 </video>
                 <div class="video-controls">
+                    <div class="video-time-line">
+                        <div class="video-time-line-played video-time-line-played-animation"></div>
+                        <div class="video-time-line-pointer"></div>
+                    </div>
+
                     <div class="video-contol-group">
-                        <div class="video-control-item text-center">
+                        <div class="video-control-item text-center video-play-button playing">
                             <span class="fa fa-play"></span>
+                            <span class="fa fa-pause"></span>
+                        </div>
+                        <div class="video-control-item text-center volume-button">
+                            <div class="fa fa-volume-up volume-icon"></div>
+                            <div class="volume-control animation">
+                                <div class="volume-control-handle"></div>
+                            </div>
                         </div>
                     </div>
                     <div class="video-contol-group right">
                         <div class="video-control-item text-center video-full-screen">
                             <span class="fa fa-expand"></span>
+                            <span class="fa fa-compress"></span>
+                        </div>
+                        <div class="video-control-item text-center video-time">
+                            <span class="video-current-time">00:00:00</span>
+                            /
+                            <span class="video-duration">00:00:00</span>
                         </div>
                     </div>
-
-
 
                 </div>
             </div>
@@ -88,7 +105,8 @@
     </div>
 </div>
 
-
+<script src="static/js/video.js"></script>
+<link rel="stylesheet" href="static/css/video.css">
 
 </body>
 </html>
