@@ -16,7 +16,10 @@ String.prototype.toHHMMSS = function () {
 var videoData = {
     currentTime: '00:00:00',
     duration: '00:00:00',
-    dragging: false
+    dragging: false,
+    inVideoArea: false,
+    inControlArea: false,
+    controlDisplaying: true
 };
 $(document).on('click', '.video-full-screen', function() {
     var videoContainer = $('.video-container');
@@ -204,6 +207,50 @@ $(document).on('click', '.volume-icon', function(event){
         video.volume = videoData.originalVolume || 1;
     }
     updateVolumeUI(video.volume);
+});
+// show or hide controls
+var controlViewAction = {
+    show: function () {
+        var controlElement = $('.video-controls');
+        controlElement.css('transform','translate(0,0)');
+        videoData.controlDisplaying = true;
+    },
+    hide: function () {
+        var controlElement = $('.video-controls');
+        controlElement.css('transform','translate(0,100px)');
+        videoData.controlDisplaying = false;
+    }
+};
+$(document).on('mouseenter', '.video-container', function(){
+    videoData.inVideoArea = true;
+    controlViewAction.show();
+});
+$(document).on('mousemove', '.video-container', function(){
+    if (videoData.controlDisplaying) {
+        if (videoData.delayHideControl) {
+            clearTimeout(videoData.delayHideControl);
+        }
+        // console.log('videoData.inControlArea: ' + videoData.inControlArea);
+        if (!videoData.inControlArea) {
+            videoData.delayHideControl = setTimeout(function () {
+                controlViewAction.hide();
+            }, 5000);
+        }
+    } else {
+        controlViewAction.show();
+    }
+});
+$(document).on('mouseleave', '.video-container', function(){
+    videoData.inVideoArea = false;
+    controlViewAction.hide();
+});
+$(document).on('mouseenter', '.video-controls', function(){
+    videoData.inControlArea = true;
+    controlViewAction.show();
+});
+$(document).on('mouseleave', '.video-controls', function(){
+    videoData.inControlArea = false;
+    // controlViewAction.hide();
 });
 
 var init = function() {
