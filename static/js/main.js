@@ -119,3 +119,17 @@ $(document).on('click', '.toggle-share-buttons', function(){
         }, 200);
     }
 });
+// video
+$(document).on('click', '.video-full-screen', function() {
+    var videoContainer = $('.video-container');
+    if (videoContainer.length > 0) {
+        console.log(videoContainer.data('fullscreenstatus'));
+        if (videoContainer.data('fullscreenstatus')) {
+            videoContainer.data('fullscreenstatus', false);
+            document.webkitCancelFullScreen();
+        } else {
+            videoContainer.data('fullscreenstatus', true);
+            videoContainer[0].webkitRequestFullScreen();
+        }
+    }
+});
