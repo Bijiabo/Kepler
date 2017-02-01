@@ -195,6 +195,16 @@ $(document).on('mouseout','.volume-control', function(event){
     }
     videoData.volumeControling = false;
 });
+$(document).on('click', '.volume-icon', function(event){
+    var video = $('.video-canvas').get(0);
+    if (video.volume > 0) {
+        videoData.originalVolume = video.volume;
+        video.volume = 0;
+    } else {
+        video.volume = videoData.originalVolume || 1;
+    }
+    updateVolumeUI(video.volume);
+});
 
 var init = function() {
     var video = $('.video-canvas');
