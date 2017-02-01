@@ -21,9 +21,14 @@
                                         订阅
                                     </template>
                                     <template v-else>
-                                        <i class="fa fa-check" v-if="index===1"></i>
-                                        <i class="fa fa-close" v-if="index===1"></i>
-                                        已订阅
+                                        <span class="feed">
+                                            <i class="fa fa-check" v-if="index===1"></i>
+                                            已订阅
+                                        </span>
+                                        <span class="to-unfeed">
+                                            <i class="fa fa-close" v-if="index===1"></i>
+                                            取消订阅
+                                        </span>
                                     </template>
 
 

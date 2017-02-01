@@ -102,3 +102,20 @@ var insetCommentToView = function (commentData) {
         .find('.list-group')
         .append(commentItem);
 };
+// watch 页面
+// 切换分享按钮显示
+$(document).on('click', '.toggle-share-buttons', function(){
+    var shareButtonContainer = $('.video-info-interaction-panel .social-share');
+    shareButtonContainer.removeClass('no-overflow-hidden');
+    if (shareButtonContainer.hasClass('active')) {
+        shareButtonContainer.removeClass('active');
+    } else {
+        shareButtonContainer.addClass('active');
+        setInterval(function(){
+            var shareButtonContainer = $('.video-info-interaction-panel .social-share');
+            if (shareButtonContainer.hasClass('active')) {
+                shareButtonContainer.addClass('no-overflow-hidden');
+            }
+        }, 200);
+    }
+});

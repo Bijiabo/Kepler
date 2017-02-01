@@ -3,7 +3,7 @@
         <template v-for="item in sideBarItems">
             <template v-if="item.icon">
                 <div class="list-group-item" :class="[item.active?'active':'', item.list?'side-bar-list-parent':'']">
-                    <a href="#" class="col-xs-12 animation">
+                    <a :href="item.link || '#'" class="col-xs-12 animation">
                         <i class="fa" :class="[item.icon]" aria-hidden="true"></i>
                         {{item.text}}
                     </a>
@@ -32,7 +32,7 @@
             </template>
             <template v-else>
                 <div class="list-group-item subclass" href="#" :count="item.count()">
-                    <a href="#" class="col-xs-12 animation">
+                    <a :href="item.link || '#'" class="col-xs-12 animation">
                         <!--<i class="fa fa-caret-right" aria-hidden="true"></i>-->
                         <img :src="item.avatar()" :alt="item.text()" class="img-circle">
                         {{item.text()}}
