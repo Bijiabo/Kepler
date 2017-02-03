@@ -219,6 +219,7 @@ var controlViewAction = {
         var controlElement = $('.video-controls');
         controlElement.css('transform','translate(0,100px)');
         videoData.controlDisplaying = false;
+        hideQualityMenu();
     }
 };
 $(document).on('mouseenter', '.video-container', function(){
@@ -253,10 +254,13 @@ $(document).on('mouseleave', '.video-controls', function(){
     // controlViewAction.hide();
 });
 // 清晰度切换
+var hideQualityMenu = function () {
+    $('.video-control-menu').removeClass('active');
+    $('.video-quality-button').data('active', false);
+};
 $(document).on('click', '.video-quality-button', function () {
     if($(this).data('active')) {
-        $('.video-control-menu').removeClass('active');
-        $(this).data('active', false);
+        hideQualityMenu();
     } else {
         $('.video-control-menu').addClass('active');
         $(this).data('active', true);
@@ -268,8 +272,8 @@ $(document).on('click', '.video-control-menu-item', function () {
     console.log(targetQuality);
 
     // 隐藏画质选择菜单
-    $('.video-control-menu').removeClass('active');
-    $('.video-quality-button').data('active', false).text(targetQuality);
+    hideQualityMenu();
+    $('.video-quality-button').text(targetQuality);
 });
 
 var init = function() {
