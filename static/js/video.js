@@ -266,6 +266,10 @@ $(document).on('click', '.video-control-menu-item', function () {
     // 此处处理清晰度切换逻辑
     var targetQuality = $(this).data('quality');
     console.log(targetQuality);
+
+    // 隐藏画质选择菜单
+    $('.video-control-menu').removeClass('active');
+    $('.video-quality-button').data('active', false).text(targetQuality);
 });
 
 var init = function() {
