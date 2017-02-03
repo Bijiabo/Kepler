@@ -47,6 +47,7 @@
     flex-direction: row-reverse;
 }
 .video-control-item {
+    position: relative;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: 50px;
@@ -162,4 +163,28 @@
 }
 .video-quality-button {
     flex-basis: 80px;
+}
+.video-control-menu {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+.video-control-menu.active {
+    display: block;
+}
+.video-control-menu-item {
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0);
+    transition: all 0.3s ease;
+    font-size: 12px;
+}
+.video-control-menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }

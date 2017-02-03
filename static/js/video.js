@@ -252,6 +252,21 @@ $(document).on('mouseleave', '.video-controls', function(){
     videoData.inControlArea = false;
     // controlViewAction.hide();
 });
+// 清晰度切换
+$(document).on('click', '.video-quality-button', function () {
+    if($(this).data('active')) {
+        $('.video-control-menu').removeClass('active');
+        $(this).data('active', false);
+    } else {
+        $('.video-control-menu').addClass('active');
+        $(this).data('active', true);
+    }
+});
+$(document).on('click', '.video-control-menu-item', function () {
+    // 此处处理清晰度切换逻辑
+    var targetQuality = $(this).data('quality');
+    console.log(targetQuality);
+});
 
 var init = function() {
     var video = $('.video-canvas');
