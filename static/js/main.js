@@ -119,3 +119,12 @@ $(document).on('click', '.toggle-share-buttons', function(){
         }, 200);
     }
 });
+$(document).on('click', '.video-description-pack-up', function () {
+    var descriptionPanel = $('.video-description');
+    var shortClass = 'short';
+    if (descriptionPanel.hasClass(shortClass)) {
+        descriptionPanel.removeClass(shortClass);
+    } else {
+        descriptionPanel.addClass(shortClass);
+    }
+});
