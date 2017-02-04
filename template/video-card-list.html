@@ -17,7 +17,8 @@
                             <div class="video-thumbnail" video-time="视频时间">
                             -->
                             <div class="video-thumbnail" v-bind:video-time="videoItem.time()">
-                                <img src="static/image/video-thumbnail.jpg" class="img-responsive">
+                                <!--<img src="static/image/video-thumbnail.jpg" class="img-responsive">-->
+                                <img :src="videoItem.img" class="img-responsive">
                                 <div class="video-progress" style="width: 50px;"></div>
                             </div>
                             <div class="caption">

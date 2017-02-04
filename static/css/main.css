@@ -382,6 +382,8 @@ a:hover {
     background: none;
     border: none;
     border-radius: 0;
+    transform: scale(1,1);
+    /*overflow: hidden;*/
 }
 .main-content-item-video-card .thumbnail:hover {
     /*background-color: #222222;*/
@@ -431,6 +433,7 @@ a:hover {
     height: 2px;
     width: 0;
     background-color: #d31c16;
+    /*border-radius: 2px;*/
 }
 
 /* footer */

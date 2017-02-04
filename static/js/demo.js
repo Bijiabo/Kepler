@@ -53,9 +53,21 @@ for (var i=0, len=mainContentItemsTitles.length; i< len; i++) {
             return '0' + Math.floor(Math.random()*9) + ':' + (second > 9 ? second : '0'+second);
         }
     };
+    var list = [];
+    for(var a=0,len=(i===0 ? 12 : 6); a<len; a++ ) {
+        list.push({
+            title: '视频名称',
+            description: '视频简介xxxx...',
+            time: function() {
+                var second = Math.floor(Math.random()*60);
+                return '0' + Math.floor(Math.random()*9) + ':' + (second > 9 ? second : '0'+second);
+            },
+            img: 'static/image/video-thumbnails/' + Math.floor(Math.random()*6) + '.jpg'
+        });
+    }
     mainContentItems.push({
         title: mainContentItemsTitles[i],
-        list: fillArray(item, i===0 ? 12 : 6)
+        list: list
     });
 }
 
