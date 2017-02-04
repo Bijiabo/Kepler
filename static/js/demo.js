@@ -54,7 +54,7 @@ for (var i=0, len=mainContentItemsTitles.length; i< len; i++) {
         }
     };
     var list = [];
-    for(var a=0,len=(i===0 ? 12 : 6); a<len; a++ ) {
+    for(var a=0,_len=(i===0 ? 12 : 6); a<_len; a++ ) {
         list.push({
             title: '视频名称',
             description: '视频简介xxxx...',
