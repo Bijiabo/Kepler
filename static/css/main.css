@@ -419,6 +419,17 @@ a:hover {
     padding: 4px 6px;
     font-size: 12px;
 }
+
+.video-progress {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #d31c16;
+}
+
 /* footer */
 .footer {
     padding: 16px 0;
@@ -703,6 +714,9 @@ a:hover {
 .right-side-bar-video-card .media-left {
     width: 80px;
 }
+.right-side-bar-video-card .media-left .img-container {
+    position: relative;
+}
 .right-side-bar-video-card .media-left img {
     width: 110px;
 }
@@ -857,6 +871,9 @@ a:hover {
 }
 
 /* settings */
+.setting-panel h3 {
+    color: #9d9d9d;
+}
 .setting-panel .panel-body {
     padding-top: 16px;
 }
@@ -876,7 +893,7 @@ a:hover {
     box-shadow: none !important;
 }
 .btn.yellow-btn {
-    border-color: #ffc543;
+    border-color: #ffc543 !important;
     color: #ffc543;
     margin-right: 12px;
 }
