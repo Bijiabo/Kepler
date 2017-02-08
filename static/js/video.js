@@ -213,11 +213,13 @@ var controlViewAction = {
     show: function () {
         var controlElement = $('.video-controls');
         controlElement.css('transform','translate(0,0)');
+        $('.video-subtitles-container').css('transform','translate(0,0)');
         videoData.controlDisplaying = true;
     },
     hide: function () {
         var controlElement = $('.video-controls');
         controlElement.css('transform','translate(0,100px)');
+        $('.video-subtitles-container').css('transform','translate(0,30px)')
         videoData.controlDisplaying = false;
         hideQualityMenu();
     }
@@ -276,18 +278,108 @@ $(document).on('click', '.video-control-menu-item', function () {
     $('.video-quality-button').text(targetQuality);
 });
 
+var actionsOnVideoTimeUpdate = [
+    function(event, context) {
+        // 更新进度条
+        videoData._currentTime = context.currentTime;
+        videoData.currentTime = context.currentTime.toString().toHHMMSS();
+        videoData._duration = context.duration;
+        videoData.duration = context.duration.toString().toHHMMSS();
+        updateVideoTIme();
+    }
+];
+
 var init = function() {
     var video = $('.video-canvas');
     updateVideoControls();
     video.on('timeupdate', function (event) {
-        videoData._currentTime = this.currentTime;
-        videoData.currentTime = this.currentTime.toString().toHHMMSS();
-        videoData._duration = this.duration
-        videoData.duration = this.duration.toString().toHHMMSS();
-        updateVideoTIme();
+        for(var i=0,len=actionsOnVideoTimeUpdate.length; i<len; i++) {
+            actionsOnVideoTimeUpdate[i](event, this);
+        }
     });
 };
 
 $(function () {
     setTimeout(init, 500);
+});
+
+// srt parse test
+var subtitles = [];
+var subtitlesIndex = [];
+var previousParseSubtitleTime = 0;
+var parseInterval = 400;
+var previousSubtitleIndex = -1;
+var subtitleElement = [];
+
+jQuery.get('static/video/The.Flash.2014.S03E11.720p.HDTV.X264-DIMENSION.繁体.srt', function(data) {
+    function strip(s) {
+        return s.replace(/^\s+|\s+$/g,"");
+    }
+    srt = data.replace(/\r\n|\r|\n/g, '\n');
+
+    srt = strip(srt);
+
+    var srt_ = srt.split('\n\n');
+
+    var cont = 0;
+
+    for(s in srt_) {
+        st = srt_[s].split('\n');
+
+        if(st.length >=2) {
+            n = st[0];
+
+            i = strip(st[1].split(' --> ')[0]);
+            o = strip(st[1].split(' --> ')[1]);
+            t = st[2];
+
+            if(st.length > 2) {
+                for(j=3; j<st.length;j++)
+                    t += '\n'+st[j];
+            }
+
+            //define variable type as Object
+            var item = {};
+            item.number = n;
+            item.start = i;
+            item.end = o;
+            item.text = t.replace(/{.+}/, '');
+            subtitles.push(item);
+
+            subtitlesIndex.push({
+                start: function () {
+                    var i_split = i.split(/:|,/).map(function(i){return Number(i)});
+                    return i_split[0]*3600 + i_split[1]*60 + i_split[2] + i_split[3]/1000;
+                }(),
+                end: function () {
+                    var i_split = o.split(/:|,/).map(function(i){return Number(i)});
+                    return i_split[0]*3600 + i_split[1]*60 + i_split[2] + i_split[3]/1000;
+                }()
+            })
+        }
+        cont++;
+    }
+
+    actionsOnVideoTimeUpdate.push(function(event, context){
+        if (context.currentTime*100 - previousParseSubtitleTime < parseInterval) {return;}
+        var i = subtitles.length;
+        for(var i=0,len=subtitles.length; i<len; i++) {
+            var item = subtitlesIndex[i];
+            if (item.start <= context.currentTime && context.currentTime < item.end ) {
+                // console.log('index:' + i);
+                if (previousSubtitleIndex != i) {
+                    if (subtitleElement.length === 0) {
+                        subtitleElement = $('.video-subtitles');
+                    }
+                    subtitleElement.text(subtitles[i].text);
+                    console.log(subtitles[i].text);
+
+                    previousSubtitleIndex = i;
+                }
+
+                break;
+            }
+        }
+    });
+
 });
