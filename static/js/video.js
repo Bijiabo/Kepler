@@ -19,7 +19,21 @@ var videoData = {
     dragging: false,
     inVideoArea: false,
     inControlArea: false,
-    controlDisplaying: true
+    controlDisplaying: true,
+    _cc : true,
+    get cc() {
+        return this._cc;
+    },
+    set cc(value) {
+        this._cc = !!value;
+        if (this._cc) {
+            $('.video-subtitles').show();
+            $('.video-cc-button').addClass('active');
+        } else {
+            $('.video-subtitles').hide();
+            $('.video-cc-button').removeClass('active');
+        }
+    }
 };
 $(document).on('click', '.video-full-screen', function() {
     var videoContainer = $('.video-container');
@@ -88,8 +102,10 @@ var updateVideoTIme = function() {
     // console.log(videoData.currentTime);
     $('.video-current-time').text(videoData.currentTime);
     $('.video-duration').text(videoData.duration);
-    var timeLinePlayedWidth = videoData._currentTime/videoData._duration*100 + '%';
-    $('.video-time-line-played').css('width', timeLinePlayedWidth);
+    // var timeLinePlayedWidth = videoData._currentTime/videoData._duration*100 + '%';
+    // $('.video-time-line-played').css('width', timeLinePlayedWidth);
+    $('.video-time-line-played').css('transform', 'scale3d('+(videoData._currentTime/videoData._duration)+',1,1)');
+    // console.log(timeLinePlayedWidth/100);
 };
 
 // 时间轴交互逻辑
@@ -261,9 +277,12 @@ var hideQualityMenu = function () {
     $('.video-quality-button').data('active', false);
 };
 $(document).on('click', '.video-quality-button', function () {
+    console.log('video-quality-button');
     if($(this).data('active')) {
+        console.log('active');
         hideQualityMenu();
     } else {
+        console.log('no active');
         $('.video-control-menu').addClass('active');
         $(this).data('active', true);
     }
@@ -277,6 +296,10 @@ $(document).on('click', '.video-control-menu-item', function () {
     hideQualityMenu();
     $('.video-quality-button').text(targetQuality);
 });
+$(document).on('click', '.video-cc-button', function () {
+    videoData.cc = !videoData.cc;
+});
+
 
 var actionsOnVideoTimeUpdate = [
     function(event, context) {
@@ -297,10 +320,12 @@ var init = function() {
             actionsOnVideoTimeUpdate[i](event, this);
         }
     });
+    videoData.cc = true;
 };
 
 $(function () {
     setTimeout(init, 500);
+    initSrt();
 });
 
 // srt parse test
@@ -311,75 +336,83 @@ var parseInterval = 400;
 var previousSubtitleIndex = -1;
 var subtitleElement = [];
 
-jQuery.get('static/video/The.Flash.2014.S03E11.720p.HDTV.X264-DIMENSION.繁体.srt', function(data) {
-    function strip(s) {
-        return s.replace(/^\s+|\s+$/g,"");
-    }
-    srt = data.replace(/\r\n|\r|\n/g, '\n');
 
-    srt = strip(srt);
 
-    var srt_ = srt.split('\n\n');
+var initSrt = function () {
+    // var srtUrl = 'static/video/The.Flash.2014.S03E11.720p.HDTV.X264-DIMENSION.繁体.srt';
+    var srtUrl = $('.video-container').attr('srt');
 
-    var cont = 0;
-
-    for(s in srt_) {
-        st = srt_[s].split('\n');
-
-        if(st.length >=2) {
-            n = st[0];
-
-            i = strip(st[1].split(' --> ')[0]);
-            o = strip(st[1].split(' --> ')[1]);
-            t = st[2];
-
-            if(st.length > 2) {
-                for(j=3; j<st.length;j++)
-                    t += '\n'+st[j];
-            }
-
-            //define variable type as Object
-            var item = {};
-            item.number = n;
-            item.start = i;
-            item.end = o;
-            item.text = t.replace(/{.+}/, '');
-            subtitles.push(item);
-
-            subtitlesIndex.push({
-                start: function () {
-                    var i_split = i.split(/:|,/).map(function(i){return Number(i)});
-                    return i_split[0]*3600 + i_split[1]*60 + i_split[2] + i_split[3]/1000;
-                }(),
-                end: function () {
-                    var i_split = o.split(/:|,/).map(function(i){return Number(i)});
-                    return i_split[0]*3600 + i_split[1]*60 + i_split[2] + i_split[3]/1000;
-                }()
-            })
+    jQuery.get(srtUrl, function(data) {
+        function strip(s) {
+            return s.replace(/^\s+|\s+$/g,"");
         }
-        cont++;
-    }
+        srt = data.replace(/\r\n|\r|\n/g, '\n');
 
-    actionsOnVideoTimeUpdate.push(function(event, context){
-        if (context.currentTime*100 - previousParseSubtitleTime < parseInterval) {return;}
-        var i = subtitles.length;
-        for(var i=0,len=subtitles.length; i<len; i++) {
-            var item = subtitlesIndex[i];
-            if (item.start <= context.currentTime && context.currentTime < item.end ) {
-                // console.log('index:' + i);
-                if (previousSubtitleIndex != i) {
-                    if (subtitleElement.length === 0) {
-                        subtitleElement = $('.video-subtitles');
-                    }
-                    subtitleElement.text(subtitles[i].text);
-                    console.log(subtitles[i].text);
+        srt = strip(srt);
 
-                    previousSubtitleIndex = i;
+        var srt_ = srt.split('\n\n');
+
+        var cont = 0;
+
+        for(s in srt_) {
+            st = srt_[s].split('\n');
+
+            if(st.length >=2) {
+                n = st[0];
+
+                i = strip(st[1].split(' --> ')[0]);
+                o = strip(st[1].split(' --> ')[1]);
+                t = st[2];
+
+                if(st.length > 2) {
+                    for(j=3; j<st.length;j++)
+                        t += '\n'+st[j];
                 }
 
-                break;
-            }
-        }
-    });
+                //define variable type as Object
+                var item = {};
+                item.number = n;
+                item.start = i;
+                item.end = o;
+                item.text = t.replace(/{.+}/, '');
+                subtitles.push(item);
 
-});
+                subtitlesIndex.push({
+                    start: function () {
+                        var i_split = i.split(/:|,/).map(function(i){return Number(i)});
+                        return i_split[0]*3600 + i_split[1]*60 + i_split[2] + i_split[3]/1000;
+                    }(),
+                    end: function () {
+                        var i_split = o.split(/:|,/).map(function(i){return Number(i)});
+                        return i_split[0]*3600 + i_split[1]*60 + i_split[2] + i_split[3]/1000;
+                    }()
+                })
+            }
+            cont++;
+        }
+
+        actionsOnVideoTimeUpdate.push(function(event, context){
+            if (videoData.cc === false) {return;}
+            if (context.currentTime*100 - previousParseSubtitleTime < parseInterval) {return;}
+            var i = subtitles.length;
+            for(var i=0,len=subtitles.length; i<len; i++) {
+                var item = subtitlesIndex[i];
+                if (item.start <= context.currentTime && context.currentTime < item.end ) {
+                    // console.log('index:' + i);
+                    if (previousSubtitleIndex != i) {
+                        if (subtitleElement.length === 0) {
+                            subtitleElement = $('.video-subtitles');
+                        }
+                        subtitleElement.text(subtitles[i].text);
+                        // console.log(subtitles[i].text);
+
+                        previousSubtitleIndex = i;
+                    }
+
+                    break;
+                }
+            }
+        });
+
+    });
+};
