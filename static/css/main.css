@@ -530,10 +530,13 @@ a:hover {
     margin-top: 16px;
     color: #636363;
 }
+.video-info-interaction-panel .pull-left .btn{
+    margin-right: 8px;
+}
 .video-info-interaction-panel .pull-right span {
     margin-left: 12px;
 }
-.video-info-interaction-panel span:hover {
+.video-info-interaction-panel .pull-right span:hover {
     color: #cccccc;
     cursor: pointer;
 }
@@ -592,6 +595,18 @@ a:hover {
 .toggle-share-buttons:hover, .toggle-share-buttons:focus {
     background-color: #525252;
     color: #efefef;
+}
+.toggle-collect-buttons.active .content {
+    display: inline-block;
+}
+.toggle-collect-buttons.active:hover .content {
+    display: none;
+}
+.toggle-collect-buttons.active .content-hover {
+    display: none;
+}
+.toggle-collect-buttons.active:hover .content-hover {
+    display: inline-block;
 }
 .video-description {
     overflow: auto;
@@ -725,6 +740,8 @@ a:hover {
 }
 .right-side-bar-video-card .media-left img {
     width: 110px;
+    min-width: 50px;
+    max-width: 80px;
 }
 .right-side-bar-more-link {
     border-top: 1px solid #333;
@@ -898,6 +915,14 @@ a:hover {
     outline: none !important;
     box-shadow: none !important;
 }
+.btn.active {
+    background: #4b4b4b;
+    border-color: #000000 !important;
+    color: #1d000d;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
 .btn.yellow-btn {
     border-color: #ffc543 !important;
     color: #ffc543;
