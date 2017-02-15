@@ -546,6 +546,10 @@ a:hover {
 .video-info-interaction-panel .pull-right span:hover .fa {
     transform: scale(1.5, 1.5) translate(-3px,-2px) rotateZ(-10deg);
 }
+.video-info-detail .media-left img {
+    width: 60px;
+    height: 60px;
+}
 .video-info-detail .play-count {
     position: relative;
     height: 59px;
@@ -874,6 +878,10 @@ a:hover {
 }
 .history-list .panel-body p, .history-list .panel-body .pull-right {
     color: #737373;
+}
+.history-list .list-group-item img {
+    max-width: 120px;
+    width: 120px;
 }
 /* channel */
 .channel-banner img {
