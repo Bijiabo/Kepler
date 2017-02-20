@@ -105,6 +105,15 @@ var updateVideoTIme = function() {
     // var timeLinePlayedWidth = videoData._currentTime/videoData._duration*100 + '%';
     // $('.video-time-line-played').css('width', timeLinePlayedWidth);
     $('.video-time-line-played').css('transform', 'scale3d('+(videoData._currentTime/videoData._duration)+',1,1)');
+    // 更新 handler 位置
+    if (!videoData.selectingTime) {
+        if (videoData.timeLineWidth === undefined) {
+            videoData.timeLineWidth = $('.video-time-line').width();
+        }
+        $('.video-time-line-handler').css('transform', 'translate3d(' + (videoData._currentTime/videoData._duration*videoData.timeLineWidth) + 'px,0,0)');
+    }
+
+    // console.log('translate3d('+ (videoData._currentTime/videoData._duration*100) +'%,0,0)');
     // console.log(timeLinePlayedWidth/100);
 };
 
@@ -122,10 +131,14 @@ $(document).on('mousemove', '.video-time-line', function(event){
     };
     var timeLinePointerWidth = mousePosition.x - timeLinePosition.x;
     $('.video-time-line-pointer').width(timeLinePointerWidth);
+    videoData.selectingTime = true;
+    $('.video-time-line-handler').css('transform', 'translate3d(' + timeLinePointerWidth + 'px,0,0)').removeClass('video-time-line-played-animation');
 });
 $(document).on('mouseout', '.video-time-line', function(event){
     if (!videoData.dragging) {
         $('.video-time-line-pointer').width(0);
+        videoData.selectingTime = false;
+        $('.video-time-line-handler').addClass('video-time-line-played-animation');
     }
 });
 $(document).on('click', '.video-time-line', function(event){

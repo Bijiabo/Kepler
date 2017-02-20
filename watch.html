@@ -35,30 +35,11 @@
 
         <!-- 主要内容 -->
         <div class="main-content col-sm-9">
-            <!--TODO: insert main content-->
-            <!--
-            <video
-                    id="doppler-player"
-                    class="video-player video-js"
-                    controls
-                    preload="auto"
-                    poster="static/image/demo-video-thumbnail.png"
-                    data-setup='{}'>
-                <source src="static/video/demo.mp4" type="video/mp4"></source>
-                <p class="vjs-no-js">
-                    To view this video please enable JavaScript, and consider upgrading to a
-                    web browser that
-                    <a href="http://videojs.com/html5-video-support/" target="_blank">
-                        supports HTML5 video
-                    </a>
-                </p>
-            </video>
-            -->
+
             <div class="video-container" srt="static/video/The.Flash.2014.S03E11.720p.HDTV.X264-DIMENSION.繁体.srt">
                 <video class="video-canvas" autoplay="autoplay" poster="static/image/demo-video-thumbnail.png" preload="auto" loop="loop">
                     您的浏览器不支持 video 标签。
                     <source src="static/video/demo.mp4" type="video/mp4"></source>
-                    <!--<track src="static/video/video.vtt" srclang="zh" kind="subtitles" label="中文" default>-->
                 </video>
 
                 <!--字幕文件-->
@@ -74,6 +55,7 @@
                             <div class="video-time-line-played video-time-line-played-animation"></div>
                         </div>
                         <div class="video-time-line-pointer"></div>
+                        <div class="video-time-line-handler video-time-line-played-animation"></div>
                     </div>
 
                     <div class="video-contol-group">

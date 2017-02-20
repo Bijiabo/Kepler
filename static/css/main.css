@@ -713,6 +713,10 @@ a:hover {
 .comment-post-panel .media-body {
     padding-top: 0;
 }
+.comment-post-panel .media-left img {
+    width: 60px;
+    height: 60px;
+}
 /* right side bar */
 .right-side-bar-title {
     margin-bottom: 16px;
@@ -758,10 +762,12 @@ a:hover {
 
 /* channel list */
 .channel-list-title {
-    margin-bottom: 8px;
+    /*margin-bottom: 8px;*/
 }
 .channel-list {
     padding: 0;
+    background-color: #252525;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 .channel-list-item {
     margin: 0;
@@ -775,6 +781,10 @@ a:hover {
 }
 .channel-list-item .media-body p {
     color: #797979;
+}
+.channel-list-item img {
+    width: 130px;
+    height: auto;
 }
 
 /* pagination */

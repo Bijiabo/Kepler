@@ -89,19 +89,29 @@
 }
 .video-time-line {
     position: absolute;
-    top: 0;
+    top: -2px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    padding: 2px 0;
+    cursor: pointer;
+}
+.video-time-line:before {
+    content: "";
+    position: absolute;
+    top: 2px;
     left: 0;
     width: 100%;
     height: 4px;
     background-color: rgba(255,255,255,0.3);
-    cursor: pointer;
+    z-index: -1;
 }
 .video-time-line-played-container {
     position: absolute;
-    top: 0;
+    top: 2px;
     left: -100%;
     width: 200%;
-    height: 100%;
+    height: 4px;
 }
 .video-time-line-played {
     position: absolute;
@@ -116,12 +126,23 @@
 }
 .video-time-line-pointer {
     position: absolute;
-    top: 0;
+    top: 2px;
     left: 0;
     width: 0;
-    height: 100%;
+    height: 4px;
     background-color: rgba(255, 255, 255, 0.3);
     z-index: 10;
+}
+.video-time-line-handler {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    margin: -5px 0 0 -5px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
 .volume-button {
     display: flex;
