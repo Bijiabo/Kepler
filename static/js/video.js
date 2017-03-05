@@ -37,6 +37,7 @@ var videoData = {
 };
 $(document).on('click', '.video-full-screen', function() {
     var videoContainer = $('.video-container');
+    var fullScreenClass = 'full-screen';
     if (videoContainer.length > 0) {
         if (videoContainer.data('fullscreenstatus')) {
             // 退出全屏
@@ -48,6 +49,7 @@ $(document).on('click', '.video-full-screen', function() {
             } else if (document.msCancelFullScreen) {
                 document.msCancelFullScreen();
             }
+            videoContainer.removeClass(fullScreenClass);
         } else {
             // 进入全屏
             videoContainer.data('fullscreenstatus', true);
@@ -58,9 +60,13 @@ $(document).on('click', '.video-full-screen', function() {
             } else if (videoContainer[0].msRequestFullScreen) {
                 videoContainer[0].msRequestFullScreen();
             }
+            videoContainer.addClass(fullScreenClass);
         }
     }
     updateVideoControls();
+    setTimeout(function () {
+        videoData.timeLineWidth = $('.video-time-line').width();
+    },200);
 });
 var togglePlayPause = function () {
     var video = $('.video-canvas').get(0);
@@ -99,22 +105,15 @@ var updateVideoControls = function() {
 
 var updateVideoTIme = function() {
     // update time
-    // console.log(videoData.currentTime);
     $('.video-current-time').text(videoData.currentTime);
     $('.video-duration').text(videoData.duration);
-    // var timeLinePlayedWidth = videoData._currentTime/videoData._duration*100 + '%';
-    // $('.video-time-line-played').css('width', timeLinePlayedWidth);
-    $('.video-time-line-played').css('transform', 'scale3d('+(videoData._currentTime/videoData._duration)+',1,1)');
+    $('.video-time-line-played').css('transform', 'translate3d(' + (videoData._currentTime/videoData._duration)*videoData.timeLineWidth + 'px,0,0)');
     // 更新 handler 位置
     if (!videoData.selectingTime) {
         if (videoData.timeLineWidth === undefined) {
             videoData.timeLineWidth = $('.video-time-line').width();
         }
-        $('.video-time-line-handler').css('transform', 'translate3d(' + (videoData._currentTime/videoData._duration*videoData.timeLineWidth) + 'px,0,0)');
     }
-
-    // console.log('translate3d('+ (videoData._currentTime/videoData._duration*100) +'%,0,0)');
-    // console.log(timeLinePlayedWidth/100);
 };
 
 // 时间轴交互逻辑
@@ -132,13 +131,11 @@ $(document).on('mousemove', '.video-time-line', function(event){
     var timeLinePointerWidth = mousePosition.x - timeLinePosition.x;
     $('.video-time-line-pointer').width(timeLinePointerWidth);
     videoData.selectingTime = true;
-    $('.video-time-line-handler').css('transform', 'translate3d(' + timeLinePointerWidth + 'px,0,0)').removeClass('video-time-line-played-animation');
 });
 $(document).on('mouseout', '.video-time-line', function(event){
     if (!videoData.dragging) {
         $('.video-time-line-pointer').width(0);
         videoData.selectingTime = false;
-        $('.video-time-line-handler').addClass('video-time-line-played-animation');
     }
 });
 $(document).on('click', '.video-time-line', function(event){
@@ -154,9 +151,12 @@ $(document).on('click', '.video-time-line', function(event){
 // 音量调节
 var updateVolume = function(volume) {
     $('.video-canvas').get(0).volume = volume;
+    $('.volume-control-pointer').width(volume*100 + '%');
 };
 var updateVolumeUI = function(volume) {
-    $('.volume-control-handle').css('left', $('.volume-control').width()*volume + 'px');
+    var volumeControlElement = $('.volume-control');
+    $('.volume-control-pointer').width(volume*100 + '%');
+    $('.volume-control-handle').css('left', volumeControlElement.width()*volume + 'px');
     if (volume === 0) {
         $('.volume-icon').removeClass('fa-volume-up').addClass('fa-volume-off');
     } else {
@@ -321,7 +321,9 @@ var actionsOnVideoTimeUpdate = [
         videoData.currentTime = context.currentTime.toString().toHHMMSS();
         videoData._duration = context.duration;
         videoData.duration = context.duration.toString().toHHMMSS();
-        updateVideoTIme();
+        if (videoData.controlDisplaying) {
+            updateVideoTIme();
+        }
     }
 ];
 
