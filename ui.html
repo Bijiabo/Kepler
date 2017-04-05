@@ -10,7 +10,9 @@
 </head>
 <body>
 
-<h1>SUMRED UI Standard</h1>
+<h1 class="text-color-red">SUM<span class="text-color-white">RED</span> <span class="text-color-gray-info">UI Standard</span></h1>
+
+<div class="separator-line"></div>
 
 <h2>Text Color</h2>
 <p class="text-color-red">Red Color Text</p>
@@ -29,7 +31,10 @@
 <div class="grid-video-card-container">
     <div class="grid-video-card">
         <div class="text-color-red text-type-title">推荐视频</div>
-        <div class="image-view"></div>
+        <div class="image-view" duration="06:00">
+            <img src="" alt="">
+            <div class="video-progress" style="width: 33%;"></div>
+        </div>
         <div class="text-color-gray-title text-bold margin-top-12">Name Of ...</div>
         <div class="text-color-gray-title margin-top-bottom-8">视频名称</div>
         <div class="text-color-gray-title margin-top-bottom-8">狂战士JK</div>
@@ -37,15 +42,14 @@
     </div>
 </div>
 
-<div class="separator-line"></div>
-
 <h2>Lisg Video Card</h2>
 <div class="list-video-card-container">
     <div class="media list-video-card">
         <div class="media-left">
-            <div class="image-view">
+            <div class="image-view" duration="06:00">
                 <a href="#">
                     <img class="media-object" src="" alt="">
+                    <div class="video-progress" style="width: 33%;"></div>
                 </a>
             </div>
         </div>
@@ -62,11 +66,12 @@
     </div>
 </div>
 
-<div class="separator-line"></div>
-
 <h2>Buttons</h2>
 <div class="btn btn-subscribe unsubscribed">1039</div>
 <div class="btn btn-subscribe subscribed">1039</div>
+<div class="btn btn-ghost">过滤条件 <span class="fa fa-angle-down"></span></div>
+
+<div class="separator-line"></div>
 
 <h2>Form</h2>
 <div class="search-container background-color-panel">
@@ -82,6 +87,8 @@
     </div>
 </div>
 
+<h2>Panel</h2>
+<div class="square-demo no-border panel-view"></div>
 
 
 </body>

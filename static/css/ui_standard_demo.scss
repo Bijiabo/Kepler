@@ -17,6 +17,9 @@ $square-demo-width: 100px;
   height: $square-demo-width;
   float: left;
 }
+.square-demo.no-border {
+  border: none;
+}
 
 .over-flow-auto {
   overflow: auto;

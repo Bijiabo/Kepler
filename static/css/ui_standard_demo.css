@@ -12,6 +12,9 @@ h2 {
   height: 100px;
   float: left; }
 
+.square-demo.no-border {
+  border: none; }
+
 .over-flow-auto {
   overflow: auto; }
 
