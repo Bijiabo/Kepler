@@ -1,0 +1,41 @@
+body {
+  padding: 16px;
+}
+
+h2 {
+  color: white;
+}
+
+.demo-container-border {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+$square-demo-width: 100px;
+.square-demo {
+  @extend .demo-container-border;
+  width: $square-demo-width;
+  height: $square-demo-width;
+  float: left;
+}
+
+.over-flow-auto {
+  overflow: auto;
+}
+
+.grid-video-card-container {
+  @extend .demo-container-border;
+  width: 300px;
+}
+
+.list-video-card-container {
+  @extend .demo-container-border;
+  width: 600px;
+}
+
+.search-container {
+  @extend  .demo-container-border;
+  height: 100px;
+  width: 400px;
+  padding: 20px;
+  background-color: #373839;
+}

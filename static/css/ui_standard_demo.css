@@ -1,0 +1,30 @@
+body {
+  padding: 16px; }
+
+h2 {
+  color: white; }
+
+.demo-container-border, .square-demo, .grid-video-card-container, .list-video-card-container, .search-container {
+  border: 1px solid rgba(255, 255, 255, 0.2); }
+
+.square-demo {
+  width: 100px;
+  height: 100px;
+  float: left; }
+
+.over-flow-auto {
+  overflow: auto; }
+
+.grid-video-card-container {
+  width: 300px; }
+
+.list-video-card-container {
+  width: 600px; }
+
+.search-container {
+  height: 100px;
+  width: 400px;
+  padding: 20px;
+  background-color: #373839; }
+
+/*# sourceMappingURL=ui_standard_demo.css.map */
