@@ -11,6 +11,11 @@ $textColor_Red: $themeColor_Red;
 $textColor_Blue: $themeColor_Blue;
 $textColor_BlueLight: $themeColor_BlueLight;
 
+.dev-border {
+  border: 1px solid $themeColor_Blue;
+  //border: none;
+}
+
 body {
   background-color: $bodyBackgroundColor;
 }
@@ -103,7 +108,11 @@ body {
 }
 
 // grid-video-card
+.grid-video-card-container {
+  padding: 0;
+}
 .grid-video-card {
+  @extend .dev-border;
   padding: 10px;
 
   .image-view {
@@ -111,11 +120,11 @@ body {
     background-color: $themeColor_GrayLight;
     width: 100%;
     min-height: 100px;
-
-    img {
-      width: 100%;
-      height: auto;
-    }
+    
+    background-image: url("./../image/video-thumbnails/0.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   .image-view::before {
     @extend .video-image-view-duration;

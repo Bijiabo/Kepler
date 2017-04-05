@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/css/ui.main.css">
+    <!--scripts-->
+    <script src="../static/js/jquery-3.1.1.min.js"></script>
+    <script src="../static/js/tether.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/vue.min.js"></script>
+    <script src="../static/js/template-loader.js"></script>
+
+    <script src="../static/js/pages/home.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <template-import file="./../components/navigation-bar.html"></template-import>
+
+    <template-import file="./../components/side-bar-menu.html"></template-import>
+
+    <template-import file="./../components/main-container.html">
+        <div class="text-type-title text-color-red">推荐内容</div>
+
+        <template v-for="(item, index) in videoCards">
+            <div class="col-xs-3 grid-video-card-container">
+                <div class="grid-video-card">
+                    <div class="text-color-red text-type-title">推荐视频</div>
+                    <div class="image-view"
+                         duration="06:00"
+                         :style="'background-image: url(./../static/image/video-thumbnails/'+index%6+'.jpg);'"
+                    >
+                        <!--<img src="" alt="">-->
+                        <div class="video-progress" style="width: 33%;"></div>
+                    </div>
+                    <div class="text-color-gray-title text-bold margin-top-12">Name Of ...</div>
+                    <div class="text-color-gray-title margin-top-bottom-8">视频名称</div>
+                    <div class="text-color-gray-title margin-top-bottom-8">狂战士JK</div>
+                    <div class="text-color-gray-info">视频简介显示内容...</div>
+                </div>
+            </div>
+        </template>
+
+    </template-import>
+</div>
+
+
+
+</body>
+</html>
