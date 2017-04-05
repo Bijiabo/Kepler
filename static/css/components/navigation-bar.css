@@ -1,0 +1,28 @@
+.flex-row-left-container, .navigation-bar, .navigation-bar .navigation-bar-left-container, .navigation-bar .navigation-bar-search-bar-container, .navigation-bar .navigation-bar-right-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch; }
+
+.navigation-bar {
+  width: 100%;
+  height: 44px; }
+  .navigation-bar .navigation-bar-left-container {
+    width: 220px; }
+    .navigation-bar .navigation-bar-left-container .slidebar-menu-button {
+      margin-left: 38px; }
+    .navigation-bar .navigation-bar-left-container .logo {
+      width: 120px; }
+  .navigation-bar .navigation-bar-search-bar-container {
+    align-items: center;
+    width: 340px; }
+  .navigation-bar .navigation-bar-right-container {
+    flex-direction: row-reverse;
+    flex-grow: 1;
+    min-width: 20px; }
+
+.navigation-bar > div {
+  border: 1px solid #ff6600; }
+
+/*# sourceMappingURL=navigation-bar.css.map */

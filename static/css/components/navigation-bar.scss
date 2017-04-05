@@ -1,0 +1,58 @@
+.flex-row-left-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.navigation-bar {
+  @extend .flex-row-left-container;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 44px;
+  z-index: 200;
+
+  .navigation-bar-left-container {
+    @extend .flex-row-left-container;
+    width: 220px;
+
+    // 侧边栏按钮
+    .slidebar-menu-button {
+      margin-left: 38px;
+    }
+
+    // logo 展示
+    .logo {
+      width: 120px;
+    }
+  }
+
+  .navigation-bar-search-bar-container {
+    @extend .flex-row-left-container;
+    align-items: center;
+    width: 340px;
+  }
+
+  .navigation-bar-right-container {
+    @extend .flex-row-left-container;
+    flex-direction: row-reverse;
+    flex-grow: 1;
+
+    min-width: 20px;
+  }
+}
+
+// dev
+.navigation-bar > div
+{
+  border: 1px solid #ff6600;
+}
+
+.navigation-bar > div > div
+{
+  //border: 1px solid #cccccc;
+}
