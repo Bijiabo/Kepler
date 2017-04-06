@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,uBAAwB;EACtB,KAAK,EAAE,IAAI;EACX,WAAW,EAAE,KAAK;;AAGpB,sBAAuB;EACrB,MAAM,EAAE,SAAS;EACjB,SAAS,EAAE,MAAM;EACjB,OAAO,EAAE,IAAI",
+"sources": ["detail-main-container.scss"],
+"names": [],
+"file": "detail-main-container.css"
+}

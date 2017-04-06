@@ -22,12 +22,22 @@
 
     <template-import file="./../components/side-bar-menu.html"></template-import>
 
-    <template-import file="./../components/main-container.html">
-        <div class="text-type-title text-color-red">推荐内容</div>
-
-        <template-import file="./../components/grid-video-card.html"></template-import>
-
-
+    <template-import file="./../components/detail-main-container.html">
+        <div class="col-md-8 row">
+            <div class="panel-view">
+                <template-import file="./../components/video-player.html"></template-import>
+            </div>
+            <div class="panel-view">
+                <template-import file="./../components/video-detail.html"></template-import>
+            </div>
+            <div class="video-comment panel-view">x</div>
+        </div>
+        <div class="col-md-4 row">
+            <div class="video-play-list panel-view">
+                <template-import file="./../components/video-play-list.html"></template-import>
+            </div>
+            <div class="video-recommend panel-view">x</div>
+        </div>
     </template-import>
 </div>
 

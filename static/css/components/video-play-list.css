@@ -1,0 +1,63 @@
+/*
+Error: Undefined variable: "$themeColor_Blue".
+        on line 3 of video-play-list.scss
+
+1: .video-play-list {
+2:   height: 200px;
+3:   background-color: $themeColor_Blue;
+4: }
+
+Backtrace:
+video-play-list.scss:3
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/script/tree/node.rb:58:in `perform'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `map'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:159:in `visit'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/engine.rb:382:in `_render_with_sourcemap'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/engine.rb:299:in `render_with_sourcemap'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/plugin.rb:82:in `update_stylesheets'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/exec/base.rb:52:in `parse'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/exec/base.rb:19:in `parse!'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/bin/scss:13:in `<top (required)>'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/bin/scss:23:in `load'
+/Users/huchunbo/.rvm/gems/ruby-2.3.1/bin/scss:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$themeColor_Blue\".\A         on line 3 of video-play-list.scss\A \A 1: .video-play-list {\A 2:   height: 200px;\A 3:   background-color: $themeColor_Blue;\A 4: }"; }

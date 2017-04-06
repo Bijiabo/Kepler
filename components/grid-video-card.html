@@ -1,0 +1,20 @@
+<template v-for="(item, index) in videoCards">
+    <div class="col-xs-3 grid-video-card-container">
+        <a :href="'#video-'+index">
+            <div class="grid-video-card">
+                <div class="text-color-red text-type-title">推荐视频</div>
+                <div class="image-view"
+                     duration="06:00"
+                     :style="'background-image: url(./../static/image/video-thumbnails/'+index%6+'.jpg);'"
+                >
+                    <!--<img src="" alt="">-->
+                    <div class="video-progress" style="width: 33%;"></div>
+                </div>
+                <div class="text-color-gray-title text-bold margin-top-12">Name Of ...</div>
+                <div class="text-color-gray-title margin-top-bottom-8">视频名称</div>
+                <div class="text-color-gray-title margin-top-bottom-8">狂战士JK</div>
+                <div class="text-color-gray-info">视频简介显示内容...</div>
+            </div>
+        </a>
+    </div>
+</template>

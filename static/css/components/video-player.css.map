@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,aAAc;EACZ,MAAM,EAAE,KAAK",
+"sources": ["video-player.scss"],
+"names": [],
+"file": "video-player.css"
+}
