@@ -91,7 +91,7 @@ body {
   .list-video-card .image-view {
     position: relative;
     background-color: #535455;
-    width: 200px;
+    width: 100px;
     height: 100px; }
     .list-video-card .image-view img {
       width: 100%;
