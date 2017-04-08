@@ -1,0 +1,25 @@
+.content-class-filter {
+  .item {
+    overflow: auto;
+
+    .class-title {
+      float: left;
+      width: 100px;
+    }
+    .class-options {
+      @extend .text-color-gray-light;
+      float: left;
+      overflow: auto;
+      width: 500px;
+
+      .option-item {
+        float: left;
+        margin: 0 20px;
+        cursor: pointer;
+      }
+    }
+  }
+  .button-group {
+    text-align: right;
+  }
+}

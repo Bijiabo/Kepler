@@ -118,6 +118,9 @@ body {
 
 // grid-video-card
 .grid-video-card-container {
+  margin: 0 -10px;
+}
+.grid-video-card-container > div {
   padding: 0;
 }
 .grid-video-card {
@@ -175,6 +178,19 @@ body {
 }
 
 // margin
+@mixin margin-top($val) {
+  margin-top: $val;
+}
+
+@mixin margin-bottom($val) {
+  margin-bottom: $val;
+}
+
+@mixin margin-top-bottom($top, $bottom) {
+  margin-top: $top;
+  margin-bottom: $bottom;
+}
+
 .margin-top-8 {
   margin-top: 8px;
 }
@@ -185,8 +201,10 @@ body {
   margin-bottom: 8px;
 }
 .margin-top-bottom-8 {
-  @extend .margin-top-8;
-  @extend .margin-bottom-8;
+  @include margin-top-bottom(8px, 8px);
+}
+.margin-top-bottom-10 {
+  @include margin-top-bottom(10px, 10px);
 }
 
 // buttons
@@ -283,4 +301,10 @@ body {
   @extend .background-color-panel;
   box-shadow: 0 1px 8px rgba(0,0,0,0.3);
   margin: 10px;
+}
+
+.panel-title-view {
+  @extend .text-type-title;
+  @extend .text-color-red;
+  @extend .margin-top-bottom-10;
 }

@@ -15,7 +15,7 @@ body {
 .text-color-white {
   color: #ffffff; }
 
-.text-color-red, .navigation-bar .navigation-bar-right-container {
+.text-color-red, .panel-title-view, .navigation-bar .navigation-bar-right-container {
   color: #e34849; }
 
 .text-color-blue {
@@ -24,7 +24,7 @@ body {
 .text-color-blue-light {
   color: #acecef; }
 
-.text-color-gray-light {
+.text-color-gray-light, .content-class-filter .item .class-options {
   color: #535455; }
 
 .text-color-gray-info, .video-play-list .video-play-list-view .video-play-list-item .index {
@@ -33,7 +33,7 @@ body {
 .text-color-gray-title, .btn-subscribe {
   color: #c1c1c1; }
 
-.text-type-title {
+.text-type-title, .panel-title-view {
   font-size: 14px; }
 
 .text-type-description {
@@ -79,6 +79,9 @@ body {
   line-height: 14px; }
 
 .grid-video-card-container {
+  margin: 0 -10px; }
+
+.grid-video-card-container > div {
   padding: 0; }
 
 .grid-video-card {
@@ -108,14 +111,22 @@ body {
   .list-video-card a {
     text-decoration: none; }
 
-.margin-top-8, .margin-top-bottom-8 {
+.margin-top-8 {
   margin-top: 8px; }
 
 .margin-top-12 {
   margin-top: 12px; }
 
-.margin-bottom-8, .margin-top-bottom-8 {
+.margin-bottom-8 {
   margin-bottom: 8px; }
+
+.margin-top-bottom-8 {
+  margin-top: 8px;
+  margin-bottom: 8px; }
+
+.margin-top-bottom-10, .panel-title-view {
+  margin-top: 10px;
+  margin-bottom: 10px; }
 
 .btn-subscribe {
   position: relative;
@@ -294,5 +305,21 @@ body {
     .video-play-list .video-play-list-view .video-play-list-item .info {
       float: left;
       width: 140px; }
+
+.content-class-filter .item {
+  overflow: auto; }
+  .content-class-filter .item .class-title {
+    float: left;
+    width: 100px; }
+  .content-class-filter .item .class-options {
+    float: left;
+    overflow: auto;
+    width: 500px; }
+    .content-class-filter .item .class-options .option-item {
+      float: left;
+      margin: 0 20px;
+      cursor: pointer; }
+.content-class-filter .button-group {
+  text-align: right; }
 
 /*# sourceMappingURL=ui.main.css.map */
