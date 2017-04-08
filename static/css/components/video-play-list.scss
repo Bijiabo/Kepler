@@ -1,4 +1,41 @@
 .video-play-list {
-  height: 200px;
-  background-color: $themeColor_Blue;
+  @extend .panel-view;
+
+  .video-play-list-view {
+    height: 200px;
+    overflow-y: scroll;
+
+    .video-play-list-item {
+      height: 70px;
+      width: 100%;
+      clear: both;
+
+      .index {
+        @extend .text-color-gray-info;
+        float: left;
+        text-align: center;
+      }
+
+      .preview {
+        float: left;
+        height: 50px;
+
+        img {
+          height: 100%;
+          background-color: $themeColor_GrayLight;
+        }
+      }
+
+      .info {
+        float: left;
+        width: 140px;
+        div {
+          @extend .no-break-line;
+          @extend .text-over-flow-ellipsis;
+        }
+      }
+    }
+  }
+
+
 }

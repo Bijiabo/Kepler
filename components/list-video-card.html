@@ -1,15 +1,15 @@
 <template v-for="(item, index) in new Array(5)">
     <div class="media list-video-card">
+    <a href="#">
         <div class="media-left">
             <div class="image-view" duration="06:00">
-                <a href="#">
-                    <img class="media-object" src="" alt="">
+
+                    <img src="./../static/image/scale/16-9.png" alt="">
                     <div class="video-progress" style="width: 33%;"></div>
-                </a>
             </div>
         </div>
         <div class="media-body">
-            <h4 class="media-heading text-color-white text-bold margin-top-12 text-type-description">
+            <h4 class="media-heading text-color-white text-bold text-type-description">
                 Horizon Zero Dawn All Cutscenes (Game Movie) PS4 PRO 1080p
             </h4>
             <h4 class="text-color-gray-light margin-top-bottom-8 text-type-description">
@@ -18,5 +18,6 @@
             <p class="text-color-blue margin-top-bottom-8">狂战士JK</p>
             <p class="text-color-gray-light">18,930次观看</p>
         </div>
+    </a>
     </div>
 </template>
