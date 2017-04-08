@@ -15,7 +15,7 @@ body {
 .text-color-white {
   color: #ffffff; }
 
-.text-color-red {
+.text-color-red, .navigation-bar .navigation-bar-right-container {
   color: #e34849; }
 
 .text-color-blue {
@@ -213,7 +213,12 @@ body {
   .navigation-bar .navigation-bar-right-container {
     flex-direction: row-reverse;
     flex-grow: 1;
-    min-width: 20px; }
+    cursor: pointer; }
+    .navigation-bar .navigation-bar-right-container .item {
+      padding: 10px; }
+    .navigation-bar .navigation-bar-right-container img {
+      height: 100%;
+      width: auto; }
 
 .navigation-bar > div {
   border: 1px solid #ff6600; }
@@ -234,6 +239,16 @@ body {
   justify-content: flex-start;
   align-items: stretch;
   display: none; }
+  .side-bar-menu .item {
+    padding-left: 38px;
+    height: 30px;
+    line-height: 30px; }
+    .side-bar-menu .item .icon {
+      float: left; }
+    .side-bar-menu .item .title {
+      float: left; }
+    .side-bar-menu .item .info {
+      float: right; }
 
 .side-bar-menu > div {
   border: 1px solid #ff6600; }

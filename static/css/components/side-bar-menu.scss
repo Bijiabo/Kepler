@@ -18,6 +18,22 @@
   align-items: stretch;
 
   display: none;
+
+  .item {
+    padding-left: 38px;
+    height: 30px;
+    line-height: 30px;
+
+    .icon {
+      float: left;
+    }
+    .title {
+      float: left;
+    }
+    .info {
+      float: right;
+    }
+  }
 }
 
 .side-bar-menu > div
