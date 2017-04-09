@@ -35,8 +35,12 @@ $(function () {
     // setTimeout(loadTemplates, 1000);
     setTimeout(function () {
         loadTemplateUnit($('body'), function () {
-            console.info('done');
-            if (window.render !== undefined) { window.render(); }
+            console.debug('Load Templates Done.');
+            if (window.didLoadActions !== undefined) {
+                for (var i=0,len=window.didLoadActions.length; i<len; i++) {
+                    window.didLoadActions[i]();
+                }
+            }
         });
     }, 1000);
 });

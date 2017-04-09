@@ -19,24 +19,44 @@
 
   display: none;
 
+  @extend .text-color-gray-bright;
+
   .item {
     padding-left: 38px;
-    height: 30px;
-    line-height: 30px;
+    height: 28px;
+    line-height: 28px;
 
     .icon {
       float: left;
+      margin-right: 12px;
     }
     .title {
       float: left;
     }
     .info {
       float: right;
+      margin-right: 20px;
     }
+  }
+
+  // 活跃条目
+  .item.active {
+    @extend .background-color-red;
+    @extend .text-color-gray-shine;
+  }
+
+  // 标题
+  .title-item {
+    @extend .item;
+    @extend .text-color-red;
+  }
+
+  .separator-line {
+    background-color: #424242;
   }
 }
 
 .side-bar-menu > div
 {
-  border: 1px solid #ff6600;
+  //border: 1px solid #ff6600;
 }

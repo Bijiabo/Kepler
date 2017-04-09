@@ -7,6 +7,7 @@ $themeColor_BlueLight: #acecef;
 $themeColor_GrayLightLess: #636363;
 $themeColor_GrayLight: #828282;
 $themeColor_GrayBright: #c1c1c1;
+$themeColor_GrayShine: #eeeeee;
 // 文字颜色
 $textColor_Red: $themeColor_Red;
 $textColor_Blue: $themeColor_Blue;
@@ -58,6 +59,10 @@ body {
 
 .text-color-gray-bright {
   color: $themeColor_GrayBright;
+}
+
+.text-color-gray-shine {
+  color: $themeColor_GrayShine;
 }
 
 .text-color-gray-info {
