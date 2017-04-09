@@ -1,0 +1,28 @@
+.list-video-card {
+  padding: 16px;
+
+  .image-view {
+    position: relative;
+    background-color: $themeColor_GrayLight;
+    width: 100px;
+
+    img {
+      width: 100%;
+      border:none;
+    }
+  }
+
+  .image-view::before {
+    @extend .video-image-view-duration;
+  }
+
+  h4 {
+    @extend .no-break-line;
+    @extend .text-over-flow-ellipsis;
+    width: 140px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

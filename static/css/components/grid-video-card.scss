@@ -1,0 +1,33 @@
+.grid-video-card-container {
+  margin: 0 -10px;
+
+  a {
+    text-decoration: none;
+  }
+}
+.grid-video-card-container > div {
+  padding: 0;
+}
+.grid-video-card {
+  //@extend .dev-border;
+  padding: 10px;
+
+  .image-view {
+    position: relative;
+    background-color: $themeColor_GrayLight;
+    width: 100%;
+    //min-height: 100px;
+
+    background-image: url("./../image/video-thumbnails/0.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .image-view::before {
+    @extend .video-image-view-duration;
+  }
+  img {
+    width: 100%;
+
+  }
+}
