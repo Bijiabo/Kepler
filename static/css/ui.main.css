@@ -24,16 +24,19 @@ body {
 .text-color-blue-light {
   color: #acecef; }
 
+.text-color-gray-dark, .no-network-tip {
+  color: #2b2b2b; }
+
 .text-color-gray-light-less {
   color: #636363; }
 
-.text-color-gray-light, .content-class-filter .item .class-options, .content-class-filter .side-bar-menu .title-item .class-options, .side-bar-menu .content-class-filter .title-item .class-options {
+.text-color-gray-light, .video-detail .action-buttons, .video-detail .video-description, .video-detail .view-more-button, .content-class-filter .item .class-options, .content-class-filter .side-bar-menu .title-item .class-options, .side-bar-menu .content-class-filter .title-item .class-options {
   color: #828282; }
 
-.text-color-gray-bright, .side-bar-menu {
+.text-color-gray-bright, .side-bar-menu, .video-detail .action-buttons > div.active, .video-detail .video-published-date, .video-detail .video-name {
   color: #c1c1c1; }
 
-.text-color-gray-shine, .side-bar-menu .item.active, .side-bar-menu .active.title-item {
+.text-color-gray-shine, .side-bar-menu .item.active, .side-bar-menu .active.title-item, .video-detail .action-buttons > div:hover {
   color: #eeeeee; }
 
 .text-color-gray-info, .video-play-list .video-play-list-view .video-play-list-item .index {
@@ -49,7 +52,13 @@ body {
   font-size: 12px;
   font-weight: normal; }
 
-.text-bold {
+.text-size-14, .video-detail .action-buttons, .video-detail .video-published-date {
+  font-size: 14px; }
+
+.text-size-12, .video-detail .video-description, .video-detail .video-name {
+  font-size: 12px; }
+
+.text-bold, .video-detail .panel-title-view {
   font-weight: bold; }
 
 .background-color-red, .side-bar-menu .item.active, .side-bar-menu .active.title-item {
@@ -64,7 +73,7 @@ body {
 .background-color-gray {
   background-color: #2A2B2C; }
 
-.background-color-panel, .panel-view, .video-play-list {
+.background-color-panel, .panel-view, .video-play-list, .no-network-tip {
   background-color: #373839; }
 
 .video-progress {
@@ -96,11 +105,19 @@ body {
 .margin-bottom-8 {
   margin-bottom: 8px; }
 
-.margin-top-bottom-8 {
+.margin-top-bottom-2 {
+  margin-top: 2px;
+  margin-bottom: 2px; }
+
+.margin-top-bottom-4 {
+  margin-top: 4px;
+  margin-bottom: 4px; }
+
+.margin-top-bottom-8, .video-detail .video-published-date, .video-detail .video-description, .video-detail .video-name {
   margin-top: 8px;
   margin-bottom: 8px; }
 
-.margin-top-bottom-10, .panel-title-view {
+.margin-top-bottom-10 {
   margin-top: 10px;
   margin-bottom: 10px; }
 
@@ -169,9 +186,10 @@ body {
   margin-top: 8px;
   margin-bottom: 8px; }
 
-.panel-view, .video-play-list {
+.panel-view, .video-play-list, .no-network-tip {
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
-  margin: 10px; }
+  margin: 10px;
+  padding: 20px; }
 
 .flex-row-left-container, .navigation-bar, .navigation-bar .navigation-bar-left-container, .navigation-bar .navigation-bar-search-bar-container, .navigation-bar .navigation-bar-right-container {
   display: flex;
@@ -207,9 +225,6 @@ body {
       height: 100%;
       width: auto; }
 
-.navigation-bar > div {
-  border: 1px solid #ff6600; }
-
 .has-side-bar-menu .side-bar-menu {
   display: block; }
 
@@ -229,7 +244,8 @@ body {
   .side-bar-menu .item, .side-bar-menu .title-item {
     padding-left: 38px;
     height: 28px;
-    line-height: 28px; }
+    line-height: 28px;
+    cursor: pointer; }
     .side-bar-menu .item .icon, .side-bar-menu .title-item .icon {
       float: left;
       margin-right: 12px; }
@@ -282,6 +298,45 @@ body {
     .video-play-list .video-play-list-view .video-play-list-item .info {
       float: left;
       width: 140px; }
+
+.no-network-tip {
+  background-color: #acecef;
+  margin-bottom: -10px;
+  padding: 6px 20px;
+  box-shadow: none; }
+  .no-network-tip .tip-icon {
+    margin-right: 10px; }
+  .no-network-tip .close-button {
+    cursor: pointer; }
+
+.video-detail {
+  padding-bottom: 0; }
+  .video-detail .panel-title-view {
+    margin-bottom: 10px; }
+  .video-detail .user-avatar {
+    width: 50px;
+    height: 50px; }
+  .video-detail .action-buttons {
+    overflow: auto; }
+    .video-detail .action-buttons .collect {
+      float: left;
+      margin-right: 20px;
+      cursor: pointer; }
+    .video-detail .action-buttons .share {
+      float: left;
+      cursor: pointer; }
+    .video-detail .action-buttons .thumbs-up {
+      float: right;
+      cursor: pointer; }
+  .video-detail .video-name {
+    overflow: auto; }
+    .video-detail .video-name .title {
+      margin-right: 20px; }
+  .video-detail .view-more-button {
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    padding: 0 0 10px 0; }
 
 .content-class-filter .item, .content-class-filter .side-bar-menu .title-item, .side-bar-menu .content-class-filter .title-item {
   overflow: auto; }

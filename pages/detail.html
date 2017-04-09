@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>Video Detail</title>
     <link rel="stylesheet" href="../static/css/bootstrap.css">
     <link rel="stylesheet" href="../static/css/font-awesome.min.css">
     <link rel="stylesheet" href="../static/css/ui.main.css">
@@ -13,7 +13,7 @@
     <script src="../static/js/vue.min.js"></script>
     <script src="../static/js/template-loader.js"></script>
 
-    <script src="../static/js/pages/home.js"></script>
+    <script data-main="../static/js/pages/home.js" src="../static/js/require.js"></script>
 </head>
 <body class="has-side-bar-menu">
 
@@ -27,9 +27,9 @@
             <div class="panel-view">
                 <template-import file="./../components/video-player.html"></template-import>
             </div>
-            <div class="panel-view">
-                <template-import file="./../components/video-detail.html"></template-import>
-            </div>
+
+            <template-import file="./../components/video-detail.html"></template-import>
+
             <div class="video-recommend-list panel-view row">
                 <template-import file="./../components/grid-video-card.html"></template-import>
             </div>

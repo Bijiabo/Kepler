@@ -1,2 +1,89 @@
+.no-network-tip {
+  @extend .panel-view;
+  @extend .text-color-gray-dark;
+  background-color: $themeColor_BlueLight;
+  margin-bottom: -10px;
+  padding: 6px 20px;
+  box-shadow: none;
+
+  .tip-icon {
+    margin-right: 10px;
+  }
+
+  .close-button {
+    cursor: pointer;
+  }
+}
+
 .video-detail {
+  //padding: 2px 16px;
+  padding-bottom: 0;
+
+  .panel-title-view {
+    @extend .text-bold;
+    margin-bottom: 10px;
+  }
+
+  $avatarSize: 50px;
+  .user-avatar {
+    width: $avatarSize;
+    height: $avatarSize;
+  }
+
+  .action-buttons {
+    @extend .text-color-gray-light;
+    @extend .text-size-14;
+    overflow: auto;
+
+    .collect {
+      float: left;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+    .share {
+      float: left;
+      cursor: pointer;
+    }
+    .thumbs-up {
+      float: right;
+      cursor: pointer;
+    }
+  }
+  .action-buttons > div.active {
+    @extend .text-color-gray-bright;
+  }
+  .action-buttons > div:hover {
+    @extend .text-color-gray-shine;
+  }
+
+  .video-published-date {
+    @extend .text-size-14;
+    @extend .text-color-gray-bright;
+    @extend .margin-top-bottom-8;
+  }
+
+  .video-description {
+    @extend .text-size-12;
+    @extend .text-color-gray-light;
+    @extend .margin-top-bottom-8;
+  }
+
+  .video-name {
+    @extend .text-size-12;
+    @extend .text-color-gray-bright;
+    @extend .margin-top-bottom-8;
+    overflow: auto;
+
+    .title {
+      margin-right: 20px;
+    }
+  }
+
+  .view-more-button {
+    @extend .text-color-gray-light;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    padding: 0 0 10px 0;
+  }
 }

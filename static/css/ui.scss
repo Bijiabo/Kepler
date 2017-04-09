@@ -4,6 +4,7 @@ $bodyBackgroundColor: #2A2B2C;
 $themeColor_Red: #e34849;
 $themeColor_Blue: #78d2dc;
 $themeColor_BlueLight: #acecef;
+$themeColor_GrayDark: #2b2b2b;
 $themeColor_GrayLightLess: #636363;
 $themeColor_GrayLight: #828282;
 $themeColor_GrayBright: #c1c1c1;
@@ -49,6 +50,10 @@ body {
   color: $textColor_BlueLight;
 }
 
+.text-color-gray-dark {
+  color: $themeColor_GrayDark;
+}
+
 .text-color-gray-light-less {
   color: $themeColor_GrayLightLess;
 }
@@ -82,6 +87,14 @@ body {
 .text-type-description {
   font-size: 12px;
   font-weight: normal;
+}
+
+.text-size-14 {
+  font-size: 14px;
+}
+
+.text-size-12 {
+  font-size: 12px;
 }
 
 .text-bold {
@@ -152,6 +165,12 @@ body {
 }
 .margin-bottom-8 {
   margin-bottom: 8px;
+}
+.margin-top-bottom-2 {
+  @include margin-top-bottom(2px, 2px);
+}
+.margin-top-bottom-4 {
+  @include margin-top-bottom(4px, 4px);
 }
 .margin-top-bottom-8 {
   @include margin-top-bottom(8px, 8px);
@@ -254,10 +273,11 @@ body {
   @extend .background-color-panel;
   box-shadow: 0 1px 8px rgba(0,0,0,0.3);
   margin: 10px;
+  padding: 20px;
 }
 
 .panel-title-view {
   @extend .text-type-title;
   @extend .text-color-red;
-  @extend .margin-top-bottom-10;
+  //@extend .margin-top-bottom-10;
 }
