@@ -1,5 +1,6 @@
 .video-play-list {
   @extend .panel-view;
+  margin-left: 0;
 
   .video-play-list-view {
     height: 200px;
@@ -36,6 +37,10 @@
       }
     }
   }
+}
 
-
+@media (max-width: 1200px) {
+  .video-play-list {
+    padding-left: 10px;
+  }
 }

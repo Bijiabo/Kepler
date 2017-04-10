@@ -9,8 +9,19 @@
   padding: 0;
 }
 .grid-video-card {
-  //@extend .dev-border;
+  @extend .animation;
+
+  float: left;
   padding: 10px;
+  width: 20%;
+
+  .title {
+    @extend .text-color-gray-bright;
+    @extend .text-bold;
+    @extend .margin-top-12;
+    @extend .no-break-line;
+    @extend .text-over-flow-ellipsis;
+  }
 
   .image-view {
     position: relative;
@@ -30,4 +41,12 @@
     width: 100%;
 
   }
+}
+
+.grid-video-card:hover {
+  @extend .background-color-gray-dark;
+
+  transform: scale(1.02,1.02);
+  position: relative;
+  z-index: 100;
 }

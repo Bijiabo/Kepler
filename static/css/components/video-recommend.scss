@@ -1,3 +1,11 @@
 .video-recommend {
+  @extend .panel-view;
   padding: 0;
+  margin-left: 0;
+}
+
+@media (max-width: 1200px) {
+  .video-recommend {
+    padding-left: 10px;
+  }
 }

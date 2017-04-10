@@ -32,6 +32,10 @@ body {
   overflow: hidden;
 }
 
+.animation {
+  transition: all 0.3s ease;
+}
+
 // 文本
 // 文本颜色
 .text-color-white {
@@ -116,6 +120,10 @@ body {
 
 .background-color-gray {
   background-color: $bodyBackgroundColor;
+}
+
+.background-color-gray-dark {
+  background-color: $themeColor_GrayDark;
 }
 
 .background-color-panel {

@@ -1,12 +1,42 @@
 .has-side-bar-menu {
   .detail-main {
     width: 100%;
-    margin-left: 110px;
+    padding-left: 220px;
   }
 }
 
-.detail-main-container {
-  margin: 80px auto;
-  max-width: 1020px;
-  padding: 10px;
+
+
+@media (min-width: 1201px) {
+  .detail-main-container {
+    position: relative;
+    margin: 50px auto;
+    max-width: 1440px;
+    max-width: 100%;
+    padding: 0 430px 0 0;
+
+    .right-side-bar {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 430px;
+      float: left;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+
+  .detail-main-container {
+    position: relative;
+    margin: 50px auto;
+    width: 100%;
+    padding: 0;
+
+    .right-side-bar {
+      position: relative;
+      width: 100%;
+      float: left;
+    }
+  }
 }
