@@ -3,7 +3,10 @@
     <div class="media list-video-card">
     <a href="#">
         <div class="media-left">
-            <div class="image-view" duration="06:00">
+            <div class="image-view"
+                 duration="06:00"
+                 :style="'background-image: url(./../static/image/video-thumbnails/'+index%6+'.jpg);'"
+            >
 
                     <img src="./../static/image/scale/16-9.png" alt="">
                     <div class="video-progress" style="width: 33%;"></div>
@@ -13,11 +16,11 @@
             <h4 class="media-heading text-color-white text-bold text-type-description">
                 Horizon Zero Dawn All Cutscenes (Game Movie) PS4 PRO 1080p
             </h4>
-            <h4 class="text-color-gray-light margin-top-bottom-8 text-type-description">
+            <h4 class="text-color-gray-light margin-top-bottom-4 text-type-description">
                 地平线(游戏视频) PS4PRO 1080P
             </h4>
-            <p class="text-color-blue margin-top-bottom-8 text-size-12">狂战士JK</p>
-            <p class="text-color-gray-light">18,930次观看</p>
+            <div class="text-color-blue margin-top-bottom-8 text-size-12">狂战士JK</div>
+            <div class="text-color-gray-light">18,930次观看</div>
         </div>
     </a>
     </div>

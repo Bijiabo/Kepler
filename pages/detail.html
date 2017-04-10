@@ -12,8 +12,10 @@
     <script src="../static/js/bootstrap.min.js"></script>
     <script src="../static/js/vue.min.js"></script>
     <script src="../static/js/template-loader.js"></script>
+    <script src="../static/js/plyr/plyr.js"></script>
+    <link rel="stylesheet" href="../static/js/plyr/plyr.css">
 
-    <script data-main="../static/js/pages/home.js" src="../static/js/require.js"></script>
+    <script data-main="../static/js/pages/detail.js" src="../static/js/require.js"></script>
 </head>
 <body class="has-side-bar-menu">
 
@@ -24,9 +26,7 @@
 
     <template-import file="./../components/detail-main-container.html">
         <div class="">
-            <div class="panel-view">
-                <template-import file="./../components/video-player.html"></template-import>
-            </div>
+            <template-import file="./../components/video-player.html"></template-import>
 
             <template-import file="./../components/video-detail.html"></template-import>
 

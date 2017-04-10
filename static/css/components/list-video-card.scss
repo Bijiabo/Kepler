@@ -1,10 +1,11 @@
 .list-video-card {
-  padding: 16px;
+  padding: 5px 12px;
+  margin: 0;
 
   .image-view {
     position: relative;
     background-color: $themeColor_GrayLight;
-    width: 100px;
+    width: 140px;
 
     img {
       width: 100%;
