@@ -327,7 +327,7 @@ body {
 
 @media (max-width: 1200px) {
   .video-play-list {
-    padding-left: 10px; } }
+    margin-left: 10px; } }
 .no-network-tip {
   background-color: #acecef;
   margin-bottom: -10px;
@@ -432,7 +432,7 @@ body {
 
 @media (max-width: 1200px) {
   .video-recommend {
-    padding-left: 10px; } }
+    margin-left: 10px; } }
 @keyframes plyr-progress {
   to {
     background-position: 25px 0; } }
