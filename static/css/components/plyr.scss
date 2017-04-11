@@ -220,6 +220,7 @@
     left: 0;
     width: 100%;
     padding: ($plyr-control-spacing * 2);
+    //transform: translateY(-($plyr-control-spacing * 6));
     transform: translateY(-($plyr-control-spacing * 6));
     transition: transform .3s ease;
     color: $plyr-captions-color;
@@ -757,3 +758,35 @@
         transform: translateY(-50%);
     }
 }
+
+// custom
+.plyr--video {
+    .plyr__controls {
+        @extend .panel-view;
+        margin: 0;
+        background: #373839;
+        bottom: -48px;
+        padding: 8px;
+    }
+
+}
+
+.plyr--fullscreen-active {
+    .plyr__controls {
+        bottom: 0;
+    }
+}
+
+.plyr__captions {
+    transform: translateY(-10px);
+    padding: 10px;
+    opacity: 0.5;
+}
+
+.plyr__captions span {
+    font-size: 14px;
+}
+
+//.plyr__controls [data-plyr="pause"] {
+//    margin-left: 10px;
+//}

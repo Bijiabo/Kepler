@@ -1,4 +1,7 @@
 .video-player {
+  @extend .panel-view;
+
+  margin-bottom: 58px;
   padding: 0;
   background-color: $themeColor_Red;
 }

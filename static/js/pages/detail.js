@@ -23,14 +23,6 @@ requirejs(['public'], function(_public) {
         _public.init();
         // video play
         var controls = ["<div class='plyr__controls'>",
-            "<button type='button' data-plyr='restart'>",
-            "<svg><use xlink:href='#plyr-restart'></use></svg>",
-            "<span class='plyr__sr-only'>Restart</span>",
-            "</button>",
-            "<button type='button' data-plyr='rewind'>",
-            "<svg><use xlink:href='#plyr-rewind'></use></svg>",
-            "<span class='plyr__sr-only'>Rewind {seektime} secs</span>",
-            "</button>",
             "<button type='button' data-plyr='play'>",
             "<svg><use xlink:href='#plyr-play'></use></svg>",
             "<span class='plyr__sr-only'>Play</span>",
@@ -38,10 +30,6 @@ requirejs(['public'], function(_public) {
             "<button type='button' data-plyr='pause'>",
             "<svg><use xlink:href='#plyr-pause'></use></svg>",
             "<span class='plyr__sr-only'>Pause</span>",
-            "</button>",
-            "<button type='button' data-plyr='fast-forward'>",
-            "<svg><use xlink:href='#plyr-fast-forward'></use></svg>",
-            "<span class='plyr__sr-only'>Forward {seektime} secs</span>",
             "</button>",
             "<span class='plyr__progress'>",
             "<label for='seek{id}' class='plyr__sr-only'>Seek</label>",
@@ -84,7 +72,7 @@ requirejs(['public'], function(_public) {
         var playerOptions = {
             controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'fullscreen'],
             debug: true,
-            autoplay: true,
+            autoplay: false,
             html: controls,
             captions: {defaultActive: true},
             hideControls: false
