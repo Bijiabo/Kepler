@@ -9,6 +9,7 @@ define([], function () {
     };
     
     var bindEvents = function () {
+        // 隐藏、显示侧边栏
         $(document).on('click', '.slidebar-menu-button', function () {
             var bodyElement = $('body');
             var targetClass = 'has-side-bar-menu';
@@ -16,6 +17,15 @@ define([], function () {
                 bodyElement.removeClass(targetClass);
             } else {
                 bodyElement.addClass(targetClass);
+            }
+        });
+        // 隐藏、显示消息盒子
+        $(document).on('click', '.navigation-bar .message-box-button', function () {
+            var messageBoxElement = $('.message-box');
+            if (messageBoxElement.data('show')) {
+                messageBoxElement.data('show',false).hide();
+            } else {
+                messageBoxElement.data('show',true).show();
             }
         });
     };

@@ -65,3 +65,60 @@
 {
   //border: 1px solid #cccccc;
 }
+
+.message-box {
+  position: fixed;
+  top: 50px;
+  right: 116px;
+  width: 680px;
+  border: 1px solid #545454;
+  z-index: 200;
+  background-color: $themeColor_GrayDark;
+
+  .title {
+    @extend .panel-title-view;
+    padding: 14px 36px;
+    margin: 0;
+  }
+
+  .message-list {
+    max-height: 400px;
+    overflow-y: scroll;
+
+    .message-item-cell {
+      overflow: auto;
+      border-top: 1px solid #545454;
+      padding: 10px 12px;
+      cursor: pointer;
+
+      .preview {
+        float: left;
+
+        img {
+          width: 120px;
+        }
+      }
+
+      .content {
+        float: left;
+        width: 500px;
+        margin-left: 12px;
+
+        .item-title {
+          @extend .text-color-blue;
+        }
+        .time {
+          @extend .text-color-gray-info;
+        }
+        .content-preview {
+          @extend .text-color-gray-info;
+          @extend .text-over-flow-ellipsis;
+          @extend .no-break-line;
+        }
+
+      }
+
+    }
+  }
+
+}

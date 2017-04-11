@@ -5,23 +5,23 @@
 body {
   background-color: #2A2B2C; }
 
-.no-break-line, .video-play-list .video-play-list-view .video-play-list-item .info div, .grid-video-card .title, .list-video-card h4 {
+.no-break-line, .message-box .message-list .message-item-cell .content .content-preview, .video-play-list .video-play-list-view .video-play-list-item .info div, .grid-video-card .title, .list-video-card h4 {
   white-space: nowrap; }
 
-.text-over-flow-ellipsis, .video-play-list .video-play-list-view .video-play-list-item .info div, .grid-video-card .title, .list-video-card h4 {
+.text-over-flow-ellipsis, .message-box .message-list .message-item-cell .content .content-preview, .video-play-list .video-play-list-view .video-play-list-item .info div, .grid-video-card .title, .list-video-card h4 {
   text-overflow: ellipsis;
   overflow: hidden; }
 
-.animation, .grid-video-card {
+.animation, .side-bar-menu .item, .side-bar-menu .title-item, .grid-video-card {
   transition: all 0.3s ease; }
 
 .text-color-white {
   color: #ffffff; }
 
-.text-color-red, .panel-title-view, .navigation-bar .navigation-bar-right-container, .side-bar-menu .title-item {
+.text-color-red, .panel-title-view, .message-box .title, .navigation-bar .navigation-bar-right-container, .side-bar-menu .title-item {
   color: #e34849; }
 
-.text-color-blue {
+.text-color-blue, .message-box .message-list .message-item-cell .content .item-title {
   color: #78d2dc; }
 
 .text-color-blue-light {
@@ -39,16 +39,16 @@ body {
 .text-color-gray-bright, .side-bar-menu, .video-detail .action-buttons > div.active, .video-detail .video-published-date, .video-detail .video-name, .grid-video-card .title {
   color: #c1c1c1; }
 
-.text-color-gray-shine, .side-bar-menu .item.active, .side-bar-menu .active.title-item, .video-detail .action-buttons > div:hover {
+.text-color-gray-shine, .side-bar-menu .item:hover, .side-bar-menu .title-item:hover, .side-bar-menu .item.active, .side-bar-menu .active.title-item, .video-detail .action-buttons > div:hover {
   color: #eeeeee; }
 
-.text-color-gray-info, .video-play-list .video-play-list-view .video-play-list-item .index {
+.text-color-gray-info, .message-box .message-list .message-item-cell .content .time, .message-box .message-list .message-item-cell .content .content-preview, .video-play-list .video-play-list-view .video-play-list-item .index {
   color: #636363; }
 
 .text-color-gray-title, .btn-subscribe {
   color: #c1c1c1; }
 
-.text-type-title, .panel-title-view {
+.text-type-title, .panel-title-view, .message-box .title {
   font-size: 14px; }
 
 .text-type-description {
@@ -61,7 +61,7 @@ body {
 .text-size-12, .video-detail .video-description, .video-detail .video-name {
   font-size: 12px; }
 
-.text-bold, .video-detail .panel-title-view, .grid-video-card .title {
+.text-bold, .video-detail .panel-title-view, .video-detail .message-box .title, .message-box .video-detail .title, .grid-video-card .title {
   font-weight: bold; }
 
 .background-color-red, .side-bar-menu .item.active, .side-bar-menu .active.title-item {
@@ -79,7 +79,7 @@ body {
 .background-color-gray-dark, .grid-video-card:hover {
   background-color: #2b2b2b; }
 
-.background-color-panel, .panel-view, .video-player, .video-play-list, .no-network-tip, .video-recommend, .plyr--video .plyr__controls {
+.background-color-panel, .panel-view, .video-player, .video-play-list, .no-network-tip, .video-recommend, .plyr--video .plyr__controls, .side-bar-menu .item .submenu, .side-bar-menu .title-item .submenu {
   background-color: #373839; }
 
 .video-progress {
@@ -231,6 +231,34 @@ body {
       height: 100%;
       width: auto; }
 
+.message-box {
+  position: fixed;
+  top: 50px;
+  right: 116px;
+  width: 680px;
+  border: 1px solid #545454;
+  z-index: 200;
+  background-color: #2b2b2b; }
+  .message-box .title {
+    padding: 14px 36px;
+    margin: 0; }
+  .message-box .message-list {
+    max-height: 400px;
+    overflow-y: scroll; }
+    .message-box .message-list .message-item-cell {
+      overflow: auto;
+      border-top: 1px solid #545454;
+      padding: 10px 12px;
+      cursor: pointer; }
+      .message-box .message-list .message-item-cell .preview {
+        float: left; }
+        .message-box .message-list .message-item-cell .preview img {
+          width: 120px; }
+      .message-box .message-list .message-item-cell .content {
+        float: left;
+        width: 500px;
+        margin-left: 12px; }
+
 .has-side-bar-menu .side-bar-menu {
   display: block; }
 
@@ -248,6 +276,7 @@ body {
   align-items: stretch;
   display: none; }
   .side-bar-menu .item, .side-bar-menu .title-item {
+    position: relative;
     padding-left: 38px;
     height: 28px;
     line-height: 28px;
@@ -260,6 +289,18 @@ body {
     .side-bar-menu .item .info, .side-bar-menu .title-item .info {
       float: right;
       margin-right: 20px; }
+    .side-bar-menu .item .submenu, .side-bar-menu .title-item .submenu {
+      position: absolute;
+      left: 100%;
+      border-left: 1px solid #2b2b2b;
+      display: none; }
+      .side-bar-menu .item .submenu .item, .side-bar-menu .title-item .submenu .item, .side-bar-menu .item .submenu .title-item, .side-bar-menu .title-item .submenu .title-item {
+        padding: 0;
+        width: 180px;
+        height: 28px;
+        text-align: center; }
+  .side-bar-menu .item:hover, .side-bar-menu .title-item:hover {
+    background: #636363; }
   .side-bar-menu .separator-line {
     background-color: #424242; }
 
@@ -341,7 +382,7 @@ body {
 
 .video-detail {
   padding-bottom: 0; }
-  .video-detail .panel-title-view {
+  .video-detail .panel-title-view, .video-detail .message-box .title, .message-box .video-detail .title {
     margin-bottom: 10px; }
   .video-detail .user-avatar {
     width: 50px;
