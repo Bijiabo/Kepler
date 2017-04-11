@@ -50,15 +50,36 @@
       .item {
         padding: 0;
         width: 180px;
-        height: 28px;
+        //height: 28px;
+        height: auto;
+        line-height: 28px;
         text-align: center;
+        overflow: auto;
+
+        .title {
+          width: 100%;
+          @extend .text-color-gray-bright;
+          text-decoration: none;
+          clear: both;
+        }
+
+        .subclass {
+          display: none;
+          margin-top: 28px;
+          .item {
+            @extend .text-color-gray-bright;
+            text-decoration: none;
+            width: 100%;
+            clear: both;
+          }
+          .subclass-item:hover {
+            background: $themeColor_GrayLightLess;
+            @extend .text-color-gray-shine;
+          }
+        }
+
       }
     }
-  }
-
-  .item:hover {
-    background: $themeColor_GrayLightLess;
-    @extend .text-color-gray-shine;
   }
 
   // 活跃条目
@@ -76,6 +97,18 @@
   .separator-line {
     background-color: #424242;
   }
+}
+
+.side-bar-menu > .item:hover {
+  background: $themeColor_GrayLightLess;
+  @extend .text-color-gray-shine;
+}
+
+.side-bar-menu > .item > .submenu > .item .title:hover,
+.side-bar-menu > .item > .submenu > .subclass > .item:hover
+{
+  background: $themeColor_GrayLightLess;
+  @extend .text-color-gray-shine;
 }
 
 .side-bar-menu > div

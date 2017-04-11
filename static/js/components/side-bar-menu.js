@@ -18,6 +18,16 @@ define([], function () {
             var $this = $(this);
             $this.find('.submenu').hide();
         });
+        $(document).on('click', '.submenu .item', function () {
+            var $this = $(this);
+            if (!$this.data('display-subclass')) {
+                $this.find('.subclass').show();
+                $this.data('display-subclass', true);
+            } else {
+                $this.find('.subclass').hide();
+                $this.data('display-subclass', false);
+            }
+        });
         
     };
     
