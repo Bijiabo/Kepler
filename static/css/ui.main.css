@@ -536,7 +536,10 @@ body {
   .list-video-card .image-view {
     position: relative;
     background-color: #828282;
-    width: 140px; }
+    width: 140px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
     .list-video-card .image-view img {
       width: 100%;
       border: none; }

@@ -6,6 +6,9 @@
     position: relative;
     background-color: $themeColor_GrayLight;
     width: 140px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     img {
       width: 100%;
