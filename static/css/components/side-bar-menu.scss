@@ -55,27 +55,38 @@
         line-height: 28px;
         text-align: center;
         overflow: auto;
+        border-bottom: 1px solid $bodyBackgroundColor;
 
         .title {
           width: 100%;
           @extend .text-color-gray-bright;
           text-decoration: none;
           clear: both;
+          border-bottom: 1px solid $bodyBackgroundColor;
         }
 
         .subclass {
           display: none;
           margin-top: 28px;
+          border-bottom: 1px solid $bodyBackgroundColor;
+
           .item {
             @extend .text-color-gray-bright;
             text-decoration: none;
             width: 100%;
             clear: both;
           }
+          .subclass-item {
+            border-bottom: 1px solid $bodyBackgroundColor;
+          }
           .subclass-item:hover {
             background: $themeColor_GrayLightLess;
             @extend .text-color-gray-shine;
           }
+        }
+
+        .subclass > .subclass-item > .item {
+          border-bottom: none;
         }
 
       }

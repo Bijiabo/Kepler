@@ -18,8 +18,9 @@ define([], function () {
             var $this = $(this);
             $this.find('.submenu').hide();
         });
-        $(document).on('click', '.submenu .item', function () {
-            var $this = $(this);
+        $(document).on('click', '.submenu .item .title', function (event) {
+            event.preventDefault();
+            var $this = $(this).parent('.item');
             if (!$this.data('display-subclass')) {
                 $this.find('.subclass').show();
                 $this.data('display-subclass', true);
