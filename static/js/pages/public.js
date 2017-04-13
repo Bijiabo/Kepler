@@ -6,13 +6,15 @@ define([
     '../components/side-bar-menu',
     '../components/noNetWorkTip',
     '../components/content-class-filter',
-], function (navigationBar, sideBarMenu, noNetworkTip, contentClassFilter) {
+    '../components/message-box'
+], function (navigationBar, sideBarMenu, noNetworkTip, contentClassFilter, messageBox) {
     
     var init = function () {
         navigationBar.init();
         sideBarMenu.init();
         noNetworkTip.init();
         contentClassFilter.init();
+        messageBox.init();
     };
     
     

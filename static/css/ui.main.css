@@ -5,10 +5,10 @@
 body {
   background-color: #2A2B2C; }
 
-.no-break-line, .message-box .message-list .message-item-cell .content .content-preview, .video-play-list .video-play-list-view .video-play-list-item .info div, .grid-video-card .title, .list-video-card h4 {
+.no-break-line, .message-box .content .message-item-cell .content .content-preview, .video-play-list .video-play-list-view .video-play-list-item .info div, .grid-video-card .title, .list-video-card h4 {
   white-space: nowrap; }
 
-.text-over-flow-ellipsis, .message-box .message-list .message-item-cell .content .content-preview, .video-play-list .video-play-list-view .video-play-list-item .info div, .grid-video-card .title, .list-video-card h4 {
+.text-over-flow-ellipsis, .message-box .content .message-item-cell .content .content-preview, .video-play-list .video-play-list-view .video-play-list-item .info div, .grid-video-card .title, .list-video-card h4 {
   text-overflow: ellipsis;
   overflow: hidden; }
 
@@ -21,7 +21,7 @@ body {
 .text-color-red, .panel-title-view, .message-box .title, .navigation-bar .navigation-bar-right-container, .side-bar-menu .title-item, .content-class-filter .item .class-options .option-item.active, .content-class-filter .side-bar-menu .title-item .class-options .option-item.active, .side-bar-menu .content-class-filter .title-item .class-options .option-item.active {
   color: #e34849; }
 
-.text-color-blue, .message-box .message-list .message-item-cell .content .item-title {
+.text-color-blue, .message-box .content .message-item-cell .content .item-title {
   color: #78d2dc; }
 
 .text-color-blue-light {
@@ -46,7 +46,7 @@ body {
 .side-bar-menu > .title-item > .submenu > .subclass > .title-item:hover, .video-detail .action-buttons > div:hover {
   color: #eeeeee; }
 
-.text-color-gray-info, .message-box .message-list .message-item-cell .content .time, .message-box .message-list .message-item-cell .content .content-preview, .video-play-list .video-play-list-view .video-play-list-item .index {
+.text-color-gray-info, .message-box .content .message-item-cell .content .time, .message-box .content .message-item-cell .content .content-preview, .message-box .content .message-item-cell .content .content-display, .video-play-list .video-play-list-view .video-play-list-item .index {
   color: #636363; }
 
 .text-color-gray-title, .btn-subscribe {
@@ -246,19 +246,24 @@ body {
   .message-box .title {
     padding: 14px 36px;
     margin: 0; }
-  .message-box .message-list {
+    .message-box .title .back {
+      margin: -2px -10px -10px -22px;
+      padding: 0 10px 0 10px;
+      font-size: 24px;
+      cursor: pointer; }
+  .message-box .content {
     max-height: 400px;
     overflow-y: scroll; }
-    .message-box .message-list .message-item-cell {
+    .message-box .content .message-item-cell {
       overflow: auto;
       border-top: 1px solid #545454;
       padding: 10px 12px;
       cursor: pointer; }
-      .message-box .message-list .message-item-cell .preview {
+      .message-box .content .message-item-cell .preview {
         float: left; }
-        .message-box .message-list .message-item-cell .preview img {
+        .message-box .content .message-item-cell .preview img {
           width: 120px; }
-      .message-box .message-list .message-item-cell .content {
+      .message-box .content .message-item-cell .content {
         float: left;
         width: 500px;
         margin-left: 12px; }
@@ -459,7 +464,8 @@ body {
       margin: 0 20px 10px 0;
       cursor: pointer; }
 .content-class-filter .button-group {
-  text-align: right; }
+  text-align: right;
+  margin-right: 10px; }
 
 .grid-video-card-container {
   margin: 0 -10px; }
