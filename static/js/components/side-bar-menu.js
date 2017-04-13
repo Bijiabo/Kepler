@@ -30,6 +30,20 @@ define([], function () {
             }
         });
         
+        // 测试添加频道
+        $(document).on('click', '.test-book-channel', function () {
+            var itemHTML = '\
+            <div class="item">\
+                <div class="logo">\
+                    <img src="../static/image/avatars/3.jpg" alt="">\
+                </div>\
+                <div class="title">测试频道</div>\
+                <div class="info">1024+</div>\
+            </div>\
+            ';
+            $('.side-bar-menu .channel-list').prepend(itemHTML);
+            $('.side-bar-menu .book-channel-success').show().fadeOut(1000);
+        });
     };
     
     return {
