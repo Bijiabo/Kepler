@@ -1,21 +1,37 @@
 .content-class-filter {
+  .filter-display-button {
+    margin: 14px 0 10px 8px;
+  }
+
   .item {
+    position: relative;
+    margin: 14px 10px;
     overflow: auto;
+    padding-left: 100px;
 
     .class-title {
-      float: left;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #828282;
       width: 100px;
     }
     .class-options {
       @extend .text-color-gray-light;
       float: left;
       overflow: auto;
-      width: 500px;
+      width: 100%;
+      border-bottom: 1px solid #424242;
 
       .option-item {
+        @extend .text-color-gray-bright;
         float: left;
-        margin: 0 20px;
+        margin: 0 20px 10px 0;
         cursor: pointer;
+      }
+
+      .option-item.active {
+        @extend .text-color-red;
       }
     }
   }

@@ -4,13 +4,15 @@
 define([
     '../components/navigation-bar',
     '../components/side-bar-menu',
-    '../components/noNetWorkTip'
-], function (navigationBar, sideBarMenu, noNetworkTip) {
+    '../components/noNetWorkTip',
+    '../components/content-class-filter',
+], function (navigationBar, sideBarMenu, noNetworkTip, contentClassFilter) {
     
     var init = function () {
         navigationBar.init();
         sideBarMenu.init();
         noNetworkTip.init();
+        contentClassFilter.init();
     };
     
     
