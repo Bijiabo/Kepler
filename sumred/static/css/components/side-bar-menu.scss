@@ -46,11 +46,16 @@
 
   .item {
     @extend .animation;
+    @extend .text-color-gray-bright;
     position: relative;
     padding-left: 38px;
     height: 28px;
     line-height: 28px;
     cursor: pointer;
+
+    a {
+      @extend .text-color-gray-bright;
+    }
 
     .icon {
       float: left;

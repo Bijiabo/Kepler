@@ -22,7 +22,15 @@
 
     // 侧边栏按钮
     .slidebar-menu-button {
+      position: relative;
+      left: -20px;
       margin-left: 38px;
+      padding: 12px 20px;
+      cursor: pointer;
+    }
+
+    .slidebar-menu-button:hover {
+      @extend .text-color-gray-bright;
     }
 
     // logo 展示
