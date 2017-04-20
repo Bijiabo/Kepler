@@ -58,6 +58,7 @@ requirejs(['public'], function(_public) {
             "<input id='volume{id}' class='plyr__volume--input' type='range' min='0' max='10' value='5' data-plyr='volume'>",
             "<progress class='plyr__volume--display' max='10' value='0' role='presentation'></progress>",
             "</span>",
+            "<div class='right-container'>",
             "<button type='button' data-plyr='captions'>",
             "<svg class='icon--captions-on'><use xlink:href='#plyr-captions-on'></use></svg>",
             "<svg><use xlink:href='#plyr-captions-off'></use></svg>",
@@ -68,6 +69,7 @@ requirejs(['public'], function(_public) {
             "<svg><use xlink:href='#plyr-enter-fullscreen'></use></svg>",
             "<span class='plyr__sr-only'>Toggle Fullscreen</span>",
             "</button>",
+            "</div>",// .right-container
             "</div>"].join("");
         var playerOptions = {
             controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'fullscreen'],

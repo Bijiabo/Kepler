@@ -4,4 +4,29 @@
   margin-bottom: 58px;
   padding: 0;
   background-color: $themeColor_Red;
+
+  .plyr__controls {
+    position: relative;
+
+    .plyr__progress {
+      position: absolute;
+      left: 0;
+      top: -14px;
+      width: 100%;
+      margin: 0;
+
+      .plyr__progress--buffer {
+        background-color: #565656;
+        border-radius: 0;
+      }
+    }
+
+    .right-container {
+      position: absolute;
+      right: 0;
+      padding-right: 10px;
+    }
+
+  }
+
 }
