@@ -227,13 +227,14 @@ body {
 .btn-ghost {
   border-width: 1px;
   border-style: solid;
-  border-color: $themeColor_GrayBright;
+  border-color: #424242;
   padding: 2px 6px;
-  color: $themeColor_GrayBright;
+  color: #424242;
+  border-radius: 0;
 }
 .btn-ghost:hover {
-  color: $themeColor_BlueLight;
-  border-color: $themeColor_BlueLight;
+  color: $themeColor_Red;
+  border-color: $themeColor_Red;
 }
 
 // from

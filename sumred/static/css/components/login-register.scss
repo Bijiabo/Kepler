@@ -1,0 +1,100 @@
+$inputBackground: #424242;
+$inputTextColor: #c1c1c1;
+$inputPlaceHolderTextColor: #636363;
+
+.login-container {
+  width: 400px;
+
+  .logo-container {
+    text-align: center;
+    margin-top: 218px;
+    margin-bottom: 112px;
+  }
+
+  .form-group {
+    position: relative;
+    margin-bottom: 10px;
+
+    .ok, .error {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 44px;
+      height: 44px;
+      text-align: center;
+      line-height: 44px;
+      color: $themeColor_Red;
+      display: none;
+    }
+  }
+
+  .form-group.ok {
+    input {
+      padding-right: 44px;
+    }
+    .ok {
+      display: block;
+    }
+  }
+
+  .form-group.error {
+    input {
+      padding-right: 44px;
+    }
+
+    .error {
+      display: block;
+    }
+  }
+
+  input {
+    background-color: $inputBackground;
+    color: $inputTextColor;
+    border-radius: 0;
+    border: none;
+    height: 44px;
+  }
+
+  input:focus  {
+    box-shadow: none;
+  }
+
+  input::-webkit-input-placeholder
+  {
+    color: $inputPlaceHolderTextColor;
+  }
+  input:-moz-placeholder
+  {
+    color: $inputPlaceHolderTextColor;
+  }
+  input::-moz-placeholder
+  {
+    color: $inputPlaceHolderTextColor;
+  }
+  input:-ms-input-placeholder
+  {
+    color: $inputPlaceHolderTextColor;
+  }
+
+  .btn-ghost {
+    height: 44px;
+    line-height: 44px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .button-group.row {
+    margin: 20px -10px 58px -10px;
+
+    .col-xs-6 {
+      padding: 0 10px;
+    }
+  }
+
+  .tip {
+    color: $inputTextColor;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+}

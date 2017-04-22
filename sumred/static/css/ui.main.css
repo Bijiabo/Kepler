@@ -165,13 +165,14 @@ body {
 .btn-ghost {
   border-width: 1px;
   border-style: solid;
-  border-color: #c1c1c1;
+  border-color: #424242;
   padding: 2px 6px;
-  color: #c1c1c1; }
+  color: #424242;
+  border-radius: 0; }
 
 .btn-ghost:hover {
-  color: #acecef;
-  border-color: #acecef; }
+  color: #e34849;
+  border-color: #e34849; }
 
 .search-input-container {
   width: 340px;
@@ -1164,5 +1165,62 @@ body {
 
 .plyr__captions span {
   font-size: 14px; }
+
+.login-container {
+  width: 400px; }
+  .login-container .logo-container {
+    text-align: center;
+    margin-top: 218px;
+    margin-bottom: 112px; }
+  .login-container .form-group {
+    position: relative;
+    margin-bottom: 10px; }
+    .login-container .form-group .ok, .login-container .form-group .error {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 44px;
+      height: 44px;
+      text-align: center;
+      line-height: 44px;
+      color: #e34849;
+      display: none; }
+  .login-container .form-group.ok input {
+    padding-right: 44px; }
+  .login-container .form-group.ok .ok {
+    display: block; }
+  .login-container .form-group.error input {
+    padding-right: 44px; }
+  .login-container .form-group.error .error {
+    display: block; }
+  .login-container input {
+    background-color: #424242;
+    color: #c1c1c1;
+    border-radius: 0;
+    border: none;
+    height: 44px; }
+  .login-container input:focus {
+    box-shadow: none; }
+  .login-container input::-webkit-input-placeholder {
+    color: #636363; }
+  .login-container input:-moz-placeholder {
+    color: #636363; }
+  .login-container input::-moz-placeholder {
+    color: #636363; }
+  .login-container input:-ms-input-placeholder {
+    color: #636363; }
+  .login-container .btn-ghost {
+    height: 44px;
+    line-height: 44px;
+    padding-top: 0;
+    padding-bottom: 0; }
+  .login-container .button-group.row {
+    margin: 20px -10px 58px -10px; }
+    .login-container .button-group.row .col-xs-6 {
+      padding: 0 10px; }
+  .login-container .tip {
+    color: #c1c1c1;
+    text-align: center;
+    margin-bottom: 50px; }
 
 /*# sourceMappingURL=ui.main.css.map */
