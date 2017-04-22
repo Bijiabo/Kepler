@@ -94,7 +94,7 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
             var $this = $(this);
             var inputContainer = $this.parents('.form-group');
             inputContainer.removeClass('ok error');
-            elements.tip.fadeOut();
+            // elements.tip.fadeOut();
         });
     
         // 用户点击跳转到注册页面动作
@@ -133,6 +133,12 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
                 elements.captchaInputContainer.addClass('ok');
             }
         });
+    
+        // 检测用户输入的手机号是否符合标准
+        // todo: 完善功能实现细节
+        
+        // 检测用户输入的密码是否符合要求
+        // todo: 完善密码验证细节
         
         // 用户点击注册按钮
         $(document).on('click', '.do-register', function () {
