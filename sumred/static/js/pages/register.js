@@ -142,14 +142,22 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
                     password = elements.passwordInput.val();
                 // todo： 调用接口检测验证码是否正确
                 // todo： 调用接口进行注册
-                userSystem.register(cellPhoneNumber, password);
+                userSystem.register(cellPhoneNumber, password, function (success, description) {
+                    if (success) {
+                        location.href = './register-success.html';
+                    } else {
+                        
+                    }
+                });
                 // todo: redirect to registe success page
                 
             } else {
                 // 邮箱注册
                 var mail = elements.mailInput.val();
                 // todo： 调用接口发送注册邮件
-                userSystem.registerByEmail(mail);
+                userSystem.registerByEmail(mail, function (success, description) {
+                    location.href = './register-success.html';
+                });
                 // todo: redirect to mail register password set page;
             }
         });
