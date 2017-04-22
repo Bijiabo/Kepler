@@ -1209,18 +1209,39 @@ body {
     color: #636363; }
   .login-container input:-ms-input-placeholder {
     color: #636363; }
+  .login-container .input-group-btn .btn {
+    height: 44px;
+    background-color: #424242;
+    color: #e34849;
+    border: none;
+    margin-left: 2px;
+    border-radius: 0; }
+  .login-container .input-group-btn .btn:focus {
+    box-shadow: none;
+    outline: none; }
   .login-container .btn-ghost {
     height: 44px;
     line-height: 44px;
     padding-top: 0;
     padding-bottom: 0; }
-  .login-container .button-group.row {
+  .login-container .button-group {
     margin: 20px -10px 58px -10px; }
-    .login-container .button-group.row .col-xs-6 {
+    .login-container .button-group .col-xs-6, .login-container .button-group .col-xs-12 {
       padding: 0 10px; }
   .login-container .tip {
     color: #c1c1c1;
     text-align: center;
     margin-bottom: 50px; }
+  .login-container .btn-group .btn {
+    height: 44px;
+    background-color: transparent;
+    color: #e34849;
+    border: 1px solid #424242;
+    border-bottom: none;
+    border-radius: 0; }
+  .login-container .btn-group .btn.active {
+    background-color: #e34849;
+    color: #2A2B2C;
+    border-color: #e34849; }
 
 /*# sourceMappingURL=ui.main.css.map */

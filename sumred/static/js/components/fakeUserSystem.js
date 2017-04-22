@@ -4,7 +4,10 @@
 define([], function () {
     var user = {
         register: function (account, password) {
-            Cookies.set('name', 'value');
+            Cookies.set(account, password);
+        },
+        registerByEmail: function (email) {
+            Cookies.set('email', email);
         },
         login: function (account, password) {
             return Cookies.get(account) == password;

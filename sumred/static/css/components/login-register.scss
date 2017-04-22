@@ -76,6 +76,24 @@ $inputPlaceHolderTextColor: #636363;
     color: $inputPlaceHolderTextColor;
   }
 
+  .input-group-btn {
+
+    .btn {
+      height: 44px;
+      background-color: $inputBackground;
+      color: $themeColor_Red;
+      border: none;
+      //border-left: 1px solid $bodyBackgroundColor;
+      margin-left: 2px;
+      border-radius: 0;
+    }
+    .btn:focus {
+      box-shadow: none;
+      outline: none;
+    }
+
+  }
+
   .btn-ghost {
     height: 44px;
     line-height: 44px;
@@ -83,10 +101,10 @@ $inputPlaceHolderTextColor: #636363;
     padding-bottom: 0;
   }
 
-  .button-group.row {
+  .button-group{
     margin: 20px -10px 58px -10px;
 
-    .col-xs-6 {
+    .col-xs-6, .col-xs-12 {
       padding: 0 10px;
     }
   }
@@ -95,6 +113,25 @@ $inputPlaceHolderTextColor: #636363;
     color: $inputTextColor;
     text-align: center;
     margin-bottom: 50px;
+  }
+
+  // 切换注册账户按钮组
+  .btn-group {
+
+    .btn {
+      height: 44px;
+      background-color: transparent;
+      color: $themeColor_Red;
+      border: 1px solid $inputBackground;
+      border-bottom: none;
+      border-radius: 0;
+    }
+    .btn.active {
+      background-color: $themeColor_Red;
+      color: $bodyBackgroundColor;
+      border-color: $themeColor_Red;
+    }
+
   }
 
 }

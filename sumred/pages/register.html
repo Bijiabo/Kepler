@@ -16,11 +16,86 @@
     <script src="../static/js/template-loader.js"></script>
 
     <!--<script src="../static/js/pages/home.js"></script>-->
-    <script data-main="../static/js/pages/search.js" src="../static/js/require.js"></script>
+    <script data-main="../static/js/pages/register.js" src="../static/js/require.js"></script>
 </head>
 <body>
 
 <div id="app">
+
+    <div class="login-container container">
+
+        <div class="logo-container" style="margin-bottom: 70px;">
+            <img src="../static/image/sumred_logo.jpg" alt="">
+        </div>
+
+        <!--切换卡片-->
+        <div class="btn-group register-account-type-switch" role="group" aria-label="...">
+            <button type="button" class="btn btn-default active" register-type="cell-phone-register">手机注册</button>
+            <button type="button" class="btn btn-default" register-type="mail-register">邮箱注册</button>
+        </div>
+
+        <div class="register-input-container">
+        <!--手机号注册-->
+        <div class="cell-phone-register">
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="cell-phone-number" placeholder="手机号">
+                    <span class="input-group-btn">
+                    <button class="btn btn-default get-captcha" type="button">发送验证码</button>
+                </span>
+                </div>
+            </div>
+
+            <div class="form-group captcha-input-container">
+                <label class="sr-only" for="captcha">Captcha</label>
+                <input type="text" class="form-control" id="captcha" placeholder="输入验证码">
+                <div class="ok">
+                    <div class="fa fa-check"></div>
+                </div>
+                <div class="error">
+                    <div class="fa fa-close"></div>
+                </div>
+            </div>
+
+            <div class="form-group password-input-container">
+                <label class="sr-only" for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="密码">
+                <div class="ok">
+                    <div class="fa fa-check"></div>
+                </div>
+                <div class="error">
+                    <div class="fa fa-close"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--邮箱注册-->
+        <div class="mail-register" style="display: none;">
+            <div class="form-group mail-input-container">
+                <label class="sr-only" for="mail">Account</label>
+                <input type="text" class="form-control" id="mail" placeholder="您的电子邮箱地址">
+                <div class="ok">
+                    <div class="fa fa-check"></div>
+                </div>
+                <div class="error">
+                    <div class="fa fa-close"></div>
+                </div>
+            </div>
+        </div>
+
+        </div><!-- end of .register-input-container -->
+
+        <div class="button-group row">
+            <div class="col-xs-12">
+                <div class="btn btn-ghost btn-block do-register">注册</div>
+            </div>
+        </div>
+
+        <div class="tip">
+            已发送密码重置链接到您的邮箱
+        </div>
+
+    </div>
 
 </div>
 
