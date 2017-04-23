@@ -8,11 +8,14 @@ var render = function() {
     var app = new Vue({
         el: '#app',
         data: {
-            videoCards: Array.apply(null, Array(50))
+            watchHistory: Array.apply(null, Array(5)).map(function(item, i) {
+                return 0;
+            })
         },
         methods: {
         },
         mounted: function () {
+            window.renderContext = this;
         }
     });
 };
@@ -39,6 +42,11 @@ requirejs(['public'], function(_public) {
         $(document).on('click', '.load-more', function (e) {
             e.preventDefault();
             // todo: 此处获取更多数据加载到页面中
+            // 模拟加载远程数据
+            var newData = Array.apply(null, Array(5)).map(function(item, i) {
+                return 0;
+            });
+            Vue.set(window.renderContext, 'watchHistory', window.renderContext.watchHistory.concat( newData ));
         });
     };
     bindEvents();
