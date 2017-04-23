@@ -15,7 +15,7 @@
     <script src="../static/js/js.cookie.js"></script>
     <script src="../static/js/template-loader.js"></script>
 
-    <script data-main="../static/js/pages/history-watch.js" src="../static/js/require.js"></script>
+    <script data-main="../static/js/pages/history-search.js" src="../static/js/require.js"></script>
 </head>
 <body class="has-side-bar-menu">
 
@@ -26,6 +26,46 @@
 
     <template-import file="./../components/main-container.html">
 
+        <div class="history-container">
+            <div class="history-type-switch-container">
+                <a href="history-watch.html" class="item">观看记录</a>
+                <a href="#" class="item active">搜索记录</a>
+
+                <div class="search-input-container unfocused">
+                    <div class="input-group">
+                        <input type="text" class="form-control" aria-label="search">
+                        <div class="input-group-btn">
+                            <div class="btn">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="list-container">
+                <template v-for="(item, index) in watchHistory">
+
+                    <div class="list-video-card-item-package">
+                        <div class="media list-video-card search-history-item">
+                            <a href="detail.html">
+                                <h4 class="media-heading text-color-blue  text-type-description">
+                                    Horizon Zero Dawn All Cutscenes (Game Movie) PS4 PRO 1080p
+                                </h4>
+                                <div class="text-color-gray-light time">2小时前</div>
+                            </a>
+                            <div class="delete fa fa-close" :target-id="index"></div>
+                        </div>
+
+                        <div class="separator-line"></div>
+                    </div>
+                </template>
+            </div>
+
+            <div class="load-more">
+                <a href="#" class="text-color-gray-info">加载更多</a>
+            </div>
+        </div>
 
     </template-import>
 </div>

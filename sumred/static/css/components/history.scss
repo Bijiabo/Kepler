@@ -1,4 +1,4 @@
-.history-watch-container {
+.history-container {
   margin: -10px;
 
   .list-container {
@@ -75,6 +75,36 @@
     @extend .text-color-gray-info;
     margin-bottom: 20px;
     text-align: center;
+  }
+
+  .list-video-card {
+    .media-heading {
+      @extend .text-color-gray-bright;
+    }
+  }
+
+  .list-video-card:hover {
+    .media-heading {
+      @extend .text-color-white;
+    }
+    .author {
+      @extend .text-color-blue-light;
+    }
+  }
+
+  .list-video-card.search-history-item {
+    .media-heading {
+      @extend .text-color-blue;
+    }
+  }
+
+  .list-video-card.search-history-item:hover {
+    .media-heading {
+      @extend .text-color-blue-light;
+    }
+    .time {
+      @extend .text-color-white;
+    }
   }
 
 }

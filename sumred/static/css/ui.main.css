@@ -18,16 +18,16 @@ body {
 a:hover {
   text-decoration: none; }
 
-.text-color-white {
+.text-color-white, .history-container .list-video-card:hover .media-heading, .history-container .list-video-card.search-history-item:hover .time {
   color: #ffffff; }
 
 .text-color-red, .panel-title-view, .message-box .title, .navigation-bar .navigation-bar-right-container, .side-bar-menu .title-item, .content-class-filter .item .class-options .option-item.active, .content-class-filter .side-bar-menu .title-item .class-options .option-item.active, .side-bar-menu .content-class-filter .title-item .class-options .option-item.active {
   color: #e34849; }
 
-.text-color-blue, .message-box .content .message-item-cell .content .item-title {
+.text-color-blue, .message-box .content .message-item-cell .content .item-title, .history-container .list-video-card.search-history-item .media-heading {
   color: #78d2dc; }
 
-.text-color-blue-light {
+.text-color-blue-light, .history-container .list-video-card:hover .author, .history-container .list-video-card.search-history-item:hover .media-heading {
   color: #acecef; }
 
 .text-color-gray-dark, .side-bar-menu .book-channel-success .title, .no-network-tip {
@@ -39,7 +39,7 @@ a:hover {
 .text-color-gray-light, .video-detail .action-buttons, .video-detail .video-description, .video-detail .view-more-button, .content-class-filter .item .class-options, .content-class-filter .side-bar-menu .title-item .class-options, .side-bar-menu .content-class-filter .title-item .class-options {
   color: #828282; }
 
-.text-color-gray-bright, .navigation-bar .navigation-bar-left-container .slidebar-menu-button:hover, .side-bar-menu, .side-bar-menu .item, .side-bar-menu .title-item, .side-bar-menu .item a, .side-bar-menu .title-item a, .side-bar-menu .item .submenu .item .title, .side-bar-menu .title-item .submenu .item .title, .side-bar-menu .item .submenu .title-item .title, .side-bar-menu .title-item .submenu .title-item .title, .side-bar-menu .item .submenu .item .subclass .item, .side-bar-menu .title-item .submenu .item .subclass .item, .side-bar-menu .item .submenu .title-item .subclass .item, .side-bar-menu .title-item .submenu .title-item .subclass .item, .side-bar-menu .item .submenu .item .subclass .title-item, .side-bar-menu .title-item .submenu .item .subclass .title-item, .side-bar-menu .item .submenu .title-item .subclass .title-item, .side-bar-menu .title-item .submenu .title-item .subclass .title-item, .video-detail .action-buttons > div.active, .video-detail .video-published-date, .video-detail .video-name, .content-class-filter .item .class-options .option-item, .content-class-filter .side-bar-menu .title-item .class-options .option-item, .side-bar-menu .content-class-filter .title-item .class-options .option-item, .grid-video-card .title {
+.text-color-gray-bright, .navigation-bar .navigation-bar-left-container .slidebar-menu-button:hover, .side-bar-menu, .side-bar-menu .item, .side-bar-menu .title-item, .side-bar-menu .item a, .side-bar-menu .title-item a, .side-bar-menu .item .submenu .item .title, .side-bar-menu .title-item .submenu .item .title, .side-bar-menu .item .submenu .title-item .title, .side-bar-menu .title-item .submenu .title-item .title, .side-bar-menu .item .submenu .item .subclass .item, .side-bar-menu .title-item .submenu .item .subclass .item, .side-bar-menu .item .submenu .title-item .subclass .item, .side-bar-menu .title-item .submenu .title-item .subclass .item, .side-bar-menu .item .submenu .item .subclass .title-item, .side-bar-menu .title-item .submenu .item .subclass .title-item, .side-bar-menu .item .submenu .title-item .subclass .title-item, .side-bar-menu .title-item .submenu .title-item .subclass .title-item, .video-detail .action-buttons > div.active, .video-detail .video-published-date, .video-detail .video-name, .content-class-filter .item .class-options .option-item, .content-class-filter .side-bar-menu .title-item .class-options .option-item, .side-bar-menu .content-class-filter .title-item .class-options .option-item, .grid-video-card .title, .history-container .list-video-card .media-heading {
   color: #c1c1c1; }
 
 .text-color-gray-shine, .side-bar-menu .item .submenu .item .subclass .subclass-item:hover, .side-bar-menu .title-item .submenu .item .subclass .subclass-item:hover, .side-bar-menu .item .submenu .title-item .subclass .subclass-item:hover, .side-bar-menu .title-item .submenu .title-item .subclass .subclass-item:hover, .side-bar-menu .item.active, .side-bar-menu .active.title-item, .side-bar-menu > .item:hover, .side-bar-menu > .title-item:hover, .side-bar-menu > .item > .submenu > .item .title:hover, .side-bar-menu > .title-item > .submenu > .item .title:hover, .side-bar-menu > .item > .submenu > .title-item .title:hover, .side-bar-menu > .title-item > .submenu > .title-item .title:hover,
@@ -49,7 +49,7 @@ a:hover {
 .side-bar-menu > .title-item > .submenu > .subclass > .title-item:hover, .video-detail .action-buttons > div:hover {
   color: #eeeeee; }
 
-.text-color-gray-info, .message-box .content .message-item-cell .content .time, .message-box .content .message-item-cell .content .content-preview, .message-box .content .message-item-cell .content .content-display, .video-play-list .video-play-list-view .video-play-list-item .index, .history-watch-container .list-video-card .delete, .history-watch-container .load-more {
+.text-color-gray-info, .message-box .content .message-item-cell .content .time, .message-box .content .message-item-cell .content .content-preview, .message-box .content .message-item-cell .content .content-display, .video-play-list .video-play-list-view .video-play-list-item .index, .history-container .list-video-card .delete, .history-container .load-more {
   color: #636363; }
 
 .text-color-gray-title, .btn-subscribe {
@@ -1478,51 +1478,51 @@ a:hover {
       background-color: rgba(0, 0, 0, 0.4);
       z-index: 500; }
 
-.history-watch-container {
+.history-container {
   margin: -10px; }
-  .history-watch-container .list-container {
+  .history-container .list-container {
     padding: 10px; }
-  .history-watch-container .list-video-card {
+  .history-container .list-video-card {
     position: relative;
     margin-left: 10px; }
-    .history-watch-container .list-video-card h4 {
+    .history-container .list-video-card h4 {
       width: 700px; }
-    .history-watch-container .list-video-card .image-view {
+    .history-container .list-video-card .image-view {
       width: 150px; }
-    .history-watch-container .list-video-card .delete {
+    .history-container .list-video-card .delete {
       position: absolute;
       right: 0;
       top: 0;
       padding: 4px 10px;
       cursor: pointer; }
-    .history-watch-container .list-video-card .delete:hover {
+    .history-container .list-video-card .delete:hover {
       color: #c1c1c1; }
-  .history-watch-container .history-type-switch-container {
+  .history-container .history-type-switch-container {
     width: 100%;
     clear: both;
     border-bottom: 1px solid #424242;
     margin-bottom: 10px; }
-    .history-watch-container .history-type-switch-container .item, .history-watch-container .history-type-switch-container .side-bar-menu .title-item, .side-bar-menu .history-watch-container .history-type-switch-container .title-item {
+    .history-container .history-type-switch-container .item, .history-container .history-type-switch-container .side-bar-menu .title-item, .side-bar-menu .history-container .history-type-switch-container .title-item {
       display: inline-block;
       color: #c1c1c1;
       text-align: center;
       width: 96px;
       padding: 14px 0;
       cursor: pointer; }
-    .history-watch-container .history-type-switch-container .item.active, .history-watch-container .history-type-switch-container .side-bar-menu .active.title-item, .side-bar-menu .history-watch-container .history-type-switch-container .active.title-item {
+    .history-container .history-type-switch-container .item.active, .history-container .history-type-switch-container .side-bar-menu .active.title-item, .side-bar-menu .history-container .history-type-switch-container .active.title-item {
       color: #eeeeee; }
-    .history-watch-container .history-type-switch-container .item:hover, .history-watch-container .history-type-switch-container .side-bar-menu .title-item:hover, .side-bar-menu .history-watch-container .history-type-switch-container .title-item:hover {
+    .history-container .history-type-switch-container .item:hover, .history-container .history-type-switch-container .side-bar-menu .title-item:hover, .side-bar-menu .history-container .history-type-switch-container .title-item:hover {
       color: #eeeeee; }
-    .history-watch-container .history-type-switch-container .search-input-container.unfocused {
+    .history-container .history-type-switch-container .search-input-container.unfocused {
       float: right;
       padding: 12px; }
-      .history-watch-container .history-type-switch-container .search-input-container.unfocused .input-group .form-control {
+      .history-container .history-type-switch-container .search-input-container.unfocused .input-group .form-control {
         border-color: #636363; }
-      .history-watch-container .history-type-switch-container .search-input-container.unfocused .input-group .btn {
+      .history-container .history-type-switch-container .search-input-container.unfocused .input-group .btn {
         background: #636363;
         color: #2A2B2C;
         border-color: #636363; }
-  .history-watch-container .load-more {
+  .history-container .load-more {
     margin-bottom: 20px;
     text-align: center; }
 
