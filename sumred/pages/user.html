@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>筛选内容 - Sumred</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/css/ui.main.css">
+    <!--scripts-->
+    <script src="../static/js/jquery-3.1.1.min.js"></script>
+    <script src="../static/js/tether.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/vue.min.js"></script>
+    <script src="../static/js/js.cookie.js"></script>
+    <script src="../static/js/template-loader.js"></script>
+
+    <script data-main="../static/js/pages/user.js" src="../static/js/require.js"></script>
+</head>
+<body class="has-side-bar-menu">
+
+<div id="app">
+    <template-import file="./../components/navigation-bar.html"></template-import>
+
+    <template-import file="./../components/side-bar-menu.html"></template-import>
+
+    <template-import file="./../components/main-container-780.html">
+
+
+        <div class="user-container">
+            <!--封面-->
+            <div class="cover">
+                <div class="edit-button">
+                    <div class="fa fa-pencil-square-o"></div>
+                </div>
+            </div>
+
+            <!--头像-->
+            <div class="avatar">
+                <div class="edit-button">
+                    <div class="fa fa-pencil-square-o"></div>
+                </div>
+            </div>
+
+            <!--表单-->
+            <div class="form">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="name" class="title">昵称</label>
+                        <input type="text" class="form-control" id="name" placeholder="">
+                    </div>
+                </form>
+
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="cell-phone-number" class="title">手机号</label>
+                        <input type="text" class="form-control" id="cell-phone-number" placeholder="">
+                    </div>
+                </form>
+
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="mail" class="title">邮箱</label>
+                        <input type="text" class="form-control" id="mail" placeholder="">
+                    </div>
+                </form>
+
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label class="title">生日</label>
+                        <input type="text" class="form-control" id="year" placeholder="">
+                        <label for="year">年</label>
+                        <input type="text" class="form-control" id="month" placeholder="">
+                        <label for="month">月</label>
+                        <input type="text" class="form-control" id="day" placeholder="">
+                        <label for="day">日</label>
+                    </div>
+                </form>
+
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label class="title">性别</label>
+                        <div class="gender-container">
+                            <label>女 <span attr="女" class="fa fa-square-o"></span> </label>
+                            <label>男 <span attr="男" class="fa fa-square-o"></span> </label>
+                            <label>保密 <span attr="保密" class="fa fa-square-o"></span> </label>
+                        </div>
+
+                    </div>
+                </form>
+
+                <!--确定、取消按钮-->
+                <div class="button-group">
+                    <div class="btn btn-ghost">确定</div>
+                    <div class="btn btn-ghost">取消</div>
+                </div>
+
+            </div>
+
+
+            <a href="#" class="logout">退出登录</a>
+
+        </div>
+
+
+    </template-import>
+</div>
+
+
+
+</body>
+</html>

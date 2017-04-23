@@ -1,0 +1,153 @@
+.user-container {
+  position: relative;
+  margin: -10px;
+  padding-bottom: 74px;
+
+  .cover {
+    width: 100%;
+    height: 270px;
+    padding: 10px;
+    background-color: $themeColor_GrayDark;
+    background-image: url("../image/user/default_cover.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .edit-button {
+      margin: 100px auto 0 auto;
+      text-align: center;
+      width: 44px;
+      height: 44px;
+      color: $themeColor_GrayLight;
+      font-size: 22px;
+      line-height: 44px;
+      cursor: pointer;
+    }
+    .edit-button:hover {
+      color: $themeColor_GrayShine;
+    }
+  }
+
+  .avatar {
+    position: relative;
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    clear: both;
+    background-color: $themeColor_GrayDark;
+    margin: -64px auto 40px auto;
+    background-image: url("../image/avatars/3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 8px solid #373839;
+    overflow: hidden;
+
+    .edit-button {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0,0,0,0.6);
+      cursor: pointer;
+      line-height: 120px;
+      text-align: center;
+      color: $themeColor_GrayBright;
+      font-size: 22px;
+    }
+    .edit-button:hover {
+      color: $themeColor_GrayShine;
+    }
+  }
+
+  .form {
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .form-inline {
+      margin-bottom: 26px;
+    }
+
+    label {
+      color: #828282;
+    }
+    label.title {
+      width: 44px;
+      margin-right: 18px;
+      text-align: justify;
+      text-align-last: justify;
+    }
+
+    input[type=text] {
+      background: none;
+      border: none;
+      border-bottom: 1px solid #c1c1c1;
+      padding: 0;
+      border-radius: 0;
+      height: 20px;
+      color: #c1c1c1;
+      margin-top: -2px;
+      width: 250px;
+    }
+    input[type=text]:focus {
+      box-shadow: none;
+      outline: none;
+    }
+
+    #year {
+      width: 90px;
+      text-align: center;
+    }
+    #month, #day {
+      width: 50px;
+      text-align: center;
+    }
+
+    .gender-container {
+      display: inline-block;
+      vertical-align: middle;
+
+      input[type="radio"] {
+        margin-left: 10px;
+      }
+
+      label {
+        position: relative;
+        width: 46px;
+        margin-right: 54px;
+        cursor: pointer;
+
+        .fa {
+          color: #c1c1c1;
+        }
+      }
+      label:last-child {
+        margin-right: -4px;
+      }
+    }
+
+    .button-group {
+      text-align: center;
+
+      .btn {
+        border-color: #c1c1c1;
+        color: #c1c1c1;
+      }
+      .btn:first-child {
+        margin-right: 6px;
+      }
+    }
+
+  }
+
+  .logout {
+    position: absolute;
+    bottom: 24px;
+    left: 34px;
+    cursor: pointer;
+    color: #828282;
+  }
+
+}
