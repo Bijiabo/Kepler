@@ -1,0 +1,80 @@
+.history-watch-container {
+  margin: -10px;
+
+  .list-container {
+    padding: 10px;
+  }
+
+  .list-video-card {
+    position: relative;
+    margin-left: 10px;
+
+    h4 {
+      width: 700px;
+    }
+
+    .image-view {
+      width: 150px;
+    }
+
+    .delete {
+      @extend .text-color-gray-info;
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 4px 10px;
+      cursor: pointer;
+    }
+    .delete:hover {
+      color: $themeColor_GrayBright;
+    }
+  }
+
+  // 切换历史记录类型按钮
+  .history-type-switch-container {
+    width: 100%;
+    clear: both;
+    border-bottom: 1px solid #424242;
+    margin-bottom: 10px;
+
+    .item {
+      display: inline-block;
+      color: #c1c1c1;
+      text-align: center;
+      width: 96px;
+      padding: 14px 0;
+      cursor: pointer;
+    }
+    .item.active {
+      color: #eeeeee;
+    }
+    .item:hover {
+      color: $themeColor_GrayShine;
+    }
+
+    .search-input-container.unfocused {
+      float: right;
+      padding: 12px;
+
+      .input-group {
+        .form-control {
+          border-color: #636363;
+        }
+
+        .btn {
+          background: #636363;
+          color: $bodyBackgroundColor;
+          border-color: #636363;
+        }
+      }
+    }
+  }
+
+  // 加载更多
+  .load-more {
+    @extend .text-color-gray-info;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+}

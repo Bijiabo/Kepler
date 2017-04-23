@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>筛选内容 - Sumred</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/css/ui.main.css">
+    <!--scripts-->
+    <script src="../static/js/jquery-3.1.1.min.js"></script>
+    <script src="../static/js/tether.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/vue.min.js"></script>
+    <script src="../static/js/js.cookie.js"></script>
+    <script src="../static/js/template-loader.js"></script>
+
+    <script data-main="../static/js/pages/history-watch.js" src="../static/js/require.js"></script>
+</head>
+<body class="has-side-bar-menu">
+
+<div id="app">
+    <template-import file="./../components/navigation-bar.html"></template-import>
+
+    <template-import file="./../components/side-bar-menu.html"></template-import>
+
+    <template-import file="./../components/main-container.html">
+
+        <div class="history-watch-container">
+            <div class="history-type-switch-container">
+                <a href="#" class="item active">观看记录</a>
+                <a href="history-search.html" class="item">搜索记录</a>
+
+                <div class="search-input-container unfocused">
+                    <div class="input-group">
+                        <input type="text" class="form-control" aria-label="search">
+                        <div class="input-group-btn">
+                            <div class="btn">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="list-container">
+            <template v-for="(item, index) in new Array(5)">
+
+                <div class="list-video-card-item-package">
+                <div class="media list-video-card">
+                    <a href="detail.html">
+                        <div class="media-left">
+                            <div class="image-view"
+                                 duration="06:00"
+                                 :style="'background-image: url(./../static/image/video-thumbnails/'+index%6+'.jpg);'"
+                            >
+
+                                <img src="./../static/image/scale/16-9.png" alt="">
+                                <div class="video-progress" style="width: 33%;"></div>
+                            </div>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading text-color-white text-bold text-type-description">
+                                Horizon Zero Dawn All Cutscenes (Game Movie) PS4 PRO 1080p
+                            </h4>
+                            <h4 class="text-color-gray-light margin-top-bottom-4 text-type-description">
+                                地平线(游戏视频) PS4PRO 1080P
+                            </h4>
+                            <div class="text-color-blue margin-top-bottom-8 text-size-12">狂战士JK</div>
+                            <div class="text-color-gray-light">18,930次观看</div>
+                        </div>
+                    </a>
+                    <div class="delete fa fa-close" :target-id="index"></div>
+                </div>
+                
+                <div class="separator-line"></div>
+                </div>
+            </template>
+            </div>
+
+            <div class="load-more">
+                <a href="#" class="text-color-gray-info">加载更多</a>
+            </div>
+        </div>
+
+    </template-import>
+</div>
+
+
+
+</body>
+</html>

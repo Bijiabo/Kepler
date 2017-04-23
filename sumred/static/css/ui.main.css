@@ -15,6 +15,9 @@ body {
 .animation, .side-bar-menu .book-channel-success, .side-bar-menu .item, .side-bar-menu .title-item, .grid-video-card {
   transition: all 0.3s ease; }
 
+a:hover {
+  text-decoration: none; }
+
 .text-color-white {
   color: #ffffff; }
 
@@ -46,7 +49,7 @@ body {
 .side-bar-menu > .title-item > .submenu > .subclass > .title-item:hover, .video-detail .action-buttons > div:hover {
   color: #eeeeee; }
 
-.text-color-gray-info, .message-box .content .message-item-cell .content .time, .message-box .content .message-item-cell .content .content-preview, .message-box .content .message-item-cell .content .content-display, .video-play-list .video-play-list-view .video-play-list-item .index {
+.text-color-gray-info, .message-box .content .message-item-cell .content .time, .message-box .content .message-item-cell .content .content-preview, .message-box .content .message-item-cell .content .content-display, .video-play-list .video-play-list-view .video-play-list-item .index, .history-watch-container .list-video-card .delete, .history-watch-container .load-more {
   color: #636363; }
 
 .text-color-gray-title, .btn-subscribe {
@@ -186,7 +189,8 @@ body {
   .search-input-container .input-group .form-control {
     background: none;
     outline: none;
-    box-shadow: none; }
+    box-shadow: none;
+    color: #c1c1c1; }
   .search-input-container .input-group .btn {
     background-color: #2A2B2C;
     color: #e34849; }
@@ -287,6 +291,7 @@ body {
   width: 220px;
   height: 100%;
   z-index: 100;
+  box-shadow: 1px 0 1px #2A2B2C;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -1472,5 +1477,53 @@ body {
       height: 100%;
       background-color: rgba(0, 0, 0, 0.4);
       z-index: 500; }
+
+.history-watch-container {
+  margin: -10px; }
+  .history-watch-container .list-container {
+    padding: 10px; }
+  .history-watch-container .list-video-card {
+    position: relative;
+    margin-left: 10px; }
+    .history-watch-container .list-video-card h4 {
+      width: 700px; }
+    .history-watch-container .list-video-card .image-view {
+      width: 150px; }
+    .history-watch-container .list-video-card .delete {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 4px 10px;
+      cursor: pointer; }
+    .history-watch-container .list-video-card .delete:hover {
+      color: #c1c1c1; }
+  .history-watch-container .history-type-switch-container {
+    width: 100%;
+    clear: both;
+    border-bottom: 1px solid #424242;
+    margin-bottom: 10px; }
+    .history-watch-container .history-type-switch-container .item, .history-watch-container .history-type-switch-container .side-bar-menu .title-item, .side-bar-menu .history-watch-container .history-type-switch-container .title-item {
+      display: inline-block;
+      color: #c1c1c1;
+      text-align: center;
+      width: 96px;
+      padding: 14px 0;
+      cursor: pointer; }
+    .history-watch-container .history-type-switch-container .item.active, .history-watch-container .history-type-switch-container .side-bar-menu .active.title-item, .side-bar-menu .history-watch-container .history-type-switch-container .active.title-item {
+      color: #eeeeee; }
+    .history-watch-container .history-type-switch-container .item:hover, .history-watch-container .history-type-switch-container .side-bar-menu .title-item:hover, .side-bar-menu .history-watch-container .history-type-switch-container .title-item:hover {
+      color: #eeeeee; }
+    .history-watch-container .history-type-switch-container .search-input-container.unfocused {
+      float: right;
+      padding: 12px; }
+      .history-watch-container .history-type-switch-container .search-input-container.unfocused .input-group .form-control {
+        border-color: #636363; }
+      .history-watch-container .history-type-switch-container .search-input-container.unfocused .input-group .btn {
+        background: #636363;
+        color: #2A2B2C;
+        border-color: #636363; }
+  .history-watch-container .load-more {
+    margin-bottom: 20px;
+    text-align: center; }
 
 /*# sourceMappingURL=ui.main.css.map */
