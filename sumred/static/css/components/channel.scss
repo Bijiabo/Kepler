@@ -1,0 +1,180 @@
+.channel-container {
+  margin: -10px;
+  // 切换历史记录类型按钮
+  .channel-header-container {
+    width: 100%;
+    clear: both;
+    border-bottom: 1px solid #424242;
+    margin-bottom: 10px;
+
+    .item {
+      display: inline-block;
+      color: #c1c1c1;
+      text-align: center;
+      width: 96px;
+      padding: 14px 0;
+      cursor: pointer;
+      opacity: 0;
+    }
+    .item.active {
+      color: #eeeeee;
+    }
+    .item:hover {
+      color: $themeColor_GrayShine;
+    }
+
+    .search-input-container.unfocused {
+      float: right;
+      padding: 12px;
+
+      .input-group {
+        .form-control {
+          border-color: #636363;
+        }
+
+        .btn {
+          background: #636363;
+          color: $bodyBackgroundColor;
+          border-color: #636363;
+        }
+      }
+    }
+  }
+
+  .carousel-container {
+    position: relative;
+    clear: both;
+    margin: 46px 60px 60px 60px;
+    height: 320px;
+
+    .carousel-inner > .item > img {
+      display: inline-block;
+    }
+    .carousel-inner {
+      height:100%;
+
+      .item {
+        .img {
+          display: inline-block;
+          float: left;
+          height: 320px;
+        }
+        .info {
+          display: inline-block;
+          float: right;
+          width: 332px;
+          height: 320px;
+          background-color: #2b2b2b;
+        }
+      }
+    }
+
+    .carousel-control.right, .carousel-control.left {
+      background: none;
+
+      .fa {
+        line-height: 60px;
+      }
+    }
+    .carousel-control.right {
+      top: 50%;
+      right: -40px;
+      width: 40px;
+      height: 60px;
+      margin-top: -30px;
+      background: #545454;
+    }
+    .carousel-control.left {
+      top: 50%;
+      left: -40px;
+      width: 40px;
+      height: 60px;
+      margin-top: -30px;
+      background: #545454;
+    }
+
+    .carousel-indicators {
+      bottom: -44px;
+      height: 44px;
+      padding: 17px 0;
+      margin-bottom: 0;
+
+      li {
+        border: none;
+        background-color: #636363;
+        margin: 0;
+      }
+      li.active {
+        width: 10px;
+        height: 10px;
+        background-color: #c1c1c1;
+      }
+    }
+
+    .info {
+      padding: 10px;
+
+      .avatar {
+        width: 76px;
+        height: 76px;
+      }
+      .zh_name {
+        color: #eeeeee;
+        font-size: 16px;
+      }
+      .en_name {
+        @extend .text-color-blue;
+      }
+      .subscribe {
+        margin-top: 8px;
+      }
+      .description {
+        color: #636363;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        height: 69px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .tags {
+        color: #c1c1c1;
+        margin-bottom: 12px;
+
+        span {
+          padding: 0 10px;
+          border-left: 1px solid #c1c1c1;
+        }
+        span:first-child {
+          border-left: none;
+          padding-left: 0;
+        }
+      }
+      .time {
+        color: #4a4a4a;
+        margin-bottom: 18px;
+      }
+      .preview-images {
+        .item {
+          float: left;
+          width: 90px;
+          height: 50px;
+          background: $themeColor_GrayLight;
+          margin-right: 10px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .carousel-container::before {
+    content: attr(title);
+    position: absolute;
+    left: 0;
+    top: -32px;
+    color: #c1c1c1;
+  }
+
+
+}
