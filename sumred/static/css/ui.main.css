@@ -86,6 +86,9 @@ body {
 .background-color-panel, .panel-view, .video-player, .video-play-list, .no-network-tip, .video-recommend, .plyr--video .plyr__controls, .side-bar-menu .item .submenu, .side-bar-menu .title-item .submenu {
   background-color: #373839; }
 
+.border-color-red {
+  border-color: #e34849 !important; }
+
 .video-progress {
   position: absolute;
   bottom: 0;

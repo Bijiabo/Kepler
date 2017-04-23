@@ -130,6 +130,11 @@ body {
   background-color: #373839;
 }
 
+// 边框
+.border-color-red {
+  border-color: $themeColor_Red!important;
+}
+
 .video-progress {
   position: absolute;
   bottom: 0;

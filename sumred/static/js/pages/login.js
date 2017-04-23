@@ -56,8 +56,6 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
     var bindEvents = function () {
         // 用户点击登录动作
         $(document).on('click', elements.selector.doLoginButton, function () {
-            $('.form-group').removeClass('ok error');
-            
             var account = $('#account').val(),
                 password = $('#password').val();
             
@@ -67,12 +65,45 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
                 elements.tip.text('系统中没有找到该账户，请检查您键入的账户名是否正确').fadeIn();
                 return;
             }
+    
+            if(!userSystem.checkPasswordFormat(elements.passwordInput.val())) {
+                elements.tip.text('密码格式错误，应为6-16位字母加数字组合，不区分大小写').fadeIn();
+                return;
+            }
+    
+            $('.form-group').removeClass('ok error');
             
             if (userSystem.login(account, password)) {
-                // do redirect
+                location.href = './home.html';
             } else {
                 elements.passwordInputContainer.addClass('error');
                 elements.tip.text('密码错误，请重新输入').fadeIn();
+            }
+        });
+        
+        // 用户输入账户后，验证账户是否正确
+        $(document).on('change', elements.selector.accountInput, function () {
+            // todo: 调用用户账户检测接口，验证账户是否存在
+            var account = elements.accountInput.val();
+            if (
+                userSystem.hasAccount(account)
+            )
+            {
+                elements.accountInputContainer.addClass('ok');
+            }
+            else
+            {
+                elements.accountInputContainer.addClass('error');
+            }
+        });
+        
+        // 用户输入密码后，检测是否符合规范
+        $(document).on('change', elements.selector.passwordInput, function () {
+            elements.passwordInputContainer.removeClass('ok error');
+            if (userSystem.checkPasswordFormat(elements.passwordInput.val())) {
+                elements.passwordInputContainer.addClass('ok');
+            } else {
+                elements.passwordInputContainer.addClass('error');
             }
         });
         
