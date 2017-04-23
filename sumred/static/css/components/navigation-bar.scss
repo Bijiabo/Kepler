@@ -17,6 +17,10 @@
   z-index: 200;
   box-shadow: 0 1px 1px rgba(0,0,0,0.2);
 
+  .logo {
+    padding-top: 8px;
+  }
+
   .navigation-bar-left-container {
     @extend .flex-row-left-container;
     width: 220px;

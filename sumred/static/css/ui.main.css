@@ -227,6 +227,8 @@ a:hover {
   height: 44px;
   z-index: 200;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }
+  .navigation-bar .logo {
+    padding-top: 8px; }
   .navigation-bar .navigation-bar-left-container {
     width: 220px; }
     .navigation-bar .navigation-bar-left-container .slidebar-menu-button {
