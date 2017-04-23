@@ -24,7 +24,7 @@ a:hover {
 .text-color-red, .panel-title-view, .message-box .title, .navigation-bar .navigation-bar-right-container, .side-bar-menu .title-item, .content-class-filter .item .class-options .option-item.active, .content-class-filter .side-bar-menu .title-item .class-options .option-item.active, .side-bar-menu .content-class-filter .title-item .class-options .option-item.active {
   color: #e34849; }
 
-.text-color-blue, .message-box .content .message-item-cell .content .item-title, .history-container .list-video-card.search-history-item .media-heading, .channel-container .carousel-container .info .en_name {
+.text-color-blue, .message-box .content .message-item-cell .content .item-title, .history-container .list-video-card.search-history-item .media-heading, .channel-container .carousel-container .info .en_name, .channel-container .recommend-card .en_name {
   color: #78d2dc; }
 
 .text-color-blue-light, .history-container .list-video-card:hover .author, .history-container .list-video-card.search-history-item:hover .media-heading {
@@ -1536,7 +1536,8 @@ a:hover {
       color: #c1c1c1; }
 
 .channel-container {
-  margin: -10px; }
+  margin: -10px;
+  padding-bottom: 20px; }
   .channel-container .channel-header-container {
     width: 100%;
     clear: both;
@@ -1566,7 +1567,7 @@ a:hover {
   .channel-container .carousel-container {
     position: relative;
     clear: both;
-    margin: 46px 60px 60px 60px;
+    margin: 46px 60px 40px 60px;
     height: 320px; }
     .channel-container .carousel-container .carousel-inner > .item > img, .channel-container .carousel-container .side-bar-menu .carousel-inner > .title-item > img, .side-bar-menu .channel-container .carousel-container .carousel-inner > .title-item > img {
       display: inline-block; }
@@ -1658,5 +1659,85 @@ a:hover {
     left: 0;
     top: -32px;
     color: #c1c1c1; }
+  .channel-container .title {
+    color: #c1c1c1;
+    margin-right: 60px;
+    margin-left: 60px;
+    border-bottom: 1px solid #424242;
+    padding: 8px 0;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  .channel-container .row {
+    margin: 0 50px; }
+    .channel-container .row .col-md-4 {
+      padding: 0; }
+  .channel-container .recommend-card {
+    background-color: #2b2b2b;
+    margin: 0 10px; }
+    .channel-container .recommend-card .img {
+      width: 100%;
+      height: 86px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover; }
+    .channel-container .recommend-card .head {
+      position: relative;
+      clear: both;
+      margin: 10px 10px 10px 10px; }
+      .channel-container .recommend-card .head .avatar img {
+        width: 40px;
+        height: 40px; }
+      .channel-container .recommend-card .head .subscribe {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin-top: 8px; }
+    .channel-container .recommend-card .zh_name {
+      margin: 14px 10px 10px 10px;
+      color: #eeeeee;
+      font-size: 16px; }
+    .channel-container .recommend-card .en_name {
+      margin: 10px 10px 14px 10px; }
+    .channel-container .recommend-card .description {
+      color: #636363;
+      margin: 16px 10px 16px 10px;
+      height: 69px;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    .channel-container .recommend-card .tags {
+      margin: 0 10px 12px 10px;
+      color: #c1c1c1; }
+      .channel-container .recommend-card .tags span {
+        padding: 0 10px;
+        border-left: 1px solid #c1c1c1; }
+      .channel-container .recommend-card .tags span:first-child {
+        border-left: none;
+        padding-left: 0; }
+    .channel-container .recommend-card .time {
+      color: #4a4a4a;
+      margin: 14px 10px 14px 10px; }
+    .channel-container .recommend-card .preview-images {
+      height: 60px;
+      margin: 0 10px 0px 10px; }
+      .channel-container .recommend-card .preview-images .item, .channel-container .recommend-card .preview-images .side-bar-menu .title-item, .side-bar-menu .channel-container .recommend-card .preview-images .title-item {
+        float: left;
+        width: 76px;
+        height: 45px;
+        background: #828282;
+        margin-right: 10px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        cursor: pointer; }
+  .channel-container .recommend-card.short .head {
+    height: 60px;
+    margin: 10px 0; }
+    .channel-container .recommend-card.short .head .avatar {
+      position: absolute;
+      top: -54px;
+      left: 10px; }
+    .channel-container .recommend-card.short .head .subscribe {
+      bottom: 40px;
+      right: 10px; }
 
 /*# sourceMappingURL=ui.main.css.map */

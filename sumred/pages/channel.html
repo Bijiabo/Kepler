@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>筛选内容 - Sumred</title>
+    <title>频道 - Sumred</title>
     <link rel="stylesheet" href="../static/css/bootstrap.css">
     <link rel="stylesheet" href="../static/css/font-awesome.min.css">
     <link rel="stylesheet" href="../static/css/ui.main.css">
@@ -170,6 +170,60 @@
                 </div>
             </div>
 
+            <!--特别推荐-->
+            <div class="title">特别推荐</div>
+            <div class="row">
+            <template v-for="(item, index) in new Array(3)">
+                <div class="col-md-4">
+                <div class="recommend-card">
+                    <div class="img" style="background-image: url(../static/image/channel/cover.jpg)"></div>
+                    <div class="head">
+                        <div class="avatar">
+                            <img src="../static/image/avatars/2.jpg" alt="">
+                        </div>
+                        <div class="subscribe">
+                            <div class="btn btn-subscribe unsubscribed">927</div>
+                        </div>
+                    </div>
+                    <div class="zh_name">地平线：黎明时分</div>
+                    <div class="en_name">Horizon Zero Dawn</div>
+                    <div class="tags">
+                        <span>PS4独占</span>
+                        <span>动作冒险</span>
+                        <span>SCE</span>
+                    </div>
+                    <div class="time">2小时前</div>
+                    <div class="preview-images">
+                        <div class="item" style="background-image: url(../static/image/channel-banner.jpg)"></div>
+                        <div class="item" style="background-image: url(../static/image/demo-video-thumbnail.png)"></div>
+                        <div class="item" style="background-image: url(../static/image/channel/cover.jpg)"></div>
+                    </div>
+                </div>
+                </div>
+            </template>
+            </div>
+
+            <!--动作类-->
+            <div class="title">动作类</div>
+            <div class="row">
+            <template v-for="(item, index) in new Array(6)">
+                <div class="col-md-4">
+                    <div class="recommend-card short">
+                        <div class="img" style="background-image: url(../static/image/channel/cover.jpg)"></div>
+                        <div class="head">
+                            <div class="avatar">
+                                <img src="../static/image/avatars/2.jpg" alt="">
+                            </div>
+                            <div class="subscribe">
+                                <div class="btn btn-subscribe unsubscribed">927</div>
+                            </div>
+                            <div class="zh_name">地平线：黎明时分</div>
+                            <div class="en_name">Horizon Zero Dawn</div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            </div>
 
         </div>
 
