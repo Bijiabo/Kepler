@@ -1184,7 +1184,10 @@ body {
       text-align: center;
       line-height: 44px;
       color: #e34849;
-      display: none; }
+      display: none;
+      z-index: 10; }
+  .login-container .form-group.cell-phone-number-container .ok, .login-container .form-group.cell-phone-number-container .error {
+    right: 96px; }
   .login-container .form-group.ok input {
     padding-right: 44px; }
   .login-container .form-group.ok .ok {

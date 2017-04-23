@@ -25,6 +25,13 @@ $inputPlaceHolderTextColor: #636363;
       line-height: 44px;
       color: $themeColor_Red;
       display: none;
+      z-index: 10;
+    }
+  }
+
+  .form-group.cell-phone-number-container {
+    .ok, .error {
+      right: 96px;
     }
   }
 

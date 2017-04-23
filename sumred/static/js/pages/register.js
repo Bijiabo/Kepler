@@ -59,6 +59,9 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
         get cellPhoneInput() {
             return $(this.selector.cellPhoneInput);
         },
+        get cellPhoneInputContainer() {
+            return $(this.selector.cellPhoneInputContainer);
+        },
         get passwordInput() {
             return $('.'+ currentRegisterType + ' ' + this.selector.passwordInput);
         },
@@ -118,6 +121,10 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
         
         // 用户点击获取手机验证码
         $(document).on('click', '.get-captcha', function () {
+            if (!userSystem.checkCellPhoneNumberFormat(elements.cellPhoneInput.val())) {
+                // 手机号格式验证失败
+                return;
+            }
             // todo: 获取手机验证码 API
         });
         
@@ -135,10 +142,25 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
         });
     
         // 检测用户输入的手机号是否符合标准
-        // todo: 完善功能实现细节
+        $(document).on('change', elements.selector.cellPhoneInput, function () {
+            elements.cellPhoneInputContainer.removeClass('ok error');
+            if (userSystem.checkCellPhoneNumberFormat(elements.cellPhoneInput.val())) {
+                elements.cellPhoneInputContainer.addClass('ok');
+            } else {
+                elements.cellPhoneInputContainer.addClass('error');
+            }
+        });
         
         // 检测用户输入的密码是否符合要求
         // todo: 完善密码验证细节
+        $(document).on('change', elements.selector.passwordInput, function () {
+            elements.passwordInputContainer.removeClass('ok error');
+            if (userSystem.checkPasswordFormat(elements.passwordInput.val())) {
+                elements.passwordInputContainer.addClass('ok');
+            } else {
+                elements.passwordInputContainer.addClass('error');
+            }
+        });
         
         // 用户点击注册按钮
         $(document).on('click', '.do-register', function () {
@@ -146,6 +168,12 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
                 // 手机号注册
                 var cellPhoneNumber = elements.cellPhoneInput.val(),
                     password = elements.passwordInput.val();
+                
+                if (!userSystem.checkPasswordFormat(password)) {
+                    // 密码不符合规范
+                    return;
+                }
+                
                 // todo： 调用接口检测验证码是否正确
                 // todo： 调用接口进行注册
                 userSystem.register(cellPhoneNumber, password, function (success, description) {
@@ -162,7 +190,15 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
                 var mail = elements.mailInput.val();
                 // todo： 调用接口发送注册邮件
                 userSystem.registerByEmail(mail, function (success, description) {
-                    location.href = './register-success.html';
+                    elements.tip.html('\
+                        <p>已发送注册确认邮件到您的邮箱，请登录邮箱确认</p>\
+                        <p style="margin-top: 30px;"><a href="#" class="text-color-red">没有收到邮件，再次发送</a></p>\
+                        \
+                        <div class="separator-line"></div>\
+                        <p>\
+                            <a href="#" class="text-color-red">本地测试环境，直接点击此链接跳转到设定密码页面</a>\
+                        </p>\
+                    ');
                 });
                 // todo: redirect to mail register password set page;
             }
