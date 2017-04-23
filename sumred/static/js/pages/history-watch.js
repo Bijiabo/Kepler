@@ -11,7 +11,8 @@ var render = function() {
             watchHistory: Array.apply(null, Array(5)).map(function(item, i) {
                 return 'Horizon Zero Dawn All Cutscenes (Game Movie) PS4 PRO 1080p';
             }),
-            searchString: false
+            searchString: false,
+            searchResultCount: 0
         },
         methods: {
         },
@@ -56,6 +57,7 @@ requirejs(['public'], function(_public) {
             var searchString = $('.search-history-input').val();
             if (searchString == undefined || searchString.length == 0) {
                 Vue.set(window.renderContext, 'watchHistory', window.originalWatchHostiry);
+                Vue.set(window.renderContext, 'searchString', false);
                 return;
             }
             
@@ -67,6 +69,7 @@ requirejs(['public'], function(_public) {
                 return format.test(item);
             });
             Vue.set(window.renderContext, 'watchHistory', searchResult);
+            Vue.set(window.renderContext, 'searchResultCount', searchResult.length);
         };
         $(document).on('click', '.search-history-button', function () {
             doSearchHistory();

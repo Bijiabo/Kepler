@@ -43,6 +43,11 @@
                 </div>
             </div>
 
+            <div class="search-result-tip" v-if="searchString">
+                {{searchResultCount}}条与 "<span class="search-key">{{searchString}}</span>" 相关的结果
+                <div class="separator-line"></div>
+            </div>
+
             <div class="list-container">
                 <template v-for="(item, index) in watchHistory">
 

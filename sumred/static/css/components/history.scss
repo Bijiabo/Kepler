@@ -107,4 +107,15 @@
     }
   }
 
+  .search-result-tip {
+    color: #828282;
+    width: 100%;
+    clear: both;
+    text-align: center;
+
+    .search-key {
+      color: #c1c1c1;
+    }
+  }
+
 }

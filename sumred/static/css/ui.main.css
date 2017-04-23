@@ -1525,5 +1525,12 @@ a:hover {
   .history-container .load-more {
     margin-bottom: 20px;
     text-align: center; }
+  .history-container .search-result-tip {
+    color: #828282;
+    width: 100%;
+    clear: both;
+    text-align: center; }
+    .history-container .search-result-tip .search-key {
+      color: #c1c1c1; }
 
 /*# sourceMappingURL=ui.main.css.map */
