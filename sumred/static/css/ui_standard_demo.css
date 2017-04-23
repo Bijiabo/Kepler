@@ -1,3 +1,212 @@
+@charset "UTF-8";
+.dev-border {
+  border: 1px solid #78d2dc; }
+
+body {
+  background-color: #2A2B2C; }
+
+.no-break-line {
+  white-space: nowrap; }
+
+.text-over-flow-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden; }
+
+.animation {
+  transition: all 0.3s ease; }
+
+a:hover {
+  text-decoration: none; }
+
+.text-color-white {
+  color: #ffffff; }
+
+.text-color-red, .panel-title-view, .url-list li a {
+  color: #e34849; }
+
+.text-color-blue {
+  color: #78d2dc; }
+
+.text-color-blue-light {
+  color: #acecef; }
+
+.text-color-gray-dark {
+  color: #2b2b2b; }
+
+.text-color-gray-light-less {
+  color: #636363; }
+
+.text-color-gray-light {
+  color: #828282; }
+
+.text-color-gray-bright {
+  color: #c1c1c1; }
+
+.text-color-gray-shine {
+  color: #eeeeee; }
+
+.text-color-gray-info {
+  color: #636363; }
+
+.text-color-gray-title, .btn-subscribe {
+  color: #c1c1c1; }
+
+.text-type-title, .panel-title-view {
+  font-size: 14px; }
+
+.text-type-description {
+  font-size: 12px;
+  font-weight: normal; }
+
+.text-size-14 {
+  font-size: 14px; }
+
+.text-size-12 {
+  font-size: 12px; }
+
+.text-bold {
+  font-weight: bold; }
+
+.background-color-red {
+  background-color: #e34849; }
+
+.background-color-blue {
+  background-color: #78d2dc; }
+
+.background-color-blue-light {
+  background-color: #acecef; }
+
+.background-color-gray {
+  background-color: #2A2B2C; }
+
+.background-color-gray-dark {
+  background-color: #2b2b2b; }
+
+.background-color-panel, .panel-view {
+  background-color: #373839; }
+
+.border-color-red {
+  border-color: #e34849 !important; }
+
+.video-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #e34849; }
+
+.video-image-view-duration {
+  content: attr(duration);
+  position: absolute;
+  bottom: 2px;
+  right: 0;
+  background-color: #2A2B2C;
+  color: #c1c1c1;
+  text-align: center;
+  padding: 0 4px;
+  font-size: 14px;
+  line-height: 14px; }
+
+.margin-top-8 {
+  margin-top: 8px; }
+
+.margin-top-12 {
+  margin-top: 12px; }
+
+.margin-bottom-8 {
+  margin-bottom: 8px; }
+
+.margin-top-bottom-2 {
+  margin-top: 2px;
+  margin-bottom: 2px; }
+
+.margin-top-bottom-4 {
+  margin-top: 4px;
+  margin-bottom: 4px; }
+
+.margin-top-bottom-8 {
+  margin-top: 8px;
+  margin-bottom: 8px; }
+
+.margin-top-bottom-10 {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.btn-subscribe {
+  position: relative;
+  padding: 0 10px 0 50px;
+  line-height: 18px;
+  height: 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e34849;
+  border-radius: 0; }
+
+.btn-subscribe:hover {
+  color: #78d2dc; }
+
+.btn-subscribe::before, .btn-subscribe.unsubscribed::before {
+  content: '订阅';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  background-color: #e34849;
+  color: #2b2b2b;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center; }
+
+.btn-subscribe.subscribed {
+  padding-left: 70px; }
+
+.btn-subscribe.subscribed::before {
+  content: '已订阅';
+  width: 60px; }
+
+.btn-ghost {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #424242;
+  padding: 2px 6px;
+  color: #424242;
+  border-radius: 0; }
+
+.btn-ghost:hover {
+  color: #e34849;
+  border-color: #e34849; }
+
+.search-input-container {
+  width: 340px;
+  height: 26px; }
+  .search-input-container .input-group .form-control, .search-input-container .input-group .btn {
+    height: 26px;
+    border-color: #2A2B2C; }
+  .search-input-container .input-group .form-control {
+    background: none;
+    outline: none;
+    box-shadow: none;
+    color: #c1c1c1; }
+  .search-input-container .input-group .btn {
+    background-color: #2A2B2C;
+    color: #e34849; }
+    .search-input-container .input-group .btn .glyphicon {
+      top: -1px; }
+
+.separator-line {
+  width: 100%;
+  height: 1px;
+  background-color: #424242;
+  margin-top: 8px;
+  margin-bottom: 8px; }
+
+.panel-view {
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+  padding: 20px; }
+
 body {
   padding: 16px; }
 
@@ -29,5 +238,9 @@ h2 {
   width: 400px;
   padding: 20px;
   background-color: #373839; }
+
+.url-list {
+  list-style-type: circle;
+  color: #e34849; }
 
 /*# sourceMappingURL=ui_standard_demo.css.map */

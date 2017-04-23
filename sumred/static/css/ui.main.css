@@ -349,6 +349,8 @@ a:hover {
       left: 100%;
       border-left: 1px solid #2b2b2b;
       display: none; }
+      .side-bar-menu .item .submenu .item.back, .side-bar-menu .title-item .submenu .item.back, .side-bar-menu .item .submenu .back.title-item, .side-bar-menu .title-item .submenu .back.title-item {
+        display: none; }
       .side-bar-menu .item .submenu .item, .side-bar-menu .title-item .submenu .item, .side-bar-menu .item .submenu .title-item, .side-bar-menu .title-item .submenu .title-item {
         padding: 0;
         width: 180px;
@@ -364,7 +366,6 @@ a:hover {
           border-bottom: 1px solid #2A2B2C; }
         .side-bar-menu .item .submenu .item .subclass, .side-bar-menu .title-item .submenu .item .subclass, .side-bar-menu .item .submenu .title-item .subclass, .side-bar-menu .title-item .submenu .title-item .subclass {
           display: none;
-          margin-top: 28px;
           border-bottom: 1px solid #2A2B2C; }
           .side-bar-menu .item .submenu .item .subclass .item, .side-bar-menu .title-item .submenu .item .subclass .item, .side-bar-menu .item .submenu .title-item .subclass .item, .side-bar-menu .title-item .submenu .title-item .subclass .item, .side-bar-menu .item .submenu .item .subclass .title-item, .side-bar-menu .title-item .submenu .item .subclass .title-item, .side-bar-menu .item .submenu .title-item .subclass .title-item, .side-bar-menu .title-item .submenu .title-item .subclass .title-item {
             text-decoration: none;

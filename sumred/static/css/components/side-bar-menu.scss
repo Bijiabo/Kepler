@@ -94,6 +94,10 @@
       border-left: 1px solid $themeColor_GrayDark;
       display: none;
 
+      .item.back {
+        display: none;
+      }
+
       .item {
         padding: 0;
         width: 180px;
@@ -114,7 +118,7 @@
 
         .subclass {
           display: none;
-          margin-top: 28px;
+          //margin-top: 28px;
           border-bottom: 1px solid $bodyBackgroundColor;
 
           .item {

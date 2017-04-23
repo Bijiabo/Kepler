@@ -21,13 +21,17 @@ define([], function () {
         $(document).on('click', '.submenu .item .title', function (event) {
             event.preventDefault();
             var $this = $(this).parent('.item');
-            if (!$this.data('display-subclass')) {
-                $this.find('.subclass').show();
-                $this.data('display-subclass', true);
-            } else {
-                $this.find('.subclass').hide();
-                $this.data('display-subclass', false);
-            }
+            $('.submenu .item .title').hide();
+            $this.children('.back').show();
+            console.log($this);
+            $this.find('.subclass').show();
+        });
+        $(document).on('click', '.submenu .item .back', function (event) {
+            event.preventDefault();
+            $('.submenu .item .title').show();
+            $(this).hide();
+            var $this = $(this).parent('.item');
+            $this.find('.subclass').hide();
         });
         
         // 测试添加频道
