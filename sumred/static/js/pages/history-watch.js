@@ -63,9 +63,7 @@ requirejs(['public'], function(_public) {
             
             Vue.set(window.renderContext, 'searchString', searchString);
             var searchResult = window.originalWatchHostiry.filter(function (item) {
-                console.log(item);
                 var format = new RegExp(searchString, 'ig');
-                console.log(format);
                 return format.test(item);
             });
             Vue.set(window.renderContext, 'watchHistory', searchResult);
