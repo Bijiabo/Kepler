@@ -34,6 +34,24 @@ requirejs(['public'], function(_public) {
             console.log($this.find('.fa'));
             $this.find('.fa').removeClass(class_uncheck).addClass(class_check);
         });
+        
+        // 点击选择修改背景图片
+        $(document).on('click', '.cover .edit-button', function () {
+            $('.select-cover-container').show();
+        });
+        // 关闭背景图片上传选择层
+        $(document).on('click', '.select-cover-container .close', function () {
+            $('.select-cover-container').hide();
+        });
+        
+        // 点击修改头像
+        $(document).on('click', '.avatar .edit-button', function () {
+            $('.select-avatar-container').show();
+        });
+        // 关闭头像上传选择层
+        $(document).on('click', '.select-avatar-container .close', function () {
+            $('.select-avatar-container').hide();
+        });
     };
     bindEvents();
     
