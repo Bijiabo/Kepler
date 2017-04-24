@@ -1782,4 +1782,8 @@ a:hover {
       bottom: 40px;
       right: 10px; }
 
+.sort-container {
+  margin: -10px;
+  padding-bottom: 20px; }
+
 /*# sourceMappingURL=ui.main.css.map */
