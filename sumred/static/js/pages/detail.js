@@ -59,6 +59,13 @@ requirejs(['public'], function(_public) {
             "<progress class='plyr__volume--display' max='10' value='0' role='presentation'></progress>",
             "</span>",
             "<div class='right-container'>",
+            // 剧场模式切换
+            "<button type='button' class='toggle-theatre-mode'>",
+            // "<svg class='icon--captions-on'><use xlink:href='#plyr-captions-on'></use></svg>",
+            "<div>[Theatre Mode]</div>",
+            // "<svg><use xlink:href='#plyr-captions-off'></use></svg>",
+            "<span class='plyr__sr-only'>Toggle Theatre Mode</span>",
+            "</button>",
             "<button type='button' data-plyr='captions'>",
             "<svg class='icon--captions-on'><use xlink:href='#plyr-captions-on'></use></svg>",
             "<svg><use xlink:href='#plyr-captions-off'></use></svg>",
@@ -83,5 +90,22 @@ requirejs(['public'], function(_public) {
     };
     
     window.didLoadActions.push(targetActions);
+    
+    var bindEvents = function () {
+        $(document).on('click', '.toggle-theatre-mode', function () {
+            var $this = $(this);
+            if ($this.data('theatre-mode') != true) {
+                $('.video-player').width($('.detail-main-container').width() + 430 - 20);
+                $('.right-side-bar').css('top', ($('.video-player').height() + 58) + 'px');
+                $this.data('theatre-mode', true);
+            } else {
+                $('.video-player').removeAttr('style');
+                $('.right-side-bar').removeAttr('style');
+                $this.data('theatre-mode', false);
+            }
+            
+        });
+    };
+    bindEvents();
     
 });
