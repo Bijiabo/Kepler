@@ -1,40 +1,95 @@
 .video-play-list {
   @extend .panel-view;
   margin-left: 0;
+  padding: 0;
+  background-color: #212121;
+
+  .play-list-info {
+    padding: 20px 0;
+
+    .media-left {
+      padding: 0 14px 0 10px;
+      color: #828282;
+      .fa {
+        position: relative;
+        top: -2px;
+      }
+    }
+
+    .zh_name {
+      margin-top: 10px;
+    }
+
+    .statistics {
+      position: relative;
+      margin-top: 14px;
+      color: #828282;
+
+      span {
+        border-left: 1px solid #828282;
+        padding: 0 10px;
+      }
+      span:first-child {
+        border-left: none;
+        padding-left: 0;
+      }
+
+      .save-to-list {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        cursor: pointer;
+
+        span {
+          padding: 0 2px;
+        }
+      }
+    }
+  }
 
   .video-play-list-view {
-    height: 200px;
+    height: 440px;
     overflow-y: scroll;
 
     .video-play-list-item {
       height: 70px;
       width: 100%;
       clear: both;
+      padding: 10px 16px;
+      cursor: pointer;
 
       .index {
-        @extend .text-color-gray-info;
+        color: #c1c1c1;
         float: left;
         text-align: center;
+        margin-right: 16px;
+        line-height: 50px;
       }
 
       .preview {
         float: left;
         height: 50px;
+        margin-right: 26px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
 
         img {
           height: 100%;
-          background-color: $themeColor_GrayLight;
         }
       }
 
       .info {
         float: left;
-        width: 140px;
+        width: 230px;
         div {
           @extend .no-break-line;
           @extend .text-over-flow-ellipsis;
         }
       }
+    }
+    .video-play-list-item.active {
+      background-color: #383838;
     }
   }
 }

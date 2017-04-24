@@ -3,22 +3,20 @@
     <div class="play-list-info">
         <div class="media">
             <div class="media-left">
-                <a href="#">
-                    playlist icon
-                </a>
+                <div class="fa fa-list"></div>
             </div>
             <div class="media-body">
-                <h4 class="media-heading text-color-blue text-type-description">
-                    Play list name Hdsfghfgdhk
+                <h4 class="media-heading text-color-blue text-type-description en_name">
+                    Horizon Zero Dawn All Cutscenes (Game Movie) PS4 PRO 1080p
                 </h4>
-                <h4 class="media-heading text-color-gray-title text-type-description">
+                <h4 class="media-heading text-color-gray-title text-type-description zh_name">
                     地平线游戏视频 PS4PRO 1080P
                 </h4>
-                <div class="play-list-description text-color-gray-info">
-                    <span>总共 102 个视频</span>
-                    <span>876,932 次观看</span>
-                    <span>2 天前更新</span>
-                    <div class="save-to-list">保存</div>
+                <div class="play-list-description text-color-gray-info statistics">
+                    <span>总共102个视频</span>
+                    <span>6,932次观看</span>
+                    <span>2天前更新</span>
+                    <div class="save-to-list"><span class="fa fa-plus"></span>保存</div>
                 </div>
             </div>
         </div>
@@ -28,16 +26,30 @@
 
     <div class="video-play-list-view">
         <template v-for="(item, index) in new Array(10)">
-            <div class="video-play-list-item">
-                <div class="index">{{index}}</div>
-                <div class="preview">
-                    <img src="./../static/image/scale/16-9.png" alt="">
+            <template v-if="index===0">
+                <div class="video-play-list-item active">
+                    <div class="index">{{index}}</div>
+                    <div class="preview" style="background-image: url(../static/image/video-thumbnails/0.jpg)">
+                        <img src="./../static/image/scale/16-9.png" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="text-color-blue">Video Name ABDCKAW</div>
+                        <div class="margin-top-bottom-10 text-color-gray-info">地平线游戏视频 PS4PRO 1080P</div>
+                    </div>
                 </div>
-                <div class="info">
-                    <div class="text-color-blue">Video Name ABDCKAW</div>
-                    <div class="text-color-gray-info">地平线游戏视频 PS4PRO 1080P</div>
+            </template>
+            <template v-else>
+                <div class="video-play-list-item">
+                    <div class="index">{{index}}</div>
+                    <div class="preview" style="background-image: url(../static/image/video-thumbnails/0.jpg)">
+                        <img src="./../static/image/scale/16-9.png" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="text-color-blue">Video Name ABDCKAW</div>
+                        <div class="margin-top-bottom-10 text-color-gray-info">地平线游戏视频 PS4PRO 1080P</div>
+                    </div>
                 </div>
-            </div>
+            </template>
         </template>
     </div>
 
