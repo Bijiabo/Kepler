@@ -196,7 +196,7 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
                         \
                         <div class="separator-line"></div>\
                         <p>\
-                            <a href="#" class="text-color-red">本地测试环境，直接点击此链接跳转到设定密码页面</a>\
+                            <a href="register-mail-set-password.html" class="text-color-red">本地测试环境，直接点击此链接跳转到设定密码页面</a>\
                         </p>\
                     ');
                 });

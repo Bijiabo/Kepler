@@ -1,4 +1,139 @@
 .sort-container {
   margin: -10px;
   padding-bottom: 20px;
+
+  .header-view {
+    padding: 0;
+
+    .cover {
+      position: relative;
+      width: 100%;
+      height: 280px;
+      background-color: #c1c1c1;
+
+      .avatar {
+        position: absolute;
+        left: 20px;
+        top: 0;
+        height: 100px;
+        width: 100px;
+        background-color: #ffffff;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .info {
+      position: relative;
+      width: 100%;
+      height: 100px;
+
+      .title {
+        margin: 18px 20px;
+        font-size: 22px;
+        color: #c1c1c1;
+      }
+      .links {
+        margin: 36px 20px 10px 20px;
+        a {
+          color: #c1c1c1;
+          text-decoration: none;
+          margin-right: 40px;
+        }
+      }
+      .subscribe {
+        position: absolute;
+        top: 0;
+        right: 20px;
+      }
+
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-right: 10px;
+
+    .left {
+      width: 400px;
+      flex-grow: 1;
+      flex-shrink: 1;
+      .recommend {
+        .title {
+          color: #c1c1c1;
+        }
+        .recommend-card {
+          padding: 0;
+          .media-left {
+            .image-view {
+              width: auto;
+              img {
+                width: 396px;
+              }
+            }
+            .image-view::before {
+              bottom: 12px;
+              width: 94px;
+              height: 27px;
+              font-size: 27px;
+              line-height: 27px;
+              font-weight: lighter;
+            }
+          }
+          .en_name {
+            font-size: 16px;
+            margin-bottom: 12px;
+            width: 300px;
+          }
+          .zh_name {
+            font-size: 16px;
+            margin-bottom: 20px;
+            width: 300px;
+          }
+          .time {
+            color: #c1c1c1;
+            margin-bottom: 20px;
+          }
+          .description {
+            font-size: 10px;
+            color: #636363;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+
+    .right {
+      width: 180px;
+      flex-shrink: 0;
+      .panel-view {
+        margin: 10px 0;
+        padding: 0;
+        .title {
+          text-align: center;
+          height: 36px;
+          line-height: 36px;
+          color: #c1c1c1;
+          border-bottom: 2px solid #2b2b2b;
+        }
+        .item {
+          text-align: center;
+          height: 28px;
+          line-height: 28px;
+          color: #828282;
+          border-bottom: 1px solid #2b2b2b;
+        }
+        .item:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+
+
+
 }

@@ -211,6 +211,11 @@ a:hover {
   margin: 10px;
   padding: 20px; }
 
+@font-face {
+  font-family: 'iconfont';
+  /* project id 268403 */
+  src: url("//at.alicdn.com/t/font_bxrw7hdncxflxr.eot");
+  src: url("//at.alicdn.com/t/font_bxrw7hdncxflxr.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_bxrw7hdncxflxr.woff") format("woff"), url("//at.alicdn.com/t/font_bxrw7hdncxflxr.ttf") format("truetype"), url("//at.alicdn.com/t/font_bxrw7hdncxflxr.svg#iconfont") format("svg"); }
 .flex-row-left-container, .navigation-bar, .navigation-bar .navigation-bar-left-container, .navigation-bar .navigation-bar-search-bar-container, .navigation-bar .navigation-bar-right-container {
   display: flex;
   flex-direction: row;
@@ -1785,5 +1790,99 @@ a:hover {
 .sort-container {
   margin: -10px;
   padding-bottom: 20px; }
+  .sort-container .header-view {
+    padding: 0; }
+    .sort-container .header-view .cover {
+      position: relative;
+      width: 100%;
+      height: 280px;
+      background-color: #c1c1c1; }
+      .sort-container .header-view .cover .avatar {
+        position: absolute;
+        left: 20px;
+        top: 0;
+        height: 100px;
+        width: 100px;
+        background-color: #ffffff;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat; }
+    .sort-container .header-view .info {
+      position: relative;
+      width: 100%;
+      height: 100px; }
+      .sort-container .header-view .info .title {
+        margin: 18px 20px;
+        font-size: 22px;
+        color: #c1c1c1; }
+      .sort-container .header-view .info .links {
+        margin: 36px 20px 10px 20px; }
+        .sort-container .header-view .info .links a {
+          color: #c1c1c1;
+          text-decoration: none;
+          margin-right: 40px; }
+      .sort-container .header-view .info .subscribe {
+        position: absolute;
+        top: 0;
+        right: 20px; }
+  .sort-container .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-right: 10px; }
+    .sort-container .content .left {
+      width: 400px;
+      flex-grow: 1;
+      flex-shrink: 1; }
+      .sort-container .content .left .recommend .title {
+        color: #c1c1c1; }
+      .sort-container .content .left .recommend .recommend-card {
+        padding: 0; }
+        .sort-container .content .left .recommend .recommend-card .media-left .image-view {
+          width: auto; }
+          .sort-container .content .left .recommend .recommend-card .media-left .image-view img {
+            width: 396px; }
+        .sort-container .content .left .recommend .recommend-card .media-left .image-view::before {
+          bottom: 12px;
+          width: 94px;
+          height: 27px;
+          font-size: 27px;
+          line-height: 27px;
+          font-weight: lighter; }
+        .sort-container .content .left .recommend .recommend-card .en_name {
+          font-size: 16px;
+          margin-bottom: 12px;
+          width: 300px; }
+        .sort-container .content .left .recommend .recommend-card .zh_name {
+          font-size: 16px;
+          margin-bottom: 20px;
+          width: 300px; }
+        .sort-container .content .left .recommend .recommend-card .time {
+          color: #c1c1c1;
+          margin-bottom: 20px; }
+        .sort-container .content .left .recommend .recommend-card .description {
+          font-size: 10px;
+          color: #636363;
+          line-height: 20px; }
+    .sort-container .content .right {
+      width: 180px;
+      flex-shrink: 0; }
+      .sort-container .content .right .panel-view, .sort-container .content .right .video-player, .sort-container .content .right .video-play-list, .sort-container .content .right .no-network-tip, .sort-container .content .right .video-recommend, .sort-container .content .right .plyr--video .plyr__controls, .plyr--video .sort-container .content .right .plyr__controls {
+        margin: 10px 0;
+        padding: 0; }
+        .sort-container .content .right .panel-view .title, .sort-container .content .right .video-player .title, .sort-container .content .right .video-play-list .title, .sort-container .content .right .no-network-tip .title, .sort-container .content .right .video-recommend .title, .sort-container .content .right .plyr--video .plyr__controls .title, .plyr--video .sort-container .content .right .plyr__controls .title {
+          text-align: center;
+          height: 36px;
+          line-height: 36px;
+          color: #c1c1c1;
+          border-bottom: 2px solid #2b2b2b; }
+        .sort-container .content .right .panel-view .item, .sort-container .content .right .video-player .item, .sort-container .content .right .video-play-list .item, .sort-container .content .right .no-network-tip .item, .sort-container .content .right .video-recommend .item, .sort-container .content .right .plyr--video .plyr__controls .item, .plyr--video .sort-container .content .right .plyr__controls .item, .sort-container .content .right .panel-view .side-bar-menu .title-item, .side-bar-menu .sort-container .content .right .panel-view .title-item, .sort-container .content .right .video-player .side-bar-menu .title-item, .side-bar-menu .sort-container .content .right .video-player .title-item, .sort-container .content .right .video-play-list .side-bar-menu .title-item, .side-bar-menu .sort-container .content .right .video-play-list .title-item, .sort-container .content .right .no-network-tip .side-bar-menu .title-item, .side-bar-menu .sort-container .content .right .no-network-tip .title-item, .sort-container .content .right .video-recommend .side-bar-menu .title-item, .side-bar-menu .sort-container .content .right .video-recommend .title-item, .sort-container .content .right .plyr--video .plyr__controls .side-bar-menu .title-item, .side-bar-menu .sort-container .content .right .plyr--video .plyr__controls .title-item, .plyr--video .sort-container .content .right .plyr__controls .side-bar-menu .title-item, .side-bar-menu .plyr--video .sort-container .content .right .plyr__controls .title-item {
+          text-align: center;
+          height: 28px;
+          line-height: 28px;
+          color: #828282;
+          border-bottom: 1px solid #2b2b2b; }
+        .sort-container .content .right .panel-view .item:last-child, .sort-container .content .right .video-player .item:last-child, .sort-container .content .right .video-play-list .item:last-child, .sort-container .content .right .no-network-tip .item:last-child, .sort-container .content .right .video-recommend .item:last-child, .sort-container .content .right .plyr--video .plyr__controls .item:last-child, .plyr--video .sort-container .content .right .plyr__controls .item:last-child, .sort-container .content .right .panel-view .side-bar-menu .title-item:last-child, .side-bar-menu .sort-container .content .right .panel-view .title-item:last-child, .sort-container .content .right .video-player .side-bar-menu .title-item:last-child, .side-bar-menu .sort-container .content .right .video-player .title-item:last-child, .sort-container .content .right .video-play-list .side-bar-menu .title-item:last-child, .side-bar-menu .sort-container .content .right .video-play-list .title-item:last-child, .sort-container .content .right .no-network-tip .side-bar-menu .title-item:last-child, .side-bar-menu .sort-container .content .right .no-network-tip .title-item:last-child, .sort-container .content .right .video-recommend .side-bar-menu .title-item:last-child, .side-bar-menu .sort-container .content .right .video-recommend .title-item:last-child, .sort-container .content .right .plyr--video .plyr__controls .side-bar-menu .title-item:last-child, .side-bar-menu .sort-container .content .right .plyr--video .plyr__controls .title-item:last-child, .plyr--video .sort-container .content .right .plyr__controls .side-bar-menu .title-item:last-child, .side-bar-menu .plyr--video .sort-container .content .right .plyr__controls .title-item:last-child {
+          border-bottom: none; }
 
 /*# sourceMappingURL=ui.main.css.map */
