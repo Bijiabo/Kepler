@@ -6,6 +6,7 @@
     <title>频道 - Sumred</title>
     <link rel="stylesheet" href="../static/css/bootstrap.css">
     <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/font/iconfont.css">
     <link rel="stylesheet" href="../static/css/ui.main.css">
     <!--scripts-->
     <script src="../static/js/jquery-3.1.1.min.js"></script>
@@ -15,7 +16,7 @@
     <script src="../static/js/js.cookie.js"></script>
     <script src="../static/js/template-loader.js"></script>
 
-    <script data-main="../static/js/pages/channel.js" src="../static/js/require.js"></script>
+    <script data-main="../static/js/pages/sort.js" src="../static/js/require.js"></script>
 </head>
 <body class="has-side-bar-menu">
 
@@ -48,37 +49,109 @@
                 </div>
 
                 <div class="content">
-                    <div class="left panel-view">
-                        <div class="recommend">
-                            <div class="title">快来看看</div>
-                            <div class="media list-video-card recommend-card">
-                                <a href="#">
-                                    <div class="media-left">
-                                        <div class="image-view"
-                                             duration="06:00"
-                                             :style="'background-image: url(./../static/image/video-thumbnails/'+index%6+'.jpg);'"
-                                        >
+                    <div class="left">
+                        <div class="panel-view">
+                            <div class="recommend">
+                                <div class="title">快来看看</div>
+                                <div class="media list-video-card recommend-card">
+                                        <div class="media-left">
+                                            <div class="image-view"
+                                                 duration="06:00"
+                                                 :style="'background-image: url(./../static/image/video-thumbnails/0.jpg);'"
+                                            >
 
-                                            <img src="./../static/image/scale/16-9.png" alt="">
-                                            <div class="video-progress" style="width: 33%;"></div>
+                                                <img src="./../static/image/scale/16-9.png" alt="">
+                                                <div class="video-progress" style="width: 33%;"></div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="media-heading text-color-blue text-bold en_name">
-                                            Horizon Zero Dawn All Cutscenes (Game Movie) PS4 PRO 1080p
-                                        </h4>
-                                        <h4 class="text-color-gray-light margin-top-bottom-4 zh_name">
-                                            地平线(游戏视频) PS4PRO 1080P
-                                        </h4>
-                                        <div class="margin-top-bottom-8 text-size-12 time">1小时前</div>
-                                        <div class="text-color-gray-light description">
-                                            In a lush, post-apocalyptic world where nature has reclaimed the ruins of a forgotten civilization, pockets of humanity live on in primitive hunter-gatherer tribes. Their dominion over the new wilderness has been usurped by the Machines – fearsome mechanical creatures of unknown origin.
+                                        <div class="media-body">
+                                            <a href="#">
+                                                <h4 class="media-heading text-color-blue text-bold en_name">
+                                                    Horizon Zero Dawn All Cutscenes (Game Movie) PS4 PRO 1080p
+                                                </h4>
+                                            </a>
+
+                                            <h4 class="text-color-gray-light margin-top-bottom-4 zh_name">
+                                                地平线(游戏视频) PS4PRO 1080P
+                                            </h4>
+                                            <div class="margin-top-bottom-8 text-size-12 time">1小时前</div>
+                                            <div class="text-color-gray-light description">
+                                                In a lush, post-apocalyptic world where nature has reclaimed the ruins of a forgotten civilization, pockets of humanity live on in primitive hunter-gatherer tribes. Their dominion over the new wilderness has been usurped by the Machines – fearsome mechanical creatures of unknown origin.
+                                            </div>
                                         </div>
-                                    </div>
-                                </a>
+                                </div>
                             </div>
-                        </div>
+                            <div class="separator-line"></div>
+                            <div class="title">上传视频</div>
+                            <div class="video-list-container">
+                                <template v-for="(item, index) in new Array(5)">
+                                    <div class="">
+                                        <a :href="'detail.html#video-'+index">
+                                            <div class="grid-video-card">
+                                                <div class="image-view"
+                                                     duration="06:00"
+                                                     :style="'background-image: url(./../static/image/video-thumbnails/'+index%6+'.jpg);'"
+                                                >
+                                                    <img src="./../static/image/scale/16-9.png" alt="">
+                                                    <div class="video-progress" style="width: 33%;"></div>
+                                                </div>
+                                                <div class="title">Name Of DFHJK HKSEWB DJKFHDK BFD</div>
+                                                <div class="text-color-gray-bright margin-top-bottom-8">地平线</div>
+                                                <div class="text-color-gray-light-less">视频简介显示内容...</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </template>
+                            </div>
+
+                            <div class="separator-line"></div>
+                            <div class="title">热门点击 -> 修改为可以左右手动点击滑动</div>
+                            <div class="video-list-container">
+                                <template v-for="(item, index) in new Array(5)">
+                                    <div class="">
+                                        <a :href="'detail.html#video-'+index">
+                                            <div class="grid-video-card">
+                                                <div class="image-view"
+                                                     duration="06:00"
+                                                     :style="'background-image: url(./../static/image/video-thumbnails/'+index%6+'.jpg);'"
+                                                >
+                                                    <img src="./../static/image/scale/16-9.png" alt="">
+                                                    <div class="video-progress" style="width: 33%;"></div>
+                                                </div>
+                                                <div class="title">Name Of DFHJK HKSEWB DJKFHDK BFD</div>
+                                                <div class="text-color-gray-bright margin-top-bottom-8">地平线</div>
+                                                <div class="text-color-gray-light-less">视频简介显示内容...</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </template>
+                            </div>
+
+                            <div class="separator-line"></div>
+                            <div class="title">地平线：黎明时分 预告片 -> 修改为可以左右手动点击滑动样式 2 </div>
+                            <div class="video-list-container">
+                                <template v-for="(item, index) in new Array(5)">
+                                    <div class="">
+                                        <a :href="'detail.html#video-'+index">
+                                            <div class="grid-video-card">
+                                                <div class="image-view"
+                                                     duration="06:00"
+                                                     :style="'background-image: url(./../static/image/video-thumbnails/'+index%6+'.jpg);'"
+                                                >
+                                                    <img src="./../static/image/scale/16-9.png" alt="">
+                                                    <div class="video-progress" style="width: 33%;"></div>
+                                                </div>
+                                                <div class="title">Name Of DFHJK HKSEWB DJKFHDK BFD</div>
+                                                <div class="text-color-gray-bright margin-top-bottom-8">地平线</div>
+                                                <div class="text-color-gray-light-less">视频简介显示内容...</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </template>
+                            </div>
+                        </div><!-- panel view -->
                     </div>
+
                     <div class="right">
                         <div class="panel-view">
                             <div class="title">所属</div>
@@ -92,11 +165,11 @@
                             <div class="item">泰坦陨落 2</div>
                             <div class="item">巫师 3</div>
                             <div class="item">最终幻想</div>
-                            <div class="item">战地</div>
-                            <div class="item">光环 5</div>
-                            <div class="item">使命召唤</div>
-                            <div class="item">黑暗之魂</div>
-                            <div class="item">
+                            <div class="item hide-item">战地</div>
+                            <div class="item hide-item">光环 5</div>
+                            <div class="item hide-item">使命召唤</div>
+                            <div class="item hide-item">黑暗之魂</div>
+                            <div class="item dropdown">
                                 <span class="fa fa-angle-down"></span>
                             </div>
                         </div>

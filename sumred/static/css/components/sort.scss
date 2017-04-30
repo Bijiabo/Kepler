@@ -64,6 +64,7 @@
       .recommend {
         .title {
           color: #c1c1c1;
+          margin-bottom: 18px;
         }
         .recommend-card {
           padding: 0;
@@ -104,7 +105,15 @@
           }
         }
       }
-    }
+
+      .title {
+        color: #c1c1c1;
+      }
+      .video-list-container {
+        margin: 0 -10px;
+        height: 190px;
+      }
+    } //.left
 
     .right {
       width: 180px;
@@ -125,6 +134,10 @@
           line-height: 28px;
           color: #828282;
           border-bottom: 1px solid #2b2b2b;
+          cursor: pointer;
+        }
+        .item.hide-item {
+          display: none;
         }
         .item:last-child {
           border-bottom: none;

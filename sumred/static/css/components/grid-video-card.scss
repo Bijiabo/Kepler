@@ -46,7 +46,7 @@
 .grid-video-card:hover {
   @extend .background-color-gray-dark;
 
-  transform: scale3d(1.02,1.02, 1);
+  //transform: scale3d(1.02,1.02, 1);
   position: relative;
   z-index: 100;
 }
