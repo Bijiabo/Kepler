@@ -2,7 +2,7 @@
   .side-bar-menu {
     display: block;
     height: 100%;
-    overflow-y: scroll;
+    //overflow-y: scroll;
     padding-bottom: 100px;
   }
 }
@@ -182,6 +182,18 @@
     //-o-animation: myfirst 5s;	/* Opera */
   }
   .item.adding::after {
+    content: attr(right-icon);
+    position: absolute;
+    left: 38px;
+    top: 0;
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    color: #ffffff;
+    z-index: 11;
+  }
+  .item.adding::before {
     content: attr(title);
     position: absolute;
     top: 0;
@@ -193,6 +205,8 @@
     opacity: 1;
     animation: hide_sidebar_subscribe_mask 1s;
     animation-delay: 1s;
+    padding-left: 57px;
+    z-index: 10;
   }
   .item.removing {
     animation: sidebar_remove_subscribe 0.5s;
@@ -200,6 +214,18 @@
     overflow: hidden;
   }
   .item.removing::after {
+    content: attr(right-icon);
+    position: absolute;
+    left: 38px;
+    top: 0;
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    color: #ffffff;
+    z-index: 11;
+  }
+  .item.removing::before {
     content: "订阅已删除";
     position: absolute;
     top: 0;
@@ -210,6 +236,8 @@
     color: #ffffff;
     //opacity: 0;
     animation: show_sidebar_subscribe_mask 0.2s;
+    padding-left: 57px;
+    z-index: 10;
   }
 
   // 活跃条目

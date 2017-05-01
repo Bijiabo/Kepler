@@ -293,7 +293,6 @@ a:hover {
 .has-side-bar-menu .side-bar-menu {
   display: block;
   height: 100%;
-  overflow-y: scroll;
   padding-bottom: 100px; }
 
 @keyframes sidebar_add_subscribe {
@@ -408,6 +407,17 @@ a:hover {
     animation: sidebar_add_subscribe 0.5s;
     overflow: hidden; }
   .side-bar-menu .item.adding::after, .side-bar-menu .adding.title-item::after {
+    content: attr(right-icon);
+    position: absolute;
+    left: 38px;
+    top: 0;
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    color: #ffffff;
+    z-index: 11; }
+  .side-bar-menu .item.adding::before, .side-bar-menu .adding.title-item::before {
     content: attr(title);
     position: absolute;
     top: 0;
@@ -418,12 +428,25 @@ a:hover {
     color: #ffffff;
     opacity: 1;
     animation: hide_sidebar_subscribe_mask 1s;
-    animation-delay: 1s; }
+    animation-delay: 1s;
+    padding-left: 57px;
+    z-index: 10; }
   .side-bar-menu .item.removing, .side-bar-menu .removing.title-item {
     animation: sidebar_remove_subscribe 0.5s;
     animation-delay: 1s;
     overflow: hidden; }
   .side-bar-menu .item.removing::after, .side-bar-menu .removing.title-item::after {
+    content: attr(right-icon);
+    position: absolute;
+    left: 38px;
+    top: 0;
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    color: #ffffff;
+    z-index: 11; }
+  .side-bar-menu .item.removing::before, .side-bar-menu .removing.title-item::before {
     content: "订阅已删除";
     position: absolute;
     top: 0;
@@ -432,7 +455,9 @@ a:hover {
     height: 100%;
     background-color: #e34849;
     color: #ffffff;
-    animation: show_sidebar_subscribe_mask 0.2s; }
+    animation: show_sidebar_subscribe_mask 0.2s;
+    padding-left: 57px;
+    z-index: 10; }
   .side-bar-menu .separator-line {
     background-color: #424242; }
 

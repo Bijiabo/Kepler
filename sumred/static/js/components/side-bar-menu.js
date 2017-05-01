@@ -38,7 +38,7 @@ define([], function () {
         $(document).on('click', '.test-book-channel', function () {
             var itemHTML = '\
                 <a href="#">\
-                <div class="item adding" title="测试频道">\
+                <div class="item adding" title="测试频道" right-icon="&#xe606;">\
                     <div class="logo">\
                         <img src="../static/image/avatars/3.jpg" alt="">\
                     </div>\
