@@ -112,6 +112,37 @@
       .video-list-container {
         margin: 0 -10px;
         height: 190px;
+
+        .carousel-control {
+          width: 20px;
+          background: none;
+          line-height: 186px;
+          color: #c1c1c1;
+          opacity: 1;
+        }
+        .carousel-control.left {
+          margin-left: -10px;
+        }
+        .carousel-control.right {
+          margin-right: -10px;
+        }
+      }
+      .video-list-container.video-list-container-type-2 {
+        .carousel-control {
+          margin-top: 19px;
+          width: 42px;
+          height: 62px;
+          background: #545454;
+          line-height: 62px;
+          color: #c1c1c1;
+          opacity: 1;
+        }
+        .carousel-control.left {
+          margin-left: -32px;
+        }
+        .carousel-control.right {
+          margin-right: -32px;
+        }
       }
     } //.left
 

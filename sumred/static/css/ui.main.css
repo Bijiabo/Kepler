@@ -1924,6 +1924,28 @@ a:hover {
       .sort-container .content .left .video-list-container {
         margin: 0 -10px;
         height: 190px; }
+        .sort-container .content .left .video-list-container .carousel-control {
+          width: 20px;
+          background: none;
+          line-height: 186px;
+          color: #c1c1c1;
+          opacity: 1; }
+        .sort-container .content .left .video-list-container .carousel-control.left {
+          margin-left: -10px; }
+        .sort-container .content .left .video-list-container .carousel-control.right {
+          margin-right: -10px; }
+      .sort-container .content .left .video-list-container.video-list-container-type-2 .carousel-control {
+        margin-top: 19px;
+        width: 42px;
+        height: 62px;
+        background: #545454;
+        line-height: 62px;
+        color: #c1c1c1;
+        opacity: 1; }
+      .sort-container .content .left .video-list-container.video-list-container-type-2 .carousel-control.left {
+        margin-left: -32px; }
+      .sort-container .content .left .video-list-container.video-list-container-type-2 .carousel-control.right {
+        margin-right: -32px; }
     .sort-container .content .right {
       width: 180px;
       flex-shrink: 0; }

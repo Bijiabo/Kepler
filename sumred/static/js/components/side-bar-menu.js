@@ -66,7 +66,6 @@ define([], function () {
                     )
                 )
             );
-            console.log(targetItem);
             targetItem.find('.item').addClass('removing');
             
             setTimeout(function () {
