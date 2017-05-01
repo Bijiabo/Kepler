@@ -29,6 +29,10 @@ requirejs(['public'], function(_public) {
         _public.init();
     };
     
+    var loadingNewData = false, // 是否正在加载新数据中
+        userLoadNewDataCount = 0, // 用户手动点击加载新数据的次数
+        autoLoadNewDataCount = 0;
+    
     window.didLoadActions.push(targetActions);
     
     var bindEvents = function () {
@@ -44,12 +48,18 @@ requirejs(['public'], function(_public) {
         // 用户点击加载更多
         $(document).on('click', '.load-more', function (e) {
             e.preventDefault();
+    
+            if (loadingNewData || userLoadNewDataCount >= 2 ) { return; }
+            
+            userLoadNewDataCount++;
+            loadingNewData = true;
             // todo: 此处获取更多数据加载到页面中
             // 模拟加载远程数据
             var newData = Array.apply(null, Array(5)).map(function(item, i) {
                 return 'Horizon Zero Dawn All Cutscenes (Game Movie) PS4 PRO 1080p';
             });
             Vue.set(window.renderContext, 'watchHistory', window.renderContext.watchHistory.concat( newData ));
+            loadingNewData = false;
         });
         
         // 用户搜索信息
@@ -77,6 +87,42 @@ requirejs(['public'], function(_public) {
                 doSearchHistory();
             }
         });
+    
+        // 滚动到底部自动加载内容
+        window.onscroll = function () {
+            if (loadingNewData || userLoadNewDataCount < 2 ) { return; }
+            
+            if (autoLoadNewDataCount >= 5) {
+                $('.load-more a').text('没有更多啦');
+                return;
+            }
+            
+            var bodyElement = $('body'),
+                windowElement = $(window);
+            // + bodyElement.offset().top + 50
+            if (bodyElement.height() - bodyElement.scrollTop()  < windowElement.height()) {
+                // 已经滚动到底部，自动加载新数据
+                console.log('滚动到底部啦！');
+                loadingNewData = true;
+                
+                $('.load-more a').text('加载中...');
+                
+                // 模拟加载远程数据
+                setTimeout(function () {
+                    $('.load-more a').text('加载更多');
+                    
+                    var newData = Array.apply(null, Array(5)).map(function(item, i) {
+                        return 'Horizon Zero Dawn All Cutscenes (Game Movie) PS4 PRO 1080p';
+                    });
+                    Vue.set(window.renderContext, 'watchHistory', window.renderContext.watchHistory.concat( newData ));
+                    // 设定新的链接 ...
+                    
+                    
+                    loadingNewData = false;
+                    autoLoadNewDataCount++;
+                }, 1000);
+            }
+        }
         
     };
     bindEvents();

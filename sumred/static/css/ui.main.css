@@ -178,9 +178,9 @@ a:hover {
 .btn-ghost {
   border-width: 1px;
   border-style: solid;
-  border-color: #424242;
+  border-color: #828282;
   padding: 2px 6px;
-  color: #424242;
+  color: #828282;
   border-radius: 0; }
 
 .btn-ghost:hover {
@@ -1572,7 +1572,11 @@ a:hover {
         border-color: #636363; }
   .history-container .load-more {
     margin-bottom: 20px;
-    text-align: center; }
+    text-align: center;
+    cursor: pointer; }
+    .history-container .load-more a:hover {
+      text-decoration: none;
+      color: #636363; }
   .history-container .search-result-tip {
     color: #828282;
     width: 100%;
