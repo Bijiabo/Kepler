@@ -47,7 +47,7 @@ a:hover {
 .text-color-gray-bright, .navigation-bar .navigation-bar-left-container .slidebar-menu-button:hover, .side-bar-menu, .side-bar-menu .item, .side-bar-menu .title-item, .side-bar-menu .item a, .side-bar-menu .title-item a, .side-bar-menu .item .submenu .item .title, .side-bar-menu .title-item .submenu .item .title, .side-bar-menu .item .submenu .title-item .title, .side-bar-menu .title-item .submenu .title-item .title, .side-bar-menu .item .submenu .item .subclass .item, .side-bar-menu .title-item .submenu .item .subclass .item, .side-bar-menu .item .submenu .title-item .subclass .item, .side-bar-menu .title-item .submenu .title-item .subclass .item, .side-bar-menu .item .submenu .item .subclass .title-item, .side-bar-menu .title-item .submenu .item .subclass .title-item, .side-bar-menu .item .submenu .title-item .subclass .title-item, .side-bar-menu .title-item .submenu .title-item .subclass .title-item, .video-detail .action-buttons > div.active, .video-detail .video-published-date, .video-detail .video-name, .content-class-filter .item .class-options .option-item, .content-class-filter .side-bar-menu .title-item .class-options .option-item, .side-bar-menu .content-class-filter .title-item .class-options .option-item, .grid-video-card .title, .history-container .list-video-card .media-heading {
   color: #c1c1c1; }
 
-.text-color-gray-shine, .side-bar-menu .item .submenu .item .subclass .subclass-item:hover, .side-bar-menu .title-item .submenu .item .subclass .subclass-item:hover, .side-bar-menu .item .submenu .title-item .subclass .subclass-item:hover, .side-bar-menu .title-item .submenu .title-item .subclass .subclass-item:hover, .side-bar-menu .item.active, .side-bar-menu .active.title-item, .side-bar-menu > .item:hover, .side-bar-menu > .title-item:hover, .side-bar-menu > .item > .submenu > .item .title:hover, .side-bar-menu > .title-item > .submenu > .item .title:hover, .side-bar-menu > .item > .submenu > .title-item .title:hover, .side-bar-menu > .title-item > .submenu > .title-item .title:hover,
+.text-color-gray-shine, .side-bar-menu .item .submenu .item .subclass .subclass-item:hover, .side-bar-menu .title-item .submenu .item .subclass .subclass-item:hover, .side-bar-menu .item .submenu .title-item .subclass .subclass-item:hover, .side-bar-menu .title-item .submenu .title-item .subclass .subclass-item:hover, .side-bar-menu .item.active, .side-bar-menu .active.title-item, .side-bar-menu > .item:hover, .side-bar-menu > .title-item:hover, .channel-list > a > .item:hover, .side-bar-menu .channel-list > a > .title-item:hover, .side-bar-menu > .item > .submenu > .item .title:hover, .side-bar-menu > .title-item > .submenu > .item .title:hover, .side-bar-menu > .item > .submenu > .title-item .title:hover, .side-bar-menu > .title-item > .submenu > .title-item .title:hover,
 .side-bar-menu > .item > .submenu > .subclass > .item:hover,
 .side-bar-menu > .title-item > .submenu > .subclass > .item:hover,
 .side-bar-menu > .item > .submenu > .subclass > .title-item:hover,
@@ -291,8 +291,31 @@ a:hover {
         margin-left: 12px; }
 
 .has-side-bar-menu .side-bar-menu {
-  display: block; }
+  display: block;
+  height: 100%;
+  overflow-y: scroll;
+  padding-bottom: 100px; }
 
+@keyframes sidebar_add_subscribe {
+  from {
+    height: 0; }
+  to {
+    height: 28px; } }
+@keyframes sidebar_remove_subscribe {
+  from {
+    height: 28px; }
+  to {
+    height: 0; } }
+@keyframes hide_sidebar_subscribe_mask {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+@keyframes show_sidebar_subscribe_mask {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 .side-bar-menu {
   position: fixed;
   left: 0;
@@ -307,9 +330,6 @@ a:hover {
   justify-content: flex-start;
   align-items: stretch;
   display: none; }
-  .side-bar-menu .channel-list {
-    max-height: 400px;
-    overflow-y: scroll; }
   .side-bar-menu .book-channel-success {
     position: relative;
     padding-left: 28px;
@@ -325,7 +345,8 @@ a:hover {
     padding-left: 38px;
     height: 28px;
     line-height: 28px;
-    cursor: pointer; }
+    cursor: pointer;
+    clear: both; }
     .side-bar-menu .item .icon, .side-bar-menu .title-item .icon {
       float: left;
       margin-right: 12px; }
@@ -382,10 +403,40 @@ a:hover {
             background: #636363; }
         .side-bar-menu .item .submenu .item .subclass > .subclass-item > .item, .side-bar-menu .title-item .submenu .item .subclass > .subclass-item > .item, .side-bar-menu .item .submenu .title-item .subclass > .subclass-item > .item, .side-bar-menu .title-item .submenu .title-item .subclass > .subclass-item > .item, .side-bar-menu .item .submenu .item .subclass > .subclass-item > .title-item, .side-bar-menu .title-item .submenu .item .subclass > .subclass-item > .title-item, .side-bar-menu .item .submenu .title-item .subclass > .subclass-item > .title-item, .side-bar-menu .title-item .submenu .title-item .subclass > .subclass-item > .title-item {
           border-bottom: none; }
+  .side-bar-menu .item.adding, .side-bar-menu .adding.title-item {
+    position: relative;
+    animation: sidebar_add_subscribe 0.5s;
+    overflow: hidden; }
+  .side-bar-menu .item.adding::after, .side-bar-menu .adding.title-item::after {
+    content: attr(title);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e34849;
+    color: #ffffff;
+    opacity: 1;
+    animation: hide_sidebar_subscribe_mask 1s;
+    animation-delay: 1s; }
+  .side-bar-menu .item.removing, .side-bar-menu .removing.title-item {
+    animation: sidebar_remove_subscribe 0.5s;
+    animation-delay: 1s;
+    overflow: hidden; }
+  .side-bar-menu .item.removing::after, .side-bar-menu .removing.title-item::after {
+    content: "订阅已删除";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e34849;
+    color: #ffffff;
+    animation: show_sidebar_subscribe_mask 0.2s; }
   .side-bar-menu .separator-line {
     background-color: #424242; }
 
-.side-bar-menu > .item:hover, .side-bar-menu > .title-item:hover {
+.side-bar-menu > .item:hover, .side-bar-menu > .title-item:hover, .channel-list > a > .item:hover, .side-bar-menu .channel-list > a > .title-item:hover {
   background: #636363; }
 
 .side-bar-menu > .item > .submenu > .item .title:hover, .side-bar-menu > .title-item > .submenu > .item .title:hover, .side-bar-menu > .item > .submenu > .title-item .title:hover, .side-bar-menu > .title-item > .submenu > .title-item .title:hover,

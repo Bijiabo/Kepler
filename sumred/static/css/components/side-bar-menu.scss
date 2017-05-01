@@ -1,8 +1,36 @@
 .has-side-bar-menu {
   .side-bar-menu {
     display: block;
+    height: 100%;
+    overflow-y: scroll;
+    padding-bottom: 100px;
   }
 }
+
+@keyframes sidebar_add_subscribe
+{
+  from {height: 0;}
+  to {height: 28px;}
+}
+
+@keyframes sidebar_remove_subscribe
+{
+  from {height: 28px;}
+  to {height: 0;}
+}
+
+@keyframes hide_sidebar_subscribe_mask
+{
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+@keyframes show_sidebar_subscribe_mask
+{
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+
 .side-bar-menu {
   @extend .unselectable;
   position: fixed;
@@ -24,8 +52,8 @@
   @extend .text-color-gray-bright;
 
   .channel-list {
-    max-height: 400px;
-    overflow-y: scroll;
+    //max-height: 400px;
+    //overflow-y: scroll;
   }
 
   .book-channel-success {
@@ -54,6 +82,7 @@
     height: 28px;
     line-height: 28px;
     cursor: pointer;
+    clear: both;
 
     a {
       @extend .text-color-gray-bright;
@@ -144,6 +173,44 @@
       }
     }
   }
+  .item.adding {
+    position: relative;
+    animation: sidebar_add_subscribe 0.5s;
+    overflow: hidden;
+    //-moz-animation: myfirst 5s;	/* Firefox */
+    //-webkit-animation: myfirst 5s;	/* Safari 和 Chrome */
+    //-o-animation: myfirst 5s;	/* Opera */
+  }
+  .item.adding::after {
+    content: attr(title);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $themeColor_Red;
+    color: #ffffff;
+    opacity: 1;
+    animation: hide_sidebar_subscribe_mask 1s;
+    animation-delay: 1s;
+  }
+  .item.removing {
+    animation: sidebar_remove_subscribe 0.5s;
+    animation-delay: 1s;
+    overflow: hidden;
+  }
+  .item.removing::after {
+    content: "订阅已删除";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $themeColor_Red;
+    color: #ffffff;
+    //opacity: 0;
+    animation: show_sidebar_subscribe_mask 0.2s;
+  }
 
   // 活跃条目
   .item.active {
@@ -162,7 +229,7 @@
   }
 }
 
-.side-bar-menu > .item:hover {
+.side-bar-menu > .item:hover, .channel-list > a > .item:hover {
   background: $themeColor_GrayLightLess;
   @extend .text-color-gray-shine;
 }
