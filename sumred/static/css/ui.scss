@@ -14,6 +14,12 @@ $textColor_Red: $themeColor_Red;
 $textColor_Blue: $themeColor_Blue;
 $textColor_BlueLight: $themeColor_BlueLight;
 
+.unselectable {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 .dev-border {
   border: 1px solid $themeColor_Blue;
   //border: none;

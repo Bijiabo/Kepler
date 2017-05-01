@@ -4,6 +4,7 @@
   }
 }
 .side-bar-menu {
+  @extend .unselectable;
   position: fixed;
   left: 0;
   top: 46px;
