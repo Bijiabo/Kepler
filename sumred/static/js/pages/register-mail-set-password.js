@@ -93,30 +93,53 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
     };
     var currentRegisterType = registerType.cellPhone;
     
+    var inputJudge = {
+        password: false,
+        passwordRepeat: false
+    };
+    
     // bind user events
     var bindEvents = function () {
         
-        // 用户更改输入框内容后，移除正确/错误提示
+        // 用户修改键入后，触发统一的判定处理逻辑
         $(document).on('keyup', '.login-container input', function () {
+            // 用户更改输入框内容后，移除正确/错误提示
             var $this = $(this);
             var inputContainer = $this.parents('.form-group');
             inputContainer.removeClass('ok error');
             // elements.tip.fadeOut();
+            
+            // 判定用户输入的密码逻辑是否符合要求，若符合，则高亮下一步按钮
+            if (inputJudge.password && inputJudge.passwordRepeat) {
+                $('.go-next span').addClass('text-color-red');
+            } else {
+                $('.go-next span').removeClass('text-color-red');
+            }
         });
         
         // 检测用户输入的密码是否符合要求
-        $(document).on('change', elements.selector.passwordInput, function () {
+        $(document).on('keyup', elements.selector.passwordInput, function () {
             elements.passwordInputContainer.removeClass('ok error');
-            if (userSystem.checkPasswordFormat(values.password)) {
+            if (values.password.length === 0) {
+                inputJudge.password = false;
+                return;
+            }
+            inputJudge.password = userSystem.checkPasswordFormat(values.password);
+            if (inputJudge.password) {
                 elements.passwordInputContainer.addClass('ok');
             } else {
                 elements.passwordInputContainer.addClass('error');
             }
         });
         // 检测用户输入的二次验证密码是否符合要求
-        $(document).on('change', elements.selector.repeatPasswordInput, function () {
+        $(document).on('keyup', elements.selector.repeatPasswordInput, function () {
             elements.repeatPasswordInputContainer.removeClass('ok error');
-            if (values.password == values.repeatPassword) {
+            if (values.repeatPassword.length === 0) {
+                inputJudge.passwordRepeat = false;
+                return;
+            }
+            inputJudge.passwordRepeat = values.password == values.repeatPassword;
+            if (inputJudge.passwordRepeat) {
                 elements.repeatPasswordInputContainer.addClass('ok');
             } else {
                 elements.repeatPasswordInputContainer.addClass('error');
@@ -127,6 +150,7 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
         $(document).on('click', '.go-next', function () {
             if (values.password != values.repeatPassword) {
                 // todo: 密码不一致提示
+                elements.tip.text('两次输入的密码不一致，请检查').fadeIn();
                 return;
             }
             

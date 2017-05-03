@@ -274,7 +274,7 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
                         <p>\
                             <a href="register-mail-set-password.html" class="text-color-red">本地测试环境，直接点击此链接跳转到设定密码页面</a>\
                         </p>\
-                    ');
+                    ').fadeIn();
                 });
                 // todo: redirect to mail register password set page;
             }
