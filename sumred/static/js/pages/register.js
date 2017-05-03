@@ -123,6 +123,7 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
             var targetType = $this.attr('register-type');
             elements.registerInputGroupItem.hide();
             $('.'+targetType).show();
+            elements.tip.hide();
             
             currentRegisterType = targetType;
         });
@@ -178,8 +179,25 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
                 elements.passwordInputContainer.addClass('error');
             }
         });
+    
+        // 检测用户输入的邮箱是否符合要求
+        $(document).on('keyup', elements.selector.mailInput, function () {
+            elements.mailInputContainer.removeClass('ok error');
+            var email = elements.mailInput.val();
+            if (email.length === 0) {
+                return;
+            }
+            pageCache.checkEmailFormat = userSystem.checkMailFormat(email);
+            if (pageCache.checkEmailFormat) {
+                elements.mailInputContainer.addClass('ok');
+                $('.do-register span').addClass('text-color-red');
+            } else {
+                elements.mailInputContainer.addClass('error');
+                $('.do-register span').removeClass('text-color-red');
+            }
+        });
         
-        $(document).on('keyup', '.register-input-container input', function () {
+        $(document).on('keyup', '.register-input-container input', function (e) {
             if (currentRegisterType == registerType.cellPhone) {
                 // 手机号注册
                 if (inputJudge.account && inputJudge.password) {
@@ -189,36 +207,63 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
                 }
             } else {
                 // 邮箱注册
-                
+                // 已经在邮箱输入框内容变动的对应函数中处理，此处可不必理会。
+                elements.tip.hide();
+            }
+    
+            if (e.which == 13) {
+                doRegister();
             }
         });
         
         // 用户点击注册按钮
-        $(document).on('click', '.do-register', function () {
+        var doRegister = function () {
             if (currentRegisterType == registerType.cellPhone) {
                 // 手机号注册
                 var cellPhoneNumber = elements.cellPhoneInput.val(),
                     password = elements.passwordInput.val();
-                
-                if (!userSystem.checkPasswordFormat(password)) {
-                    // 密码不符合规范
+    
+                if (!userSystem.checkCellPhoneNumberFormat(cellPhoneNumber)) {
+                    // 手机号不符合规范
+                    elements.tip.text('手机号码不符合规范，请检查').fadeIn();
                     return;
                 }
                 
+                if (elements.captchaInput.val().length === 0 ) {
+                    elements.tip.text('请输入验证码').fadeIn();
+                    return;
+                }
+                
+                if (!userSystem.checkPasswordFormat(password)) {
+                    // 密码不符合规范
+                    elements.tip.text('请输入 6-13 位密码，不区分大小写').fadeIn();
+                    return;
+                }
+        
                 // todo： 调用接口检测验证码是否正确
                 // todo： 调用接口进行注册
                 userSystem.register(cellPhoneNumber, password, function (success, description) {
                     if (success) {
                         location.href = './register-success.html';
                     } else {
-                        
+                
                     }
                 });
                 // todo: redirect to registe success page
-                
+        
             } else {
                 // 邮箱注册
                 var mail = elements.mailInput.val();
+        
+                if (!pageCache.checkEmailFormat) {
+                    if (mail.length === 0) {
+                        elements.tip.text('请输入您的邮箱地址').fadeIn();
+                    } else {
+                        elements.tip.text('您输入的邮箱地址格式有误，请检查').fadeIn();
+                    }
+                    return;
+                }
+        
                 // todo： 调用接口发送注册邮件
                 userSystem.registerByEmail(mail, function (success, description) {
                     elements.tip.html('\
@@ -233,7 +278,8 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
                 });
                 // todo: redirect to mail register password set page;
             }
-        });
+        };
+        $(document).on('click', '.do-register', doRegister);
     };
     bindEvents();
     
