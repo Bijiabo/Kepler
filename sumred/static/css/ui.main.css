@@ -26,7 +26,7 @@ a:hover {
 .text-color-white, .history-container .list-video-card:hover .media-heading, .history-container .list-video-card.search-history-item:hover .time {
   color: #ffffff; }
 
-.text-color-red, .panel-title-view, .message-box .title, .navigation-bar .navigation-bar-right-container, .side-bar-menu .title-item, .content-class-filter .item .class-options .option-item.active, .content-class-filter .side-bar-menu .title-item .class-options .option-item.active, .side-bar-menu .content-class-filter .title-item .class-options .option-item.active {
+.text-color-red, .panel-title-view, .message-box .title, .navigation-bar .navigation-bar-right-container, .side-bar-menu .title-item, .content-class-filter .item .class-options .option-item.active, .content-class-filter .side-bar-menu .title-item .class-options .option-item.active, .side-bar-menu .content-class-filter .title-item .class-options .option-item.active, .login-container .forgot {
   color: #e34849; }
 
 .text-color-blue, .message-box .content .message-item-cell .content .item-title, .history-container .list-video-card.search-history-item .media-heading, .channel-container .carousel-container .info .en_name, .channel-container .recommend-card .en_name {
@@ -1369,6 +1369,19 @@ a:hover {
     color: #c1c1c1;
     text-align: center;
     margin-bottom: 50px; }
+  .login-container .forgot {
+    position: relative;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: none; }
+    .login-container .forgot .iconfont {
+      position: absolute;
+      top: -20px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      display: none; }
   .login-container .btn-group .btn {
     height: 44px;
     background-color: transparent;

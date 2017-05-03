@@ -130,6 +130,24 @@ $inputPlaceHolderTextColor: #636363;
     margin-bottom: 50px;
   }
 
+  .forgot {
+    @extend .text-color-red;
+    position: relative;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: none;
+
+    .iconfont {
+      position: absolute;
+      top: -20px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      display: none;
+    }
+  }
+
   // 切换注册账户按钮组
   .btn-group {
 

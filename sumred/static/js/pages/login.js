@@ -72,6 +72,8 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
         password: false
     };
     
+    var wrongPasswordCount = 0; // 输入密码错误次数记录
+    
     
     // bind user events
     var bindEvents = function () {
@@ -97,8 +99,26 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
             if (userSystem.login(account, password)) {
                 location.href = './home.html';
             } else {
+                wrongPasswordCount++;
                 elements.passwordInputContainer.addClass('error');
-                elements.tip.text('密码错误，请重新输入').fadeIn();
+                var tipText = '密码错误，请重新输入';
+                switch (wrongPasswordCount) {
+                    case 1:
+                        tipText = 'Wait...What?';
+                        break;
+                    case 2:
+                        tipText = 'Really?';
+                        break;
+                    case 3:
+                        tipText = 'F**k it. I\'m gonna go for this';
+                        $('.forgot .iconfont').fadeIn();
+                        break;
+                    default:
+                        break;
+                }
+                elements.tip.text(tipText).fadeIn();
+                $('.forgot').fadeIn();
+                
                 elements.passwordInput.addClass('wrong');
             }
         });
