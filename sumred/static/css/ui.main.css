@@ -94,7 +94,7 @@ a:hover {
 .background-color-panel, .panel-view, .video-player, .video-play-list, .no-network-tip, .video-recommend, .plyr--video .plyr__controls, .side-bar-menu .item .submenu, .side-bar-menu .title-item .submenu {
   background-color: #373839; }
 
-.border-color-red {
+.border-color-red, .login-container .input-group-btn .do-login:hover {
   border-color: #e34849 !important; }
 
 .video-progress {
@@ -1334,6 +1334,8 @@ a:hover {
     border-radius: 0;
     border: none;
     height: 44px; }
+  .login-container input.wrong {
+    border: 1px solid #e34849; }
   .login-container input:focus {
     box-shadow: none; }
   .login-container input::-webkit-input-placeholder {

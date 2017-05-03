@@ -62,6 +62,10 @@ $inputPlaceHolderTextColor: #636363;
     height: 44px;
   }
 
+  input.wrong {
+    border: 1px solid $themeColor_Red;
+  }
+
   input:focus  {
     box-shadow: none;
   }
@@ -97,6 +101,10 @@ $inputPlaceHolderTextColor: #636363;
     .btn:focus {
       box-shadow: none;
       outline: none;
+    }
+
+    .do-login:hover {
+      @extend .border-color-red;
     }
 
   }

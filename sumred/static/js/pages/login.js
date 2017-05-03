@@ -57,10 +57,10 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
             
             // 用户修改输入，动态更新按钮状态显示
             if (inputJudge.account && inputJudge.password) {
-                $('.do-login').addClass('border-color-red').find('span').addClass('text-color-red');
+                $('.do-login').find('span').addClass('text-color-red');
                 $('.go-register span').removeClass('text-color-red');
             } else {
-                $('.do-login').removeClass('border-color-red').find('span').removeClass('text-color-red');
+                $('.do-login').find('span').removeClass('text-color-red');
                 $('.go-register span').addClass('text-color-red');
             }
         }
@@ -99,6 +99,7 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
             } else {
                 elements.passwordInputContainer.addClass('error');
                 elements.tip.text('密码错误，请重新输入').fadeIn();
+                elements.passwordInput.addClass('wrong');
             }
         });
         
@@ -150,6 +151,7 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
             var inputContainer = $this.parents('.form-group');
             inputContainer.removeClass('ok error');
             elements.tip.fadeOut();
+            $('.login-container input').removeClass('wrong');
             
             if ($this.attr('id') == 'password') {
                 inputJudge.password = userSystem.checkPasswordFormat(elements.passwordInput.val());
