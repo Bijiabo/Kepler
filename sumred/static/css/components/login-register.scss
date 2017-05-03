@@ -87,6 +87,11 @@ $inputPlaceHolderTextColor: #636363;
     color: $inputPlaceHolderTextColor;
   }
 
+  input[disabled] {
+    background-color: $inputBackground;
+    color: $inputTextColor;
+  }
+
   .input-group-btn {
 
     .btn {

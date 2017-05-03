@@ -139,11 +139,13 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
             {
                 inputJudge.account = true;
                 elements.accountInputContainer.addClass('ok');
+                elements.passwordInput.removeAttr("disabled");
             }
             else
             {
                 inputJudge.account = false;
                 elements.accountInputContainer.addClass('error');
+                elements.passwordInput.attr("disabled", "disabled");
             }
         });
         

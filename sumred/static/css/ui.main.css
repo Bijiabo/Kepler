@@ -1346,6 +1346,9 @@ a:hover {
     color: #636363; }
   .login-container input:-ms-input-placeholder {
     color: #636363; }
+  .login-container input[disabled] {
+    background-color: #424242;
+    color: #c1c1c1; }
   .login-container .input-group-btn .btn {
     height: 44px;
     background-color: #424242;
