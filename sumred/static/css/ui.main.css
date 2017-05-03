@@ -1356,6 +1356,10 @@ a:hover {
     border: none;
     margin-left: 2px;
     border-radius: 0; }
+  .login-container .input-group-btn .btn.get-captcha {
+    color: #2A2B2C; }
+  .login-container .input-group-btn .btn.get-captcha.active {
+    color: #e34849; }
   .login-container .input-group-btn .btn:focus {
     box-shadow: none;
     outline: none; }

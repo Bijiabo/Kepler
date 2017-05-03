@@ -27,7 +27,7 @@ define([], function () {
         },
         checkCellPhoneNumberFormat: function (cellPhoneNumber) {
             var phoneNumberFormatRegex = /(13\d|14[57]|15[^4,\D]|17[678]|18\d)\d{8}|170[059]\d{7}/ig;
-            return phoneNumberFormatRegex.test(cellPhoneNumber);
+            return phoneNumberFormatRegex.test(cellPhoneNumber) && cellPhoneNumber.length === 11;
         },
         checkMailFormat: function (mail) {
             var formatRegex = /\w[-\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\.)+[A-Za-z]{2,14}/ig;

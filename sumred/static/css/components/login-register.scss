@@ -103,6 +103,14 @@ $inputPlaceHolderTextColor: #636363;
       margin-left: 2px;
       border-radius: 0;
     }
+
+    .btn.get-captcha {
+      color: #2A2B2C;
+    }
+    .btn.get-captcha.active {
+      color: $themeColor_Red;
+    }
+
     .btn:focus {
       box-shadow: none;
       outline: none;
