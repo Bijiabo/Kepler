@@ -52,6 +52,27 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
         }
     };
     
+    var updateRender = {
+        didChangeInput: function (context) {
+            
+            // 用户修改输入，动态更新按钮状态显示
+            if (inputJudge.account && inputJudge.password) {
+                $('.do-login').addClass('border-color-red').find('span').addClass('text-color-red');
+                $('.go-register span').removeClass('text-color-red');
+            } else {
+                $('.do-login').removeClass('border-color-red').find('span').removeClass('text-color-red');
+                $('.go-register span').addClass('text-color-red');
+            }
+        }
+    };
+    
+    // 输入内容判定是否合法
+    var inputJudge = {
+        account: false,
+        password: false
+    };
+    
+    
     // bind user events
     var bindEvents = function () {
         // 用户点击登录动作
@@ -85,14 +106,22 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
         $(document).on('change', elements.selector.accountInput, function () {
             // todo: 调用用户账户检测接口，验证账户是否存在
             var account = elements.accountInput.val();
+    
+            if (account.length == 0) {
+                inputJudge.account = false;
+                return;
+            }
+            
             if (
                 userSystem.hasAccount(account)
             )
             {
+                inputJudge.account = true;
                 elements.accountInputContainer.addClass('ok');
             }
             else
             {
+                inputJudge.account = false;
                 elements.accountInputContainer.addClass('error');
             }
         });
@@ -100,9 +129,17 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
         // 用户输入密码后，检测是否符合规范
         $(document).on('change', elements.selector.passwordInput, function () {
             elements.passwordInputContainer.removeClass('ok error');
+            
+            if (elements.passwordInput.val().length == 0) {
+                inputJudge.password = false;
+                return;
+            }
+            
             if (userSystem.checkPasswordFormat(elements.passwordInput.val())) {
+                inputJudge.password = true;
                 elements.passwordInputContainer.addClass('ok');
             } else {
+                inputJudge.password = false;
                 elements.passwordInputContainer.addClass('error');
             }
         });
@@ -113,6 +150,16 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
             var inputContainer = $this.parents('.form-group');
             inputContainer.removeClass('ok error');
             elements.tip.fadeOut();
+            
+            if ($this.attr('id') == 'password') {
+                inputJudge.password = userSystem.checkPasswordFormat(elements.passwordInput.val());
+                updateRender.didChangeInput(this);
+                if (inputJudge.password) {
+                    elements.passwordInputContainer.addClass('ok');
+                } else {
+                    elements.passwordInputContainer.addClass('error');
+                }
+            }
         });
     
         // 用户点击跳转到注册页面动作
