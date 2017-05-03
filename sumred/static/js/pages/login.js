@@ -72,16 +72,18 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
         password: false
     };
     
+    var pageCache = {};
+    
     var wrongPasswordCount = 0; // 输入密码错误次数记录
     
     
     // bind user events
     var bindEvents = function () {
         // 用户点击登录动作
-        $(document).on('click', elements.selector.doLoginButton, function () {
+        var doLoginAction = function () {
             var account = $('#account').val(),
                 password = $('#password').val();
-            
+    
             // 检测是否存在此账户
             if (!userSystem.hasAccount(account)) {
                 elements.accountInputContainer.addClass('error');
@@ -95,7 +97,7 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
             }
     
             $('.form-group').removeClass('ok error');
-            
+    
             if (userSystem.login(account, password)) {
                 location.href = './home.html';
             } else {
@@ -118,35 +120,44 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
                 }
                 elements.tip.text(tipText).fadeIn();
                 $('.forgot').fadeIn();
-                
+        
                 elements.passwordInput.addClass('wrong');
             }
+        };
+        $(document).on('click', elements.selector.doLoginButton, function () {
+            doLoginAction();
         });
         
         // 用户输入账户后，验证账户是否正确
-        $(document).on('change', elements.selector.accountInput, function () {
-            // todo: 调用用户账户检测接口，验证账户是否存在
+        var didUserChangedAccountInput = function () {
             var account = elements.accountInput.val();
     
             if (account.length == 0) {
                 inputJudge.account = false;
                 return;
             }
-            
+    
             if (
                 userSystem.hasAccount(account)
             )
             {
+                pageCache.hasAccount = true;
                 inputJudge.account = true;
                 elements.accountInputContainer.addClass('ok');
                 elements.passwordInput.removeAttr("disabled");
             }
             else
             {
+                pageCache.hasAccount = false;
                 inputJudge.account = false;
                 elements.accountInputContainer.addClass('error');
                 elements.passwordInput.attr("disabled", "disabled");
+                elements.tip.text('系统中没有找到该账户，请检查您输入的用户名是否正确。').fadeIn();
             }
+        };
+        $(document).on('change', elements.selector.accountInput, function () {
+            // todo: 调用用户账户检测接口，验证账户是否存在
+            didUserChangedAccountInput();
         });
         
         // 用户输入密码后，检测是否符合规范
@@ -168,11 +179,14 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
         });
         
         // 用户更改输入框内容后，移除正确/错误提示
-        $(document).on('keyup', '.login-container input', function () {
+        $(document).on('keyup', '.login-container input', function (e) {
             var $this = $(this);
             var inputContainer = $this.parents('.form-group');
-            inputContainer.removeClass('ok error');
-            elements.tip.fadeOut();
+            if (pageCache.hasAccount !== false) {
+                elements.accountInputContainer.removeClass('ok error');
+            }
+            elements.passwordInputContainer.removeClass('ok error');
+            elements.tip.hide();
             $('.login-container input').removeClass('wrong');
             
             if ($this.attr('id') == 'password') {
@@ -180,9 +194,18 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
                 updateRender.didChangeInput(this);
                 if (inputJudge.password) {
                     elements.passwordInputContainer.addClass('ok');
+                    
+                    if (e.which == 13) {
+                        doLoginAction();
+                    }
+                    
                 } else {
                     elements.passwordInputContainer.addClass('error');
                 }
+            }
+    
+            if ($this.attr('id') == 'account') {
+                didUserChangedAccountInput();
             }
         });
     
