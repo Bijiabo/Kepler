@@ -108,14 +108,24 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
             var inputContainer = $this.parents('.form-group');
             inputContainer.removeClass('ok error');
             // elements.tip.fadeOut();
-            
-            // 判定用户输入的密码逻辑是否符合要求，若符合，则高亮下一步按钮
-            if (inputJudge.password && inputJudge.passwordRepeat) {
+        });
+        
+        var resetTipContent = function () {
+            elements.tip.html('<p>邮箱注册成功，请设置密码</p>').fadeIn();
+        };
+        
+        var setEnableStatusForNextButton = function () {
+            var enable = inputJudge.passwordRepeat && inputJudge.password;
+            var nextButton = $('.go-next');
+            console.warn(enable);
+            if (enable) {
+                nextButton.addClass('enable');
                 $('.go-next span').addClass('text-color-red');
             } else {
+                nextButton.removeClass('enable');
                 $('.go-next span').removeClass('text-color-red');
             }
-        });
+        };
         
         // 检测用户输入的密码是否符合要求
         $(document).on('keyup', elements.selector.passwordInput, function () {
@@ -127,9 +137,15 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
             inputJudge.password = userSystem.checkPasswordFormat(values.password);
             if (inputJudge.password) {
                 elements.passwordInputContainer.addClass('ok');
-            } else {
+                resetTipContent();
+            } else if (values.password.length >= 6) {
                 elements.passwordInputContainer.addClass('error');
+                elements.tip.text('密码格式错误，应为6-16位字母加数字组合，不区分大小写').fadeIn();
+            } else {
+                resetTipContent();
             }
+    
+            setEnableStatusForNextButton();
         });
         // 检测用户输入的二次验证密码是否符合要求
         $(document).on('keyup', elements.selector.repeatPasswordInput, function () {
@@ -141,16 +157,21 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
             inputJudge.passwordRepeat = values.password == values.repeatPassword;
             if (inputJudge.passwordRepeat) {
                 elements.repeatPasswordInputContainer.addClass('ok');
-            } else {
+                resetTipContent();
+            } else if (values.repeatPassword.length >= values.password.length) {
                 elements.repeatPasswordInputContainer.addClass('error');
+                elements.tip.text('两次输入不一致').fadeIn();
+            } else {
+                resetTipContent();
             }
+    
+            setEnableStatusForNextButton();
         });
         
         // 用户点击注册按钮
         $(document).on('click', '.go-next', function () {
-            if (values.password != values.repeatPassword) {
-                // todo: 密码不一致提示
-                elements.tip.text('两次输入的密码不一致，请检查').fadeIn();
+            if (!$(this).hasClass('enable')) {
+                // elements.tip.text('两次输入的密码不一致，请检查').fadeIn();
                 return;
             }
             
