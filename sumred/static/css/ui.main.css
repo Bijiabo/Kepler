@@ -1374,6 +1374,10 @@ a:hover {
     cursor: not-allowed; }
   .login-container .btn-ghost.enable:hover {
     cursor: pointer; }
+  .login-container .btn-ghost.enable:active {
+    background-color: #e34849; }
+    .login-container .btn-ghost.enable:active span, .login-container .btn-ghost.enable:active span.text-color-red, .login-container .btn-ghost.enable:active span.panel-title-view, .login-container .btn-ghost.enable:active .message-box span.title, .message-box .login-container .btn-ghost.enable:active span.title, .login-container .btn-ghost.enable:active .navigation-bar span.navigation-bar-right-container, .navigation-bar .login-container .btn-ghost.enable:active span.navigation-bar-right-container, .login-container .btn-ghost.enable:active .side-bar-menu span.title-item, .side-bar-menu .login-container .btn-ghost.enable:active span.title-item, .login-container .btn-ghost.enable:active .content-class-filter .item .class-options span.option-item.active, .content-class-filter .item .class-options .login-container .btn-ghost.enable:active span.option-item.active, .login-container .btn-ghost.enable:active .content-class-filter .side-bar-menu .title-item .class-options span.option-item.active, .content-class-filter .side-bar-menu .title-item .class-options .login-container .btn-ghost.enable:active span.option-item.active, .login-container .btn-ghost.enable:active .side-bar-menu .content-class-filter .title-item .class-options span.option-item.active, .side-bar-menu .content-class-filter .title-item .class-options .login-container .btn-ghost.enable:active span.option-item.active, .login-container .btn-ghost.enable:active span.forgot {
+      color: #2A2B2C; }
   .login-container .button-group {
     margin: 20px -10px 58px -10px; }
     .login-container .button-group .col-xs-6, .login-container .button-group .col-xs-12 {

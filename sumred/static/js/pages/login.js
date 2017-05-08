@@ -98,8 +98,6 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
                 return;
             }
     
-            $('.form-group').removeClass('ok error');
-    
             if (userSystem.login(account, password)) {
                 location.href = './home.html';
             } else {
@@ -127,7 +125,9 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
             }
         };
         $(document).on('click', elements.selector.doLoginButton, function () {
-            doLoginAction();
+            if ($(this).hasClass('enable')) {
+                doLoginAction();
+            }
         });
         
         // 用户输入账户后，验证账户是否正确
@@ -194,14 +194,14 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
                 inputJudge.password = userSystem.checkPasswordFormat(elements.passwordInput.val());
                 updateRender.didChangeInput(this);
                 if (inputJudge.password) {
-                    // elements.passwordInputContainer.addClass('ok');
                     
                     if (e.which == 13) {
                         doLoginAction();
                     }
                     
-                } else {
-                    // elements.passwordInputContainer.addClass('error');
+                } else if (elements.passwordInput.val().length >= 6 ) {
+                    elements.passwordInputContainer.addClass('error');
+                    elements.tip.text('密码格式错误，应为6-16位字母加数字组合，不区分大小写').fadeIn();
                 }
             }
     

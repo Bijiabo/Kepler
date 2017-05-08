@@ -22,7 +22,7 @@ define([], function () {
             return Cookies.get(account) != undefined;
         },
         checkPasswordFormat: function (password) {
-            var passwordFormatRegex = /[A-Za-z0-9]{6,16}/ig;
+            var passwordFormatRegex = /^[A-Za-z0-9]{6,16}$/ig;
             return passwordFormatRegex.test(password);
         },
         checkCellPhoneNumberFormat: function (cellPhoneNumber) {

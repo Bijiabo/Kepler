@@ -132,10 +132,16 @@ $inputPlaceHolderTextColor: #636363;
     cursor: not-allowed;
   }
 
-
   .btn-ghost.enable:hover {
     @extend .border-color-red;
     cursor: pointer;
+  }
+
+  .btn-ghost.enable:active {
+    background-color: $themeColor_Red;
+    span, span.text-color-red {
+      color: $bodyBackgroundColor;
+    }
   }
 
   .button-group{
