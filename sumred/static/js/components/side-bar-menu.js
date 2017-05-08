@@ -70,7 +70,7 @@ define([], function () {
             
             setTimeout(function () {
                 targetItem.remove();
-            }, 1500);
+            }, 1450);
         });
     };
     

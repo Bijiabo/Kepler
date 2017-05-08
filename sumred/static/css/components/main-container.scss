@@ -2,11 +2,13 @@
   .main {
     width: 100%;
     padding-left: 220px;
+    //overflow-x: hidden;
   }
 }
 
 .main-container {
   margin: 80px auto;
-  max-width: 1020px;
+  //max-width: 1020px;
   padding: 10px;
+  max-width: 100%;
 }

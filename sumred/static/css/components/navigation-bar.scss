@@ -56,14 +56,30 @@
     flex-direction: row-reverse;
     flex-grow: 1;
     cursor: pointer;
+    padding-right: 34px;
 
     .item {
-      padding: 10px;
+      margin: 10px 4px;
+      line-height: 20px;
+      font-size: 14px;
+      border: 1px solid transparent;
+      padding: 1px 10px;
+    }
+    .item:hover {
+      border-color: #424242;
+    }
+
+    .item.avatar {
+      padding: 6px 10px;
+      margin: 0;
+    }
+    .item.avatar:hover {
+      border-color: transparent;
     }
 
     img {
-      height: 24px;
-      width: 24px;
+      height: 32px;
+      width: 32px;
     }
   }
 }

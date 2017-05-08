@@ -13,14 +13,39 @@
 
   float: left;
   padding: 10px;
-  width: 20%;
+  //width: 20%;
 
   .title {
-    @extend .text-color-gray-bright;
-    @extend .text-bold;
-    @extend .margin-top-12;
+    @extend .margin-top-10;
     @extend .no-break-line;
     @extend .text-over-flow-ellipsis;
+    color: #A4A4A4;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .cn_title {
+    color: #A4A4A4;
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .author {
+    @extend .text-color-gray-light;
+    @extend .margin-top-bottom-8;
+    font-size: 12px;
+    line-height: 12px;
+    color: $themeColor_Blue;
+    margin-top: 10px;
+  }
+
+  .info {
+    font-size: 12px;
+    line-height: 12px;
+    color: #636363;
+    margin-top: 10px;
+    margin-bottom: 8px;
   }
 
   .image-view {
@@ -49,4 +74,10 @@
   //transform: scale3d(1.02,1.02, 1);
   position: relative;
   z-index: 100;
+}
+
+@media (max-width: 500px) {
+  .grid-video-card {
+    width: 100%;
+  }
 }

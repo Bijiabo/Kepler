@@ -26,14 +26,13 @@
 
     <template-import file="./../components/side-bar-menu.html"></template-import>
 
-    <template-import file="./../components/main-container.html">
+    <div class="main has-side-bar-menu">
+        <div class="container panel-view main-container container">
+            <div class="panel-title-view">推荐内容</div>
 
-        <div class="panel-title-view">推荐内容</div>
-
-        <template-import file="./../components/grid-video-card.html"></template-import>
-
-
-    </template-import>
+            <template-import file="./../components/grid-video-card.html"></template-import>
+        </div>
+    </div>
 </div>
 
 

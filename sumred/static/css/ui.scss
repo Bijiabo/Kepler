@@ -180,8 +180,15 @@ a:hover {
   margin-bottom: $bottom;
 }
 
+.margin-top-5 {
+  margin-top: 8px;
+}
+
 .margin-top-8 {
   margin-top: 8px;
+}
+.margin-top-10 {
+  margin-top: 10px;
 }
 .margin-top-12 {
   margin-top: 12px;
@@ -306,4 +313,5 @@ a:hover {
   @extend .text-type-title;
   @extend .text-color-red;
   //@extend .margin-top-bottom-10;
+  margin: 4px 0;
 }
