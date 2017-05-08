@@ -190,9 +190,11 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
             pageCache.checkEmailFormat = userSystem.checkMailFormat(email);
             if (pageCache.checkEmailFormat) {
                 elements.mailInputContainer.addClass('ok');
+                $('.do-register').addClass('enable');
                 $('.do-register span').addClass('text-color-red');
             } else {
                 elements.mailInputContainer.addClass('error');
+                $('.do-register').removeClass('enable');
                 $('.do-register span').removeClass('text-color-red');
             }
         });
@@ -201,8 +203,10 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
             if (currentRegisterType == registerType.cellPhone) {
                 // 手机号注册
                 if (inputJudge.account && inputJudge.password) {
+                    $('.do-register').addClass('enable');
                     $('.do-register span').addClass('text-color-red');
                 } else {
+                    $('.do-register').removeClass('enable');
                     $('.do-register span').removeClass('text-color-red');
                 }
             } else {
