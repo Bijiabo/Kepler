@@ -176,8 +176,9 @@ a:hover {
   border-style: solid;
   border-color: #828282;
   padding: 2px 6px;
-  color: #828282;
-  border-radius: 0; }
+  border-radius: 0;
+  border-color: #424242;
+  color: #636363; }
 
 .btn-ghost:hover {
   color: #e34849;

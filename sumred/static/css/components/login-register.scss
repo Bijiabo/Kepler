@@ -87,7 +87,7 @@ $inputPlaceHolderTextColor: #636363;
     color: $inputPlaceHolderTextColor;
   }
 
-  input[disabled] {
+  input.form-control[disabled] {
     background-color: $inputBackground;
     color: $inputTextColor;
   }
@@ -116,9 +116,6 @@ $inputPlaceHolderTextColor: #636363;
       outline: none;
     }
 
-    .do-login:hover {
-      @extend .border-color-red;
-    }
 
   }
 
@@ -127,6 +124,18 @@ $inputPlaceHolderTextColor: #636363;
     line-height: 44px;
     padding-top: 0;
     padding-bottom: 0;
+  }
+
+  .btn-ghost:hover {
+    border-color: #424242;
+    color: #636363;
+    cursor: not-allowed;
+  }
+
+
+  .btn-ghost.enable:hover {
+    @extend .border-color-red;
+    cursor: pointer;
   }
 
   .button-group{

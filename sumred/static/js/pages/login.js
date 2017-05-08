@@ -56,12 +56,14 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
         didChangeInput: function (context) {
             
             // 用户修改输入，动态更新按钮状态显示
-            if (inputJudge.account && inputJudge.password) {
+            if (inputJudge.account && inputJudge.password) { // 输入都符合要求
                 $('.do-login').find('span').addClass('text-color-red');
                 $('.go-register span').removeClass('text-color-red');
+                $(elements.selector.doLoginButton).addClass('enable');
             } else {
                 $('.do-login').find('span').removeClass('text-color-red');
                 $('.go-register span').addClass('text-color-red');
+                $(elements.selector.doLoginButton).removeClass('enable');
             }
         }
     };
@@ -131,12 +133,13 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
         // 用户输入账户后，验证账户是否正确
         var didUserChangedAccountInput = function () {
             var account = elements.accountInput.val();
+            elements.accountInputContainer.removeClass('ok error');
     
             if (account.length == 0) {
                 inputJudge.account = false;
                 return;
             }
-    
+            // todo: 调用用户账户检测接口，验证账户是否存在
             if (
                 userSystem.hasAccount(account)
             )
@@ -155,11 +158,11 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
                 elements.tip.text('系统中没有找到该账户，请检查您输入的用户名是否正确。').fadeIn();
             }
         };
+        /*
         $(document).on('change', elements.selector.accountInput, function () {
-            // todo: 调用用户账户检测接口，验证账户是否存在
-            didUserChangedAccountInput();
+            // didUserChangedAccountInput();
         });
-        
+        */
         // 用户输入密码后，检测是否符合规范
         $(document).on('change', elements.selector.passwordInput, function () {
             elements.passwordInputContainer.removeClass('ok error');
@@ -171,10 +174,10 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
             
             if (userSystem.checkPasswordFormat(elements.passwordInput.val())) {
                 inputJudge.password = true;
-                elements.passwordInputContainer.addClass('ok');
+                // elements.passwordInputContainer.addClass('ok');
             } else {
                 inputJudge.password = false;
-                elements.passwordInputContainer.addClass('error');
+                // elements.passwordInputContainer.addClass('error');
             }
         });
         
@@ -182,9 +185,7 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
         $(document).on('keyup', '.login-container input', function (e) {
             var $this = $(this);
             var inputContainer = $this.parents('.form-group');
-            if (pageCache.hasAccount !== false) {
-                elements.accountInputContainer.removeClass('ok error');
-            }
+            
             elements.passwordInputContainer.removeClass('ok error');
             elements.tip.hide();
             $('.login-container input').removeClass('wrong');
@@ -193,14 +194,14 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
                 inputJudge.password = userSystem.checkPasswordFormat(elements.passwordInput.val());
                 updateRender.didChangeInput(this);
                 if (inputJudge.password) {
-                    elements.passwordInputContainer.addClass('ok');
+                    // elements.passwordInputContainer.addClass('ok');
                     
                     if (e.which == 13) {
                         doLoginAction();
                     }
                     
                 } else {
-                    elements.passwordInputContainer.addClass('error');
+                    // elements.passwordInputContainer.addClass('error');
                 }
             }
     
