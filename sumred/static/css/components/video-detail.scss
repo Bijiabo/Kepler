@@ -86,4 +86,40 @@
     cursor: pointer;
     padding: 0 0 10px 0;
   }
+
+}
+
+// player
+.plyr--captions-active .plyr__controls .icon--captions-on {
+  color: $themeColor_Red;
+}
+.toggle-captions-btn {
+  span {
+    color: #ECECEC;
+  }
+
+  .icon--captions-on {
+    color: $themeColor_Red;
+  }
+}
+
+.plyr--video .plyr__controls button.toggle-ratio-mode {
+  span.iconfont, span {
+    font-size: 12px;
+  }
+}
+
+.plyr--video .plyr__controls {
+  .volume-group {
+    .plyr__volume {
+      display: none;
+    }
+  }
+
+  .volume-group:hover {
+    .plyr__volume {
+      display: inline-block;
+    }
+  }
+
 }

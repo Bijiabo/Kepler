@@ -674,6 +674,22 @@ a:hover {
     cursor: pointer;
     padding: 0 0 10px 0; }
 
+.plyr--captions-active .plyr__controls .icon--captions-on {
+  color: #e34849; }
+
+.toggle-captions-btn span {
+  color: #ECECEC; }
+.toggle-captions-btn .icon--captions-on {
+  color: #e34849; }
+
+.plyr--video .plyr__controls button.toggle-ratio-mode span.iconfont, .plyr--video .plyr__controls button.toggle-ratio-mode span {
+  font-size: 12px; }
+
+.plyr--video .plyr__controls .volume-group .plyr__volume {
+  display: none; }
+.plyr--video .plyr__controls .volume-group:hover .plyr__volume {
+  display: inline-block; }
+
 .content-class-filter .filter-display-button {
   margin: 14px 0 10px 8px; }
 .content-class-filter .item, .content-class-filter .side-bar-menu .title-item, .side-bar-menu .content-class-filter .title-item {
@@ -1040,8 +1056,7 @@ a:hover {
   color: #fff;
   transition: opacity .3s ease; }
   .plyr--video .plyr__controls button.tab-focus:focus, .plyr--video .plyr__controls button:hover {
-    background: #e34849;
-    color: #fff; }
+    color: #e34849; }
 
 .plyr--audio .plyr__controls {
   padding: 10px;
@@ -1101,6 +1116,10 @@ a:hover {
   .plyr--fullscreen-active .icon--exit-fullscreen + svg,
   .plyr--muted .plyr__controls .icon--muted + svg,
   .plyr--captions-active .plyr__controls .icon--captions-on + svg {
+    display: none; }
+  .plyr--fullscreen-active .icon--exit-fullscreen + span,
+  .plyr--muted .plyr__controls .icon--muted + span,
+  .plyr--captions-active .plyr__controls .icon--captions-on + span {
     display: none; }
 
 .plyr [data-plyr='captions'],

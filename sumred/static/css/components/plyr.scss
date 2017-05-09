@@ -353,8 +353,9 @@
         // Hover and tab focus
         &.tab-focus:focus,
         &:hover {
-            background: $plyr-video-control-bg-hover;
-            color: $plyr-video-control-color-hover;
+            //background: $plyr-video-control-bg-hover;
+            //color: $plyr-video-control-color-hover;
+            color: $themeColor_Red;
         }
     }
 }
@@ -433,6 +434,10 @@
     display: block;
 
     & + svg {
+        display: none;
+    }
+
+    & + span {
         display: none;
     }
 }
