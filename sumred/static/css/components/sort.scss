@@ -46,6 +46,31 @@
           color: #c1c1c1;
           border-bottom: 1px solid $themeColor_Red;
         }
+        .search {
+          display: inline-block;
+          .form-control {
+            width: 174px;
+            height: 24px;
+            box-shadow: none;
+            outline: none;
+            background: none;
+            border-color: #656565;
+            border-radius: 0;
+            margin-left: 15px;
+            font-size: 12px;
+            color: #656565;
+            padding-left: 6px;
+          }
+          .form-control::-webkit-input-placeholder,
+          .form-control:-moz-placeholder,
+          .form-control::-moz-placeholder,
+          .form-control:-ms-input-placeholder,
+          .form-control::-ms-input-placeholder
+          {
+            color: #535353;
+            opacity: 0.5;
+          }
+        }
       }
       .subscribe {
         position: absolute;
