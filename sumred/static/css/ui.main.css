@@ -1993,7 +1993,8 @@ a:hover {
   margin: -10px;
   padding-bottom: 20px; }
   .sort-container .header-view {
-    padding: 0; }
+    padding: 0;
+    margin-bottom: 0; }
     .sort-container .header-view .cover {
       position: relative;
       width: 100%;
@@ -2018,11 +2019,14 @@ a:hover {
         font-size: 22px;
         color: #c1c1c1; }
       .sort-container .header-view .info .links {
-        margin: 36px 20px 10px 20px; }
+        margin: 36px 20px 0 0; }
         .sort-container .header-view .info .links a {
-          color: #c1c1c1;
+          color: #828282;
           text-decoration: none;
-          margin-right: 40px; }
+          padding: 13px 20px; }
+        .sort-container .header-view .info .links a.active, .sort-container .header-view .info .links a:hover {
+          color: #c1c1c1;
+          border-bottom: 1px solid #e34849; }
       .sort-container .header-view .info .subscribe {
         position: absolute;
         top: 0;

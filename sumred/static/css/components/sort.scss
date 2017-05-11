@@ -4,6 +4,7 @@
 
   .header-view {
     padding: 0;
+    margin-bottom: 0;
 
     .cover {
       position: relative;
@@ -35,11 +36,15 @@
         color: #c1c1c1;
       }
       .links {
-        margin: 36px 20px 10px 20px;
+        margin: 36px 20px 0 0;
         a {
-          color: #c1c1c1;
+          color: #828282;
           text-decoration: none;
-          margin-right: 40px;
+          padding: 13px 20px;
+        }
+        a.active, a:hover {
+          color: #c1c1c1;
+          border-bottom: 1px solid $themeColor_Red;
         }
       }
       .subscribe {
