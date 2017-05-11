@@ -58,11 +58,11 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
             // 用户修改输入，动态更新按钮状态显示
             if (inputJudge.account && inputJudge.password) { // 输入都符合要求
                 $('.do-login').find('span').addClass('text-color-red');
-                $('.go-register span').removeClass('text-color-red');
+                // $('.go-register span').removeClass('text-color-red');
                 $(elements.selector.doLoginButton).addClass('enable');
             } else {
                 $('.do-login').find('span').removeClass('text-color-red');
-                $('.go-register span').addClass('text-color-red');
+                // $('.go-register span').addClass('text-color-red');
                 $(elements.selector.doLoginButton).removeClass('enable');
             }
         }
@@ -158,11 +158,11 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
                 elements.tip.text('系统中没有找到该账户，请检查您输入的用户名是否正确。').fadeIn();
             }
         };
-        /*
+        //*
         $(document).on('change', elements.selector.accountInput, function () {
-            // didUserChangedAccountInput();
+            didUserChangedAccountInput();
         });
-        */
+        //*/
         // 用户输入密码后，检测是否符合规范
         $(document).on('change', elements.selector.passwordInput, function () {
             elements.passwordInputContainer.removeClass('ok error');
@@ -206,7 +206,7 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
             }
     
             if ($this.attr('id') == 'account') {
-                didUserChangedAccountInput();
+                // didUserChangedAccountInput();
             }
         });
     

@@ -4,15 +4,15 @@
 define([], function () {
     var user = {
         register: function (account, password, callback) {
-            Cookies.set(account, password);
+            Cookies.set(account, password, { expires: 999 });
             callback(true, '注册成功！');
         },
         registerByEmail: function (email, callback) {
-            Cookies.set('email', email);
+            Cookies.set('email', email, { expires: 999 });
             callback(true, '注册邮件发送成功！');
         },
         setPasswordForEmailRegister: function (email, password, callback) {
-            Cookies.set(email, password);
+            Cookies.set(email, password, { expires: 999 });
             callback(true, '设定密码成功！');
         },
         login: function (account, password) {
