@@ -312,6 +312,6 @@ a:hover {
 .panel-title-view {
   @extend .text-type-title;
   @extend .text-color-red;
-  //@extend .margin-top-bottom-10;
-  margin: 4px 0;
+  margin: 4px 0 0 10px;
+  line-height: 14px;
 }

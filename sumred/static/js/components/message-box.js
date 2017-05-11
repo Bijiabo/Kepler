@@ -63,9 +63,6 @@ define([], function () {
     
             var cellCode = '\
                 <div class="message-item-cell">\
-                        <div class="preview">\
-                            <img src="./../static/image/video-thumbnails/'+targetIndex+'.jpg" alt="">\
-                        </div>\
                         <div class="content">\
                             <div class="item-title">账号数据异常</div>\
                             <div class="time">2017年3月29日上午 10:00</div>\

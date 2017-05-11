@@ -219,7 +219,8 @@ a:hover {
   padding: 20px; }
 
 .panel-title-view {
-  margin: 4px 0; }
+  margin: 4px 0 0 10px;
+  line-height: 14px; }
 
 body {
   padding: 16px; }

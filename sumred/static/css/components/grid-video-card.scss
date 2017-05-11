@@ -1,5 +1,5 @@
 .grid-video-card-container {
-  margin: 0 -10px;
+  //margin: 0 -5px;
 
   a {
     text-decoration: none;
@@ -9,7 +9,7 @@
   padding: 0;
 }
 .grid-video-card {
-  @extend .animation;
+  //@extend .animation;
 
   float: left;
   padding: 10px;
@@ -36,7 +36,7 @@
     @extend .margin-top-bottom-8;
     font-size: 12px;
     line-height: 12px;
-    color: $themeColor_Blue;
+    color: #828282;
     margin-top: 10px;
   }
 
@@ -71,9 +71,16 @@
 .grid-video-card:hover {
   @extend .background-color-gray-dark;
 
-  //transform: scale3d(1.02,1.02, 1);
   position: relative;
   z-index: 100;
+  transform: scale3d(1.02,1.02, 1);
+  box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+  color: transparent;
+  cursor: pointer;
+
+  .author {
+    color: $themeColor_Blue;
+  }
 }
 
 @media (max-width: 500px) {
