@@ -74,7 +74,8 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
         password: false
     };
     
-    var pageCache = {};
+    var pageCache = {
+    };
     
     var wrongPasswordCount = 0; // 输入密码错误次数记录
     
@@ -187,7 +188,9 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
             var inputContainer = $this.parents('.form-group');
             
             elements.passwordInputContainer.removeClass('ok error');
-            elements.tip.hide();
+            if (wrongPasswordCount == 0) {
+                elements.tip.hide();
+            }
             $('.login-container input').removeClass('wrong');
             
             if ($this.attr('id') == 'password') {

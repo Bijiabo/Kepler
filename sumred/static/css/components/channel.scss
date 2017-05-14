@@ -13,7 +13,7 @@
       color: #c1c1c1;
       text-align: center;
       width: 96px;
-      padding: 14px 0;
+      padding: 12px 0;
       cursor: pointer;
       opacity: 0;
     }
@@ -26,17 +26,18 @@
 
     .search-input-container.unfocused {
       float: right;
-      padding: 12px;
+      padding: 8px;
+      height: 44px;
 
       .input-group {
         .form-control {
-          border-color: #636363;
+          border-color: #424242;
         }
 
         .btn {
-          background: #636363;
-          color: $bodyBackgroundColor;
-          border-color: #636363;
+          background: #424242;
+          color: #636363;
+          border-color: #424242;
         }
       }
     }
@@ -52,20 +53,35 @@
       display: inline-block;
     }
     .carousel-inner {
+      position: relative;
       height:100%;
 
       .item {
+        height: 320px;
+        padding-right: 332px;
+
         .img {
           display: inline-block;
           float: left;
           height: 320px;
+          width: 100%;
+          margin-right: 332px;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
         }
         .info {
-          display: inline-block;
-          float: right;
+          position: absolute;
+          right: 0;
+          top: 0;
+          //display: inline-block;
+          //float: right;
           width: 332px;
           height: 320px;
           background-color: #2b2b2b;
+          .item {
+            padding: 0;
+          }
         }
       }
     }
@@ -111,6 +127,7 @@
         background-color: #c1c1c1;
       }
     }
+
 
     .info {
       padding: 10px;
@@ -277,6 +294,15 @@
         cursor: pointer;
       }
     }
+  }
+  .recommend-card:hover {
+    @extend .background-color-gray-dark;
+    position: relative;
+    z-index: 100;
+    transform: scale(1.05,1.05);
+    box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+    color: transparent;
+    cursor: pointer;
   }
   .recommend-card.short {
     .head {

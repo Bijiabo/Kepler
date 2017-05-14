@@ -200,6 +200,9 @@ a:hover {
     outline: none;
     box-shadow: none;
     color: #c1c1c1; }
+  .search-input-container .input-group .form-control:focus {
+    background-color: #C1C1C1;
+    color: #2A2B2C; }
   .search-input-container .input-group .btn {
     background-color: #2A2B2C;
     color: #e34849; }
