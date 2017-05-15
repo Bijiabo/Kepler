@@ -43,9 +43,9 @@ define([], function () {
             for (var i=0; i<6; i++) {
                 var cellCode = '\
                 <div class="message-item-cell message-list-item" index="'+i+'">\
-                        <div class="preview">\
+                        <!--<div class="preview">\
                             <img src="./../static/image/video-thumbnails/'+i+'.jpg" alt="">\
-                        </div>\
+                        </div>-->\
                         <div class="content">\
                             <div class="item-title">账号数据异常</div>\
                             <div class="time">2017年3月29日上午 10:00</div>\
