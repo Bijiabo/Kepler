@@ -26,7 +26,7 @@ a:hover {
 .text-color-white, .history-container .list-video-card:hover .media-heading, .history-container .list-video-card.search-history-item:hover .time {
   color: #ffffff; }
 
-.text-color-red, .panel-title-view, .message-box .title, .navigation-bar .navigation-bar-right-container, .side-bar-menu .title-item .title, .content-class-filter .item .class-options .option-item.active, .content-class-filter .side-bar-menu .title-item .class-options .option-item.active, .side-bar-menu .content-class-filter .title-item .class-options .option-item.active, .login-container .forgot {
+.text-color-red, .panel-title-view, .message-box .title, .navigation-bar .navigation-bar-right-container, .side-bar-menu .title-item .title, .content-class-filter .item .class-options .option-item.active, .content-class-filter .side-bar-menu .title-item .class-options .option-item.active, .side-bar-menu .content-class-filter .title-item .class-options .option-item.active, .login-container .forgot, .user-container .form .button-group .btn.update-user-profile-btn {
   color: #e34849; }
 
 .text-color-blue, .message-box .content .message-item-cell .content .item-title, .history-container .list-video-card.search-history-item .media-heading, .channel-container .carousel-container .info .en_name, .channel-container .recommend-card .en_name {
@@ -1469,7 +1469,7 @@ a:hover {
     cursor: pointer; }
   .login-container .btn-ghost.enable:active {
     background-color: #e34849; }
-    .login-container .btn-ghost.enable:active span, .login-container .btn-ghost.enable:active span.text-color-red, .login-container .btn-ghost.enable:active span.panel-title-view, .login-container .btn-ghost.enable:active .message-box span.title, .message-box .login-container .btn-ghost.enable:active span.title, .login-container .btn-ghost.enable:active .navigation-bar span.navigation-bar-right-container, .navigation-bar .login-container .btn-ghost.enable:active span.navigation-bar-right-container, .login-container .btn-ghost.enable:active .side-bar-menu .title-item span.title, .side-bar-menu .title-item .login-container .btn-ghost.enable:active span.title, .login-container .btn-ghost.enable:active .content-class-filter .item .class-options span.option-item.active, .content-class-filter .item .class-options .login-container .btn-ghost.enable:active span.option-item.active, .login-container .btn-ghost.enable:active .content-class-filter .side-bar-menu .title-item .class-options span.option-item.active, .content-class-filter .side-bar-menu .title-item .class-options .login-container .btn-ghost.enable:active span.option-item.active, .login-container .btn-ghost.enable:active .side-bar-menu .content-class-filter .title-item .class-options span.option-item.active, .side-bar-menu .content-class-filter .title-item .class-options .login-container .btn-ghost.enable:active span.option-item.active, .login-container .btn-ghost.enable:active span.forgot {
+    .login-container .btn-ghost.enable:active span, .login-container .btn-ghost.enable:active span.text-color-red, .login-container .btn-ghost.enable:active span.panel-title-view, .login-container .btn-ghost.enable:active .message-box span.title, .message-box .login-container .btn-ghost.enable:active span.title, .login-container .btn-ghost.enable:active .navigation-bar span.navigation-bar-right-container, .navigation-bar .login-container .btn-ghost.enable:active span.navigation-bar-right-container, .login-container .btn-ghost.enable:active .side-bar-menu .title-item span.title, .side-bar-menu .title-item .login-container .btn-ghost.enable:active span.title, .login-container .btn-ghost.enable:active .content-class-filter .item .class-options span.option-item.active, .content-class-filter .item .class-options .login-container .btn-ghost.enable:active span.option-item.active, .login-container .btn-ghost.enable:active .content-class-filter .side-bar-menu .title-item .class-options span.option-item.active, .content-class-filter .side-bar-menu .title-item .class-options .login-container .btn-ghost.enable:active span.option-item.active, .login-container .btn-ghost.enable:active .side-bar-menu .content-class-filter .title-item .class-options span.option-item.active, .side-bar-menu .content-class-filter .title-item .class-options .login-container .btn-ghost.enable:active span.option-item.active, .login-container .btn-ghost.enable:active span.forgot, .login-container .btn-ghost.enable:active .user-container .form .button-group span.btn.update-user-profile-btn, .user-container .form .button-group .login-container .btn-ghost.enable:active span.btn.update-user-profile-btn {
       color: #2A2B2C; }
   .login-container .button-group {
     margin: 20px -10px 58px -10px; }
@@ -1610,6 +1610,8 @@ a:hover {
         color: #c1c1c1; }
       .user-container .form .button-group .btn:first-child {
         margin-right: 6px; }
+      .user-container .form .button-group .btn.update-user-profile-btn:hover {
+        border-color: #e34849; }
   .user-container .logout {
     position: absolute;
     bottom: 24px;

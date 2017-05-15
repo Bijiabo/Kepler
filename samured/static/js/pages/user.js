@@ -52,6 +52,22 @@ requirejs(['public'], function(_public) {
         $(document).on('click', '.select-avatar-container .close', function () {
             $('.select-avatar-container').hide();
         });
+        
+        // 点击确定修改资料
+        $(document).on('click', '.update-user-profile-btn', function () {
+            var userData = {
+                name: $('#name').val(),
+                cellPhoneNumber: $('#cell-phone-number').val(),
+                year: $('#year').val(),
+                month: $('#month').val(),
+                day: $('#day').val(),
+                gender: $('.gender-container .fa-check-square-o').attr('attr') || ''
+            };
+            
+            console.log(userData);
+            
+            // todo: 提交数据等操作...
+        });
     };
     bindEvents();
     

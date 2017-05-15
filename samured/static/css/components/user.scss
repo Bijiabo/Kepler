@@ -139,6 +139,14 @@
       .btn:first-child {
         margin-right: 6px;
       }
+
+      .btn.update-user-profile-btn {
+        @extend .text-color-red;
+      }
+
+      .btn.update-user-profile-btn:hover {
+        border-color: $themeColor_Red;
+      }
     }
 
   }
@@ -286,5 +294,4 @@
       z-index: 500;
     }
   }
-
 }
