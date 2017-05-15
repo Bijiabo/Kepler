@@ -6,6 +6,12 @@ var loadTemplateCount = 0;
 
 var loadTemplateUnit = function (element, callback) {
     var templateImports = element.find('template-import');
+    
+    if (templateImports.length === 0) {
+        callback();
+        return;
+    }
+    
     $.each(templateImports, function(index, item) {
         item = $(item);
         var contentHTMLCache = item.html();
