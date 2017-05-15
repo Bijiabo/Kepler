@@ -1,7 +1,29 @@
 .user-container {
-  position: relative;
-  margin: -10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 780px;
+  height: 780px;
+  margin: -390px 0 0 -390px;
   padding-bottom: 74px;
+  z-index: 990;
+  background-color: #383838;
+  box-shadow: 0 10px 16px rgba(0,0,0,0.6);
+  display: none;
+
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    color: #4f4f4f;
+    opacity: 1;
+    text-shadow: none;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+  }
 
   .cover {
     width: 100%;
@@ -272,6 +294,7 @@
         font-size: 50px;
         text-align: center;
         cursor: pointer;
+        line-height: 50px;
       }
       .tip {
         position: absolute;
@@ -294,4 +317,15 @@
       z-index: 500;
     }
   }
+}
+.user-container:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #212121;
+  opacity: 0.6;
 }

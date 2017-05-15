@@ -22,10 +22,14 @@
     </div>
 
     <div class="navigation-bar-right-container">
-        <div class="item avatar"><img class="img-circle" src="./../static/image/avatars/0.jpg" alt=""></div>
+        <div class="item avatar bind-open-user-profile">
+            <img class="img-circle" src="./../static/image/avatars/0.jpg" alt="">
+        </div>
+
         <div class="item message-box-button">
             <span class="fa fa-inbox"></span>
         </div>
+
         <div class="item">登录</div>
     </div>
 </div>
@@ -33,4 +37,105 @@
 <div class="message-box" style="display: none;">
     <div class="title">系统通知</div>
     <div class="content"></div>
+</div>
+
+<!--用户信息面板-->
+<div class="user-container">
+    <div class="close iconfont">&#xe605;</div>
+    <!--封面-->
+    <div class="cover">
+        <div class="edit-button">
+            <div class="fa fa-pencil-square-o"></div>
+        </div>
+    </div>
+
+    <!--头像-->
+    <div class="avatar">
+        <div class="edit-button">
+            <div class="fa fa-pencil-square-o"></div>
+        </div>
+    </div>
+
+    <!--表单-->
+    <div class="form">
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="name" class="title">昵称</label>
+                <input type="text" class="form-control" id="name" placeholder="">
+            </div>
+        </form>
+
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="cell-phone-number" class="title">手机号</label>
+                <input type="text" class="form-control" id="cell-phone-number" placeholder="">
+            </div>
+        </form>
+
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="mail" class="title">邮箱</label>
+                <input type="text" class="form-control" id="mail" placeholder="">
+            </div>
+        </form>
+
+        <form class="form-inline">
+            <div class="form-group">
+                <label class="title">生日</label>
+                <input type="text" class="form-control" id="year" placeholder="">
+                <label for="year">年</label>
+                <input type="text" class="form-control" id="month" placeholder="">
+                <label for="month">月</label>
+                <input type="text" class="form-control" id="day" placeholder="">
+                <label for="day">日</label>
+            </div>
+        </form>
+
+        <form class="form-inline">
+            <div class="form-group">
+                <label class="title">性别</label>
+                <div class="gender-container">
+                    <label>女 <span attr="女" class="fa fa-square-o"></span> </label>
+                    <label>男 <span attr="男" class="fa fa-square-o"></span> </label>
+                    <label>保密 <span attr="保密" class="fa fa-square-o"></span> </label>
+                </div>
+
+            </div>
+        </form>
+
+        <!--确定、取消按钮-->
+        <div class="button-group">
+            <div class="btn btn-ghost update-user-profile-btn">确定</div>
+        </div>
+
+    </div>
+
+    <!--退出登录链接-->
+    <a href="#" class="logout">退出登录</a>
+
+    <!--上传头像文件选择框-->
+    <div class="select-avatar-container">
+        <div class="main">
+            <div class="title">编辑头像</div>
+            <div class="close iconfont">&#xe605;</div>
+            <div class="pick-image iconfont">&#xe60e;</div>
+            <div class="tip">
+                建议背景图片尺寸2560*1440，且小于4M
+            </div>
+        </div>
+        <div class="shadow"></div>
+    </div>
+    <!--上传背景图片文件选择框-->
+    <div class="select-cover-container">
+        <div class="main">
+            <div class="title">编辑头像</div>
+            <div class="close iconfont">&#xe605;</div>
+            <div class="pick-image iconfont">&#xe60e;</div>
+            <div class="tip">
+                建议背景图片尺寸2560*1440，且小于4M
+            </div>
+        </div>
+        <div class="shadow"></div>
+    </div>
+
 </div>
