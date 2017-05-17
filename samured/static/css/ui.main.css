@@ -535,7 +535,7 @@ a:hover {
 @media (min-width: 1201px) {
   .detail-main-container {
     position: relative;
-    margin: 50px auto;
+    margin: 0 auto 50px auto;
     max-width: 1440px;
     max-width: 100%;
     padding: 0 430px 0 0; }
@@ -556,7 +556,7 @@ a:hover {
       width: 100%;
       float: left; } }
 .video-player {
-  margin-bottom: 58px;
+  margin-bottom: 48px;
   padding: 0;
   background-color: #e34849; }
   .video-player .plyr__controls {

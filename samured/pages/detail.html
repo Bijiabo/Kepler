@@ -25,10 +25,15 @@
 
     <template-import file="./../components/side-bar-menu.html"></template-import>
 
-    <template-import file="./../components/detail-main-container.html">
-        <div class="">
+    <div class="main has-side-bar-menu">
+        <div class="container main-container" style="padding: 0;margin-bottom: 0;">
             <template-import file="./../components/video-player.html"></template-import>
+        </div>
+    </div>
 
+    <template-import file="./../components/detail-main-container.html">
+
+        <div class="">
             <template-import file="./../components/video-detail.html"></template-import>
 
             <div class="video-recommend-list panel-view row">
@@ -37,8 +42,6 @@
         </div>
         <!--右侧边栏-->
         <div class="right-side-bar">
-            <template-import file="./../components/video-play-list.html"></template-import>
-
             <template-import file="./../components/list-video-card.html"></template-import>
         </div>
     </template-import>
