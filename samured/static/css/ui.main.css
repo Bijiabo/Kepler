@@ -574,6 +574,19 @@ a:hover {
       position: absolute;
       right: 0;
       padding-right: 10px; }
+    .video-player .plyr__controls button .iconfont {
+      font-size: 18px; }
+    .video-player .plyr__controls button.fullscreen .iconfont {
+      font-size: 13px; }
+  .video-player .plyr--fullscreen-active .plyr__controls button {
+    padding-left: 13px;
+    padding-right: 13px; }
+    .video-player .plyr--fullscreen-active .plyr__controls button .iconfont {
+      font-size: 28px; }
+  .video-player .plyr--fullscreen-active .plyr__controls button.toggle-ratio-mode span.iconfont, .video-player .plyr--fullscreen-active .plyr__controls button.toggle-ratio-mode span {
+    font-size: 19px; }
+  .video-player .plyr--fullscreen-active .plyr__controls button.fullscreen .iconfont {
+    font-size: 21px; }
 
 .video-play-list {
   margin-left: 0;
@@ -681,13 +694,31 @@ a:hover {
 .plyr--captions-active .plyr__controls .icon--captions-on {
   color: #e34849; }
 
-.toggle-captions-btn span {
-  color: #ECECEC; }
 .toggle-captions-btn .icon--captions-on {
   color: #e34849; }
 
-.plyr--video .plyr__controls button.toggle-ratio-mode span.iconfont, .plyr--video .plyr__controls button.toggle-ratio-mode span {
-  font-size: 12px; }
+.plyr--video .plyr__controls button.toggle-ratio-mode {
+  position: relative; }
+  .plyr--video .plyr__controls button.toggle-ratio-mode span.iconfont, .plyr--video .plyr__controls button.toggle-ratio-mode span {
+    font-size: 12px; }
+  .plyr--video .plyr__controls button.toggle-ratio-mode .ratio-list {
+    position: absolute;
+    bottom: 28px;
+    padding-bottom: 10px;
+    left: 50%;
+    width: 112px;
+    margin-left: -56px;
+    z-index: 10; }
+    .plyr--video .plyr__controls button.toggle-ratio-mode .ratio-list .ratio-list-container {
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3); }
+      .plyr--video .plyr__controls button.toggle-ratio-mode .ratio-list .ratio-list-container .ratio-list-item {
+        height: 50px;
+        line-height: 50px;
+        color: #828282;
+        background-color: #2b2b2b; }
+      .plyr--video .plyr__controls button.toggle-ratio-mode .ratio-list .ratio-list-container .ratio-list-item:hover {
+        color: #eeeeee;
+        background-color: #383838; }
 
 .plyr--video .plyr__controls .volume-group .plyr__volume {
   display: none; }

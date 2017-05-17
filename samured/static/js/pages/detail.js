@@ -22,6 +22,12 @@ requirejs(['public'], function(_public) {
     var targetActions = function () {
         _public.init();
         // video play
+        // 获取清晰度选择
+        var ratioListHTML = '';
+        var ratioList = $('.video-player').attr('ratio-list').split(',').map(function (item) {
+            return '<div class="ratio-list-item" ratio="' + item + '">' + item + 'P</div>';
+        }).join('');
+        
         var controls = ["<div class='plyr__controls'>",
             "<button type='button' data-plyr='play'>",
             "<span class='iconfont'>&#xe61a;</span>",
@@ -69,6 +75,9 @@ requirejs(['public'], function(_public) {
             "<button type='button' class='toggle-ratio-mode'>",
             "<span class='iconfont'>1080P</span>",
             "<span class='plyr__sr-only'>toggle ratio mode</span>",
+            "<div class='ratio-list'><div class='ratio-list-container'>",
+            ratioList,
+            "</div></div>",
             "</button>",
             
             // 剧场模式切换
@@ -85,7 +94,7 @@ requirejs(['public'], function(_public) {
             "</button>",
             
             // 全屏幕切换
-            "<button type='button' data-plyr='fullscreen'>",
+            "<button type='button' data-plyr='fullscreen' class='fullscreen'>",
             "<span class='icon--exit-fullscreen iconfont'>&#xe611;</span>",
             "<span class='iconfont'>&#xe614;</span>",
             "<span class='plyr__sr-only'>Toggle Fullscreen</span>",
@@ -120,6 +129,15 @@ requirejs(['public'], function(_public) {
             }
             
         });
+        
+        // 用户选择分辨率
+        $(document).on('click', '.ratio-list-item', function () {
+            var $this = $(this);
+            var targetRatio = $this.attr('ratio');
+            console.log('targetRatio', targetRatio);
+            // todo： 用户设定分辨率之后的操作
+        });
+        
         /*
         $(document).on('mouseenter', '.toggle-mute', function () {
             $('.plyr--video .plyr__controls .plyr__volume').show();

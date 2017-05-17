@@ -27,6 +27,41 @@
       padding-right: 10px;
     }
 
+    button {
+      .iconfont {
+        font-size: 18px;
+      }
+    }
+
+    button.fullscreen {
+      .iconfont {
+        font-size: 13px;
+      }
+    }
+
+  }
+
+  .plyr--fullscreen-active {
+    .plyr__controls {
+      button {
+        padding-left: 13px;
+        padding-right: 13px;
+
+        .iconfont {
+          font-size: 28px;
+        }
+      }
+      button.toggle-ratio-mode {
+        span.iconfont, span {
+          font-size: 19px;
+        }
+      }
+      button.fullscreen {
+        .iconfont {
+          font-size: 21px;
+        }
+      }
+    }
   }
 
 }
