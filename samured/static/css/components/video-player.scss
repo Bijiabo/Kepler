@@ -8,17 +8,33 @@
   .plyr__controls {
     position: relative;
 
+    .plyr__progress input[type="range"] {
+      opacity: 0;
+    }
+
+    .plyr__progress:hover input[type="range"] {
+      opacity: 1;
+    }
+
     .plyr__progress {
       position: absolute;
       left: 0;
-      top: -14px;
+      top: -12px;
       width: 100%;
       margin: 0;
 
       .plyr__progress--buffer {
         background-color: #565656;
         border-radius: 0;
+        height: 4px;
+        margin: -2px 0 0;
       }
+
+      .plyr__progress--played {
+        height: 4px;
+        margin: -2px 0 0;
+      }
+
     }
 
     .right-container {
@@ -55,6 +71,9 @@
         span.iconfont, span {
           font-size: 19px;
         }
+        .ratio-list {
+          font-size: 19px;
+        }
       }
       button.fullscreen {
         .iconfont {
@@ -62,6 +81,10 @@
         }
       }
     }
+  }
+
+  .plyr [data-plyr='captions'], .plyr [data-plyr='fullscreen'] {
+    display: inline-block;
   }
 
 }

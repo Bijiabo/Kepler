@@ -19,6 +19,9 @@ var render = function() {
 window.didLoadActions.push(render);
 
 requirejs(['public'], function(_public) {
+    
+    var pageCache = {};
+    
     var targetActions = function () {
         _public.init();
         // video play
@@ -81,10 +84,10 @@ requirejs(['public'], function(_public) {
             "</button>",
             
             // 剧场模式切换
-            "<button type='button' class='toggle-theatre-mode'>",
-            "<span class='iconfont'>&#xe613;</span>",
-            "<span class='plyr__sr-only'>toggle theatre mode</span>",
-            "</button>",
+            // "<button type='button' class='toggle-theatre-mode'>",
+            // "<span class='iconfont'>&#xe613;</span>",
+            // "<span class='plyr__sr-only'>toggle theatre mode</span>",
+            // "</button>",
             
             // 字幕切换
             "<button type='button' data-plyr='captions' class='toggle-captions-btn'>",
@@ -104,13 +107,19 @@ requirejs(['public'], function(_public) {
             "</div>"].join("");
         var playerOptions = {
             controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'fullscreen'],
-            debug: true,
+            // debug: true,
             autoplay: false,
             html: controls,
             captions: {defaultActive: true},
-            hideControls: false
+            hideControls: false,
+            keyboardShortcuts: { focused: true, global: true }
         };
-        plyr.setup(playerOptions);
+        window.players = plyr.setup(playerOptions);
+        window.players[0].on('canplay', function (event) {
+            if (pageCache.afterCanPlay) {
+                pageCache.afterCanPlay();
+            }
+        });
     };
     
     window.didLoadActions.push(targetActions);
@@ -134,8 +143,30 @@ requirejs(['public'], function(_public) {
         $(document).on('click', '.ratio-list-item', function () {
             var $this = $(this);
             var targetRatio = $this.attr('ratio');
+            $('.plyr--video .plyr__controls button.toggle-ratio-mode .iconfont').text($this.text());
             console.log('targetRatio', targetRatio);
-            // todo： 用户设定分辨率之后的操作
+            // todo: 用户设定分辨率之后的操作
+            // todo: 获取对应分辨率的视频链接，切换视频源
+            var player = window.players[0];
+            var targetCurrentTime = player.getCurrentTime();
+            var playAfterChangedMedia = !player.isPaused();
+            
+            player.source({
+                type:       'video',
+                title:      'Video title',
+                sources: [{
+                    src:    '../static/video/demo.mp4',
+                    type:   'video/mp4'
+                }]
+            });
+            // 开始等待播放器准备好
+            pageCache.afterCanPlay = function () {
+                player.seek(targetCurrentTime);
+                if (playAfterChangedMedia) {
+                    player.play();
+                }
+                pageCache.afterCanPlay = undefined;
+            };
         });
         
         /*

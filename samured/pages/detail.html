@@ -37,7 +37,28 @@
             <template-import file="./../components/video-detail.html"></template-import>
 
             <div class="video-recommend-list panel-view row">
-                <template-import file="./../components/grid-video-card.html"></template-import>
+                <div class="grid-video-card-container">
+                    <template v-for="(item, index) in videoCards">
+                        <div class="">
+                            <a :href="'detail.html#video-'+index">
+                                <div class="grid-video-card col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                    <!--<div class="text-color-red text-type-title">推荐视频</div>-->
+                                    <div class="image-view"
+                                         duration="06:00"
+                                         :style="'background-image: url(./../static/image/video-thumbnails/'+index%6+'.jpg);'"
+                                    >
+                                        <img src="./../static/image/scale/16-9.png" alt="">
+                                        <div class="video-progress" style="width: 33%;"></div>
+                                    </div>
+                                    <div class="title">Name Of DFHJK HKSEWB DJKFHDK BFD</div>
+                                    <div class="cn_title">视频名称</div>
+                                    <div class="author">狂战士JK</div>
+                                    <div class="info">视频简介显示内容...</div>
+                                </div>
+                            </a>
+                        </div>
+                    </template>
+                </div>
             </div>
         </div>
         <!--右侧边栏-->
