@@ -267,6 +267,8 @@ a:hover {
   height: 26px;
 
   .input-group {
+    @extend .animation;
+
     .form-control, .btn {
       height: 26px;
       border-color: #2A2B2C;
@@ -292,7 +294,10 @@ a:hover {
         top: -1px;
       }
     }
+  }
 
+  .input-group.focus {
+    width: 440px;
   }
 
 }

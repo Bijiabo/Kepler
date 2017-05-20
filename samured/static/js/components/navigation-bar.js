@@ -28,6 +28,14 @@ define([], function () {
                 messageBoxElement.data('show',true).show();
             }
         });
+        // 搜索框获得焦点
+        $(document).on('focus', '.search-input-container input', function () {
+            $('.search-input-container .input-group').addClass('focus');
+        });
+        // 搜索框失去焦点
+        $(document).on('blur', '.search-input-container input', function () {
+            $('.search-input-container .input-group').removeClass('focus');
+        });
     };
     
     return {

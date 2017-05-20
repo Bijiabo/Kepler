@@ -17,7 +17,7 @@ body {
   text-overflow: ellipsis;
   overflow: hidden; }
 
-.animation, .side-bar-menu .book-channel-success, .side-bar-menu .item, .side-bar-menu .title-item {
+.animation, .search-input-container .input-group, .side-bar-menu .book-channel-success, .side-bar-menu .item, .side-bar-menu .title-item {
   transition: all 0.3s ease; }
 
 a:hover {
@@ -212,6 +212,8 @@ a:hover {
     color: #e34849; }
     .search-input-container .input-group .btn .glyphicon {
       top: -1px; }
+  .search-input-container .input-group.focus {
+    width: 440px; }
 
 .separator-line {
   width: 100%;
