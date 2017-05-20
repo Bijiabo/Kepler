@@ -1861,11 +1861,11 @@ a:hover {
       color: #eeeeee; }
     .history-container .history-type-switch-container .search-input-container.unfocused {
       float: right;
-      padding: 12px; }
+      padding: 6px 12px; }
       .history-container .history-type-switch-container .search-input-container.unfocused .input-group .form-control {
-        border-color: #636363; }
+        border-color: #545454; }
       .history-container .history-type-switch-container .search-input-container.unfocused .input-group .btn {
-        background: #636363;
+        background: #545454;
         color: #2A2B2C;
         border-color: #636363; }
   .history-container .load-more {

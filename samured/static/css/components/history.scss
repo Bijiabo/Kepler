@@ -63,17 +63,17 @@
 
     .search-input-container.unfocused {
       float: right;
-      padding: 12px;
+      padding: 6px 12px;
 
       .input-group {
         .form-control {
-          border-color: #636363;
+          border-color: #545454;
         }
 
         .btn {
-          background: #636363;
+          background: #545454;
           color: $bodyBackgroundColor;
-          border-color: #636363;
+          border-color: #545454;
         }
       }
     }
