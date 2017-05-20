@@ -769,8 +769,9 @@
     .plyr__controls {
         @extend .panel-view;
         margin: 0;
-        background: #373839;
-        bottom: -48px;
+        //background: #373839;
+        background: none;
+        //bottom: -48px;
         padding: 8px;
     }
 

@@ -22,6 +22,18 @@ requirejs(['public'], function(_public) {
     
     var pageCache = {};
     
+    var initPlayListScroll = function () {
+        // 设定 iScroll
+        pageCache.playListScroll = new IScroll('.video-play-list-view', {
+            mouseWheel: true,
+            bounce: true,
+            scrollbars: 'custom',
+            // fadeScrollbars: true,
+            interactiveScrollbars: true,
+        });
+    
+    };
+    
     var targetActions = function () {
         _public.init();
         // video play
@@ -111,8 +123,8 @@ requirejs(['public'], function(_public) {
             autoplay: false,
             html: controls,
             captions: {defaultActive: true},
-            hideControls: false,
-            keyboardShortcuts: { focused: true, global: true }
+            keyboardShortcuts: { focused: true, global: true },
+            hideControls: true
         };
         window.players = plyr.setup(playerOptions);
         window.players[0].on('canplay', function (event) {
@@ -120,6 +132,8 @@ requirejs(['public'], function(_public) {
                 pageCache.afterCanPlay();
             }
         });
+        
+        initPlayListScroll();
     };
     
     window.didLoadActions.push(targetActions);
@@ -180,5 +194,4 @@ requirejs(['public'], function(_public) {
         */
     };
     bindEvents();
-    
 });

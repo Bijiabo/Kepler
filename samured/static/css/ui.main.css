@@ -557,10 +557,16 @@ a:hover {
       position: relative;
       width: 100%;
       float: left; } }
+.video-player-container {
+  background-color: #000000; }
+  .video-player-container .main-container {
+    margin-top: 44px; }
+
 .video-player {
-  margin-bottom: 48px;
   padding: 0;
-  background-color: #e34849; }
+  background-color: #e34849;
+  margin-top: 0;
+  margin-bottom: 0; }
   .video-player .plyr__controls {
     position: relative; }
     .video-player .plyr__controls .plyr__progress input[type="range"] {
@@ -574,7 +580,7 @@ a:hover {
       width: 100%;
       margin: 0; }
       .video-player .plyr__controls .plyr__progress .plyr__progress--buffer {
-        background-color: #2B2B2B;
+        background-color: rgba(255, 255, 255, 0.2);
         border-radius: 0;
         height: 4px;
         margin: -2px 0 0; }
@@ -608,6 +614,7 @@ a:hover {
   padding: 0;
   background-color: #212121; }
   .video-play-list .play-list-info {
+    position: relative;
     padding: 20px 0; }
     .video-play-list .play-list-info .media-left {
       padding: 0 14px 0 10px;
@@ -618,7 +625,6 @@ a:hover {
     .video-play-list .play-list-info .zh_name {
       margin-top: 10px; }
     .video-play-list .play-list-info .statistics {
-      position: relative;
       margin-top: 14px;
       color: #828282; }
       .video-play-list .play-list-info .statistics span {
@@ -629,26 +635,45 @@ a:hover {
         padding-left: 0; }
       .video-play-list .play-list-info .statistics .save-to-list {
         position: absolute;
-        bottom: 0;
-        right: 0;
+        bottom: 20px;
+        right: 20px;
         cursor: pointer; }
         .video-play-list .play-list-info .statistics .save-to-list span {
           padding: 0 2px; }
+  .video-play-list .separator-line {
+    margin-bottom: 0; }
   .video-play-list .video-play-list-view {
+    position: relative;
     height: 440px;
-    overflow-y: scroll; }
+    overflow: hidden; }
+    .video-play-list .video-play-list-view .iScrollVerticalScrollbar {
+      position: absolute;
+      z-index: 9999;
+      width: 10px;
+      bottom: 0;
+      top: 0;
+      right: 0;
+      overflow: hidden;
+      background-color: #212121;
+      border-left: 1px solid #2C2C2C;
+      padding-left: 1px; }
+      .video-play-list .video-play-list-view .iScrollVerticalScrollbar .iScrollIndicator {
+        width: 100%;
+        background: #828282; }
     .video-play-list .video-play-list-view .video-play-list-item {
       height: 70px;
       width: 100%;
       clear: both;
-      padding: 10px 16px;
+      padding: 10px 16px 10px 0;
       cursor: pointer; }
       .video-play-list .video-play-list-view .video-play-list-item .index {
+        width: 40px;
         color: #c1c1c1;
         float: left;
         text-align: center;
-        margin-right: 16px;
         line-height: 50px; }
+      .video-play-list .video-play-list-view .video-play-list-item .index.active {
+        color: #e34849; }
       .video-play-list .video-play-list-view .video-play-list-item .preview {
         float: left;
         height: 50px;
@@ -1431,8 +1456,7 @@ a:hover {
 
 .plyr--video .plyr__controls {
   margin: 0;
-  background: #373839;
-  bottom: -48px;
+  background: none;
   padding: 8px; }
 
 .plyr--fullscreen-active .plyr__controls {
@@ -1867,7 +1891,7 @@ a:hover {
       .history-container .history-type-switch-container .search-input-container.unfocused .input-group .btn {
         background: #545454;
         color: #2A2B2C;
-        border-color: #636363; }
+        border-color: #545454; }
   .history-container .load-more {
     margin-bottom: 10px;
     text-align: center;

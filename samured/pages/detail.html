@@ -13,6 +13,7 @@
     <script src="../static/js/tether.min.js"></script>
     <script src="../static/js/bootstrap.min.js"></script>
     <script src="../static/js/vue.min.js"></script>
+    <script src="../static/js/iscroll.js"></script>
     <script src="../static/js/template-loader.js"></script>
     <script src="../static/js/plyr/plyr.js"></script>
 
@@ -25,7 +26,7 @@
 
     <template-import file="./../components/side-bar-menu.html"></template-import>
 
-    <div class="main has-side-bar-menu">
+    <div class="main has-side-bar-menu video-player-container">
         <div class="container main-container" style="padding: 0;margin-bottom: 0;">
             <template-import file="./../components/video-player.html"></template-import>
         </div>
@@ -63,7 +64,7 @@
         </div>
         <!--右侧边栏-->
         <div class="right-side-bar">
-            <template-import file="./../components/list-video-card.html"></template-import>
+            <template-import file="./../components/video-play-list.html"></template-import>
         </div>
     </template-import>
 </div>

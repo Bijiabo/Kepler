@@ -5,6 +5,7 @@
   background-color: #212121;
 
   .play-list-info {
+    position: relative;
     padding: 20px 0;
 
     .media-left {
@@ -21,7 +22,6 @@
     }
 
     .statistics {
-      position: relative;
       margin-top: 14px;
       color: #828282;
 
@@ -36,8 +36,8 @@
 
       .save-to-list {
         position: absolute;
-        bottom: 0;
-        right: 0;
+        bottom: 20px;
+        right: 20px;
         cursor: pointer;
 
         span {
@@ -47,23 +47,51 @@
     }
   }
 
+  .separator-line {
+    margin-bottom: 0;
+  }
+
   .video-play-list-view {
+    position: relative;
     height: 440px;
-    overflow-y: scroll;
+    //overflow-y: scroll;
+    overflow: hidden;
+
+    .iScrollVerticalScrollbar {
+      position: absolute;
+      z-index: 9999;
+      width: 10px;
+      bottom: 0;
+      top: 0;
+      right: 0;
+      overflow: hidden;
+      background-color: #212121;
+      border-left: 1px solid #2C2C2C;
+      padding-left: 1px;
+
+      .iScrollIndicator {
+        width: 100%;
+        background: #828282;
+      }
+    }
 
     .video-play-list-item {
       height: 70px;
       width: 100%;
       clear: both;
-      padding: 10px 16px;
+      padding: 10px 16px 10px 0;
       cursor: pointer;
 
       .index {
+        width: 40px;
         color: #c1c1c1;
         float: left;
         text-align: center;
-        margin-right: 16px;
         line-height: 50px;
+      }
+
+      .index.active {
+        color: $themeColor_Red;
       }
 
       .preview {
