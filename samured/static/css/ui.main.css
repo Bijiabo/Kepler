@@ -356,7 +356,7 @@ input::-webkit-inner-spin-button {
   top: 46px;
   width: 220px;
   height: 100%;
-  z-index: 100;
+  z-index: 199;
   box-shadow: 1px 0 1px #2A2B2C;
   display: flex;
   flex-direction: column;
@@ -544,20 +544,24 @@ input::-webkit-inner-spin-button {
 @media (min-width: 1201px) {
   .detail-main-container {
     position: relative;
-    margin: 0 auto 50px auto;
+    margin: -10px auto 50px auto;
     max-width: 1440px;
     max-width: 100%;
-    padding: 0 430px 0 0; }
+    padding: 0; }
     .detail-main-container .right-side-bar {
       position: absolute;
       right: 0;
       top: 0;
       width: 430px;
-      float: left; } }
+      float: left; }
+
+  .detail-main.has-play-list .detail-main-container {
+    margin: 0 auto 50px auto;
+    padding: 0 430px 0 0; } }
 @media (max-width: 1200px) {
   .detail-main-container {
     position: relative;
-    margin: 50px auto;
+    margin: 0;
     width: 100%;
     padding: 0; }
     .detail-main-container .right-side-bar {
@@ -565,6 +569,11 @@ input::-webkit-inner-spin-button {
       width: 100%;
       float: left; } }
 .video-player-container {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 198;
   background-color: #000000; }
   .video-player-container .main-container {
     margin-top: 44px; }
@@ -655,7 +664,7 @@ input::-webkit-inner-spin-button {
     overflow: hidden; }
     .video-play-list .video-play-list-view .iScrollVerticalScrollbar {
       position: absolute;
-      z-index: 9999;
+      z-index: 197;
       width: 10px;
       bottom: 0;
       top: 0;
@@ -699,6 +708,10 @@ input::-webkit-inner-spin-button {
 @media (max-width: 1200px) {
   .video-play-list {
     margin-left: 10px; } }
+@media (min-width: 1201px) {
+  .video-detail-container .main-container, .video-detail-container .detail-main-container {
+    max-width: 1020px; } }
+
 .no-network-tip {
   background-color: #acecef;
   margin-bottom: -10px;
@@ -739,8 +752,8 @@ input::-webkit-inner-spin-button {
     padding: 0 0 10px 0; }
 
 .video-recommend-list {
-  padding-left: 10px;
-  padding-right: 10px; }
+  padding-left: 12px;
+  padding-right: 12px; }
 
 .plyr--captions-active .plyr__controls .icon--captions-on {
   color: #e34849; }
@@ -779,6 +792,10 @@ input::-webkit-inner-spin-button {
   display: none; }
 .plyr--video .plyr__controls .volume-group:hover .plyr__volume {
   display: inline-block; }
+
+.detail-main .grid-video-card {
+  padding-left: 12px;
+  padding-right: 12px; }
 
 .content-class-filter .filter-display-button {
   margin: 14px 0 10px 8px; }

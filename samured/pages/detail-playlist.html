@@ -21,7 +21,7 @@
 </head>
 <body class="has-side-bar-menu">
 
-<div id="app" class="video-detail-container">
+<div id="app">
     <template-import file="./../components/navigation-bar.html"></template-import>
 
     <template-import file="./../components/side-bar-menu.html"></template-import>
@@ -32,12 +32,7 @@
         </div>
     </div>
 
-    <template-import file="./../components/detail-main-container.html">
-
-        <!--头部占位，来处理视频播放器 fixed 定位引起的布局下移问题-->
-        <div class="panel-view row" style="padding: 0;">
-            <img src="../static/image/scale/16-9.png" alt="" style="width: 100%;">
-        </div>
+    <template-import file="./../components/detail-main-container-has-play-list.html">
 
         <div class="">
             <template-import file="./../components/video-detail.html"></template-import>
@@ -66,6 +61,10 @@
                     </template>
                 </div>
             </div>
+        </div>
+        <!--右侧边栏-->
+        <div class="right-side-bar">
+            <template-import file="./../components/video-play-list.html"></template-import>
         </div>
     </template-import>
 </div>
