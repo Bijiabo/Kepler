@@ -51,7 +51,6 @@
 
             <div class="list-container">
             <template v-for="(item, index) in watchHistory">
-
                 <div class="list-video-card-item-package">
                 <div class="media list-video-card">
                     <a href="detail.html">
@@ -66,22 +65,55 @@
                             </div>
                         </div>
                         <div class="media-body">
-                            <h4 class="media-heading text-color-white text-bold text-type-description">
+                            <h4 class="media-heading text-bold text-type-description">
                                 Horizon Zero Dawn All Cutscenes (Game Movie) PS4 PRO 1080p
                             </h4>
-                            <h4 class="text-color-gray-light margin-top-bottom-4 text-type-description">
+                            <h4 class="text-color-gray-light margin-top-bottom-4 text-type-description zh_name">
                                 地平线(游戏视频) PS4PRO 1080P
                             </h4>
                             <div class="text-color-blue margin-top-bottom-8 text-size-12 author">狂战士JK</div>
-                            <div class="text-color-gray-light">18,930次观看</div>
+                            <div class="watch-count">18,930次观看</div>
                         </div>
                     </a>
-                    <div class="delete fa fa-close" :target-id="index"></div>
+                    <div class="delete iconfont" :target-id="index">&#xe605;</div>
                 </div>
                 
                 <div class="separator-line"></div>
                 </div>
             </template>
+
+                <div class="list-video-card-item-template" style="display: none;">
+                    <div class="list-video-card-item-package">
+                        <div class="media list-video-card">
+                            <a href="detail.html">
+                                <div class="media-left">
+                                    <div class="image-view"
+                                         duration="06:00"
+                                         :style="'background-image: url(./../static/image/video-thumbnails/0.jpg);'"
+                                    >
+
+                                        <img src="./../static/image/scale/16-9.png" alt="">
+                                        <div class="video-progress" style="width: 33%;"></div>
+                                    </div>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading text-bold text-type-description en_name">
+                                        Horizon Zero Dawn All Cutscenes (Game Movie) PS4 PRO 1080p
+                                    </h4>
+                                    <h4 class="text-color-gray-light margin-top-bottom-4 text-type-description zh_name">
+                                        地平线(游戏视频) PS4PRO 1080P
+                                    </h4>
+                                    <div class="text-color-blue margin-top-bottom-8 text-size-12 author">狂战士JK</div>
+                                    <div class="watch-count">18,930次观看</div>
+                                </div>
+                            </a>
+                            <div class="delete iconfont" target-id="999">&#xe605;</div>
+                        </div>
+
+                        <div class="separator-line"></div>
+                    </div>
+                </div>
+
             </div>
 
             <div class="load-more">

@@ -1,13 +1,20 @@
 .history-container {
   margin: -10px;
 
+  .separator-line {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
   .list-container {
-    padding: 10px;
+    padding: 0 10px;
   }
 
   .list-video-card {
     position: relative;
     margin-left: 10px;
+    padding: 0;
+    height: 84px;
 
     h4 {
       width: 700px;
@@ -22,7 +29,8 @@
       position: absolute;
       right: 0;
       top: 0;
-      padding: 4px 10px;
+      padding: 0px 10px;
+      line-height: 20px;
       cursor: pointer;
     }
     .delete:hover {
@@ -39,14 +47,15 @@
 
     .item {
       display: inline-block;
-      color: #c1c1c1;
+      color: #828282;
       text-align: center;
       width: 96px;
-      padding: 14px 0;
+      padding: 8px 0;
       cursor: pointer;
     }
     .item.active {
       color: #eeeeee;
+      border-bottom: 2px solid $themeColor_Red;
     }
     .item:hover {
       color: $themeColor_GrayShine;
@@ -73,11 +82,11 @@
   // 加载更多
   .load-more {
     @extend .text-color-gray-info;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: center;
     cursor: pointer;
 
-    a:hover {
+    a:hover, a:focus {
       text-decoration: none;
       color: #636363;
     }
@@ -87,14 +96,22 @@
     .media-heading {
       @extend .text-color-gray-bright;
     }
+    .watch-count {
+      color: #636363;
+    }
   }
 
   .list-video-card:hover {
-    .media-heading {
-      @extend .text-color-white;
+    .media-heading, .zh_name {
+      color: #eeeeee !important;
     }
+
     .author {
       @extend .text-color-blue-light;
+    }
+
+    .watch-count {
+      color: #828282;
     }
   }
 
