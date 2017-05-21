@@ -708,6 +708,10 @@ input::-webkit-inner-spin-button {
 @media (max-width: 1200px) {
   .video-play-list {
     margin-left: 10px; } }
+.video-place-holder {
+  margin: 0;
+  padding: 0; }
+
 @media (min-width: 1201px) {
   .video-detail-container .main-container, .video-detail-container .detail-main-container {
     max-width: 1020px; } }

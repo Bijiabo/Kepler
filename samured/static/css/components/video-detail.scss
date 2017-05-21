@@ -1,3 +1,8 @@
+.video-place-holder {
+  margin: 0;
+  padding: 0;
+}
+
 .video-detail-container {
 
   @media (min-width: 1201px) {
@@ -5,7 +10,6 @@
       max-width: 1020px;
     }
   }
-
 }
 .no-network-tip {
   @extend .panel-view;

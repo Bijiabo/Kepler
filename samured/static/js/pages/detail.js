@@ -23,6 +23,7 @@ requirejs(['public'], function(_public) {
     var pageCache = {};
     
     var initPlayListScroll = function () {
+        if ($('.video-play-list-view').length === 0) {return;}
         // 设定 iScroll
         pageCache.playListScroll = new IScroll('.video-play-list-view', {
             mouseWheel: true,
@@ -134,6 +135,20 @@ requirejs(['public'], function(_public) {
         });
         
         initPlayListScroll();
+        
+        // 初始化视频容器在布局中的占位符
+        window.players[0].on('loadeddata', function (event) {
+            var videoContainerHeight = $('.video-player-container').height();
+            $('.video-place-holder').height(videoContainerHeight);
+            pageCache.videoHasBeenLoadedData = true;
+        });
+        
+        $(window).on('resize', function () {
+            if (pageCache.videoHasBeenLoadedData !== true) {return;}
+            var videoContainerHeight = $('.video-player-container').height();
+            $('.video-place-holder').height(videoContainerHeight);
+        });
+        
     };
     
     window.didLoadActions.push(targetActions);

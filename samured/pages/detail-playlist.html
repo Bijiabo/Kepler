@@ -21,6 +21,9 @@
 </head>
 <body class="has-side-bar-menu">
 
+<!--头部占位，来处理视频播放器 fixed 定位引起的布局下移问题-->
+<div class="video-place-holder"></div>
+
 <div id="app">
     <template-import file="./../components/navigation-bar.html"></template-import>
 
@@ -33,6 +36,9 @@
     </div>
 
     <template-import file="./../components/detail-main-container-has-play-list.html">
+
+        <!--头部占位，来处理视频播放器 fixed 定位引起的布局下移问题-->
+        <!--<div class="panel-view row video-place-holder"></div>-->
 
         <div class="">
             <template-import file="./../components/video-detail.html"></template-import>
