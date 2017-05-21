@@ -12,6 +12,7 @@
 
 .video-player {
   @extend .panel-view;
+  position: relative;
 
   //margin-bottom: 48px;
   padding: 0;
@@ -96,10 +97,91 @@
         }
       }
     }
+
+    .play-end-view {
+      padding: 26px;
+    }
   }
 
   .plyr [data-plyr='captions'], .plyr [data-plyr='fullscreen'] {
     display: inline-block;
+  }
+
+  // 播放完成后页面
+  .play-end-view {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 60px;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    padding: 10px 0;
+    text-align: center;
+    display: none;
+
+    .item {
+      box-sizing: border-box;
+      display: inline-block;
+      height: 33%;
+      width: 24%;
+      padding: 5px;
+      margin: 0;
+
+      .content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 8px;
+        //padding: 32px 36px 32px 30px;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+
+        .zh_title, .en_title, .time {
+          @extend .no-break-line;
+          @extend .text-over-flow-ellipsis;
+          position: relative;
+          z-index: 2;
+        }
+        .en_title {
+          @extend .text-color-blue-light;
+        }
+        .zh_title {
+          color: #C1C1C1;
+        }
+        .time {
+          color: #E2E2E3;
+        }
+      }
+
+      .content:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.2);
+        z-index: 0;
+      }
+    }
+    .item:hover {
+      .content {
+        box-shadow: inset 0 0 20px rgba(0,0,0,0.7);
+      }
+      .content:before {
+        background: rgba(0,0,0,0.5);
+      }
+    }
+
+  }
+  .play-end-view.active{
+    display: block;
   }
 
 }

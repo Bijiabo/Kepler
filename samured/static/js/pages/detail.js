@@ -32,7 +32,41 @@ requirejs(['public'], function(_public) {
             // fadeScrollbars: true,
             interactiveScrollbars: true,
         });
+    };
     
+    var generatePlayEndCardsViewHTML = function (dataItem) {
+        return '\
+        <div class="item">\
+            <a href="#">\
+            <div class="content" style="background-image: url(../static/image/video-thumbnails/0.jpg)">\
+            <div class="en_title">Horizon Zero DownHorizon Zero DownHorizon</div>\
+        <div class="zh_title">地平线 PS4 游戏 地平线 PS4 游戏</div>\
+        <div class="time">2小时前</div>\
+        </div>\
+        </a>\
+        </div>\
+            ';
+    };
+    
+    var addPlayEndRecommedVideoData = function () {
+        // 呈现播放完成后的推荐视频
+        // todo: 此处添加获取该视频对应的播放完成后的推荐视频数据的地址 @小袁
+        // fake data
+        var data = new Array(12);
+        data = data.map(function (item) {
+            return {
+                enTitle: 'Horizon Zero DownHorizon Zero DownHorizon',
+                zhTitle: '地平线 PS4 游戏 地平线 PS4 游戏',
+                time: '2小时前'
+            };
+        });
+        var html = '';
+        for(var i=0,len=data.length; i<len; i++) {
+            html += generatePlayEndCardsViewHTML(data[i]);
+        }
+        
+        html = '<div class="play-end-view">' + html + '</div>';
+        $('.video-player .plyr').append(html);
     };
     
     var targetActions = function () {
@@ -128,7 +162,8 @@ requirejs(['public'], function(_public) {
             hideControls: true
         };
         window.players = plyr.setup(playerOptions);
-        window.players[0].on('canplay', function (event) {
+        window.player = window.players[0];
+        window.player.on('canplay', function (event) {
             if (pageCache.afterCanPlay) {
                 pageCache.afterCanPlay();
             }
@@ -137,7 +172,7 @@ requirejs(['public'], function(_public) {
         initPlayListScroll();
         
         // 初始化视频容器在布局中的占位符
-        window.players[0].on('loadeddata', function (event) {
+        window.player.on('loadeddata', function (event) {
             var videoContainerHeight = $('.video-player-container').height();
             $('.video-place-holder').height(videoContainerHeight);
             pageCache.videoHasBeenLoadedData = true;
@@ -149,6 +184,17 @@ requirejs(['public'], function(_public) {
             $('.video-place-holder').height(videoContainerHeight);
         });
         
+        // 视频播放器播放完成后的事件
+        window.player.on('ended', function (event) {
+            $('.video-player .plyr .play-end-view').addClass('active');
+        });
+        
+        // 视频播放器播放时隐藏推荐列表
+        window.player.on('play', function (event) {
+            $('.video-player .plyr .play-end-view').removeClass('active');
+        });
+        
+        addPlayEndRecommedVideoData();
     };
     
     window.didLoadActions.push(targetActions);
