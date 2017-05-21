@@ -2117,17 +2117,34 @@ input::-webkit-inner-spin-button {
           padding-left: 0; }
       .channel-container .carousel-container .info .time {
         color: #4a4a4a;
-        margin-bottom: 18px; }
-      .channel-container .carousel-container .info .preview-images .item, .channel-container .carousel-container .info .preview-images .side-bar-menu .title-item, .side-bar-menu .channel-container .carousel-container .info .preview-images .title-item {
-        float: left;
-        width: 90px;
-        height: 50px;
-        background: #828282;
-        margin-right: 10px;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        cursor: pointer; }
+        margin-bottom: 8px; }
+      .channel-container .carousel-container .info .preview-images {
+        margin: 0 -5px; }
+        .channel-container .carousel-container .info .preview-images .item-container {
+          float: left;
+          width: 33.33%;
+          padding: 5px; }
+        .channel-container .carousel-container .info .preview-images .item, .channel-container .carousel-container .info .preview-images .side-bar-menu .title-item, .side-bar-menu .channel-container .carousel-container .info .preview-images .title-item {
+          position: relative;
+          float: left;
+          width: 100%;
+          height: 60px;
+          background: #828282;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          cursor: pointer; }
+        .channel-container .carousel-container .info .preview-images .item:hover, .channel-container .carousel-container .info .preview-images .side-bar-menu .title-item:hover, .side-bar-menu .channel-container .carousel-container .info .preview-images .title-item:hover {
+          transform: scale(1.05, 1.05);
+          box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4); }
+        .channel-container .carousel-container .info .preview-images .item-container:hover .item:after, .channel-container .carousel-container .info .preview-images .item-container:hover .side-bar-menu .title-item:after, .side-bar-menu .channel-container .carousel-container .info .preview-images .item-container:hover .title-item:after {
+          content: attr(time);
+          position: absolute;
+          right: 2px;
+          bottom: 2px;
+          padding: 2px 4px;
+          color: #ffffff;
+          background-color: rgba(33, 33, 33, 0.7); }
   .channel-container .carousel-container::before {
     content: attr(title);
     position: absolute;
@@ -2158,7 +2175,7 @@ input::-webkit-inner-spin-button {
     .channel-container .recommend-card .head {
       position: relative;
       clear: both;
-      margin: 10px 10px 10px 10px; }
+      margin: 0 10px 10px 10px; }
       .channel-container .recommend-card .head .avatar img {
         width: 40px;
         height: 40px; }
@@ -2207,8 +2224,8 @@ input::-webkit-inner-spin-button {
   .channel-container .recommend-card:hover {
     position: relative;
     z-index: 100;
-    transform: scale(1.05, 1.05);
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02, 1.02);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
     color: transparent;
     cursor: pointer; }
   .channel-container .recommend-card.short .head {
@@ -2329,8 +2346,7 @@ input::-webkit-inner-spin-button {
       .sort-container .content .left .title {
         color: #c1c1c1; }
       .sort-container .content .left .video-list-container {
-        margin: 0 -10px;
-        height: 190px; }
+        margin: 0 -10px; }
         .sort-container .content .left .video-list-container .carousel-control {
           width: 20px;
           background: none;
@@ -2342,7 +2358,7 @@ input::-webkit-inner-spin-button {
         .sort-container .content .left .video-list-container .carousel-control.right {
           margin-right: -10px; }
       .sort-container .content .left .video-list-container.video-list-container-type-2 .carousel-control {
-        margin-top: 19px;
+        margin-top: 38px;
         width: 42px;
         height: 62px;
         background: #545454;

@@ -169,19 +169,40 @@
       }
       .time {
         color: #4a4a4a;
-        margin-bottom: 18px;
+        margin-bottom: 8px;
       }
       .preview-images {
-        .item {
+        margin: 0 -5px;
+        .item-container {
           float: left;
-          width: 90px;
-          height: 50px;
+          width: 33.33%;
+          padding: 5px;
+        }
+        .item {
+          position: relative;
+          float: left;
+          width: 100%;
+          height: 60px;
           background: $themeColor_GrayLight;
-          margin-right: 10px;
           background-repeat: no-repeat;
           background-position: center;
           background-size: cover;
           cursor: pointer;
+        }
+        .item:hover {
+          transform: scale(1.05,1.05);
+          box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+        }
+        .item-container:hover {
+          .item:after {
+            content: attr(time);
+            position: absolute;
+            right: 2px;
+            bottom: 2px;
+            padding: 2px 4px;
+            color: #ffffff;
+            background-color: rgba(33, 33, 33, 0.7);
+          }
         }
       }
     }
@@ -228,7 +249,7 @@
     .head {
       position: relative;
       clear: both;
-      margin: 10px 10px 10px 10px;
+      margin: 0 10px 10px 10px;
 
       .avatar {
         img {
@@ -299,8 +320,8 @@
     @extend .background-color-gray-dark;
     position: relative;
     z-index: 100;
-    transform: scale(1.05,1.05);
-    box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+    transform: scale(1.02,1.02);
+    box-shadow: 0 2px 3px rgba(0,0,0,0.4);
     color: transparent;
     cursor: pointer;
   }

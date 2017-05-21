@@ -86,10 +86,10 @@
                             <div class="separator-line"></div>
                             <div class="title">上传视频</div>
                             <div class="video-list-container">
-                                <template v-for="(item, index) in new Array(5)">
+                                <template v-for="(item, index) in new Array(4)">
                                     <div class="">
                                         <a :href="'detail.html#video-'+index">
-                                            <div class="grid-video-card">
+                                            <div class="grid-video-card col-md-3 col-sm-4 col-xs-6">
                                                 <div class="image-view"
                                                      duration="06:00"
                                                      :style="'background-image: url(./../static/image/video-thumbnails/'+index%6+'.jpg);'"
@@ -113,10 +113,10 @@
                                     <!-- Wrapper for slides -->
                                     <div class="carousel-inner" role="listbox">
                                         <div class="item active" style="width: 100%">
-                                            <template v-for="(item, index) in new Array(5)">
+                                            <template v-for="(item, index) in new Array(4)">
                                                 <div class="">
                                                     <a :href="'detail.html#video-'+index">
-                                                        <div class="grid-video-card">
+                                                        <div class="grid-video-card col-md-3 col-sm-4 col-xs-6">
                                                             <div class="image-view"
                                                                  duration="06:00"
                                                                  :style="'background-image: url(./../static/image/video-thumbnails/'+index%6+'.jpg);'"
@@ -134,10 +134,10 @@
                                         </div>
 
                                         <div class="item"  style="width: 100%">
-                                            <template v-for="(item, index) in new Array(5)">
+                                            <template v-for="(item, index) in new Array(4)">
                                                 <div class="">
                                                     <a :href="'detail.html#video-'+index">
-                                                        <div class="grid-video-card">
+                                                        <div class="grid-video-card col-md-3 col-sm-4 col-xs-6">
                                                             <div class="image-view"
                                                                  duration="06:00"
                                                                  :style="'background-image: url(./../static/image/video-thumbnails/'+index%6+'.jpg);'"
@@ -172,13 +172,13 @@
                             <div class="title">地平线：黎明时分 预告片 -> 修改为可以左右手动点击滑动样式 2 </div>
                             <div class="video-list-container video-list-container-type-2">
                                 <div id="video-list-container-1" class="carousel slide" data-interval="false">
-                                    <!-- Wrapper for slides -->
+
                                     <div class="carousel-inner" role="listbox">
                                         <div class="item active" style="width: 100%">
-                                            <template v-for="(item, index) in new Array(5)">
+                                            <template v-for="(item, index) in new Array(4)">
                                                 <div class="">
                                                     <a :href="'detail.html#video-'+index">
-                                                        <div class="grid-video-card">
+                                                        <div class="grid-video-card col-md-3 col-sm-4 col-xs-6">
                                                             <div class="image-view"
                                                                  duration="06:00"
                                                                  :style="'background-image: url(./../static/image/video-thumbnails/'+index%6+'.jpg);'"
@@ -196,10 +196,10 @@
                                         </div>
 
                                         <div class="item"  style="width: 100%">
-                                            <template v-for="(item, index) in new Array(5)">
+                                            <template v-for="(item, index) in new Array(4)">
                                                 <div class="">
                                                     <a :href="'detail.html#video-'+index">
-                                                        <div class="grid-video-card">
+                                                        <div class="grid-video-card col-md-3 col-sm-4 col-xs-6">
                                                             <div class="image-view"
                                                                  duration="06:00"
                                                                  :style="'background-image: url(./../static/image/video-thumbnails/'+index%6+'.jpg);'"
@@ -216,7 +216,6 @@
                                             </template>
                                         </div>
                                     </div>
-
                                     <!-- Controls -->
                                     <a class="left carousel-control" href="#video-list-container-1" role="button" data-slide="prev">
                                         <span class="fa fa-angle-left" aria-hidden="true"></span>
