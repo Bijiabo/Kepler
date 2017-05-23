@@ -58,12 +58,32 @@ requirejs(['public'], function(_public) {
     
     var bindEvents = function () {
         // 用户删除观看记录条目
-        $(document).on('click', '.list-video-card .delete', function () {
-            var $this = $(this);
+        $(document).on('click', '.list-video-card .menu', function () {
+            var $this = $(this).parents('.list-video-card');
             var targetId = $this.attr('target-id');
-            // todo: 调用接口删除观看记录条目
-            $this.parents('.list-video-card-item-package').remove();
-            console.log($this.parent('.list-video-card-item-package'));
+            
+            if ($this.find('.menu-content').length > 0) {
+                $this.find('.menu-content').remove();
+            } else {
+                $('.list-video-card .menu-content').remove();
+                
+                var menuContentHTML = '\
+                <div class="menu-content">\
+                    <div class="item title">\
+                    <i class="icon fa fa-list-ul" aria-hidden="true"></i>\
+                    添加到\
+                    </div>\
+                    <div class="item">我的专辑</div>\
+                    <div class="item">专辑1</div>\
+                    <div class="item">专辑2</div>\
+                    <div class="item">\
+                        <input type="text">\
+                    </div>\
+                    <div class="item button">创建</div>\
+                </div>';
+                $this.append(menuContentHTML);
+            }
+            
         });
         
         // 用户点击加载更多

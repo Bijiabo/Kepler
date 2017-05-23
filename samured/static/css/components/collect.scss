@@ -1,0 +1,197 @@
+.collect-container {
+  margin: -10px;
+
+  .separator-line {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .list-container {
+    padding: 0 10px;
+  }
+
+  .list-video-card {
+    position: relative;
+    margin-left: 10px;
+    padding: 0;
+    height: 84px;
+
+    h4 {
+      width: 700px;
+    }
+
+    .image-view {
+      width: 150px;
+    }
+
+    .menu {
+      @extend .text-color-gray-info;
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 0px 10px;
+      line-height: 20px;
+      cursor: pointer;
+
+    }
+    .menu:hover {
+      color: $themeColor_GrayBright;
+    }
+
+    .menu-content {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      width: 166px;
+      height: 172px;
+      background-color: #2b2b2b;
+      z-index: 10;
+
+      .title {
+        position: relative;
+        border-bottom: 1px solid #383838;
+
+        .icon {
+          position: absolute;
+          top: 0;
+          left: 10px;
+          line-height: 28px;
+        }
+      }
+
+      .item {
+        color: #828282;
+        width: 100%;
+        clear: both;
+        height: 28px;
+        line-height: 28px;
+        text-align: center;
+        padding: 0;
+        cursor: pointer;
+
+        input {
+          background-color: transparent;
+          border: 1px solid #c1c1c1;
+          height: 28px;
+          width: 100%;
+        }
+      }
+
+      .item:hover {
+        color: #c1c1c1;
+      }
+
+      .item.button {
+        text-align: right;
+        color: $themeColor_Red;
+        padding-right: 6px;
+        height: 30px;
+        line-height: 30px;
+      }
+    }
+  }
+
+  // 切换历史记录类型按钮
+  .history-type-switch-container {
+    width: 100%;
+    clear: both;
+    border-bottom: 1px solid #424242;
+    margin-bottom: 10px;
+
+    .item {
+      display: inline-block;
+      color: #828282;
+      text-align: center;
+      width: 96px;
+      padding: 8px 0;
+      cursor: pointer;
+    }
+    .item.active {
+      color: #eeeeee;
+      border-bottom: 2px solid $themeColor_Red;
+    }
+    .item:hover {
+      color: $themeColor_GrayShine;
+    }
+
+    .search-input-container.unfocused {
+      float: right;
+      padding: 6px 12px;
+
+      .input-group {
+        .form-control {
+          border-color: #545454;
+        }
+
+        .btn {
+          background: #545454;
+          color: $bodyBackgroundColor;
+          border-color: #545454;
+        }
+      }
+    }
+  }
+
+  // 加载更多
+  .load-more {
+    @extend .text-color-gray-info;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+
+    a:hover, a:focus {
+      text-decoration: none;
+      color: #636363;
+    }
+  }
+
+  .list-video-card {
+    .media-heading {
+      @extend .text-color-gray-bright;
+    }
+    .watch-count {
+      color: #636363;
+    }
+  }
+
+  .list-video-card:hover {
+    .media-heading, .zh_name {
+      color: #eeeeee !important;
+    }
+
+    .author {
+      @extend .text-color-blue-light;
+    }
+
+    .watch-count {
+      color: #828282;
+    }
+  }
+
+  .list-video-card.search-history-item {
+    .media-heading {
+      @extend .text-color-blue;
+    }
+  }
+
+  .list-video-card.search-history-item:hover {
+    .media-heading {
+      @extend .text-color-blue-light;
+    }
+    .time {
+      @extend .text-color-white;
+    }
+  }
+
+  .search-result-tip {
+    color: #828282;
+    width: 100%;
+    clear: both;
+    text-align: center;
+
+    .search-key {
+      color: #c1c1c1;
+    }
+  }
+
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>筛选内容 - Sumred</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/font/iconfont.css">
+    <link rel="stylesheet" href="../static/css/ui.main.css">
+    <!--scripts-->
+    <script src="../static/js/jquery-3.1.1.min.js"></script>
+    <script src="../static/js/tether.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/vue.min.js"></script>
+    <script src="../static/js/js.cookie.js"></script>
+    <script src="../static/js/template-loader.js"></script>
+
+    <script data-main="../static/js/pages/collect.js" src="../static/js/require.js"></script>
+</head>
+<body class="has-side-bar-menu">
+
+<div id="app">
+    <template-import file="./../components/navigation-bar.html"></template-import>
+
+    <template-import file="./../components/side-bar-menu.html"></template-import>
+
+    <template-import file="./../components/main-container.html">
+
+        <div class="collect-container">
+            <div class="history-type-switch-container">
+                <a href="#" class="item active">收藏视频</a>
+                <a href="history-search.html" class="item">收藏专辑</a>
+                <a href="history-search.html" class="item">点赞视频</a>
+
+            </div>
+
+            <div class="search-result-tip" v-if="searchString">
+                {{searchResultCount}}条与 "<span class="search-key">{{searchString}}</span>" 相关的结果
+                <div class="separator-line"></div>
+            </div>
+
+            <div class="list-container">
+            <template v-for="(item, index) in watchHistory">
+                <div class="list-video-card-item-package">
+                <div class="media list-video-card">
+                    <a href="detail.html">
+                        <div class="media-left">
+                            <div class="image-view"
+                                 duration="06:00"
+                                 :style="'background-image: url(./../static/image/video-thumbnails/'+index%6+'.jpg);'"
+                            >
+
+                                <img src="./../static/image/scale/16-9.png" alt="">
+                                <div class="video-progress" style="width: 33%;"></div>
+                            </div>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading text-bold text-type-description">
+                                Horizon Zero Dawn All Cutscenes (Game Movie) PS4 PRO 1080p
+                            </h4>
+                            <h4 class="text-color-gray-light margin-top-bottom-4 text-type-description zh_name">
+                                地平线(游戏视频) PS4PRO 1080P
+                            </h4>
+                            <div class="text-color-blue margin-top-bottom-8 text-size-12 author">狂战士JK</div>
+                            <div class="watch-count">18,930次观看</div>
+                        </div>
+                    </a>
+
+                    <div class="menu" :target-id="index">
+                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                    </div>
+                </div>
+                
+                <div class="separator-line"></div>
+                </div>
+            </template>
+
+                <div class="list-video-card-item-template" style="display: none;">
+                    <div class="list-video-card-item-package">
+                        <div class="media list-video-card">
+                            <a href="detail.html">
+                                <div class="media-left">
+                                    <div class="image-view"
+                                         duration="06:00"
+                                         :style="'background-image: url(./../static/image/video-thumbnails/0.jpg);'"
+                                    >
+
+                                        <img src="./../static/image/scale/16-9.png" alt="">
+                                        <div class="video-progress" style="width: 33%;"></div>
+                                    </div>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading text-bold text-type-description en_name">
+                                        Horizon Zero Dawn All Cutscenes (Game Movie) PS4 PRO 1080p
+                                    </h4>
+                                    <h4 class="text-color-gray-light margin-top-bottom-4 text-type-description zh_name">
+                                        地平线(游戏视频) PS4PRO 1080P
+                                    </h4>
+                                    <div class="text-color-blue margin-top-bottom-8 text-size-12 author">狂战士JK</div>
+                                    <div class="watch-count">18,930次观看</div>
+                                </div>
+                            </a>
+                            <div class="delete iconfont" target-id="999">&#xe605;</div>
+                        </div>
+
+                        <div class="separator-line"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="load-more">
+                <a href="#" class="text-color-gray-info">加载更多</a>
+            </div>
+
+        </div>
+    </template-import>
+</div>
+
+</body>
+</html>

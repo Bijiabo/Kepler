@@ -23,16 +23,16 @@ body {
 a:hover {
   text-decoration: none; }
 
-.text-color-white, .history-container .list-video-card.search-history-item:hover .time {
+.text-color-white, .history-container .list-video-card.search-history-item:hover .time, .collect-container .list-video-card.search-history-item:hover .time {
   color: #ffffff; }
 
 .text-color-red, .panel-title-view, .message-box .title, .navigation-bar .navigation-bar-right-container, .side-bar-menu .title-item .title, .content-class-filter .item .class-options .option-item.active, .content-class-filter .side-bar-menu .title-item .class-options .option-item.active, .side-bar-menu .content-class-filter .title-item .class-options .option-item.active, .login-container .forgot, .user-container .form .button-group .btn.update-user-profile-btn {
   color: #e34849; }
 
-.text-color-blue, .message-box .content .message-item-cell .content .item-title, .history-container .list-video-card.search-history-item .media-heading, .channel-container .carousel-container .info .en_name, .channel-container .recommend-card .en_name {
+.text-color-blue, .message-box .content .message-item-cell .content .item-title, .history-container .list-video-card.search-history-item .media-heading, .channel-container .carousel-container .info .en_name, .channel-container .recommend-card .en_name, .collect-container .list-video-card.search-history-item .media-heading {
   color: #78d2dc; }
 
-.text-color-blue-light, .video-player .play-end-view .item .content .en_title, .video-player .play-end-view .side-bar-menu .title-item .content .en_title, .side-bar-menu .video-player .play-end-view .title-item .content .en_title, .history-container .list-video-card:hover .author, .history-container .list-video-card.search-history-item:hover .media-heading {
+.text-color-blue-light, .video-player .play-end-view .item .content .en_title, .video-player .play-end-view .side-bar-menu .title-item .content .en_title, .side-bar-menu .video-player .play-end-view .title-item .content .en_title, .history-container .list-video-card:hover .author, .history-container .list-video-card.search-history-item:hover .media-heading, .collect-container .list-video-card:hover .author, .collect-container .list-video-card.search-history-item:hover .media-heading {
   color: #acecef; }
 
 .text-color-gray-dark, .side-bar-menu .book-channel-success .title, .no-network-tip {
@@ -44,7 +44,7 @@ a:hover {
 .text-color-gray-light, .video-detail .action-buttons, .video-detail .video-description, .video-detail .view-more-button, .content-class-filter .item .class-options, .content-class-filter .side-bar-menu .title-item .class-options, .side-bar-menu .content-class-filter .title-item .class-options, .grid-video-card .author {
   color: #828282; }
 
-.text-color-gray-bright, .navigation-bar .navigation-bar-left-container .slidebar-menu-button:hover, .side-bar-menu, .side-bar-menu .item, .side-bar-menu .title-item, .side-bar-menu .item a, .side-bar-menu .title-item a, .side-bar-menu .item .submenu .item .title, .side-bar-menu .title-item .submenu .item .title, .side-bar-menu .item .submenu .title-item .title, .side-bar-menu .title-item .submenu .title-item .title, .side-bar-menu .item .submenu .item .subclass .item, .side-bar-menu .title-item .submenu .item .subclass .item, .side-bar-menu .item .submenu .title-item .subclass .item, .side-bar-menu .title-item .submenu .title-item .subclass .item, .side-bar-menu .item .submenu .item .subclass .title-item, .side-bar-menu .title-item .submenu .item .subclass .title-item, .side-bar-menu .item .submenu .title-item .subclass .title-item, .side-bar-menu .title-item .submenu .title-item .subclass .title-item, .video-detail .action-buttons > div.active, .video-detail .video-published-date, .video-detail .video-name, .content-class-filter .item .class-options .option-item, .content-class-filter .side-bar-menu .title-item .class-options .option-item, .side-bar-menu .content-class-filter .title-item .class-options .option-item, .history-container .list-video-card .media-heading {
+.text-color-gray-bright, .navigation-bar .navigation-bar-left-container .slidebar-menu-button:hover, .side-bar-menu, .side-bar-menu .item, .side-bar-menu .title-item, .side-bar-menu .item a, .side-bar-menu .title-item a, .side-bar-menu .item .submenu .item .title, .side-bar-menu .title-item .submenu .item .title, .side-bar-menu .item .submenu .title-item .title, .side-bar-menu .title-item .submenu .title-item .title, .side-bar-menu .item .submenu .item .subclass .item, .side-bar-menu .title-item .submenu .item .subclass .item, .side-bar-menu .item .submenu .title-item .subclass .item, .side-bar-menu .title-item .submenu .title-item .subclass .item, .side-bar-menu .item .submenu .item .subclass .title-item, .side-bar-menu .title-item .submenu .item .subclass .title-item, .side-bar-menu .item .submenu .title-item .subclass .title-item, .side-bar-menu .title-item .submenu .title-item .subclass .title-item, .video-detail .action-buttons > div.active, .video-detail .video-published-date, .video-detail .video-name, .content-class-filter .item .class-options .option-item, .content-class-filter .side-bar-menu .title-item .class-options .option-item, .side-bar-menu .content-class-filter .title-item .class-options .option-item, .history-container .list-video-card .media-heading, .collect-container .list-video-card .media-heading {
   color: #c1c1c1; }
 
 .text-color-gray-shine, .side-bar-menu .item .submenu .item .subclass .subclass-item:hover, .side-bar-menu .title-item .submenu .item .subclass .subclass-item:hover, .side-bar-menu .item .submenu .title-item .subclass .subclass-item:hover, .side-bar-menu .title-item .submenu .title-item .subclass .subclass-item:hover, .side-bar-menu .item.active, .side-bar-menu .active.title-item, .side-bar-menu > a > .item:hover, .side-bar-menu > a > .title-item:hover, .side-bar-menu > .item:hover, .side-bar-menu > .title-item:hover, .channel-list > a > .item:hover, .side-bar-menu .channel-list > a > .title-item:hover, .side-bar-menu > .item > .submenu > .item .title:hover, .side-bar-menu > .title-item > .submenu > .item .title:hover, .side-bar-menu > .item > .submenu > .title-item .title:hover, .side-bar-menu > .title-item > .submenu > .title-item .title:hover,
@@ -54,7 +54,7 @@ a:hover {
 .side-bar-menu > .title-item > .submenu > .subclass > .title-item:hover, .video-detail .action-buttons > div:hover {
   color: #eeeeee; }
 
-.text-color-gray-info, .message-box .content .message-item-cell .content .time, .message-box .content .message-item-cell .content .content-preview, .message-box .content .message-item-cell .content .content-display, .history-container .list-video-card .delete, .history-container .load-more {
+.text-color-gray-info, .message-box .content .message-item-cell .content .time, .message-box .content .message-item-cell .content .content-preview, .message-box .content .message-item-cell .content .content-display, .history-container .list-video-card .delete, .history-container .load-more, .collect-container .list-video-card .menu, .collect-container .load-more {
   color: #636363; }
 
 .text-color-gray-title, .btn-subscribe {
@@ -237,6 +237,20 @@ input[type='number'] {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none; }
+
+.footer {
+  color: #4e4e4e;
+  margin-top: -20px !important;
+  margin-bottom: 70px !important;
+  padding: 0 !important; }
+  .footer a {
+    color: #4e4e4e;
+    margin-right: 50px; }
+  .footer a:hover {
+    color: #828282; }
+
+.has-side-bar-menu .footer {
+  padding: 0 10px !important; }
 
 .flex-row-left-container, .navigation-bar, .navigation-bar .navigation-bar-left-container, .navigation-bar .navigation-bar-search-bar-container, .navigation-bar .navigation-bar-right-container {
   display: flex;
@@ -2392,5 +2406,115 @@ input::-webkit-inner-spin-button {
           display: none; }
         .sort-container .content .right .panel-view .item:last-child, .sort-container .content .right .video-player .item:last-child, .sort-container .content .right .video-play-list .item:last-child, .sort-container .content .right .no-network-tip .item:last-child, .sort-container .content .right .video-recommend .item:last-child, .sort-container .content .right .plyr--video .plyr__controls .item:last-child, .plyr--video .sort-container .content .right .plyr__controls .item:last-child, .sort-container .content .right .panel-view .side-bar-menu .title-item:last-child, .side-bar-menu .sort-container .content .right .panel-view .title-item:last-child, .sort-container .content .right .video-player .side-bar-menu .title-item:last-child, .side-bar-menu .sort-container .content .right .video-player .title-item:last-child, .sort-container .content .right .video-play-list .side-bar-menu .title-item:last-child, .side-bar-menu .sort-container .content .right .video-play-list .title-item:last-child, .sort-container .content .right .no-network-tip .side-bar-menu .title-item:last-child, .side-bar-menu .sort-container .content .right .no-network-tip .title-item:last-child, .sort-container .content .right .video-recommend .side-bar-menu .title-item:last-child, .side-bar-menu .sort-container .content .right .video-recommend .title-item:last-child, .sort-container .content .right .plyr--video .plyr__controls .side-bar-menu .title-item:last-child, .side-bar-menu .sort-container .content .right .plyr--video .plyr__controls .title-item:last-child, .plyr--video .sort-container .content .right .plyr__controls .side-bar-menu .title-item:last-child, .side-bar-menu .plyr--video .sort-container .content .right .plyr__controls .title-item:last-child {
           border-bottom: none; }
+
+.collect-container {
+  margin: -10px; }
+  .collect-container .separator-line {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  .collect-container .list-container {
+    padding: 0 10px; }
+  .collect-container .list-video-card {
+    position: relative;
+    margin-left: 10px;
+    padding: 0;
+    height: 84px; }
+    .collect-container .list-video-card h4 {
+      width: 700px; }
+    .collect-container .list-video-card .image-view {
+      width: 150px; }
+    .collect-container .list-video-card .menu {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 0px 10px;
+      line-height: 20px;
+      cursor: pointer; }
+    .collect-container .list-video-card .menu:hover {
+      color: #c1c1c1; }
+    .collect-container .list-video-card .menu-content {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      width: 166px;
+      height: 172px;
+      background-color: #2b2b2b;
+      z-index: 10; }
+      .collect-container .list-video-card .menu-content .title {
+        position: relative;
+        border-bottom: 1px solid #383838; }
+        .collect-container .list-video-card .menu-content .title .icon {
+          position: absolute;
+          top: 0;
+          left: 10px;
+          line-height: 28px; }
+      .collect-container .list-video-card .menu-content .item, .collect-container .list-video-card .menu-content .side-bar-menu .title-item, .side-bar-menu .collect-container .list-video-card .menu-content .title-item {
+        color: #828282;
+        width: 100%;
+        clear: both;
+        height: 28px;
+        line-height: 28px;
+        text-align: center;
+        padding: 0;
+        cursor: pointer; }
+        .collect-container .list-video-card .menu-content .item input, .collect-container .list-video-card .menu-content .side-bar-menu .title-item input, .side-bar-menu .collect-container .list-video-card .menu-content .title-item input {
+          background-color: transparent;
+          border: 1px solid #c1c1c1;
+          height: 28px;
+          width: 100%; }
+      .collect-container .list-video-card .menu-content .item:hover, .collect-container .list-video-card .menu-content .side-bar-menu .title-item:hover, .side-bar-menu .collect-container .list-video-card .menu-content .title-item:hover {
+        color: #c1c1c1; }
+      .collect-container .list-video-card .menu-content .item.button, .collect-container .list-video-card .menu-content .side-bar-menu .button.title-item, .side-bar-menu .collect-container .list-video-card .menu-content .button.title-item {
+        text-align: right;
+        color: #e34849;
+        padding-right: 6px;
+        height: 30px;
+        line-height: 30px; }
+  .collect-container .history-type-switch-container {
+    width: 100%;
+    clear: both;
+    border-bottom: 1px solid #424242;
+    margin-bottom: 10px; }
+    .collect-container .history-type-switch-container .item, .collect-container .history-type-switch-container .side-bar-menu .title-item, .side-bar-menu .collect-container .history-type-switch-container .title-item {
+      display: inline-block;
+      color: #828282;
+      text-align: center;
+      width: 96px;
+      padding: 8px 0;
+      cursor: pointer; }
+    .collect-container .history-type-switch-container .item.active, .collect-container .history-type-switch-container .side-bar-menu .active.title-item, .side-bar-menu .collect-container .history-type-switch-container .active.title-item {
+      color: #eeeeee;
+      border-bottom: 2px solid #e34849; }
+    .collect-container .history-type-switch-container .item:hover, .collect-container .history-type-switch-container .side-bar-menu .title-item:hover, .side-bar-menu .collect-container .history-type-switch-container .title-item:hover {
+      color: #eeeeee; }
+    .collect-container .history-type-switch-container .search-input-container.unfocused {
+      float: right;
+      padding: 6px 12px; }
+      .collect-container .history-type-switch-container .search-input-container.unfocused .input-group .form-control {
+        border-color: #545454; }
+      .collect-container .history-type-switch-container .search-input-container.unfocused .input-group .btn {
+        background: #545454;
+        color: #2A2B2C;
+        border-color: #545454; }
+  .collect-container .load-more {
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer; }
+    .collect-container .load-more a:hover, .collect-container .load-more a:focus {
+      text-decoration: none;
+      color: #636363; }
+  .collect-container .list-video-card .watch-count {
+    color: #636363; }
+  .collect-container .list-video-card:hover .media-heading, .collect-container .list-video-card:hover .zh_name {
+    color: #eeeeee !important; }
+  .collect-container .list-video-card:hover .watch-count {
+    color: #828282; }
+  .collect-container .search-result-tip {
+    color: #828282;
+    width: 100%;
+    clear: both;
+    text-align: center; }
+    .collect-container .search-result-tip .search-key {
+      color: #c1c1c1; }
 
 /*# sourceMappingURL=ui.main.css.map */
