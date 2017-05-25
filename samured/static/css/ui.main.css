@@ -338,6 +338,33 @@ input::-webkit-inner-spin-button {
         width: 500px;
         margin-left: 12px; }
 
+.feed-back {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 990;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none; }
+  .feed-back .feed-back-content {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 320px;
+    height: 320px;
+    margin: -160px 0 0 -160px;
+    background-color: #eeeeee;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    z-index: 1; }
+    .feed-back .feed-back-content .title {
+      text-align: center; }
+    .feed-back .feed-back-content textarea.feed-back-input {
+      border: none; }
+    .feed-back .feed-back-content .screenshot-preview canvas {
+      width: 100%; }
+
 .has-side-bar-menu .side-bar-menu {
   display: block;
   height: 100%;
