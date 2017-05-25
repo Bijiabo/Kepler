@@ -77,7 +77,7 @@ requirejs(['public'], function(_public) {
                     <div class="item">专辑1</div>\
                     <div class="item">专辑2</div>\
                     <div class="item">\
-                        <input type="text">\
+                        <input type="text" class="new-album">\
                     </div>\
                     <div class="item button">创建</div>\
                 </div>';
@@ -173,6 +173,17 @@ requirejs(['public'], function(_public) {
                 }, 1000);
             }
         }
+        
+        // 用户键入分类信息后敲击回车
+        $(document).on('keyup', '.menu-content .new-album', function (e) {
+            if (e.which !== 13) { return; }
+            var content = $(this).val();
+            if (content.length === 0) { return; }
+            // todo: 请求创建新专辑接口
+            // 添加新专辑项目
+            $(this).parents('.item').before('<div class="item">'+content+'</div>');
+            $(this).val('');
+        });
         
     };
     bindEvents();

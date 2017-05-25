@@ -43,7 +43,7 @@
       right: 20px;
       top: 20px;
       width: 166px;
-      height: 172px;
+      //height: 172px;
       background-color: #2b2b2b;
       z-index: 10;
 
@@ -74,6 +74,13 @@
           border: 1px solid #c1c1c1;
           height: 28px;
           width: 100%;
+          padding: 0 6px;
+          text-align: center;
+        }
+
+        input:focus {
+          box-shadow: none;
+          outline: none;
         }
       }
 
@@ -152,6 +159,23 @@
     .watch-count {
       color: #636363;
     }
+
+    .album-title {
+      font-size: 14px;
+    }
+
+    .button-group {
+      color: #C1C1C1;
+      font-size: 14px;
+      margin-top: 25px;
+
+      .play-album {
+        display: inline-block;
+      }
+      .share {
+        display: inline-block;
+      }
+    }
   }
 
   .list-video-card:hover {
@@ -166,6 +190,7 @@
     .watch-count {
       color: #828282;
     }
+
   }
 
   .list-video-card.search-history-item {
