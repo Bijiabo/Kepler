@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>频道 - Sumred</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/font/iconfont.css">
+    <link rel="stylesheet" href="../static/css/ui.main.css">
+    <!--scripts-->
+    <script src="../static/js/jquery-3.1.1.min.js"></script>
+    <script src="../static/js/tether.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/vue.min.js"></script>
+    <script src="../static/js/js.cookie.js"></script>
+    <script src="../static/js/template-loader.js"></script>
+    <script src="../static/js/html2canvas.min.js"></script>
+
+    <script data-main="../static/js/pages/sort.js" src="../static/js/require.js"></script>
+</head>
+<body class="has-side-bar-menu">
+
+<div id="app">
+    <template-import file="./../components/navigation-bar.html"></template-import>
+
+    <template-import file="./../components/side-bar-menu.html"></template-import>
+
+    <div class="main has-side-bar-menu">
+        <div class="container main-container">
+            <div class="sort-container">
+                <div class="panel-view header-view">
+                    <div class="cover">
+                        <div class="avatar" style="background-image: url(../static/image/avatars/2.jpg)"></div>
+                    </div>
+
+                    <div class="info">
+                        <div class="title"><a href="#">地平线</a></div>
+                        <div class="links">
+                            <a href="./sort.html">首页</a>
+                            <a href="./sort-video.html" class="active">视频</a>
+                            <a href="./sort-album.html">专辑</a>
+                            <a href="./sort-intro.html">简介</a>
+                            <span class="search">
+                                <input type="text" class="form-control" placeholder="频道内搜索">
+                            </span>
+                        </div>
+                        <div class="subscribe">
+                            <div class="btn btn-subscribe unsubscribed">1039</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="left">
+                        <div class="panel-view sort-video">
+                            <div class="head">
+                                <div class="title">上传列表</div>
+                                <div class="button-group">
+                                    <div class="btn btn-ghost">排序（按热度）</div>
+                                    <div class="btn btn-ghost">列表</div>
+                                </div>
+                            </div>
+                            <template v-for="(item, index) in new Array(10)">
+                                <div class="list-video-card-item-package">
+                                    <div class="media list-video-card">
+                                        <a href="detail.html">
+                                            <div class="media-left">
+                                                <div class="image-view"
+                                                     duration="06:00"
+                                                     :style="'background-image: url(./../static/image/video-thumbnails/'+index%6+'.jpg);'"
+                                                >
+
+                                                    <img src="./../static/image/scale/16-9.png" alt="">
+                                                    <div class="video-progress" style="width: 33%;"></div>
+                                                </div>
+                                            </div>
+                                            <div class="media-body">
+                                                <h4 class="media-heading text-bold text-type-description">
+                                                    Horizon Zero Dawn All Cutscenes (Game Movie) PS4 PRO 1080p
+                                                </h4>
+                                                <h4 class="text-color-gray-light margin-top-bottom-4 text-type-description zh_name">
+                                                    地平线(游戏视频) PS4PRO 1080P
+                                                </h4>
+                                                <div class="watch-count">18,930次观看 | 一周前</div>
+                                            </div>
+                                        </a>
+
+                                    </div>
+
+                                    <div class="separator-line"></div>
+                                </div>
+                            </template>
+                        </div><!-- panel view -->
+                    </div>
+
+                    <div class="right">
+                        <div class="panel-view">
+                            <div class="title">所属</div>
+                            <div class="item">PLAYSTATION</div>
+                            <div class="item">动作</div>
+                            <div class="item">SCE</div>
+                        </div>
+                        <div class="panel-view">
+                            <div class="title">相关</div>
+                            <div class="item">NIOH</div>
+                            <div class="item">泰坦陨落 2</div>
+                            <div class="item">巫师 3</div>
+                            <div class="item">最终幻想</div>
+                            <div class="item hide-item">战地</div>
+                            <div class="item hide-item">光环 5</div>
+                            <div class="item hide-item">使命召唤</div>
+                            <div class="item hide-item">黑暗之魂</div>
+                            <div class="item dropdown">
+                                <span class="fa fa-angle-down"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+</body>
+</html>

@@ -171,7 +171,7 @@
       }
       .video-list-container {
         margin: 0 -10px;
-        min-height: 227px;
+        min-height: 230px;
         //height: 190px;
 
         .carousel-control {
@@ -264,6 +264,58 @@
   }
 
 
+  // 简介页面
+  .label-mark {
+    color: #c1c1c1;
+    margin: 30px 0 18px 0;
+    font-size: 14px;
+    clear: both;
+    width: 100%;
+  }
+
+  p {
+    color: #828282;
+    line-height: 18px;
+  }
+
+  // 视频列表页面
+  .panel-view.sort-video {
+    padding-top: 10px;
+  }
+  .list-video-card {
+    position: relative;
+    margin-left: 10px;
+    padding: 0;
+    height: 84px;
+
+    h4 {
+      width: 700px;
+    }
+
+    .image-view {
+      width: 150px;
+    }
+
+    .delete {
+      @extend .text-color-gray-info;
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 0px 10px;
+      line-height: 20px;
+      cursor: pointer;
+    }
+    .delete:hover {
+      color: $themeColor_GrayBright;
+    }
+
+    .media-heading {
+      @extend .text-color-gray-bright;
+    }
+    .watch-count {
+      color: #636363;
+    }
+  }
 
 
 }
