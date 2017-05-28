@@ -261,6 +261,40 @@ requirejs(['public'], function(_public) {
         $(document).on('click', '.action-buttons .share', function () {
             $('.social-share').toggle();
         });
+        
+        // 用户点击订阅/取消订阅按钮
+        $(document).on('click', '.btn-subscribe', function () {
+            $this = $(this);
+            var targetId = $this.attr('video-id');
+            
+            var subscribeType = $this.hasClass('unsubscribed') ? 'subscribe' : 'unsubscribe' ;
+            switch (subscribeType) {
+                case 'subscribe':
+                    API.subscribe.add({id: targetId}, function (result, error) {
+                        if (error === undefined) {
+                            $this.removeClass('unsubscribed').addClass('subscribed');
+                        } else {
+                            alert(error);
+                        }
+                    });
+                    $this.removeClass('unsubscribed').addClass('subscribed'); // todo: 删除此行，仅用于演示
+                    break;
+                case 'unsubscribe':
+                    API.subscribe.remove({id: targetId}, function (result, error) {
+                        if (error === undefined) {
+                            $this.removeClass('subscribed').addClass('unsubscribed');
+                        } else {
+                            alert(error);
+                        }
+                        $this.removeClass('subscribed').addClass('unsubscribed'); // todo: 删除此行，仅用于演示
+                    });
+                    break;
+                default:
+                    break;
+            }
+            
+            
+        });
     };
     bindEvents();
 });
