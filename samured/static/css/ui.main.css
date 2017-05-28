@@ -188,7 +188,8 @@ a:hover {
   padding: 2px 6px;
   border-radius: 0;
   border-color: #424242;
-  color: #636363; }
+  color: #636363;
+  background: none; }
 
 .btn-ghost:hover {
   color: #e34849;
@@ -2527,6 +2528,17 @@ input::-webkit-inner-spin-button {
       color: #c1c1c1; }
     .sort-container .list-video-card .watch-count {
       color: #636363; }
+  .sort-container .btn-group.open .btn-ghost {
+    border-color: #e34849;
+    color: #e34849; }
+  .sort-container .btn-group.open .dropdown-menu {
+    background: #373839;
+    border-radius: 0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); }
+    .sort-container .btn-group.open .dropdown-menu li a {
+      color: #828282; }
+    .sort-container .btn-group.open .dropdown-menu li a:hover {
+      background-color: #2a2a2a; }
 
 .collect-container {
   margin: -10px; }

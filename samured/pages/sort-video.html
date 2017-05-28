@@ -57,8 +57,30 @@
                             <div class="head">
                                 <div class="title">上传列表</div>
                                 <div class="button-group">
-                                    <div class="btn btn-ghost">排序（按热度）</div>
-                                    <div class="btn btn-ghost">列表</div>
+                                    <!-- Single button -->
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-ghost dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            排序（按热度）
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-ghost dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            列表
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">列表</a></li>
+                                            <li><a href="#">其他</a></li>
+                                        </ul>
+                                    </div>
+
                                 </div>
                             </div>
                             <template v-for="(item, index) in new Array(10)">
