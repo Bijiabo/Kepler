@@ -1,7 +1,8 @@
 @charset "UTF-8";
-.unselectable, .side-bar-menu {
-  -moz-user-select: none;
+.unselectable, .side-bar-menu, .video-detail .action-buttons {
   -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none; }
 
 .dev-border {

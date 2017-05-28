@@ -46,6 +46,7 @@
   .action-buttons {
     @extend .text-color-gray-light;
     @extend .text-size-14;
+    @extend .unselectable;
     overflow: auto;
 
     .collect {

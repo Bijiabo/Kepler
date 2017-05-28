@@ -15,8 +15,9 @@ $textColor_Blue: $themeColor_Blue;
 $textColor_BlueLight: $themeColor_BlueLight;
 
 .unselectable {
-  -moz-user-select: none;
   -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
