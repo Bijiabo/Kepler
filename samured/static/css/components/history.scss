@@ -38,6 +38,18 @@
     }
   }
 
+  .list-video-card.search-history-item {
+    height: 42px;
+
+    .media-heading {
+      margin-top: 18px;
+    }
+    .time {
+      margin-bottom: 18px;
+    }
+
+  }
+
   // 切换历史记录类型按钮
   .history-type-switch-container {
     width: 100%;

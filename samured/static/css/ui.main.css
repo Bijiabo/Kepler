@@ -2000,6 +2000,12 @@ input::-webkit-inner-spin-button {
       cursor: pointer; }
     .history-container .list-video-card .delete:hover {
       color: #c1c1c1; }
+  .history-container .list-video-card.search-history-item {
+    height: 42px; }
+    .history-container .list-video-card.search-history-item .media-heading {
+      margin-top: 18px; }
+    .history-container .list-video-card.search-history-item .time {
+      margin-bottom: 18px; }
   .history-container .history-type-switch-container {
     width: 100%;
     clear: both;
