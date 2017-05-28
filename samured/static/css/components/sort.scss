@@ -2,6 +2,10 @@
   margin: -10px;
   padding-bottom: 20px;
 
+  .panel-view {
+    padding-top: 1px;
+  }
+
   .header-view {
     padding: 0;
     margin-bottom: 0;
@@ -34,6 +38,12 @@
         margin: 18px 20px;
         font-size: 22px;
         color: #c1c1c1;
+        a {
+          color: #c1c1c1;
+        }
+        a:hover {
+          color: $themeColor_Red;
+        }
       }
       .links {
         margin: 36px 20px 0 0;
@@ -99,9 +109,17 @@
         .title {
           color: #c1c1c1;
           margin-bottom: 18px;
+          a {
+            color: #c1c1c1;
+          }
+          a:hover {
+            color: $themeColor_Red;
+          }
         }
         .recommend-card {
           padding: 0;
+          margin-bottom: 22px;
+
           .media-left {
             .image-view {
               width: auto;
@@ -142,9 +160,18 @@
 
       .title {
         color: #c1c1c1;
+        margin-top: 18px;
+        margin-bottom: 6px;
+        a {
+          color: #c1c1c1;
+        }
+        a:hover {
+          color: $themeColor_Red;
+        }
       }
       .video-list-container {
         margin: 0 -10px;
+        min-height: 227px;
         //height: 190px;
 
         .carousel-control {
@@ -161,6 +188,7 @@
           margin-right: -10px;
         }
       }
+
       .video-list-container.video-list-container-type-2 {
         .carousel-control {
           margin-top: 38px;

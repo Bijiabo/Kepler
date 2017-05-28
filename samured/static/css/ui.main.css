@@ -1861,7 +1861,7 @@ input::-webkit-inner-spin-button {
     bottom: 24px;
     left: 34px;
     cursor: pointer;
-    color: #828282; }
+    color: #383838; }
   .user-container .select-cover-container {
     display: none; }
     .user-container .select-cover-container .main {
@@ -2309,6 +2309,8 @@ input::-webkit-inner-spin-button {
 .sort-container {
   margin: -10px;
   padding-bottom: 20px; }
+  .sort-container .panel-view, .sort-container .video-player, .sort-container .video-play-list, .sort-container .no-network-tip, .sort-container .video-recommend, .sort-container .plyr--video .plyr__controls, .plyr--video .sort-container .plyr__controls {
+    padding-top: 1px; }
   .sort-container .header-view {
     padding: 0;
     margin-bottom: 0; }
@@ -2335,6 +2337,10 @@ input::-webkit-inner-spin-button {
         margin: 18px 20px;
         font-size: 22px;
         color: #c1c1c1; }
+        .sort-container .header-view .info .title a {
+          color: #c1c1c1; }
+        .sort-container .header-view .info .title a:hover {
+          color: #e34849; }
       .sort-container .header-view .info .links {
         margin: 36px 20px 0 0; }
         .sort-container .header-view .info .links a {
@@ -2382,8 +2388,13 @@ input::-webkit-inner-spin-button {
       .sort-container .content .left .recommend .title {
         color: #c1c1c1;
         margin-bottom: 18px; }
+        .sort-container .content .left .recommend .title a {
+          color: #c1c1c1; }
+        .sort-container .content .left .recommend .title a:hover {
+          color: #e34849; }
       .sort-container .content .left .recommend .recommend-card {
-        padding: 0; }
+        padding: 0;
+        margin-bottom: 22px; }
         .sort-container .content .left .recommend .recommend-card .media-left .image-view {
           width: auto; }
           .sort-container .content .left .recommend .recommend-card .media-left .image-view img {
@@ -2411,9 +2422,16 @@ input::-webkit-inner-spin-button {
           color: #636363;
           line-height: 20px; }
       .sort-container .content .left .title {
-        color: #c1c1c1; }
+        color: #c1c1c1;
+        margin-top: 18px;
+        margin-bottom: 6px; }
+        .sort-container .content .left .title a {
+          color: #c1c1c1; }
+        .sort-container .content .left .title a:hover {
+          color: #e34849; }
       .sort-container .content .left .video-list-container {
-        margin: 0 -10px; }
+        margin: 0 -10px;
+        min-height: 227px; }
         .sort-container .content .left .video-list-container .carousel-control {
           width: 20px;
           background: none;

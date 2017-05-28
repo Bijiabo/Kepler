@@ -19,8 +19,35 @@ var render = function() {
 window.didLoadActions.push(render);
 
 requirejs(['public'], function(_public) {
+    
+    var initCarouselComponents = function () {
+        $('.video-list-container-type-1').carousel({
+            interval: false
+        });
+        $('.video-list-container-type-1').find('.carousel-control.left').hide();
+    
+        $('.video-list-container-type-1').on('slid.bs.carousel', function () {
+            var activeIndex = $(this).find('.carousel-inner .item.active').index();
+            var pageCount = $(this).find('.carousel-inner .item').length;
+            
+            if (activeIndex === 0) {
+                $(this).find('.carousel-control.left').hide();
+            } else {
+                $(this).find('.carousel-control.left').show();
+            }
+            
+            if (activeIndex + 1 === pageCount) {
+                $(this).find('.carousel-control.right').hide();
+            } else {
+                $(this).find('.carousel-control.right').show();
+            }
+            console.log('xxx: ' + activeIndex);
+        })
+    };
+    
     var targetActions = function () {
         _public.init();
+        initCarouselComponents();
     };
     
     window.didLoadActions.push(targetActions);
