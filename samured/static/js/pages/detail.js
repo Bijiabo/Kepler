@@ -264,7 +264,7 @@ requirejs(['public'], function(_public) {
         
         // 用户点击订阅/取消订阅按钮
         $(document).on('click', '.btn-subscribe', function () {
-            $this = $(this);
+            var $this = $(this);
             var targetId = $this.attr('video-id');
             
             var subscribeType = $this.hasClass('unsubscribed') ? 'subscribe' : 'unsubscribe' ;
@@ -292,8 +292,30 @@ requirejs(['public'], function(_public) {
                 default:
                     break;
             }
+        });
+        
+        // 用户点赞/取消点赞
+        $(document).on('click', '.thumbs-up', function () {
+            var $this = $(this);
+            var targetId = $this.attr('video-id');
             
-            
+            API.like.toggle({id: targetId}, function (result, error) {
+                if (error === undefined) {
+                    var isLiked = true; // todo: 从 result 获取
+                    var likedCount = 10893; // todo: 从 result 获取
+    
+                    $this.find('.count').text(likedCount);
+                    
+                    if (isLiked) {
+                        $this.addClass('active');
+                    } else {
+                        $this.removeClass('active');
+                    }
+                } else {
+                    alert(error);
+                }
+                $this.removeClass('subscribed').addClass('unsubscribed'); // todo: 删除此行，仅用于演示
+            })
         });
     };
     bindEvents();
