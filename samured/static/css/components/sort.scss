@@ -181,11 +181,35 @@
           color: #c1c1c1;
           opacity: 1;
         }
+        .carousel-control:hover {
+          z-index: 200;
+        }
+        .carousel-control span.fa {
+          transition: background-color 0.3s ease;
+          background-color: rgba(84, 84, 84, 0);
+        }
+        .carousel-control:hover span.fa {
+          margin-top: 38px;
+          width: 42px;
+          height: 62px;
+          background: #545454;
+          line-height: 62px;
+          color: #c1c1c1;
+          opacity: 1;
+        }
         .carousel-control.left {
           margin-left: -10px;
         }
         .carousel-control.right {
           margin-right: -10px;
+        }
+        .carousel-control.left:hover span.fa {
+          margin-left: -32px;
+          margin-right: -10px;
+        }
+        .carousel-control.right:hover span.fa{
+          margin-right: -32px;
+          margin-left: -10px;
         }
       }
 

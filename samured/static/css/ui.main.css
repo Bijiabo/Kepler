@@ -2438,10 +2438,29 @@ input::-webkit-inner-spin-button {
           line-height: 186px;
           color: #c1c1c1;
           opacity: 1; }
+        .sort-container .content .left .video-list-container .carousel-control:hover {
+          z-index: 200; }
+        .sort-container .content .left .video-list-container .carousel-control span.fa {
+          transition: background 0.3s ease;
+          background-color: rgba(84, 84, 84, 0); }
+        .sort-container .content .left .video-list-container .carousel-control:hover span.fa {
+          margin-top: 38px;
+          width: 42px;
+          height: 62px;
+          background: #545454;
+          line-height: 62px;
+          color: #c1c1c1;
+          opacity: 1; }
         .sort-container .content .left .video-list-container .carousel-control.left {
           margin-left: -10px; }
         .sort-container .content .left .video-list-container .carousel-control.right {
           margin-right: -10px; }
+        .sort-container .content .left .video-list-container .carousel-control.left:hover span.fa {
+          margin-left: -32px;
+          margin-right: -10px; }
+        .sort-container .content .left .video-list-container .carousel-control.right:hover span.fa {
+          margin-right: -32px;
+          margin-left: -10px; }
       .sort-container .content .left .video-list-container.video-list-container-type-2 .carousel-control {
         margin-top: 38px;
         width: 42px;
