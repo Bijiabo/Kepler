@@ -195,6 +195,9 @@ requirejs(['public'], function(_public) {
         });
         
         addPlayEndRecommedVideoData();
+        
+        // 初始化分享按钮
+        $('.social-share').share();
     };
     
     window.didLoadActions.push(targetActions);
@@ -253,6 +256,11 @@ requirejs(['public'], function(_public) {
             $('.plyr--video .plyr__controls .plyr__volume').hide();
         });
         */
+        
+        // 用户点击分享按钮，切换分享组件呈现
+        $(document).on('click', '.action-buttons .share', function () {
+            $('.social-share').toggle();
+        });
     };
     bindEvents();
 });
