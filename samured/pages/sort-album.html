@@ -53,8 +53,69 @@
 
                 <div class="content">
                     <div class="left">
-                        <div class="panel-view">
+                        <div class="panel-view sort-album">
+                            <div class="head">
+                                <div class="title">所有专辑</div>
+                                <div class="button-group">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-ghost dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            列表
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">列表</a></li>
+                                            <li><a href="#">网格</a></li>
+                                        </ul>
+                                    </div>
 
+                                </div>
+                            </div>
+
+                            <template v-for="(item, index) in new Array(10)">
+                                <div class="list-video-card-item-package">
+                                    <div class="media list-video-card">
+                                        <a href="detail.html">
+                                            <div class="media-left">
+                                                <div class="image-view"
+                                                     duration="06:00"
+                                                     :style="'background-image: url(./../static/image/video-thumbnails/'+index%6+'.jpg);'"
+                                                >
+
+                                                    <img src="./../static/image/scale/16-9.png" alt="">
+                                                    <div class="video-progress" style="width: 33%;"></div>
+                                                </div>
+                                            </div>
+                                            <div class="media-body">
+                                                <h4 class="media-heading text-bold text-type-description">
+                                                    地平线：黎明时分 Horizon Zero Dawn All Cutscenes (Game Movie) PS4 PRO 1080p
+                                                </h4>
+                                                <div class="play-list">
+                                                    <div class="item">
+                                                        <div class="pull-left">All Cutscenes(Game Movie)</div>
+                                                        <div class="pull-right">23:00</div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="pull-left">Horizon Zero Dawn All Cutscenes</div>
+                                                        <div class="pull-right">18:28</div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="pull-left">PS4 PRO 1080p</div>
+                                                        <div class="pull-right">26:38</div>
+                                                    </div>
+                                                </div>
+                                                <div class="watch-all-video">查看所有视频列表</div>
+                                            </div>
+                                        </a>
+
+                                    </div>
+
+                                    <div class="separator-line"></div>
+                                </div>
+                            </template>
+
+                            <div class="load-more">
+                                <a href="#" class="text-color-gray-info">加载更多</a>
+                            </div>
                         </div><!-- panel view -->
                     </div>
 
