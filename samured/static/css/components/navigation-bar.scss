@@ -70,11 +70,79 @@
     }
 
     .item.avatar {
+      position: relative;
       padding: 6px 10px;
       margin: 0;
+
+      .profile-preview {
+        position: absolute;
+        right: 0;
+        top: 52px;
+        width: 260px;
+        height: 180px;
+        background-color: #383838;
+        box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+        display: none;
+
+        .header-image {
+          width: 100%;
+          height: 90px;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+        .avatar {
+          position: absolute;
+          left: 10px;
+          top: 62px;
+          width: 58px;
+          height: 58px;
+          border-radius: 50%;
+          border: 2px solid #383838;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .edit-button {
+          position: absolute;
+          top: 100px;
+          right: 14px;
+          width: 18px;
+          height: 18px;
+          line-height: 18px;
+          .iconfont {
+            font-size: 18px;
+            color: #c1c1c1;
+          }
+        }
+        .account {
+          position: absolute;
+          bottom: 28px;
+          left: 12px;
+          color: #c1c1c1;
+          .name {
+            padding-right: 18px;
+            margin-right: 18px;
+            border-right: 1px solid #545454;
+          }
+        }
+      }
+      .profile-preview:before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 0;
+        width: 100%;
+        height: 20px;
+      }
     }
     .item.avatar:hover {
       border-color: transparent;
+      .profile-preview {
+        display: block;
+      }
     }
 
     img {

@@ -306,10 +306,67 @@ input::-webkit-inner-spin-button {
     .navigation-bar .navigation-bar-right-container .item:hover, .navigation-bar .navigation-bar-right-container .side-bar-menu .title-item:hover, .side-bar-menu .navigation-bar .navigation-bar-right-container .title-item:hover {
       border-color: #424242; }
     .navigation-bar .navigation-bar-right-container .item.avatar, .navigation-bar .navigation-bar-right-container .side-bar-menu .avatar.title-item, .side-bar-menu .navigation-bar .navigation-bar-right-container .avatar.title-item {
+      position: relative;
       padding: 6px 10px;
       margin: 0; }
+      .navigation-bar .navigation-bar-right-container .item.avatar .profile-preview, .navigation-bar .navigation-bar-right-container .side-bar-menu .avatar.title-item .profile-preview, .side-bar-menu .navigation-bar .navigation-bar-right-container .avatar.title-item .profile-preview {
+        position: absolute;
+        right: 0;
+        top: 52px;
+        width: 260px;
+        height: 180px;
+        background-color: #383838;
+        box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+        display: none; }
+        .navigation-bar .navigation-bar-right-container .item.avatar .profile-preview .header-image, .navigation-bar .navigation-bar-right-container .side-bar-menu .avatar.title-item .profile-preview .header-image, .side-bar-menu .navigation-bar .navigation-bar-right-container .avatar.title-item .profile-preview .header-image {
+          width: 100%;
+          height: 90px;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat; }
+        .navigation-bar .navigation-bar-right-container .item.avatar .profile-preview .avatar, .navigation-bar .navigation-bar-right-container .side-bar-menu .avatar.title-item .profile-preview .avatar, .side-bar-menu .navigation-bar .navigation-bar-right-container .avatar.title-item .profile-preview .avatar {
+          position: absolute;
+          left: 10px;
+          top: 62px;
+          width: 58px;
+          height: 58px;
+          border-radius: 50%;
+          border: 2px solid #383838;
+          overflow: hidden; }
+          .navigation-bar .navigation-bar-right-container .item.avatar .profile-preview .avatar img, .navigation-bar .navigation-bar-right-container .side-bar-menu .avatar.title-item .profile-preview .avatar img, .side-bar-menu .navigation-bar .navigation-bar-right-container .avatar.title-item .profile-preview .avatar img {
+            width: 100%;
+            height: 100%; }
+        .navigation-bar .navigation-bar-right-container .item.avatar .profile-preview .edit-button, .navigation-bar .navigation-bar-right-container .side-bar-menu .avatar.title-item .profile-preview .edit-button, .side-bar-menu .navigation-bar .navigation-bar-right-container .avatar.title-item .profile-preview .edit-button {
+          position: absolute;
+          top: 100px;
+          right: 14px;
+          width: 18px;
+          height: 18px;
+          line-height: 18px; }
+          .navigation-bar .navigation-bar-right-container .item.avatar .profile-preview .edit-button .iconfont, .navigation-bar .navigation-bar-right-container .side-bar-menu .avatar.title-item .profile-preview .edit-button .iconfont, .side-bar-menu .navigation-bar .navigation-bar-right-container .avatar.title-item .profile-preview .edit-button .iconfont {
+            font-size: 18px;
+            color: #c1c1c1; }
+        .navigation-bar .navigation-bar-right-container .item.avatar .profile-preview .account, .navigation-bar .navigation-bar-right-container .side-bar-menu .avatar.title-item .profile-preview .account, .side-bar-menu .navigation-bar .navigation-bar-right-container .avatar.title-item .profile-preview .account {
+          position: absolute;
+          bottom: 28px;
+          left: 12px;
+          color: #c1c1c1; }
+          .navigation-bar .navigation-bar-right-container .item.avatar .profile-preview .account .name, .navigation-bar .navigation-bar-right-container .side-bar-menu .avatar.title-item .profile-preview .account .name, .side-bar-menu .navigation-bar .navigation-bar-right-container .avatar.title-item .profile-preview .account .name {
+            padding-right: 18px;
+            margin-right: 18px;
+            border-right: 1px solid #545454; }
+      .navigation-bar .navigation-bar-right-container .item.avatar .profile-preview:before, .navigation-bar .navigation-bar-right-container .side-bar-menu .avatar.title-item .profile-preview:before, .side-bar-menu .navigation-bar .navigation-bar-right-container .avatar.title-item .profile-preview:before {
+        content: "";
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 0;
+        width: 100%;
+        height: 20px; }
     .navigation-bar .navigation-bar-right-container .item.avatar:hover, .navigation-bar .navigation-bar-right-container .side-bar-menu .avatar.title-item:hover, .side-bar-menu .navigation-bar .navigation-bar-right-container .avatar.title-item:hover {
       border-color: transparent; }
+      .navigation-bar .navigation-bar-right-container .item.avatar:hover .profile-preview, .navigation-bar .navigation-bar-right-container .side-bar-menu .avatar.title-item:hover .profile-preview, .side-bar-menu .navigation-bar .navigation-bar-right-container .avatar.title-item:hover .profile-preview {
+        display: block; }
     .navigation-bar .navigation-bar-right-container img {
       height: 32px;
       width: 32px; }
