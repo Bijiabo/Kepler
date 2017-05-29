@@ -30,8 +30,8 @@
 
         <div class="collect-container">
             <div class="history-type-switch-container">
-                <a href="#" class="item">收藏视频</a>
-                <a href="history-search.html" class="item active">收藏专辑</a>
+                <a href="./collect.html" class="item">收藏视频</a>
+                <a href="./album-collect.htmll" class="item active">收藏专辑</a>
                 <a href="./like-collect.html" class="item">点赞视频</a>
 
             </div>
@@ -41,48 +41,50 @@
                 <div class="separator-line"></div>
             </div>
 
-            <div class="list-container">
-            <template v-for="(item, index) in watchHistory">
-                <div class="list-video-card-item-package">
-                <div class="media list-video-card">
-                    <a href="detail.html">
-                        <div class="media-left">
-                            <div class="image-view"
-                                 duration="06:00"
-                                 :style="'background-image: url(./../static/image/video-thumbnails/'+index%6+'.jpg);'"
-                            >
+            <div class="list-container album-collect-list">
 
-                                <img src="./../static/image/scale/16-9.png" alt="">
-                                <div class="video-progress" style="width: 33%;"></div>
-                            </div>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading text-bold text-type-description album-title">
-                                我的专辑
-                            </h4>
-                            <div class="watch-count">18,930次观看</div>
-
-                            <div class="button-group">
-                                <div class="iconfont play-album">
-                                    <span class="iconfont">&#xe61a;</span>
-                                    播放全部
-                                </div>
-                                <div class="share">
-                                    <span class="iconfont">&#xe657;</span>
-                                    分享
+                <template v-for="(item, index) in new Array(10)">
+                    <div class="list-video-card-item-package">
+                        <div class="media list-video-card">
+                            <div class="media-left">
+                                <div class="image-view"
+                                     duration="06:00"
+                                     :style="'background-image: url(./../static/image/video-thumbnails/'+index%6+'.jpg);'"
+                                >
+                                    <img src="./../static/image/scale/16-9.png" alt="">
+                                    <div class="video-view-mask">
+                                        <span class="fa fa-list-ul"></span>
+                                        <span class="video-count">6个视频</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
+                            <div class="media-body">
+                                <h4 class="media-heading text-bold text-type-description">
+                                    我的专辑
+                                </h4>
+                                <div class="watch-count">876,932次观看</div>
 
-                    <div class="menu" :target-id="index">
-                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+
+                                <div class="button-group">
+                                    <div class="play-album">
+                                        <a href="./detail-playlist.html">
+                                            <span class="iconfont">&#xe61a;</span>
+                                            播放全部
+                                        </a>
+                                    </div>
+                                    <div class="share">
+                                        <span class="iconfont">&#xe657;</span>
+                                        分享
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="separator-line"></div>
                     </div>
-                </div>
-                
-                <div class="separator-line"></div>
-                </div>
-            </template>
+                </template>
+
 
                 <div class="list-video-card-item-template" style="display: none;">
                     <div class="list-video-card-item-package">

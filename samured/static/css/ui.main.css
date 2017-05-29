@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.unselectable, .side-bar-menu, .video-detail .action-buttons, .sort-container .panel-view.sort-album .list-video-card .watch-all-video, .sort-container .sort-album.video-player .list-video-card .watch-all-video, .sort-container .sort-album.video-play-list .list-video-card .watch-all-video, .sort-container .sort-album.no-network-tip .list-video-card .watch-all-video, .sort-container .sort-album.video-recommend .list-video-card .watch-all-video, .sort-container .plyr--video .sort-album.plyr__controls .list-video-card .watch-all-video, .plyr--video .sort-container .sort-album.plyr__controls .list-video-card .watch-all-video {
+.unselectable, .side-bar-menu, .video-detail .action-buttons, .sort-container .panel-view.sort-album .list-video-card .watch-all-video, .sort-container .sort-album.video-player .list-video-card .watch-all-video, .sort-container .sort-album.video-play-list .list-video-card .watch-all-video, .sort-container .sort-album.no-network-tip .list-video-card .watch-all-video, .sort-container .sort-album.video-recommend .list-video-card .watch-all-video, .sort-container .plyr--video .sort-album.plyr__controls .list-video-card .watch-all-video, .plyr--video .sort-container .sort-album.plyr__controls .list-video-card .watch-all-video, .collect-container .album-collect-list .list-video-card .watch-all-video {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -11,10 +11,10 @@
 body {
   background-color: #2A2B2C; }
 
-.no-break-line, .message-box .content .message-item-cell .content .content-preview, .video-player .play-end-view .item .content .zh_title, .video-player .play-end-view .side-bar-menu .title-item .content .zh_title, .side-bar-menu .video-player .play-end-view .title-item .content .zh_title, .video-player .play-end-view .item .content .en_title, .video-player .play-end-view .side-bar-menu .title-item .content .en_title, .side-bar-menu .video-player .play-end-view .title-item .content .en_title, .video-player .play-end-view .item .content .time, .video-player .play-end-view .side-bar-menu .title-item .content .time, .side-bar-menu .video-player .play-end-view .title-item .content .time, .video-play-list .video-play-list-view .video-play-list-item .info div, .grid-video-card .title, .list-video-card h4, .sort-container .panel-view.sort-video .list-video-card .media-heading, .sort-container .sort-video.video-player .list-video-card .media-heading, .sort-container .sort-video.video-play-list .list-video-card .media-heading, .sort-container .sort-video.no-network-tip .list-video-card .media-heading, .sort-container .sort-video.video-recommend .list-video-card .media-heading, .sort-container .plyr--video .sort-video.plyr__controls .list-video-card .media-heading, .plyr--video .sort-container .sort-video.plyr__controls .list-video-card .media-heading, .sort-container .panel-view.sort-video .list-video-card .zh_name, .sort-container .sort-video.video-player .list-video-card .zh_name, .sort-container .sort-video.video-play-list .list-video-card .zh_name, .sort-container .sort-video.no-network-tip .list-video-card .zh_name, .sort-container .sort-video.video-recommend .list-video-card .zh_name, .sort-container .plyr--video .sort-video.plyr__controls .list-video-card .zh_name, .plyr--video .sort-container .sort-video.plyr__controls .list-video-card .zh_name, .sort-container .panel-view.sort-album .list-video-card .media-heading, .sort-container .sort-album.video-player .list-video-card .media-heading, .sort-container .sort-album.video-play-list .list-video-card .media-heading, .sort-container .sort-album.no-network-tip .list-video-card .media-heading, .sort-container .sort-album.video-recommend .list-video-card .media-heading, .sort-container .plyr--video .sort-album.plyr__controls .list-video-card .media-heading, .plyr--video .sort-container .sort-album.plyr__controls .list-video-card .media-heading, .sort-container .panel-view.sort-album .list-video-card .zh_name, .sort-container .sort-album.video-player .list-video-card .zh_name, .sort-container .sort-album.video-play-list .list-video-card .zh_name, .sort-container .sort-album.no-network-tip .list-video-card .zh_name, .sort-container .sort-album.video-recommend .list-video-card .zh_name, .sort-container .plyr--video .sort-album.plyr__controls .list-video-card .zh_name, .plyr--video .sort-container .sort-album.plyr__controls .list-video-card .zh_name {
+.no-break-line, .message-box .content .message-item-cell .content .content-preview, .video-player .play-end-view .item .content .zh_title, .video-player .play-end-view .side-bar-menu .title-item .content .zh_title, .side-bar-menu .video-player .play-end-view .title-item .content .zh_title, .video-player .play-end-view .item .content .en_title, .video-player .play-end-view .side-bar-menu .title-item .content .en_title, .side-bar-menu .video-player .play-end-view .title-item .content .en_title, .video-player .play-end-view .item .content .time, .video-player .play-end-view .side-bar-menu .title-item .content .time, .side-bar-menu .video-player .play-end-view .title-item .content .time, .video-play-list .video-play-list-view .video-play-list-item .info div, .grid-video-card .title, .list-video-card h4, .sort-container .panel-view.sort-video .list-video-card .media-heading, .sort-container .sort-video.video-player .list-video-card .media-heading, .sort-container .sort-video.video-play-list .list-video-card .media-heading, .sort-container .sort-video.no-network-tip .list-video-card .media-heading, .sort-container .sort-video.video-recommend .list-video-card .media-heading, .sort-container .plyr--video .sort-video.plyr__controls .list-video-card .media-heading, .plyr--video .sort-container .sort-video.plyr__controls .list-video-card .media-heading, .sort-container .panel-view.sort-video .list-video-card .zh_name, .sort-container .sort-video.video-player .list-video-card .zh_name, .sort-container .sort-video.video-play-list .list-video-card .zh_name, .sort-container .sort-video.no-network-tip .list-video-card .zh_name, .sort-container .sort-video.video-recommend .list-video-card .zh_name, .sort-container .plyr--video .sort-video.plyr__controls .list-video-card .zh_name, .plyr--video .sort-container .sort-video.plyr__controls .list-video-card .zh_name, .sort-container .panel-view.sort-album .list-video-card .media-heading, .sort-container .sort-album.video-player .list-video-card .media-heading, .sort-container .sort-album.video-play-list .list-video-card .media-heading, .sort-container .sort-album.no-network-tip .list-video-card .media-heading, .sort-container .sort-album.video-recommend .list-video-card .media-heading, .sort-container .plyr--video .sort-album.plyr__controls .list-video-card .media-heading, .plyr--video .sort-container .sort-album.plyr__controls .list-video-card .media-heading, .sort-container .panel-view.sort-album .list-video-card .zh_name, .sort-container .sort-album.video-player .list-video-card .zh_name, .sort-container .sort-album.video-play-list .list-video-card .zh_name, .sort-container .sort-album.no-network-tip .list-video-card .zh_name, .sort-container .sort-album.video-recommend .list-video-card .zh_name, .sort-container .plyr--video .sort-album.plyr__controls .list-video-card .zh_name, .plyr--video .sort-container .sort-album.plyr__controls .list-video-card .zh_name, .collect-container .album-collect-list .list-video-card .media-heading, .collect-container .album-collect-list .list-video-card .zh_name {
   white-space: nowrap; }
 
-.text-over-flow-ellipsis, .message-box .content .message-item-cell .content .content-preview, .video-player .play-end-view .item .content .zh_title, .video-player .play-end-view .side-bar-menu .title-item .content .zh_title, .side-bar-menu .video-player .play-end-view .title-item .content .zh_title, .video-player .play-end-view .item .content .en_title, .video-player .play-end-view .side-bar-menu .title-item .content .en_title, .side-bar-menu .video-player .play-end-view .title-item .content .en_title, .video-player .play-end-view .item .content .time, .video-player .play-end-view .side-bar-menu .title-item .content .time, .side-bar-menu .video-player .play-end-view .title-item .content .time, .video-play-list .video-play-list-view .video-play-list-item .info div, .grid-video-card .title, .list-video-card h4, .sort-container .panel-view.sort-video .list-video-card .media-heading, .sort-container .sort-video.video-player .list-video-card .media-heading, .sort-container .sort-video.video-play-list .list-video-card .media-heading, .sort-container .sort-video.no-network-tip .list-video-card .media-heading, .sort-container .sort-video.video-recommend .list-video-card .media-heading, .sort-container .plyr--video .sort-video.plyr__controls .list-video-card .media-heading, .plyr--video .sort-container .sort-video.plyr__controls .list-video-card .media-heading, .sort-container .panel-view.sort-video .list-video-card .zh_name, .sort-container .sort-video.video-player .list-video-card .zh_name, .sort-container .sort-video.video-play-list .list-video-card .zh_name, .sort-container .sort-video.no-network-tip .list-video-card .zh_name, .sort-container .sort-video.video-recommend .list-video-card .zh_name, .sort-container .plyr--video .sort-video.plyr__controls .list-video-card .zh_name, .plyr--video .sort-container .sort-video.plyr__controls .list-video-card .zh_name, .sort-container .panel-view.sort-album .list-video-card .media-heading, .sort-container .sort-album.video-player .list-video-card .media-heading, .sort-container .sort-album.video-play-list .list-video-card .media-heading, .sort-container .sort-album.no-network-tip .list-video-card .media-heading, .sort-container .sort-album.video-recommend .list-video-card .media-heading, .sort-container .plyr--video .sort-album.plyr__controls .list-video-card .media-heading, .plyr--video .sort-container .sort-album.plyr__controls .list-video-card .media-heading, .sort-container .panel-view.sort-album .list-video-card .zh_name, .sort-container .sort-album.video-player .list-video-card .zh_name, .sort-container .sort-album.video-play-list .list-video-card .zh_name, .sort-container .sort-album.no-network-tip .list-video-card .zh_name, .sort-container .sort-album.video-recommend .list-video-card .zh_name, .sort-container .plyr--video .sort-album.plyr__controls .list-video-card .zh_name, .plyr--video .sort-container .sort-album.plyr__controls .list-video-card .zh_name {
+.text-over-flow-ellipsis, .message-box .content .message-item-cell .content .content-preview, .video-player .play-end-view .item .content .zh_title, .video-player .play-end-view .side-bar-menu .title-item .content .zh_title, .side-bar-menu .video-player .play-end-view .title-item .content .zh_title, .video-player .play-end-view .item .content .en_title, .video-player .play-end-view .side-bar-menu .title-item .content .en_title, .side-bar-menu .video-player .play-end-view .title-item .content .en_title, .video-player .play-end-view .item .content .time, .video-player .play-end-view .side-bar-menu .title-item .content .time, .side-bar-menu .video-player .play-end-view .title-item .content .time, .video-play-list .video-play-list-view .video-play-list-item .info div, .grid-video-card .title, .list-video-card h4, .sort-container .panel-view.sort-video .list-video-card .media-heading, .sort-container .sort-video.video-player .list-video-card .media-heading, .sort-container .sort-video.video-play-list .list-video-card .media-heading, .sort-container .sort-video.no-network-tip .list-video-card .media-heading, .sort-container .sort-video.video-recommend .list-video-card .media-heading, .sort-container .plyr--video .sort-video.plyr__controls .list-video-card .media-heading, .plyr--video .sort-container .sort-video.plyr__controls .list-video-card .media-heading, .sort-container .panel-view.sort-video .list-video-card .zh_name, .sort-container .sort-video.video-player .list-video-card .zh_name, .sort-container .sort-video.video-play-list .list-video-card .zh_name, .sort-container .sort-video.no-network-tip .list-video-card .zh_name, .sort-container .sort-video.video-recommend .list-video-card .zh_name, .sort-container .plyr--video .sort-video.plyr__controls .list-video-card .zh_name, .plyr--video .sort-container .sort-video.plyr__controls .list-video-card .zh_name, .sort-container .panel-view.sort-album .list-video-card .media-heading, .sort-container .sort-album.video-player .list-video-card .media-heading, .sort-container .sort-album.video-play-list .list-video-card .media-heading, .sort-container .sort-album.no-network-tip .list-video-card .media-heading, .sort-container .sort-album.video-recommend .list-video-card .media-heading, .sort-container .plyr--video .sort-album.plyr__controls .list-video-card .media-heading, .plyr--video .sort-container .sort-album.plyr__controls .list-video-card .media-heading, .sort-container .panel-view.sort-album .list-video-card .zh_name, .sort-container .sort-album.video-player .list-video-card .zh_name, .sort-container .sort-album.video-play-list .list-video-card .zh_name, .sort-container .sort-album.no-network-tip .list-video-card .zh_name, .sort-container .sort-album.video-recommend .list-video-card .zh_name, .sort-container .plyr--video .sort-album.plyr__controls .list-video-card .zh_name, .plyr--video .sort-container .sort-album.plyr__controls .list-video-card .zh_name, .collect-container .album-collect-list .list-video-card .media-heading, .collect-container .album-collect-list .list-video-card .zh_name {
   text-overflow: ellipsis;
   overflow: hidden; }
 
@@ -2919,16 +2919,25 @@ input::-webkit-inner-spin-button {
     .collect-container .load-more a:hover, .collect-container .load-more a:focus {
       text-decoration: none;
       color: #636363; }
+  .collect-container .list-video-card .media-heading {
+    font-size: 14px;
+    line-height: 22px; }
   .collect-container .list-video-card .watch-count {
-    color: #636363; }
+    color: #636363;
+    margin-top: 8px; }
   .collect-container .list-video-card .album-title {
     font-size: 14px; }
   .collect-container .list-video-card .button-group {
     color: #C1C1C1;
     font-size: 14px;
-    margin-top: 25px; }
+    margin-top: 34px; }
+    .collect-container .list-video-card .button-group a, .collect-container .list-video-card .button-group a:hover {
+      color: #C1C1C1; }
+    .collect-container .list-video-card .button-group .iconfont {
+      font-size: 14px !important; }
     .collect-container .list-video-card .button-group .play-album {
-      display: inline-block; }
+      display: inline-block;
+      margin-right: 30px; }
     .collect-container .list-video-card .button-group .share {
       display: inline-block; }
   .collect-container .list-video-card:hover .media-heading, .collect-container .list-video-card:hover .zh_name {
@@ -2942,5 +2951,160 @@ input::-webkit-inner-spin-button {
     text-align: center; }
     .collect-container .search-result-tip .search-key {
       color: #c1c1c1; }
+  .collect-container .album-collect-list .list-video-card {
+    margin-left: 0;
+    height: auto;
+    margin-bottom: -5px; }
+    .collect-container .album-collect-list .list-video-card .media-body {
+      width: 100%; }
+    .collect-container .album-collect-list .list-video-card .image-view {
+      width: 180px; }
+      .collect-container .album-collect-list .list-video-card .image-view .video-view-mask {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 30px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #c1c1c1;
+        text-align: right;
+        line-height: 30px;
+        padding-right: 10px; }
+    .collect-container .album-collect-list .list-video-card .image-view:before {
+      display: none; }
+    .collect-container .album-collect-list .list-video-card .media-heading {
+      color: #c1c1c1;
+      width: auto; }
+    .collect-container .album-collect-list .list-video-card .zh_name {
+      color: #c1c1c1;
+      font-size: 12px;
+      width: auto; }
+    .collect-container .album-collect-list .list-video-card .watch-all-video {
+      color: #636363;
+      margin-top: 18px;
+      font-size: 12px;
+      cursor: pointer; }
+    .collect-container .album-collect-list .list-video-card .watch-all-video:hover {
+      color: #c1c1c1; }
+    .collect-container .album-collect-list .list-video-card .play-list {
+      margin-right: 158px; }
+      .collect-container .album-collect-list .list-video-card .play-list .item, .collect-container .album-collect-list .list-video-card .play-list .side-bar-menu .title-item, .side-bar-menu .collect-container .album-collect-list .list-video-card .play-list .title-item {
+        clear: both;
+        height: 14px;
+        line-height: 18px;
+        font-size: 12px;
+        color: #acecef;
+        font-weight: lighter; }
+      .collect-container .album-collect-list .list-video-card .play-list .item:hover, .collect-container .album-collect-list .list-video-card .play-list .side-bar-menu .title-item:hover, .side-bar-menu .collect-container .album-collect-list .list-video-card .play-list .title-item:hover {
+        color: #78d2dc; }
+  .collect-container .album-collect-list .album-video-list {
+    clear: both;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 2px; }
+    .collect-container .album-collect-list .album-video-list .separator-line {
+      margin: 0; }
+    .collect-container .album-collect-list .album-video-list .item, .collect-container .album-collect-list .album-video-list .side-bar-menu .title-item, .side-bar-menu .collect-container .album-collect-list .album-video-list .title-item {
+      height: 70px;
+      padding: 5px 0; }
+      .collect-container .album-collect-list .album-video-list .item .index, .collect-container .album-collect-list .album-video-list .side-bar-menu .title-item .index, .side-bar-menu .collect-container .album-collect-list .album-video-list .title-item .index {
+        display: inline-block;
+        width: 50px;
+        line-height: 56px;
+        text-align: center;
+        color: #c1c1c1; }
+      .collect-container .album-collect-list .album-video-list .item .preview, .collect-container .album-collect-list .album-video-list .side-bar-menu .title-item .preview, .side-bar-menu .collect-container .album-collect-list .album-video-list .title-item .preview {
+        display: inline-block;
+        width: 90px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; }
+        .collect-container .album-collect-list .album-video-list .item .preview img, .collect-container .album-collect-list .album-video-list .side-bar-menu .title-item .preview img, .side-bar-menu .collect-container .album-collect-list .album-video-list .title-item .preview img {
+          width: 100%;
+          height: auto; }
+      .collect-container .album-collect-list .album-video-list .item .info, .collect-container .album-collect-list .album-video-list .side-bar-menu .title-item .info, .side-bar-menu .collect-container .album-collect-list .album-video-list .title-item .info {
+        display: inline-block;
+        margin-left: 12px; }
+        .collect-container .album-collect-list .album-video-list .item .info .title, .collect-container .album-collect-list .album-video-list .side-bar-menu .title-item .info .title, .side-bar-menu .collect-container .album-collect-list .album-video-list .title-item .info .title {
+          font-size: 12px;
+          line-height: 16px;
+          margin: 0;
+          color: #78d2dc;
+          font-weight: lighter; }
+        .collect-container .album-collect-list .album-video-list .item .info .time, .collect-container .album-collect-list .album-video-list .side-bar-menu .title-item .info .time, .side-bar-menu .collect-container .album-collect-list .album-video-list .title-item .info .time {
+          font-size: 12px;
+          line-height: 16px;
+          color: #bababa;
+          font-weight: lighter; }
+      .collect-container .album-collect-list .album-video-list .item .right-button-group, .collect-container .album-collect-list .album-video-list .side-bar-menu .title-item .right-button-group, .side-bar-menu .collect-container .album-collect-list .album-video-list .title-item .right-button-group {
+        position: relative;
+        display: inline-block;
+        float: right;
+        width: 100px;
+        color: #bababa;
+        font-weight: lighter; }
+        .collect-container .album-collect-list .album-video-list .item .right-button-group .menu, .collect-container .album-collect-list .album-video-list .side-bar-menu .title-item .right-button-group .menu, .side-bar-menu .collect-container .album-collect-list .album-video-list .title-item .right-button-group .menu {
+          display: inline-block;
+          margin-right: 36px;
+          cursor: pointer; }
+        .collect-container .album-collect-list .album-video-list .item .right-button-group .remove, .collect-container .album-collect-list .album-video-list .side-bar-menu .title-item .right-button-group .remove, .side-bar-menu .collect-container .album-collect-list .album-video-list .title-item .right-button-group .remove {
+          display: inline-block;
+          cursor: pointer; }
+        .collect-container .album-collect-list .album-video-list .item .right-button-group .menu-content, .collect-container .album-collect-list .album-video-list .side-bar-menu .title-item .right-button-group .menu-content, .side-bar-menu .collect-container .album-collect-list .album-video-list .title-item .right-button-group .menu-content {
+          position: absolute;
+          right: 86px;
+          top: 20px;
+          width: 166px;
+          background-color: #2b2b2b;
+          z-index: 10; }
+          .collect-container .album-collect-list .album-video-list .item .right-button-group .menu-content .title, .collect-container .album-collect-list .album-video-list .side-bar-menu .title-item .right-button-group .menu-content .title, .side-bar-menu .collect-container .album-collect-list .album-video-list .title-item .right-button-group .menu-content .title {
+            position: relative;
+            border-bottom: 1px solid #383838; }
+            .collect-container .album-collect-list .album-video-list .item .right-button-group .menu-content .title .icon, .collect-container .album-collect-list .album-video-list .side-bar-menu .title-item .right-button-group .menu-content .title .icon, .side-bar-menu .collect-container .album-collect-list .album-video-list .title-item .right-button-group .menu-content .title .icon {
+              position: absolute;
+              top: 0;
+              left: 10px;
+              line-height: 28px; }
+          .collect-container .album-collect-list .album-video-list .item .right-button-group .menu-content .item, .collect-container .album-collect-list .album-video-list .side-bar-menu .title-item .right-button-group .menu-content .item, .side-bar-menu .collect-container .album-collect-list .album-video-list .title-item .right-button-group .menu-content .item, .collect-container .album-collect-list .album-video-list .item .right-button-group .menu-content .side-bar-menu .title-item, .side-bar-menu .collect-container .album-collect-list .album-video-list .item .right-button-group .menu-content .title-item, .collect-container .album-collect-list .album-video-list .side-bar-menu .title-item .right-button-group .menu-content .title-item, .side-bar-menu .collect-container .album-collect-list .album-video-list .title-item .right-button-group .menu-content .title-item {
+            position: relative;
+            color: #828282;
+            width: 100%;
+            clear: both;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            padding: 0;
+            cursor: pointer; }
+            .collect-container .album-collect-list .album-video-list .item .right-button-group .menu-content .item input, .collect-container .album-collect-list .album-video-list .side-bar-menu .title-item .right-button-group .menu-content .item input, .side-bar-menu .collect-container .album-collect-list .album-video-list .title-item .right-button-group .menu-content .item input, .collect-container .album-collect-list .album-video-list .item .right-button-group .menu-content .side-bar-menu .title-item input, .side-bar-menu .collect-container .album-collect-list .album-video-list .item .right-button-group .menu-content .title-item input, .collect-container .album-collect-list .album-video-list .side-bar-menu .title-item .right-button-group .menu-content .title-item input, .side-bar-menu .collect-container .album-collect-list .album-video-list .title-item .right-button-group .menu-content .title-item input {
+              background-color: transparent;
+              border: 1px solid #7b7b7b;
+              height: 28px;
+              width: 100%;
+              padding: 0 6px;
+              text-align: center; }
+            .collect-container .album-collect-list .album-video-list .item .right-button-group .menu-content .item input:focus, .collect-container .album-collect-list .album-video-list .side-bar-menu .title-item .right-button-group .menu-content .item input:focus, .side-bar-menu .collect-container .album-collect-list .album-video-list .title-item .right-button-group .menu-content .item input:focus, .collect-container .album-collect-list .album-video-list .item .right-button-group .menu-content .side-bar-menu .title-item input:focus, .side-bar-menu .collect-container .album-collect-list .album-video-list .item .right-button-group .menu-content .title-item input:focus, .collect-container .album-collect-list .album-video-list .side-bar-menu .title-item .right-button-group .menu-content .title-item input:focus, .side-bar-menu .collect-container .album-collect-list .album-video-list .title-item .right-button-group .menu-content .title-item input:focus {
+              box-shadow: none;
+              outline: none; }
+          .collect-container .album-collect-list .album-video-list .item .right-button-group .menu-content .item:hover, .collect-container .album-collect-list .album-video-list .side-bar-menu .title-item .right-button-group .menu-content .item:hover, .side-bar-menu .collect-container .album-collect-list .album-video-list .title-item .right-button-group .menu-content .item:hover, .collect-container .album-collect-list .album-video-list .item .right-button-group .menu-content .side-bar-menu .title-item:hover, .side-bar-menu .collect-container .album-collect-list .album-video-list .item .right-button-group .menu-content .title-item:hover, .collect-container .album-collect-list .album-video-list .side-bar-menu .title-item .right-button-group .menu-content .title-item:hover, .side-bar-menu .collect-container .album-collect-list .album-video-list .title-item .right-button-group .menu-content .title-item:hover {
+            color: #c1c1c1; }
+          .collect-container .album-collect-list .album-video-list .item .right-button-group .menu-content .item.button, .collect-container .album-collect-list .album-video-list .side-bar-menu .title-item .right-button-group .menu-content .item.button, .side-bar-menu .collect-container .album-collect-list .album-video-list .title-item .right-button-group .menu-content .item.button, .collect-container .album-collect-list .album-video-list .item .right-button-group .menu-content .side-bar-menu .button.title-item, .side-bar-menu .collect-container .album-collect-list .album-video-list .item .right-button-group .menu-content .button.title-item, .collect-container .album-collect-list .album-video-list .side-bar-menu .title-item .right-button-group .menu-content .button.title-item, .side-bar-menu .collect-container .album-collect-list .album-video-list .title-item .right-button-group .menu-content .button.title-item {
+            text-align: right;
+            color: #e34849;
+            padding-right: 6px;
+            height: 30px;
+            line-height: 30px; }
+          .collect-container .album-collect-list .album-video-list .item .right-button-group .menu-content .item.active:before, .collect-container .album-collect-list .album-video-list .side-bar-menu .title-item .right-button-group .menu-content .item.active:before, .side-bar-menu .collect-container .album-collect-list .album-video-list .title-item .right-button-group .menu-content .item.active:before, .collect-container .album-collect-list .album-video-list .item .right-button-group .menu-content .side-bar-menu .active.title-item:before, .side-bar-menu .collect-container .album-collect-list .album-video-list .item .right-button-group .menu-content .active.title-item:before, .collect-container .album-collect-list .album-video-list .side-bar-menu .title-item .right-button-group .menu-content .active.title-item:before, .side-bar-menu .collect-container .album-collect-list .album-video-list .title-item .right-button-group .menu-content .active.title-item:before {
+            position: absolute;
+            left: 10px;
+            content: "\f00c";
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 28px; }
+    .collect-container .album-collect-list .album-video-list .item:hover .info .title, .collect-container .album-collect-list .album-video-list .side-bar-menu .title-item:hover .info .title, .side-bar-menu .collect-container .album-collect-list .album-video-list .title-item:hover .info .title {
+      color: #acecef; }
 
 /*# sourceMappingURL=ui.main.css.map */

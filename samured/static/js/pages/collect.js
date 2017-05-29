@@ -65,6 +65,7 @@ requirejs(['public'], function(_public) {
             if ($this.find('.menu-content').length > 0) {
                 $this.find('.menu-content').remove();
             } else {
+                $('.menu-content').remove();
                 $('.list-video-card .menu-content').remove();
                 
                 var menuContentHTML = '\
@@ -113,7 +114,7 @@ requirejs(['public'], function(_public) {
         });
         
         // 用户点击 menu 中的删除按钮
-        $(document).on('click', '.menu-remove', function () {
+        $(document).on('click', '.list-video-card .menu-remove', function () {
             var $this = $(this);
             // todo: 调用接口删除此条目
             $this.parents('.list-video-card-item-package').remove();
@@ -229,6 +230,125 @@ requirejs(['public'], function(_public) {
             // 添加新专辑项目
             $(this).parents('.menu-content').find('.menu-new-album-input').before('<div class="item">'+content+'</div>');
             $('.new-album').val('');
+        });
+        
+        // 用户点击收藏专辑 item 切换专辑视频列表显示
+        $(document).on('click', '.album-collect-list .list-video-card', function () {
+            var $this = $(this);
+            var container = $this.parents('.list-video-card-item-package');
+            if (container.find('.album-video-list').length > 0) {
+                container.find('.album-video-list').remove();
+                return;
+            }
+        
+            // todo: 获取视频播放列表数据
+            var playlistLength = 5;
+        
+            var listHTML = '';
+            for (var i=0; i<playlistLength; i++) {
+                listHTML += '\
+                \
+                    <div class="separator-line"></div>\
+                    <div class="item">\
+                        <div class="index">'+(i+1)+'</div>\
+                        <div class="preview" style="background-image: url(./../static/image/video-thumbnails/0.jpg);">\
+                            <img src="./../static/image/scale/16-9.png" alt="">\
+                        </div>\
+                        <div class="info">\
+                            <div class="title">All Cutscenes (Game Movie)</div>\
+                            <div class="time">2016年6月</div>\
+                        </div>\
+                        <div class="right-button-group">\
+                            <div class="menu" target-id="'+(i+1)+'">\
+                                <i class="fa fa-list-ul" aria-hidden="true"></i>\
+                            </div>\
+                            <div class="remove" target-id="'+(i+1)+'">\
+                                <i class="iconfont">&#xe605;</i>\
+                            </div>\
+                        </div>\
+                    </div>\
+                \
+                ';
+            }
+        
+            listHTML = '<div class="album-video-list">' + listHTML + '</div>';
+        
+            container.find('.separator-line').before(listHTML);
+        });
+        
+        // 用户点击收藏专辑 播放列表 子条目的删除按钮
+        $(document).on('click', '.album-collect-list .right-button-group .remove', function () {
+            // todo: 调用接口删除此条目
+            // 获取新的列表数据，直接重新渲染此列表
+            var $this = $(this);
+            var container = $this.parents('.list-video-card-item-package');
+            container.find('.album-video-list').remove();
+    
+            var playlistLength = 5;
+    
+            var listHTML = '';
+            for (var i=0; i<playlistLength; i++) {
+                listHTML += '\
+                \
+                    <div class="separator-line"></div>\
+                    <div class="item">\
+                        <div class="index">'+(i+1)+'</div>\
+                        <div class="preview" style="background-image: url(./../static/image/video-thumbnails/0.jpg);">\
+                            <img src="./../static/image/scale/16-9.png" alt="">\
+                        </div>\
+                        <div class="info">\
+                            <div class="title">All Cutscenes (Game Movie)</div>\
+                            <div class="time">2016年6月</div>\
+                        </div>\
+                        <div class="right-button-group">\
+                            <div class="menu" target-id="'+(i+1)+'">\
+                                <i class="fa fa-list-ul" aria-hidden="true"></i>\
+                            </div>\
+                            <div class="remove" target-id="'+(i+1)+'">\
+                                <i class="iconfont">&#xe605;</i>\
+                            </div>\
+                        </div>\
+                    </div>\
+                \
+                ';
+            }
+    
+            listHTML = '<div class="album-video-list">' + listHTML + '</div>';
+    
+            container.find('.separator-line').before(listHTML);
+        });
+        
+        // 用户点击收藏专辑页面 播放列表 子条目的菜单按钮
+        $(document).on('click', '.album-collect-list .right-button-group .menu', function () {
+            var $this = $(this).parents('.right-button-group');
+            var targetId = $this.attr('target-id');
+        
+            if ($this.find('.menu-content').length > 0) {
+                $this.find('.menu-content').remove();
+            } else {
+                $('.menu-content').remove();
+                $('.list-video-card .menu-content').remove();
+            
+                var menuContentHTML = '\
+                <div class="menu-content">\
+                    <div class="item title menu-add-to-album">\
+                    <i class="icon fa fa-list-ul" aria-hidden="true"></i>\
+                    添加到\
+                    </div>\
+                    <div class="item menu-remove">删除</div>\
+                    \
+                </div>';
+                $this.append(menuContentHTML);
+                
+                $this.find('.menu-add-to-album').click();
+            }
+        });
+    
+        // 用户点击 menu 中的删除按钮
+        $(document).on('click', '.album-collect-list .menu-remove', function () {
+            var $this = $(this);
+            // todo: 调用接口删除此条目
+            $this.parents('.item').remove();
         });
         
     };
