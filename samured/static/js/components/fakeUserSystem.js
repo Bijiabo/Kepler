@@ -32,6 +32,9 @@ define([], function () {
         checkMailFormat: function (mail) {
             var formatRegex = /\w[-\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\.)+[A-Za-z]{2,14}/ig;
             return formatRegex.test(mail);
+        },
+        checkPassWord: function (password) {
+            return true;
         }
     };
     

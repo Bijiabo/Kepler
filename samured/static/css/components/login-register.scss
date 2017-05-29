@@ -195,4 +195,14 @@ $inputPlaceHolderTextColor: #636363;
 
   }
 
+  // 重设密码
+  .is-original-password-tip {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 200px;
+    line-height: 44px;
+    padding-left: 16px;
+    color: #c1c1c1;
+  }
 }
