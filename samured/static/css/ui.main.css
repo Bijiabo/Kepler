@@ -2818,11 +2818,12 @@ input::-webkit-inner-spin-button {
     position: relative;
     margin-left: 10px;
     padding: 0;
-    height: 84px; }
+    margin-bottom: -4px; }
     .collect-container .list-video-card h4 {
-      width: 700px; }
+      width: 700px;
+      color: #c1c1c1; }
     .collect-container .list-video-card .image-view {
-      width: 150px; }
+      width: 180px; }
     .collect-container .list-video-card .menu {
       position: absolute;
       right: 0;
@@ -2951,6 +2952,13 @@ input::-webkit-inner-spin-button {
     text-align: center; }
     .collect-container .search-result-tip .search-key {
       color: #c1c1c1; }
+  .collect-container .collect-count-tip {
+    color: #828282;
+    width: 100%;
+    clear: both;
+    text-align: left; }
+    .collect-container .collect-count-tip span {
+      padding-left: 20px; }
   .collect-container .album-collect-list .list-video-card {
     margin-left: 0;
     height: auto;

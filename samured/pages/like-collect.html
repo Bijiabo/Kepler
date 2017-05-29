@@ -30,14 +30,14 @@
 
         <div class="collect-container">
             <div class="history-type-switch-container">
-                <a href="./collect.html" class="item">收藏视频</a>
+                <a href="#" class="item">收藏视频</a>
                 <a href="./album-collect.html" class="item">收藏专辑</a>
-                <a href="#" class="item active">点赞视频</a>
+                <a href="./like-collect.html" class="item active">点赞视频</a>
 
             </div>
 
-            <div class="search-result-tip" v-if="searchString">
-                {{searchResultCount}}条与 "<span class="search-key">{{searchString}}</span>" 相关的结果
+            <div class="collect-count-tip">
+                <span>共16个视频</span>
                 <div class="separator-line"></div>
             </div>
 
@@ -67,34 +67,14 @@
                             <div class="watch-count">18,930次观看</div>
                         </div>
                     </a>
+
+                    <div class="menu" :target-id="index">
+                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                    </div>
                 </div>
                 
                 <div class="separator-line"></div>
                 </div>
-
-                <template v-if="index === 0">
-                    <div class="album-list-container">
-                        <div class="album-list-item">
-                            <div class="index">1</div>
-                            <div class="thumbnails" style="background-image: url(./../static/image/video-thumbnails/0.jpg);">
-                                <img src="./../static/image/scale/16-9.png" alt="">
-                            </div>
-                            <div class="info">
-                                <div class="title">Title of the video</div>
-                                <div class="time">2017年5月</div>
-                            </div>
-                            <div class="button-group">
-                                <div class="add-button">
-                                    <span class="iconfont">XXX</span>
-                                </div>
-                                <div class="delete-button">
-                                    <span class="iconfont">&#xe605;</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </template>
-
             </template>
 
                 <div class="list-video-card-item-template" style="display: none;">
