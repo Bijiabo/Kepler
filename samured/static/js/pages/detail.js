@@ -197,7 +197,9 @@ requirejs(['public'], function(_public) {
         addPlayEndRecommedVideoData();
         
         // 初始化分享按钮
-        $('.social-share').share();
+        $('.social-share').share({
+            sites: ['qzone', 'qq', 'weibo','wechat', 'douban']
+        });
     };
     
     window.didLoadActions.push(targetActions);

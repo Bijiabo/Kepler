@@ -921,6 +921,14 @@ input::-webkit-inner-spin-button {
     clear: both;
     padding: 6px 0;
     display: none; }
+    .video-detail .social-share .social-share-icon:before {
+      color: #373839; }
+    .video-detail .social-share .social-share-icon {
+      border-color: #828282;
+      background: #828282; }
+    .video-detail .social-share .social-share-icon:hover {
+      border-color: #c1c1c1;
+      background: #c1c1c1; }
     .video-detail .social-share .icon-wechat .wechat-qrcode {
       z-index: 990;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.65); }

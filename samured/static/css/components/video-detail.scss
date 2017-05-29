@@ -75,7 +75,16 @@
     padding: 6px 0;
     display: none;
 
+    .social-share-icon:before {
+      color: #373839;
+    }
     .social-share-icon {
+      border-color: #828282;
+      background: #828282;
+    }
+    .social-share-icon:hover {
+      border-color: #c1c1c1;
+      background: #c1c1c1;
     }
 
     .icon-wechat {
