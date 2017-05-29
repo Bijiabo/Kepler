@@ -2766,8 +2766,28 @@ input::-webkit-inner-spin-button {
         text-align: right;
         line-height: 30px;
         padding-right: 10px; }
+      .sort-container .panel-view.sort-album .grid-video-card-container .grid-video-card .image-view .video-view-mask-play-list, .sort-container .sort-album.video-player .grid-video-card-container .grid-video-card .image-view .video-view-mask-play-list, .sort-container .sort-album.video-play-list .grid-video-card-container .grid-video-card .image-view .video-view-mask-play-list, .sort-container .sort-album.no-network-tip .grid-video-card-container .grid-video-card .image-view .video-view-mask-play-list, .sort-container .sort-album.video-recommend .grid-video-card-container .grid-video-card .image-view .video-view-mask-play-list, .sort-container .plyr--video .sort-album.plyr__controls .grid-video-card-container .grid-video-card .image-view .video-view-mask-play-list, .plyr--video .sort-container .sort-album.plyr__controls .grid-video-card-container .grid-video-card .image-view .video-view-mask-play-list {
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #c1c1c1;
+        text-align: center;
+        line-height: 18px;
+        display: none; }
+        .sort-container .panel-view.sort-album .grid-video-card-container .grid-video-card .image-view .video-view-mask-play-list .iconfont, .sort-container .sort-album.video-player .grid-video-card-container .grid-video-card .image-view .video-view-mask-play-list .iconfont, .sort-container .sort-album.video-play-list .grid-video-card-container .grid-video-card .image-view .video-view-mask-play-list .iconfont, .sort-container .sort-album.no-network-tip .grid-video-card-container .grid-video-card .image-view .video-view-mask-play-list .iconfont, .sort-container .sort-album.video-recommend .grid-video-card-container .grid-video-card .image-view .video-view-mask-play-list .iconfont, .sort-container .plyr--video .sort-album.plyr__controls .grid-video-card-container .grid-video-card .image-view .video-view-mask-play-list .iconfont, .plyr--video .sort-container .sort-album.plyr__controls .grid-video-card-container .grid-video-card .image-view .video-view-mask-play-list .iconfont {
+          font-size: 16px;
+          margin-left: 4px; }
       .sort-container .panel-view.sort-album .grid-video-card-container .grid-video-card .image-view:before, .sort-container .sort-album.video-player .grid-video-card-container .grid-video-card .image-view:before, .sort-container .sort-album.video-play-list .grid-video-card-container .grid-video-card .image-view:before, .sort-container .sort-album.no-network-tip .grid-video-card-container .grid-video-card .image-view:before, .sort-container .sort-album.video-recommend .grid-video-card-container .grid-video-card .image-view:before, .sort-container .plyr--video .sort-album.plyr__controls .grid-video-card-container .grid-video-card .image-view:before, .plyr--video .sort-container .sort-album.plyr__controls .grid-video-card-container .grid-video-card .image-view:before {
         display: none; }
+      .sort-container .panel-view.sort-album .grid-video-card-container .grid-video-card:hover .image-view .video-view-mask, .sort-container .sort-album.video-player .grid-video-card-container .grid-video-card:hover .image-view .video-view-mask, .sort-container .sort-album.video-play-list .grid-video-card-container .grid-video-card:hover .image-view .video-view-mask, .sort-container .sort-album.no-network-tip .grid-video-card-container .grid-video-card:hover .image-view .video-view-mask, .sort-container .sort-album.video-recommend .grid-video-card-container .grid-video-card:hover .image-view .video-view-mask, .sort-container .plyr--video .sort-album.plyr__controls .grid-video-card-container .grid-video-card:hover .image-view .video-view-mask, .plyr--video .sort-container .sort-album.plyr__controls .grid-video-card-container .grid-video-card:hover .image-view .video-view-mask {
+        display: none; }
+      .sort-container .panel-view.sort-album .grid-video-card-container .grid-video-card:hover .image-view .video-view-mask-play-list, .sort-container .sort-album.video-player .grid-video-card-container .grid-video-card:hover .image-view .video-view-mask-play-list, .sort-container .sort-album.video-play-list .grid-video-card-container .grid-video-card:hover .image-view .video-view-mask-play-list, .sort-container .sort-album.no-network-tip .grid-video-card-container .grid-video-card:hover .image-view .video-view-mask-play-list, .sort-container .sort-album.video-recommend .grid-video-card-container .grid-video-card:hover .image-view .video-view-mask-play-list, .sort-container .plyr--video .sort-album.plyr__controls .grid-video-card-container .grid-video-card:hover .image-view .video-view-mask-play-list, .plyr--video .sort-container .sort-album.plyr__controls .grid-video-card-container .grid-video-card:hover .image-view .video-view-mask-play-list {
+        display: flex; }
 
 .collect-container {
   margin: -10px; }

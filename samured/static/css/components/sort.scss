@@ -551,9 +551,38 @@
             line-height: 30px;
             padding-right: 10px;
           }
+          .video-view-mask-play-list {
+            //display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+            color: #c1c1c1;
+            text-align: center;
+            line-height: 18px;
+            display: none;
+            .iconfont {
+              font-size: 16px;
+              margin-left: 4px;
+            }
+          }
         }
         .image-view:before {
           display: none;
+        }
+      }
+      .grid-video-card:hover {
+        .image-view {
+          .video-view-mask {
+            display: none;
+          }
+          .video-view-mask-play-list {
+            display: flex;
+          }
         }
       }
     }
