@@ -969,8 +969,8 @@ input::-webkit-inner-spin-button {
     font-size: 12px; }
   .plyr--video .plyr__controls button.toggle-ratio-mode .ratio-list {
     position: absolute;
-    bottom: 28px;
-    padding-bottom: 10px;
+    bottom: 22px;
+    padding-bottom: 16px;
     left: 50%;
     width: 112px;
     margin-left: -56px;
@@ -986,9 +986,6 @@ input::-webkit-inner-spin-button {
       .plyr--video .plyr__controls button.toggle-ratio-mode .ratio-list .ratio-list-container .ratio-list-item:hover {
         color: #eeeeee;
         background-color: #383838; }
-
-.plyr--video .plyr__controls button.toggle-ratio-mode:hover .ratio-list {
-  display: block; }
 
 .plyr--video .plyr__controls .volume-group .plyr__volume {
   display: none; }

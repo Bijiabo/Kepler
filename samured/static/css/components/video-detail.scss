@@ -170,8 +170,8 @@
 
   .ratio-list {
     position: absolute;
-    bottom: 28px;
-    padding-bottom: 10px;
+    bottom: 22px;
+    padding-bottom: 16px;
     left: 50%;
     width: 112px;
     margin-left: -56px;
@@ -194,11 +194,11 @@
 
   }
 }
-.plyr--video .plyr__controls button.toggle-ratio-mode:hover {
-  .ratio-list {
-    display: block;
-  }
-}
+//.plyr--video .plyr__controls button.toggle-ratio-mode:hover {
+//  .ratio-list {
+//    display: block;
+//  }
+//}
 
 .plyr--video .plyr__controls {
   .volume-group {
@@ -210,6 +210,8 @@
   .volume-group:hover {
     .plyr__volume {
       display: inline-block;
+      //position: relative;
+      //top: 7px;
     }
   }
 

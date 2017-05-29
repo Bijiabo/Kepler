@@ -194,6 +194,25 @@ requirejs(['public'], function(_public) {
             $('.video-player .plyr .play-end-view').removeClass('active');
         });
         
+        // 用户点击切换分辨率
+        $(document).on('click', '.toggle-ratio-mode .iconfont', function () {
+            $('.ratio-list').toggle();
+        });
+        
+        // 修复火狐浏览器音频条错位问题
+        var Browser=new Object();
+        Browser.isMozilla=(typeof document.implementation!='undefined')&&(typeof document.implementation.createDocument!='undefined')&&(typeof HTMLDocument!='undefined');
+        Browser.isIE=window.ActiveXObject ? true : false;
+        Browser.isFirefox=(navigator.userAgent.toLowerCase().indexOf("firefox")!=-1);
+        Browser.isSafari=(navigator.userAgent.toLowerCase().indexOf("safari")!=-1);
+        Browser.isOpera=(navigator.userAgent.toLowerCase().indexOf("opera")!=-1);
+        if (Browser.isFirefox) {
+            $('.plyr__volume').css({
+                position: 'relative',
+                top: '6px'
+            });
+        }
+        
         addPlayEndRecommedVideoData();
         
         // 初始化分享按钮
