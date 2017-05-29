@@ -43,6 +43,13 @@ requirejs(['public'], function(_public) {
                 $this.data('dropdown', true);
             }
         });
+    
+        // 用户切换搜索框显示
+        $(document).on('click', '.toggle-search-input', function () {
+            $('.info .links .search').show();
+            $('.info .links .search input').focus();
+            $(this).hide();
+        });
     };
     bindEvents();
 });

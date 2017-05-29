@@ -80,6 +80,12 @@ requirejs(['public'], function(_public) {
             container.find('.separator-line').before(listHTML);
         });
         
+        // 用户切换搜索框显示
+        $(document).on('click', '.toggle-search-input', function () {
+            $('.info .links .search').show();
+            $('.info .links .search input').focus();
+            $(this).hide();
+        });
     };
     bindEvents();
 });
