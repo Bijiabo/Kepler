@@ -24,11 +24,11 @@ define([], function () {
         });
         
         // 点击修改头像
-        $(document).on('click', '.avatar .edit-button', function () {
+        $(document).on('click', '.user-container .avatar .edit-button', function () {
             $('.select-avatar-container').show();
         });
         // 关闭头像上传选择层
-        $(document).on('click', '.select-avatar-container .close', function () {
+        $(document).on('click', '.user-container .select-avatar-container .close', function () {
             $('.select-avatar-container').hide();
         });
         

@@ -316,7 +316,7 @@ input::-webkit-inner-spin-button {
         width: 260px;
         height: 180px;
         background-color: #383838;
-        box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 2px 18px rgba(0, 0, 0, 0.5);
         display: none; }
         .navigation-bar .navigation-bar-right-container .item.avatar .profile-preview .header-image, .navigation-bar .navigation-bar-right-container .side-bar-menu .avatar.title-item .profile-preview .header-image, .side-bar-menu .navigation-bar .navigation-bar-right-container .avatar.title-item .profile-preview .header-image {
           width: 100%;
@@ -356,7 +356,6 @@ input::-webkit-inner-spin-button {
             margin-right: 18px;
             border-right: 1px solid #545454; }
       .navigation-bar .navigation-bar-right-container .item.avatar .profile-preview:before, .navigation-bar .navigation-bar-right-container .side-bar-menu .avatar.title-item .profile-preview:before, .side-bar-menu .navigation-bar .navigation-bar-right-container .avatar.title-item .profile-preview:before {
-        content: "";
         content: "";
         position: absolute;
         top: -20px;
