@@ -121,13 +121,14 @@ requirejs(['public'], function(_public) {
             
             "<div class='right-container'>",
     
+            "<div class='ratio-list'><div class='ratio-list-container'>",
+            ratioList,
+            "</div></div>",
+            
             // 分辨率切换
             "<button type='button' class='toggle-ratio-mode'>",
             "<span class='iconfont'>1080P</span>",
             "<span class='plyr__sr-only'>toggle ratio mode</span>",
-            "<div class='ratio-list'><div class='ratio-list-container'>",
-            ratioList,
-            "</div></div>",
             "</button>",
             
             // 剧场模式切换
@@ -159,7 +160,8 @@ requirejs(['public'], function(_public) {
             html: controls,
             captions: {defaultActive: true},
             keyboardShortcuts: { focused: true, global: true },
-            hideControls: true
+            hideControls: true,
+            clickToPlay: false
         };
         window.players = plyr.setup(playerOptions);
         window.player = window.players[0];
@@ -192,11 +194,6 @@ requirejs(['public'], function(_public) {
         // 视频播放器播放时隐藏推荐列表
         window.player.on('play', function (event) {
             $('.video-player .plyr .play-end-view').removeClass('active');
-        });
-        
-        // 用户点击切换分辨率
-        $(document).on('click', '.toggle-ratio-mode .iconfont', function () {
-            $('.ratio-list').toggle();
         });
         
         // 修复火狐浏览器音频条错位问题
@@ -239,7 +236,8 @@ requirejs(['public'], function(_public) {
         });
         
         // 用户选择分辨率
-        $(document).on('click', '.ratio-list-item', function () {
+        $(document).on('click', '.ratio-list-item', function (event) {
+            event.stopPropagation();
             var $this = $(this);
             var targetRatio = $this.attr('ratio');
             $('.plyr--video .plyr__controls button.toggle-ratio-mode .iconfont').text($this.text());
@@ -266,6 +264,8 @@ requirejs(['public'], function(_public) {
                 }
                 pageCache.afterCanPlay = undefined;
             };
+            
+            $('.ratio-list').hide();
         });
         
         /*
@@ -337,6 +337,17 @@ requirejs(['public'], function(_public) {
                 }
                 $this.removeClass('subscribed').addClass('unsubscribed'); // todo: 删除此行，仅用于演示
             })
+        });
+    
+        // 用户点击切换分辨率
+        $(document).on('click', '.toggle-ratio-mode', function (event) {
+            event.stopPropagation();
+            console.log('xxx');
+            $('.ratio-list').toggle();
+        });
+    
+        $(document).on('mouseleave', '.video-player', function () {
+            $('.ratio-list').hide();
         });
     };
     bindEvents();
