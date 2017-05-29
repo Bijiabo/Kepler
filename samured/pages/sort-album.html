@@ -17,7 +17,7 @@
     <script src="../static/js/template-loader.js"></script>
     <script src="../static/js/html2canvas.min.js"></script>
 
-    <script data-main="../static/js/pages/sort.js" src="../static/js/require.js"></script>
+    <script data-main="../static/js/pages/sort-album.js" src="../static/js/require.js"></script>
 </head>
 <body class="has-side-bar-menu">
 
@@ -74,15 +74,16 @@
                             <template v-for="(item, index) in new Array(10)">
                                 <div class="list-video-card-item-package">
                                     <div class="media list-video-card">
-                                        <a href="detail.html">
                                             <div class="media-left">
                                                 <div class="image-view"
                                                      duration="06:00"
                                                      :style="'background-image: url(./../static/image/video-thumbnails/'+index%6+'.jpg);'"
                                                 >
-
                                                     <img src="./../static/image/scale/16-9.png" alt="">
-                                                    <div class="video-progress" style="width: 33%;"></div>
+                                                    <div class="video-view-mask">
+                                                        <span class="fa fa-list-ul"></span>
+                                                        <span class="video-count">6个视频</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="media-body">
@@ -105,8 +106,6 @@
                                                 </div>
                                                 <div class="watch-all-video">查看所有视频列表</div>
                                             </div>
-                                        </a>
-
                                     </div>
 
                                     <div class="separator-line"></div>

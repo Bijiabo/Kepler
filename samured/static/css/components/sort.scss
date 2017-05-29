@@ -393,6 +393,21 @@
 
       .image-view {
         width: 180px;
+        .video-view-mask {
+          position: absolute;
+          left:0;
+          bottom: 0;
+          right: 0;
+          height: 30px;
+          background-color: rgba(0,0,0,0.5);
+          color: #c1c1c1;
+          text-align: right;
+          line-height: 30px;
+          padding-right: 10px;
+        }
+      }
+      .image-view:before {
+        display: none;
       }
 
       .media-heading {
@@ -411,9 +426,14 @@
       }
 
       .watch-all-video {
+        @extend .unselectable;
         color: #636363;
         margin-top: 18px;
         font-size: 12px;
+        cursor: pointer;
+      }
+      .watch-all-video:hover {
+        color: #c1c1c1;
       }
 
       .play-list {
@@ -430,6 +450,73 @@
           color: $themeColor_Blue;
         }
       }
+    }
+
+    .album-video-list {
+      clear: both;
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 2px;
+      .separator-line {
+        margin: 0;
+      }
+
+      .item {
+        height: 70px;
+        padding: 5px 0;
+        .index {
+          display: inline-block;
+          width: 50px;
+          line-height: 56px;
+          text-align: center;
+          color: #c1c1c1;
+        }
+        .preview {
+          display: inline-block;
+          width: 90px;
+          //height: 100%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+        .info {
+          display: inline-block;
+          margin-left: 12px;
+          .title {
+            font-size: 12px;
+            line-height: 16px;
+            margin: 0;
+            color: $themeColor_Blue;
+            font-weight: lighter;
+          }
+          .time {
+            font-size: 12px;
+            line-height: 16px;
+            color: #bababa;
+            font-weight: lighter;
+          }
+        }
+        .duration {
+          display: inline-block;
+          float: right;
+          width: 60px;
+          color: #bababa;
+          font-weight: lighter;
+        }
+      }
+      .item:hover {
+        .info {
+          .title {
+            color: $themeColor_BlueLight;
+          }
+        }
+      }
+
+
     }
   }
 
