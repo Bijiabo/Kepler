@@ -312,6 +312,32 @@
         font-size: 12px;
       }
     }
+
+    .grid-video-card-container {
+      overflow: auto;
+      margin-left: -10px;
+      margin-right: -10px;
+      .grid-video-card {
+        .title {
+          color: $themeColor_Blue;
+          font-size: 12px;
+          margin-bottom: 10px;
+        }
+        .count-and-time {
+          font-size: 12px;
+          margin-top: 10px;
+          color: #595959;
+        }
+        .grid-view-watch-all-video {
+          font-size: 12px;
+          margin-top: 16px;
+          color: #595959;
+        }
+        .cn_title {
+          font-size: 12px;
+        }
+      }
+    }
   }
   .list-video-card {
     position: relative;

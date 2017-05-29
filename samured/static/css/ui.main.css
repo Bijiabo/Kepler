@@ -2609,6 +2609,24 @@ input::-webkit-inner-spin-button {
         color: #636363;
         margin-top: 12px;
         font-size: 12px; }
+    .sort-container .panel-view.sort-video .grid-video-card-container, .sort-container .sort-video.video-player .grid-video-card-container, .sort-container .sort-video.video-play-list .grid-video-card-container, .sort-container .sort-video.no-network-tip .grid-video-card-container, .sort-container .sort-video.video-recommend .grid-video-card-container, .sort-container .plyr--video .sort-video.plyr__controls .grid-video-card-container, .plyr--video .sort-container .sort-video.plyr__controls .grid-video-card-container {
+      overflow: auto;
+      margin-left: -10px;
+      margin-right: -10px; }
+      .sort-container .panel-view.sort-video .grid-video-card-container .grid-video-card .title, .sort-container .sort-video.video-player .grid-video-card-container .grid-video-card .title, .sort-container .sort-video.video-play-list .grid-video-card-container .grid-video-card .title, .sort-container .sort-video.no-network-tip .grid-video-card-container .grid-video-card .title, .sort-container .sort-video.video-recommend .grid-video-card-container .grid-video-card .title, .sort-container .plyr--video .sort-video.plyr__controls .grid-video-card-container .grid-video-card .title, .plyr--video .sort-container .sort-video.plyr__controls .grid-video-card-container .grid-video-card .title {
+        color: #78d2dc;
+        font-size: 12px;
+        margin-bottom: 10px; }
+      .sort-container .panel-view.sort-video .grid-video-card-container .grid-video-card .count-and-time, .sort-container .sort-video.video-player .grid-video-card-container .grid-video-card .count-and-time, .sort-container .sort-video.video-play-list .grid-video-card-container .grid-video-card .count-and-time, .sort-container .sort-video.no-network-tip .grid-video-card-container .grid-video-card .count-and-time, .sort-container .sort-video.video-recommend .grid-video-card-container .grid-video-card .count-and-time, .sort-container .plyr--video .sort-video.plyr__controls .grid-video-card-container .grid-video-card .count-and-time, .plyr--video .sort-container .sort-video.plyr__controls .grid-video-card-container .grid-video-card .count-and-time {
+        font-size: 12px;
+        margin-top: 10px;
+        color: #595959; }
+      .sort-container .panel-view.sort-video .grid-video-card-container .grid-video-card .grid-view-watch-all-video, .sort-container .sort-video.video-player .grid-video-card-container .grid-video-card .grid-view-watch-all-video, .sort-container .sort-video.video-play-list .grid-video-card-container .grid-video-card .grid-view-watch-all-video, .sort-container .sort-video.no-network-tip .grid-video-card-container .grid-video-card .grid-view-watch-all-video, .sort-container .sort-video.video-recommend .grid-video-card-container .grid-video-card .grid-view-watch-all-video, .sort-container .plyr--video .sort-video.plyr__controls .grid-video-card-container .grid-video-card .grid-view-watch-all-video, .plyr--video .sort-container .sort-video.plyr__controls .grid-video-card-container .grid-video-card .grid-view-watch-all-video {
+        font-size: 12px;
+        margin-top: 16px;
+        color: #595959; }
+      .sort-container .panel-view.sort-video .grid-video-card-container .grid-video-card .cn_title, .sort-container .sort-video.video-player .grid-video-card-container .grid-video-card .cn_title, .sort-container .sort-video.video-play-list .grid-video-card-container .grid-video-card .cn_title, .sort-container .sort-video.no-network-tip .grid-video-card-container .grid-video-card .cn_title, .sort-container .sort-video.video-recommend .grid-video-card-container .grid-video-card .cn_title, .sort-container .plyr--video .sort-video.plyr__controls .grid-video-card-container .grid-video-card .cn_title, .plyr--video .sort-container .sort-video.plyr__controls .grid-video-card-container .grid-video-card .cn_title {
+        font-size: 12px; }
   .sort-container .list-video-card {
     position: relative;
     padding: 0; }

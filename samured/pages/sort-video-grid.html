@@ -64,14 +64,14 @@
                                             <span class="caret"></span>
                                         </button>
                                         <ul class="dropdown-menu">
-                                            <li class="toggle-sort-type" type="hot"><a href="#" >热度</a></li>
-                                            <li class="toggle-sort-type" type="time"><a href="#">发布时间</a></li>
+                                            <li><a href="#" >热度</a></li>
+                                            <li><a href="#">发布时间</a></li>
                                         </ul>
                                     </div>
 
                                     <div class="btn-group">
                                         <button type="button" class="btn btn-ghost dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            列表
+                                            网格
                                             <span class="caret"></span>
                                         </button>
                                         <ul class="dropdown-menu">
@@ -82,11 +82,13 @@
 
                                 </div>
                             </div>
-                            <template v-for="(item, index) in new Array(10)">
-                                <div class="list-video-card-item-package">
-                                    <div class="media list-video-card">
-                                        <a href="detail.html">
-                                            <div class="media-left">
+
+                            <div class="grid-video-card-container">
+                                <template v-for="(item, index) in videoCards">
+                                    <div class="">
+                                        <a :href="'detail.html#video-'+index">
+                                            <div class="grid-video-card col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                                <!--<div class="text-color-red text-type-title">推荐视频</div>-->
                                                 <div class="image-view"
                                                      duration="06:00"
                                                      :style="'background-image: url(./../static/image/video-thumbnails/'+index%6+'.jpg);'"
@@ -94,23 +96,16 @@
                                                     <img src="./../static/image/scale/16-9.png" alt="">
                                                     <div class="video-progress" style="width: 33%;"></div>
                                                 </div>
-                                            </div>
-                                            <div class="media-body">
-                                                <h4 class="media-heading text-bold text-type-description">
-                                                    Horizon Zero Dawn All Cutscenes (Game Movie) PS4 PRO 1080p
-                                                </h4>
-                                                <h4 class="text-color-gray-light margin-top-bottom-4 text-type-description zh_name">
-                                                    地平线(游戏视频) PS4PRO 1080P
-                                                </h4>
-                                                <div class="watch-count">18,930次观看 | 一周前</div>
+                                                <div class="title">Name Of DFHJK HKSEWB DJKFHDK BFD</div>
+                                                <div class="cn_title">地平线</div>
+                                                <div class="count-and-time">189,002次观看 | 一周前</div>
                                             </div>
                                         </a>
-
                                     </div>
+                                </template>
+                            </div>
 
-                                    <div class="separator-line"></div>
-                                </div>
-                            </template>
+
                             <div class="load-more">
                                 <a href="#" class="text-color-gray-info">加载更多</a>
                             </div>

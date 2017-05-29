@@ -43,18 +43,6 @@ requirejs(['public'], function(_public) {
                 $this.data('dropdown', true);
             }
         });
-    
-        // 用户点击切换视图
-        $(document).on('click', '.toggle-view-type', function () {
-            var targetViewType = $(this).attr('type');
-            console.log('target view type: ', targetViewType);
-        });
-    
-        // 用户点击切换排序
-        $(document).on('click', '.toggle-sort-type', function () {
-            var targetSortType = $(this).attr('type');
-            console.log('target view type: ', targetSortType);
-        });
     };
     bindEvents();
 });
