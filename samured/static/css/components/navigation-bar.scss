@@ -122,9 +122,10 @@
     overflow-y: scroll;
 
     .message-item-cell {
+      position: relative;
       overflow: auto;
       border-top: 1px solid #545454;
-      padding: 10px 12px;
+      padding: 10px 12px 10px 36px;
       cursor: pointer;
 
       .preview {
@@ -137,11 +138,13 @@
 
       .content {
         float: left;
-        width: 500px;
-        margin-left: 12px;
+        width: 100%;
 
         .item-title {
-          @extend .text-color-blue;
+          color: #828282;
+        }
+        .item-title.text-color-blue{
+          color: $themeColor_Blue;
         }
         .time {
           @extend .text-color-gray-info;
@@ -158,6 +161,23 @@
 
       }
 
+    }
+    .message-item-cell.unread:before {
+      content: "";
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      width: 8px;
+      height: 8px;
+      margin-top: -4px;
+      background-color: $themeColor_Red;
+    }
+    .message-item-cell.unread {
+      .content {
+        .item-title {
+          @extend .text-color-blue;
+        }
+      }
     }
   }
 
