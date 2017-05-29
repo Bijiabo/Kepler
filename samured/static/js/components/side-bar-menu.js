@@ -17,6 +17,11 @@ define([], function () {
         $(document).on('mouseleave', '.side-bar-menu > .item', function () {
             var $this = $(this);
             $this.find('.submenu').hide();
+            
+            var backButton = $('.submenu .item .back');
+            $('.submenu .item .title').show();
+            backButton.hide();
+            backButton.parent('.item').find('.subclass').hide();
         });
         $(document).on('click', '.submenu .item .title', function (event) {
             event.preventDefault();
