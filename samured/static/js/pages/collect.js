@@ -69,19 +69,65 @@ requirejs(['public'], function(_public) {
                 
                 var menuContentHTML = '\
                 <div class="menu-content">\
-                    <div class="item title">\
+                    <div class="item title menu-add-to-album">\
                     <i class="icon fa fa-list-ul" aria-hidden="true"></i>\
                     添加到\
                     </div>\
-                    <div class="item">我的专辑</div>\
-                    <div class="item">专辑1</div>\
-                    <div class="item">专辑2</div>\
-                    <div class="item">\
-                        <input type="text" class="new-album">\
-                    </div>\
-                    <div class="item button">创建</div>\
+                    <div class="item menu-remove">删除</div>\
+                    \
                 </div>';
                 $this.append(menuContentHTML);
+            }
+            
+        });
+        
+        // 用户点击"添加到"按钮
+        $(document).on('click', '.menu-add-to-album', function () {
+            var $this = $(this);
+            var menuContentContainer = $this.parents('.menu-content');
+            if (menuContentContainer.find('.album-item').length > 0) { return; }
+            menuContentContainer.find('.menu-remove').remove();
+            // todo: 获取用户的专辑列表
+            var albumList = [
+                {
+                    title: '专辑名称一',
+                    id: 1038,
+                    hasThisOne: true
+                },
+                {
+                    title: '专辑名称二',
+                    id: 1039,
+                    hasThisOne: false
+                }
+            ];
+            var html = '';
+            for (var i=0,len=albumList.length; i<len; i++) {
+                var item = albumList[i];
+                html += '<div class="item album-item '+(item.hasThisOne ? 'active' : '')+'" album-id="'+item.id+'">'+item.title+'</div>';
+            }
+            html += '<div class="item menu-new-album-input">\
+                        <input type="text" class="new-album">\
+                    </div>';
+            $this.after(html);
+            menuContentContainer.append('<div class="item button menu-create">创建</div>');
+        });
+        
+        // 用户点击 menu 中的删除按钮
+        $(document).on('click', '.menu-remove', function () {
+            var $this = $(this);
+            // todo: 调用接口删除此条目
+            $this.parents('.list-video-card-item-package').remove();
+        });
+        
+        // 用户点击加入某个专辑
+        $(document).on('click', '.menu-content .album-item', function () {
+            var $this = $(this);
+            if ($this.hasClass('active')) {
+                // todo: 调用接口从用户播放专辑删除
+                $this.removeClass('active');
+            } else {
+                // todo: 调用接口添加到用户播放专辑
+                $this.addClass('active');
             }
             
         });
@@ -172,17 +218,17 @@ requirejs(['public'], function(_public) {
                     autoLoadNewDataCount++;
                 }, 1000);
             }
-        }
+        };
         
         // 用户键入分类信息后敲击回车
-        $(document).on('keyup', '.menu-content .new-album', function (e) {
-            if (e.which !== 13) { return; }
-            var content = $(this).val();
+        $(document).on('click', '.menu-content .menu-create', function (e) {
+            // if (e.which !== 13) { return; }
+            var content = $('.new-album').val();
             if (content.length === 0) { return; }
             // todo: 请求创建新专辑接口
             // 添加新专辑项目
-            $(this).parents('.item').before('<div class="item">'+content+'</div>');
-            $(this).val('');
+            $(this).parents('.menu-content').find('.menu-new-album-input').before('<div class="item">'+content+'</div>');
+            $('.new-album').val('');
         });
         
     };

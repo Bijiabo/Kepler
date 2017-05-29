@@ -60,6 +60,7 @@
       }
 
       .item {
+        position: relative;
         color: #828282;
         width: 100%;
         clear: both;
@@ -71,7 +72,7 @@
 
         input {
           background-color: transparent;
-          border: 1px solid #c1c1c1;
+          border: 1px solid #7b7b7b;
           height: 28px;
           width: 100%;
           padding: 0 6px;
@@ -95,6 +96,21 @@
         height: 30px;
         line-height: 30px;
       }
+
+      .item.active:before {
+        position: absolute;
+        left: 10px;
+
+        content: "\f00c";
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        line-height:28px;
+      }
+
     }
   }
 
