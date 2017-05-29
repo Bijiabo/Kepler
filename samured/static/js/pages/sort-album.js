@@ -79,6 +79,12 @@ requirejs(['public'], function(_public) {
             
             container.find('.separator-line').before(listHTML);
         });
+        
+        // 用户点击切换视图
+        $(document).on('click', '.toggle-view-type', function () {
+            var targetViewType = $(this).attr('type');
+            console.log('target view type: ', targetViewType);
+        });
     };
     bindEvents();
 });
