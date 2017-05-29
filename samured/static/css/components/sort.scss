@@ -280,7 +280,38 @@
 
   // 视频列表页面
   .panel-view.sort-video {
-    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .list-video-card {
+      margin-left: 0;
+      height: auto;
+      margin-bottom: -5px;
+
+      .image-view {
+        width: 180px;
+      }
+
+      .media-heading {
+        @extend .text-over-flow-ellipsis;
+        @extend .no-break-line;
+        color: $themeColor_Blue;
+        width: auto;
+      }
+
+      .zh_name {
+        @extend .text-over-flow-ellipsis;
+        @extend .no-break-line;
+        color: #c1c1c1;
+        font-size: 12px;
+        width: auto;
+      }
+
+      .watch-count {
+        color: #636363;
+        margin-top: 12px;
+        font-size: 12px;
+      }
+    }
   }
   .list-video-card {
     position: relative;
@@ -335,8 +366,18 @@
         }
       }
     }
-
   }
+  .head {
+    .title {
+      display: inline-block;
+      margin-bottom: 10px !important;
+    }
+    .button-group {
+      float: right;
+      margin-top: 10px;
+    }
+  }
+
 
 
 }

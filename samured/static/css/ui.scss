@@ -358,3 +358,12 @@ input::-webkit-inner-spin-button {
 .has-side-bar-menu .footer {
   padding: 0 10px !important;
 }
+
+.load-more {
+  margin-bottom: 10px;
+  text-align: center;
+  cursor: pointer;
+  a:hover {
+    color: #828282;
+  }
+}
