@@ -17,7 +17,7 @@
     <script src="../static/js/template-loader.js"></script>
     <script src="../static/js/html2canvas.min.js"></script>
 
-    <script data-main="../static/js/pages/sort.js" src="../static/js/require.js"></script>
+    <script data-main="../static/js/pages/sort-video.js" src="../static/js/require.js"></script>
 </head>
 <body class="has-side-bar-menu">
 
@@ -64,8 +64,8 @@
                                             <span class="caret"></span>
                                         </button>
                                         <ul class="dropdown-menu">
-                                            <li><a href="#">热度</a></li>
-                                            <li><a href="#">发布时间</a></li>
+                                            <li class="toggle-sort-type" type="hot"><a href="#" >热度</a></li>
+                                            <li class="toggle-sort-type" type="time"><a href="#">发布时间</a></li>
                                         </ul>
                                     </div>
 
@@ -75,8 +75,8 @@
                                             <span class="caret"></span>
                                         </button>
                                         <ul class="dropdown-menu">
-                                            <li><a href="#">列表</a></li>
-                                            <li><a href="#">网格</a></li>
+                                            <li class="toggle-view-type" type="list"><a href="#" >列表</a></li>
+                                            <li class="toggle-view-type" type="grid"><a href="#">网格</a></li>
                                         </ul>
                                     </div>
 
