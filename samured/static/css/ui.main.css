@@ -688,14 +688,7 @@ input::-webkit-inner-spin-button {
       width: 100%;
       float: left; } }
 .video-player-container {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 198;
   background-color: #000000; }
-  .video-player-container .main-container {
-    margin-top: 44px; }
 
 .video-player {
   position: relative;
