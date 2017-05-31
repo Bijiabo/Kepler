@@ -695,7 +695,10 @@ input::-webkit-inner-spin-button {
   padding: 0;
   background-color: #e34849;
   margin-top: 0;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  max-width: 1020px;
+  margin-left: auto;
+  margin-right: auto; }
   .video-player .plyr__controls {
     position: relative; }
     .video-player .plyr__controls .plyr__progress input[type="range"] {
