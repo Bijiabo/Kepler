@@ -173,11 +173,13 @@ requirejs(['public', './../components/fakeUserSystem'], function(_public, userSy
                 return;
             }
             inputJudge.password = userSystem.checkPasswordFormat(password);
+            /*
             if (inputJudge.password) {
                 elements.passwordInputContainer.addClass('ok');
             } else {
                 elements.passwordInputContainer.addClass('error');
             }
+            */
         });
     
         // 检测用户输入的邮箱是否符合要求
