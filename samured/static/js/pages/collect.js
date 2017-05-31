@@ -260,7 +260,7 @@ requirejs(['public'], function(_public) {
                         </div>\
                         <div class="right-button-group">\
                             <div class="menu" target-id="'+(i+1)+'">\
-                                <i class="fa fa-list-ul" aria-hidden="true"></i>\
+                                <i class="iconfont">&#xe61f;</i>\
                             </div>\
                             <div class="remove" target-id="'+(i+1)+'">\
                                 <i class="iconfont">&#xe605;</i>\

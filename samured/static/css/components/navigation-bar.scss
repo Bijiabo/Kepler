@@ -240,13 +240,10 @@
       margin-top: -4px;
       background-color: $themeColor_Red;
     }
-    .message-item-cell.unread {
-      .content {
-        .item-title {
-          @extend .text-color-blue;
-        }
-      }
+    .message-item-cell:hover .item-title {
+      @extend .text-color-blue;
     }
+
   }
 
 }
