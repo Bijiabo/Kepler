@@ -3,9 +3,22 @@
  */
 define([], function () {
     
+    var displaySideBarMenu = function (display) {
+        var bodyElement = $('body');
+        var targetClass = 'has-side-bar-menu';
+        if (!display) {
+            bodyElement.removeClass(targetClass);
+        } else {
+            bodyElement.addClass(targetClass);
+        }
+    };
+    
     var init = function () {
         console.debug('init sideBarMenu;');
         bindEvents();
+        
+        // 根据页面尺寸，显示、隐藏侧边栏
+        displaySideBarMenu($(window).width() >= 1000);
     };
     
     var bindEvents = function () {
@@ -76,6 +89,13 @@ define([], function () {
             setTimeout(function () {
                 targetItem.remove();
             }, 1450);
+        });
+        
+        $(window).on('resize', function () {
+            if ($(window).width() < 1000) {
+                displaySideBarMenu(false);
+            }
+            
         });
     };
     

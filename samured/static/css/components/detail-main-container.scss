@@ -6,7 +6,36 @@
 }
 
 
+.detail-main-container {
+  position: relative;
+  margin: -10px auto 50px auto;
+  //max-width: 1440px;
+  max-width: 100%;
+  padding: 0;
 
+  .right-side-bar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 430px;
+    float: left;
+  }
+}
+
+.detail-main.has-play-list {
+  .detail-main-container {
+    margin: 0 auto 50px auto;
+    padding: 0 430px 0 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .detail-main-container {
+    width: 100%;
+  }
+}
+
+/*
 @media (min-width: 1201px) {
   .detail-main-container {
     position: relative;
@@ -31,7 +60,8 @@
     }
   }
 }
-
+*/
+/*
 @media (max-width: 1200px) {
 
   .detail-main-container {
@@ -47,3 +77,4 @@
     }
   }
 }
+*/

@@ -7,6 +7,7 @@
   background-color: #000000;
   .main-container {
     //margin-top: 44px;
+    width: 100%;
   }
 }
 
@@ -15,14 +16,29 @@
   position: relative;
 
   //margin-bottom: 48px;
-  padding: 0;
-  background-color: $themeColor_Red;
+  padding: 0 10px;
+  //background-color: $themeColor_Red;
+  background: none;
   margin-top: 0;
   margin-bottom: 0;
 
-  max-width: 1020px;
+  //max-width: 1020px;
   margin-left: auto;
   margin-right: auto;
+
+  .plyr {
+    height: 100%;
+    width: 100%;
+
+    .plyr__video-wrapper {
+      height: 100%;
+      width: 100%;
+      video {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
 
 
   .plyr__controls {
