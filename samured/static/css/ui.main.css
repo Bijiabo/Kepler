@@ -27,7 +27,7 @@ a:hover {
 .text-color-white, .history-container .list-video-card.search-history-item:hover .time, .collect-container .list-video-card.search-history-item:hover .time {
   color: #ffffff; }
 
-.text-color-red, .panel-title-view, .message-box .title, .navigation-bar .navigation-bar-right-container, .side-bar-menu .title-item .title, .content-class-filter .item .class-options .option-item.active, .content-class-filter .side-bar-menu .title-item .class-options .option-item.active, .side-bar-menu .content-class-filter .title-item .class-options .option-item.active, .login-container .forgot, .user-container .form .button-group .btn.update-user-profile-btn {
+.text-color-red, .panel-title-view, .message-box .title, .navigation-bar .navigation-bar-right-container, .side-bar-menu .title-item .title, .content-class-filter .item .class-options .option-item.active, .content-class-filter .side-bar-menu .title-item .class-options .option-item.active, .side-bar-menu .content-class-filter .title-item .class-options .option-item.active, .login-container .forgot, .login-container .forgot a:hover, .user-container .form .button-group .btn.update-user-profile-btn {
   color: #e34849; }
 
 .text-color-blue, .message-box .content .message-item-cell:hover .item-title, .history-container .list-video-card.search-history-item .media-heading, .channel-container .carousel-container .info .en_name, .channel-container .recommend-card .en_name, .collect-container .list-video-card.search-history-item .media-heading {
@@ -2571,17 +2571,17 @@ input::-webkit-inner-spin-button {
       margin: 14px 10px 14px 10px; }
     .channel-container .recommend-card .preview-images {
       height: 60px;
-      margin: 0 10px 0px 10px; }
+      margin: 0 0 0 10px; }
       .channel-container .recommend-card .preview-images .item, .channel-container .recommend-card .preview-images .side-bar-menu .title-item, .side-bar-menu .channel-container .recommend-card .preview-images .title-item {
         float: left;
-        width: 76px;
+        width: 33.3333%;
         height: 45px;
         background: #828282;
-        margin-right: 10px;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        cursor: pointer; }
+        cursor: pointer;
+        border-right: 10px solid #2b2b2b; }
   .channel-container .recommend-card:hover {
     position: relative;
     z-index: 100;
