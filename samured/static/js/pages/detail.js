@@ -156,7 +156,7 @@ requirejs(['public'], function(_public) {
         var playerOptions = {
             controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'fullscreen'],
             // debug: true,
-            autoplay: false,
+            autoplay: true,
             html: controls,
             captions: {defaultActive: true},
             keyboardShortcuts: { focused: true, global: true },

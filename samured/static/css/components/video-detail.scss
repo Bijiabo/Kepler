@@ -261,192 +261,209 @@
 */
 // @1
 @media (min-width: 1740px) and (max-width: 2560px) and (min-height: 1100px) and (max-height: 1440px) {
-  .video-player {
-    width: 1280px;
-    height: 720px;
-  }
-  .detail-main-container {
-    max-width: 1720px;
-  }
-  .grid-video-card {
-    width: 16.66666667%;
+  .detail-main {
+    .video-player {
+      width: 1280px;
+      height: 720px;
+    }
+    .detail-main-container {
+      max-width: 1720px;
+    }
+    .grid-video-card {
+      width: 16.66666667%;
+    }
   }
 }
 // @2
 @media (min-width: 1740px) and (max-width: 2560px) and (min-height: 990px) and (max-height: 1100px) {
-  .video-player {
-    width: 1280px;
-    height: 720px;
-  }
-  .detail-main-container {
-    max-width: 1280px;
-  }
-  .grid-video-card {
-    width: 16.66666667%;
-  }
-
-  .has-play-list {
+  .detail-main {
+    .video-player {
+      width: 1280px;
+      height: 720px;
+    }
+    .detail-main-container {
+      max-width: 1280px;
+    }
     .grid-video-card {
-      width: 25%;
+      width: 16.66666667%;
+    }
+
+    .has-play-list {
+      .grid-video-card {
+        width: 25%;
+      }
     }
   }
 }
 // @3
 @media (min-width: 1740px) and (max-width: 2560px) and (max-height: 990px) {
-  .video-player {
-    width: 860px;
-    height: 486px;
-  }
-  .detail-main-container {
-    max-width: 860px;
-  }
-
-  .grid-video-card {
-    width: 25%;
-  }
-
-  .has-play-list {
-    .detail-main-container {
-      max-width: 1070px;
+  .detail-main {
+    .video-player {
+      width: 860px;
+      height: 486px;
     }
-
-    .grid-video-card {
-      width: 33.33333333%;
-    }
-  }
-}
-// @4
-@media (min-width: 1300px) and (max-width: 1740px) {
-  .video-player {
-    width: 1280px;
-    height: 720px;
-  }
-  .detail-main-container {
-    max-width: 1280px;
-  }
-
-  .grid-video-card {
-    width: 16.66666667%;
-  }
-
-  .has-play-list {
     .detail-main-container {
-      max-width: 1280px;
+      max-width: 860px;
     }
 
     .grid-video-card {
       width: 25%;
     }
+
+    .has-play-list {
+      .detail-main-container {
+        max-width: 1070px;
+      }
+
+      .grid-video-card {
+        width: 33.33333333%;
+      }
+    }
+  }
+}
+// @4
+@media (min-width: 1300px) and (max-width: 1740px) {
+  .detail-main {
+    .video-player {
+      width: 1280px;
+      height: 720px;
+    }
+    .detail-main-container {
+      max-width: 1280px;
+    }
+
+    .grid-video-card {
+      width: 16.66666667%;
+    }
+
+    .has-play-list {
+      .detail-main-container {
+        max-width: 1280px;
+      }
+
+      .grid-video-card {
+        width: 25%;
+      }
+    }
   }
 }
 // @5
 @media (min-width: 1100px) and (max-width: 1300px) {
-  .video-player {
-    width: 860px;
-    height: 486px;
-  }
-  .detail-main-container {
-    max-width: 860px;
-  }
-
-  .grid-video-card {
-    width: 25%;
-  }
-
-  .has-play-list {
+  .detail-main {
+    .video-player {
+      width: 860px;
+      height: 486px;
+    }
     .detail-main-container {
-      max-width: 1070px;
+      max-width: 860px;
     }
 
     .grid-video-card {
-      width: 33.33333333%;
+      width: 25%;
+    }
+
+    .has-play-list {
+      .detail-main-container {
+        max-width: 1070px;
+      }
+
+      .grid-video-card {
+        width: 33.33333333%;
+      }
     }
   }
 }
 // @6
 @media (min-width: 880px) and (max-width: 1100px) {
-  .video-player {
-    width: 860px;
-    height: 486px;
-  }
-  .detail-main-container {
-    max-width: 860px;
-  }
-  .grid-video-card {
-    width: 25%;
-  }
-
-  .has-play-list {
+  .detail-main {
+    .video-player {
+      width: 860px;
+      height: 486px;
+    }
     .detail-main-container {
       max-width: 860px;
     }
     .grid-video-card {
-      width: 50%;
+      width: 25%;
+    }
+
+    .has-play-list {
+      .detail-main-container {
+        max-width: 860px;
+      }
+      .grid-video-card {
+        width: 50%;
+      }
     }
   }
 }
 // @7
 @media (max-width: 880px) {
-  .video-player {
-    width: 440px;
-    height: 248px;
-  }
-  .detail-main-container {
-    max-width: 440px;
-    padding-top: 580px !important;
-    padding-right: 0 !important;
-
-    .panel-view {
-      margin-left: 0 !important;
-      margin-right: 0 !important;
+  .detail-main {
+    .video-player {
+      width: 440px;
+      height: 248px;
     }
-  }
-  .grid-video-card {
-    width: 50%;
-  }
-  .video-play-list {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-
-  .has-play-list {
     .detail-main-container {
       max-width: 440px;
+      padding-top: 580px !important;
+      padding-right: 0 !important;
+
+      .panel-view {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
     }
     .grid-video-card {
       width: 50%;
     }
-  }
+    .video-play-list {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
 
+    .has-play-list {
+      .detail-main-container {
+        max-width: 440px;
+      }
+      .grid-video-card {
+        width: 50%;
+      }
+    }
+  }
 }
 // @8 高度补充
 @media (max-height: 500px) {
-  .video-player {
-    width: 440px;
-    height: 248px;
-  }
-  .detail-main-container {
-    max-width: 440px;
-  }
-
-  .has-play-list {
+  .detail-main {
+    .video-player {
+      width: 440px;
+      height: 248px;
+    }
     .detail-main-container {
       max-width: 440px;
+    }
+
+    .has-play-list {
+      .detail-main-container {
+        max-width: 440px;
+      }
     }
   }
 }
 @media (min-width: 1300px) and (max-height: 800px) {
-  .video-player {
-    width: 860px;
-    height: 486px;
-  }
-  .detail-main-container {
-    max-width: 860px;
-  }
-
-  .has-play-list {
+  .detail-main {
+    .video-player {
+      width: 860px;
+      height: 486px;
+    }
     .detail-main-container {
       max-width: 860px;
+    }
+
+    .has-play-list {
+      .detail-main-container {
+        max-width: 860px;
+      }
     }
   }
 }
